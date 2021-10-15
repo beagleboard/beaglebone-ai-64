@@ -1,5 +1,7 @@
-k3-image-gen
-u-boot
+arm-trusted-firmware/
+k3-image-gen/
+u-boot/
+deploy/bl31.bin
 deploy/sysfw.itb
 deploy/tiboot3.bin
 deploy/tispl.bin

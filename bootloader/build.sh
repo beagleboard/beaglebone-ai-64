@@ -6,6 +6,8 @@
 #gcc-arm-linux-gnueabihf gcc-aarch64-linux-gnu
 #bb-u-boot-j721e-evm
 
+DIR="$PWD"
+
 if [ -d ./k3-image-gen ] ; then
 	rm -rf ./k3-image-gen || true
 fi
@@ -14,6 +16,16 @@ git clone https://github.com/beagleboard/k3-image-gen --depth=10
 cd ./k3-image-gen/
 make SOC=j721e CONFIG=evm CROSS_COMPILE=arm-linux-gnueabihf-
 cp -v sysfw.itb ../deploy/
+cd ../
+
+if [ -d ./arm-trusted-firmware ] ; then
+	rm -rf ./arm-trusted-firmware || true
+fi
+
+git clone -b 08.00.00.004 https://github.com/beagleboard/arm-trusted-firmware --depth=10
+cd ./arm-trusted-firmware/
+make -j4 CROSS_COMPILE=aarch64-linux-gnu- ARCH=aarch64 PLAT=k3 TARGET_BOARD=generic SPD=opteed all
+cp -v build/k3/generic/release/bl31.bin ../deploy/
 cd ../
 
 if [ -d ./u-boot ] ; then
@@ -26,8 +38,7 @@ make CROSS_COMPILE=arm-linux-gnueabihf- j721e_evm_r5_defconfig O=/tmp/r5
 make -j4 CROSS_COMPILE=arm-linux-gnueabihf- O=/tmp/r5
 cp -v /tmp/r5/tiboot3.bin ../deploy/
 make CROSS_COMPILE=aarch64-linux-gnu- j721e_evm_a72_defconfig O=/tmp/a72
-make -j4 CROSS_COMPILE=aarch64-linux-gnu- ATF=/opt/u-boot/bb-u-boot-j721e-evm/bl31.bin TEE=/opt/u-boot/bb-u-boot-j721e-evm/tee-pager_v2.bin DM=/opt/u-boot/bb-u-boot-j721e-evm/ipc_echo_testb_mcu1_0_release_strip.xer5f O=/tmp/a72
+make -j4 CROSS_COMPILE=aarch64-linux-gnu- ATF=${DIR}/deploy/bl31.bin TEE=/opt/u-boot/bb-u-boot-j721e-evm/tee-pager_v2.bin DM=/opt/u-boot/bb-u-boot-j721e-evm/ipc_echo_testb_mcu1_0_release_strip.xer5f O=/tmp/a72
 cp -v /tmp/a72/tispl.bin ../deploy/
 cp -v /tmp/a72/u-boot.img ../deploy/
 cd ../
-
