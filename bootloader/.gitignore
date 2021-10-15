@@ -1,0 +1,6 @@
+k3-image-gen
+u-boot
+deploy/sysfw.itb
+deploy/tiboot3.bin
+deploy/tispl.bin
+deploy/u-boot.img
