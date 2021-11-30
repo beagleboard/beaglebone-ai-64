@@ -37,7 +37,6 @@ _**NOTE**_: Please [update your software](https://beagleboard.org/update-ai64).
 # Connection options
 * [Tethered to a PC](#tethered-to-a-pc)
 * [Standalone with Keyboard and Mouse](#standalone-with-keyboard-and-mouse)
-* [Wireless Connection](#wireless-connection)
 
 # Tethered to a PC
 
@@ -67,21 +66,6 @@ _**NOTE**_: Please [update your software](https://beagleboard.org/update-ai64).
 5. BeagleBone® AI-64 will boot. Any necessary username/password will be provided on-screen.
 
 6. Follow the instructions on the screen.
- 
-
-# Wireless Connection
-
-1. Plug a 5V 3A USB type-C power supply into BeagleBone® AI-64's USB type-C port or 5V 3A power supply to the center-positive barrel jack.
-
-2. BeagleBone® AI-64 will boot.
-
-3. Connect your PC's WiFi to SSID "BeagleBone-_XXXX_" where _XXXX_ varies for your BeagleBone® AI-64.
-
-4. Use password "BeagleBone" to complete the WiFi connection.
-
-5. Open http://192.168.8.1 in your web browser.
-
-6. Follow the instructions in the browser window.
 
 
 # Trademarks
