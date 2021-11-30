@@ -7,6 +7,7 @@ _**NOTE**_: Please [update your software](https://beagleboard.org/update-ai64).
 ![image](https://user-images.githubusercontent.com/9018/143978969-f7bcb6a8-ca57-4c50-9be2-1fa919286abb.png)
 
 # Updates for block diagram
+* Obviously the board image
 * Texas Instruments TDA4VM system-on-chip with dual Arm® Cortex®-A72, C7x DSP, and deep learning, vision and multimedia accelerators
 * 4GB DDR4 RAM
 * 16GB on-board eMMC flash storage
