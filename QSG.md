@@ -16,9 +16,9 @@ ventilation on your board and [update your software](https://beagleboard.org/upg
 
 1. Connect a USB type-C cable to BeagleBone® AI USB type-C port.
 
-2. Connect the other end of the USB cable to the PC USB 3 port.
+2. Connect the other end of the USB cable to the PC USB 3.1 port.
 
-3. BeagleBone® AI will boot.
+3. BeagleBone® AI-64 will boot.
 
 4. Look for a new mass storage drive to appear on the PC.
 
@@ -29,28 +29,26 @@ ventilation on your board and [update your software](https://beagleboard.org/upg
 
 # Standalone with Keyboard and Mouse
 
-1. Connect a combo keyboard and mouse to BeagleBone® AI's USB host port.
+1. Connect a keyboard and mouse to BeagleBone® AI-64's USB type-A host ports.
 
-2. Connect a microHDMI-to-HDMI cable to BeagleBone® AI's microHDMI port.
+2. Connect a mini-DisplayPort to DisplayPort (or *active* mini-DP to HDMI) cable to BeagleBone® AI's mini-DP port.
 
-3. Connect the microHDMI-to-HDMI cable to an HDMI monitor.
+3. Connect the DisplayPort or HDMI cable to a DisplayPort or HDMI monitor, respecively.
 
-4. Plug a 5V 3A USB type-C power supply into BeagleBone® AI's USB type-C port.
+4. Plug a 5V 3A USB type-C power supply into BeagleBone® AI-64's USB type-C port or 5V 3A power supply to the center-positive barrel jack.
 
-5. BeagleBone® AI will boot. No need to enter any passwords.
+5. BeagleBone® AI-64 will boot. Any necessary username/password will be provided on-screen.
 
-6. Desktop will appear on the monitor. Click the "Getting Started" icon.
-
-7. Follow the instructions in the browser window.
+6. Follow the instructions on the screen.
  
 
 # Wireless Connection
 
-1. Plug a 5V 3A USB type-C power supply into BeagleBone® AI's USB type-C port.
+1. Plug a 5V 3A USB type-C power supply into BeagleBone® AI-64's USB type-C port or 5V 3A power supply to the center-positive barrel jack.
 
-2. BeagleBone® AI will boot.
+2. BeagleBone® AI-64 will boot.
 
-3. Connect your PC's WiFi to SSID "BeagleBone-_XXXX_" where _XXXX_ varies for your BeagleBone® AI.
+3. Connect your PC's WiFi to SSID "BeagleBone-_XXXX_" where _XXXX_ varies for your BeagleBone® AI-64.
 
 4. Use password "BeagleBone" to complete the WiFi connection.
 
