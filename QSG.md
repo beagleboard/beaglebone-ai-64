@@ -2,10 +2,37 @@ _**NOTE**_: For the latest online instructions, troubleshooting tips and support
 
 _**NOTE**_: Usage of Chrome or Firefox web browsers is recommended.
 
-_**NOTE**_: By default, the boards may run warm and shutdown. Please keep adequate
-ventilation on your board and [update your software](https://beagleboard.org/upgrade).
+_**NOTE**_: Please [update your software](https://beagleboard.org/update-ai64).
 
 ![](images/getting-started-image.png)
+
+# Updates for block diagram
+* Texas Instruments TDA4VM system-on-chip with dual Arm® Cortex®-A72, C7x DSP, and deep learning, vision and multimedia accelerators
+* 4GB DDR4 RAM
+* 16GB on-board eMMC flash storage
+* micro-SD slot (bottom-side)
+* gigabit Ethernet
+* USB super-speed (5Gbps) Type-C port with power input (5V@3A)
+* dual USB super-speed (5Gbps) Type-A host ports
+* mini-DisplayPort
+* dual CSI-2 camera connectors (bottom-side)
+* M.2 E-key connector with PCIe, USB, and SDIO for WiFi/Bluetooth and expansion
+* 46-pin and 50-pin expansion headers compatible with many BeagleBone®
+* 16-pin microcontroller header
+* reset button
+* power button
+* boot button
+* 5 user LEDs and 1 power LED
+* wake-up domain serial port
+* main domain serial port
+
+# Links
+* Latest instructions: beagleboard.org/getting-started
+* Latest software: beagleboard.org/latest-images
+* Latest product information: beagleboard.org/ai-64
+* Support: beagleboard.org/support
+* Repair issues: beagleboard.org/rma
+* Newsletter: beagleboard.org/newsletter
 
 # Connection options
 * [Tethered to a PC](#tethered-to-a-pc)
@@ -56,3 +83,7 @@ ventilation on your board and [update your software](https://beagleboard.org/upg
 
 6. Follow the instructions in the browser window.
 
+
+# Trademarks
+* ARM® and Cortex® are trademarks of ARM Ltd.
+* BeagleBone® and BeagleBoard.org® are trademarks of the BeagleBoard.org Foundation
