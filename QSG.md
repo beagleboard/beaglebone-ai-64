@@ -14,7 +14,7 @@ _**NOTE**_: Please [update your software](https://beagleboard.org/update-ai64).
 * gigabit Ethernet
 * USB super-speed (5Gbps) Type-C port with power input (5V@3A)
 * dual USB super-speed (5Gbps) Type-A host ports
-* mini-DisplayPort
+* Mini-DisplayPort
 * dual CSI-2 camera connectors (bottom-side)
 * M.2 E-key connector with PCIe, USB, and SDIO for WiFi/Bluetooth and expansion
 * 46-pin and 50-pin expansion headers compatible with many BeagleBone®
