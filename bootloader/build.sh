@@ -29,7 +29,9 @@ if [ -d ./arm-trusted-firmware ] ; then
 	rm -rf ./arm-trusted-firmware || true
 fi
 
-git clone -b 08.00.00.004 https://github.com/beagleboard/arm-trusted-firmware --depth=10
+#https://git.ti.com/gitweb?p=atf/arm-trusted-firmware.git;a=summary
+#https://git.ti.com/gitweb?p=atf/arm-trusted-firmware.git;a=shortlog;h=refs/tags/08.01.00.006
+git clone -b bbb.io-08.01.00.006 https://github.com/beagleboard/arm-trusted-firmware --depth=10
 cd ./arm-trusted-firmware/
 make -j4 CROSS_COMPILE=aarch64-linux-gnu- ARCH=aarch64 PLAT=k3 TARGET_BOARD=generic SPD=opteed all
 cp -v build/k3/generic/release/bl31.bin ../deploy/
