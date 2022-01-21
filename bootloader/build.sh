@@ -12,7 +12,14 @@ if [ -d ./k3-image-gen ] ; then
 	rm -rf ./k3-image-gen || true
 fi
 
-git clone https://github.com/beagleboard/k3-image-gen --depth=10
+#https://git.ti.com/gitweb?p=arago-project/meta-ti.git;a=tree;f=recipes-bsp/ti-sci-fw;hb=HEAD
+#https://git.ti.com/gitweb?p=arago-project/meta-ti.git;a=blob;f=recipes-bsp/ti-linux-fw/ti-linux-fw.inc;hb=HEAD
+#https://git.ti.com/gitweb?p=k3-image-gen/k3-image-gen.git;a=summary
+
+#2022.01.21 -> 489c767a153ff26e9230746e04dd4b1ad0809901
+#08.00.00.004 -> 08.01.00.006
+#https://github.com/beagleboard/k3-image-gen/compare/08.00.00.004...08.01.00.006
+git clone -b 08.01.00.006 https://github.com/beagleboard/k3-image-gen --depth=10
 cd ./k3-image-gen/
 make SOC=j721e CONFIG=evm CROSS_COMPILE=arm-linux-gnueabihf-
 cp -v sysfw.itb ../deploy/
