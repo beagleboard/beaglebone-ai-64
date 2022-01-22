@@ -129,3 +129,8 @@ ENV ROS_DISTRO=foxy
 WORKDIR /opt
 RUN git clone --single-branch --depth 1 --branch REL.08.01.00.03 git://git.ti.com/processor-sdk-vision/jacinto_ros_perception
 
+RUN apt update && apt install -y curl gnupg2 lsb-release
+RUN curl -sSL https://raw.githubusercontent.com/ros/rosdistro/master/ros.key  -o /usr/share/keyrings/ros-archive-keyring.gpg
+RUN echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/ros-archive-keyring.gpg] http://packages.ros.org/ros2/ubuntu focal main" > /etc/apt/sources.list.d/ros2.list
+RUN apt update && apt install -y ros-foxy-ros-base ros-foxy-desktop
+
