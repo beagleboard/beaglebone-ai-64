@@ -242,3 +242,7 @@ WORKDIR ${ROS_WS}
 
 ENTRYPOINT ["/root/entrypoint.sh"]
 
+# When this is done, clean-up should be done earlier to avoid image bloat
+RUN rm /opt/ti-processor-sdk-rtos-j721e-evm-08_01_00_11.tar.gz
+RUN rm /opt/ti-processor-sdk-linux-j7-evm-08_01_00_07-Linux-x86-Install.bin
+
