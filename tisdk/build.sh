@@ -1,4 +1,5 @@
 docker build \
 	--network host \
 	-t tisdk \
-	- < Dockerfile.`arch`
+	-f Dockerfile.`arch` \
+	.

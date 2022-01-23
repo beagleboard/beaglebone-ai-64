@@ -83,3 +83,6 @@ RUN colcon mixin add default \
       https://raw.githubusercontent.com/colcon/colcon-metadata-repository/master/index.yaml && \
     colcon metadata update
 
+COPY /tivision_apps.tar.xz /opt/
+RUN tar xf /opt/tivision_apps.tar.xz --skip-old-files -C /
+
