@@ -240,5 +240,5 @@ ENV WORK_DIR=/root/${PROJECT_HOME}
 ENV ROS_WS=${WORK_DIR}/ros_ws
 WORKDIR ${ROS_WS}
 
-#ENTRYPOINT ["/root/entrypoint.sh"]
+ENTRYPOINT ["/root/entrypoint.sh"]
 
