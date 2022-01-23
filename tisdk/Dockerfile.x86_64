@@ -201,3 +201,44 @@ WORKDIR /opt/jacinto_ros_perception/ros2
 RUN /bin/bash -c "source /opt/ros/foxy/setup.bash && \
     colcon build"
 
+RUN echo . \
+    && apt update && apt upgrade -y \
+    && apt install -y --no-install-recommends \
+    ros-foxy-rmw-cyclonedds-cpp \
+    ros-foxy-cv-bridge \
+    ros-foxy-image-transport \
+    ros-foxy-camera-info-manager \
+    ros-foxy-rviz2 \
+    ros-foxy-image-view \
+    ros-foxy-rqt-image-view \
+    ros-foxy-rqt-console \
+    ros-foxy-rqt-graph \
+    libcanberra-gtk-module \
+    libcanberra-gtk3-0 \
+    libcanberra-gtk3-module \
+    && echo .
+
+RUN cp /opt/jacinto_ros_perception/docker/entrypoint_x86_64.sh /root/entrypoint.sh
+RUN cp /opt/jacinto_ros_perception/docker/ros_setup.sh /root/
+
+WORKDIR /root
+RUN echo "if [ -n \"$BASH_VERSION\" ]; then"     >  .profile && \
+    echo "    # include .bashrc if it exists"    >> .profile && \
+    echo "    if [ -f \"$HOME/.bashrc\" ]; then" >> .profile && \
+    echo "        . \"$HOME/.bashrc\""           >> .profile && \
+    echo "    fi"                                >> .profile && \
+    echo "fi"                                    >> .profile && \
+    echo "#!/bin/bash"                           >  .bashrc  && \
+    echo "export PS1=\"${debian_chroot:+($debian_chroot)}\u@pc-docker:\w\$ \"" >> .bashrc
+RUN echo "#!/bin/sh" >  setup_proxy.sh \
+    && echo "" >> setup_proxy.sh \
+    && chmod +x setup_proxy.sh \
+    && echo .
+
+ARG PROJECT_HOME=j7ros_home
+ENV WORK_DIR=/root/${PROJECT_HOME}
+ENV ROS_WS=${WORK_DIR}/ros_ws
+WORKDIR ${ROS_WS}
+
+#ENTRYPOINT ["/root/entrypoint.sh"]
+
