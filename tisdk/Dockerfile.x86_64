@@ -2,49 +2,13 @@ FROM ubuntu:20.04 AS ubuntu-tisdk1
 ENV DEBIAN_FRONTEND=noninteractive
 ENV LANG=C.UTF-8
 ENV LC_ALL=C.UTF-8
-RUN \
-    apt update && apt upgrade -y \
-    && apt install -y --no-install-recommends \
-    wget \
-    ca-certificates \
-    && echo .
-    #&& rm -rf /var/lib/apt/lists/*
-
-WORKDIR /opt
 RUN echo . \
-    && wget https://software-dl.ti.com/jacinto7/esd/processor-sdk-rtos-jacinto7/08_01_00_11/exports/ti-processor-sdk-rtos-j721e-evm-08_01_00_11.tar.gz \
-    && wget https://software-dl.ti.com/jacinto7/esd/processor-sdk-linux-jacinto7/08_01_00_07/exports/ti-processor-sdk-linux-j7-evm-08_01_00_07-Linux-x86-Install.bin \
-    && echo .
-
-RUN echo . \
-    && chmod +x ./ti-processor-sdk-linux-j7-evm-08_01_00_07-Linux-x86-Install.bin \
-    && ./ti-processor-sdk-linux-j7-evm-08_01_00_07-Linux-x86-Install.bin \
-    && echo .
-
-RUN echo . \
-    && tar xzf ti-processor-sdk-rtos-j721e-evm-08_01_00_11.tar.gz \
-    && echo .
-
-RUN echo .\
-    && apt install -y --no-install-recommends \
-    xz-utils \
-    && echo .
-
-WORKDIR /opt/ti-processor-sdk-rtos-j721e-evm-08_01_00_11
-RUN echo . \
-    && ln -s /opt/ti-processor-sdk-linux-j7-evm-08_01_00_07/board-support/prebuilt-images/boot-j7-evm.tar.gz \
-    && ln -s /opt/ti-processor-sdk-linux-j7-evm-08_01_00_07/filesystem/tisdk-default-image-j7-evm.tar.xz \
-    && echo .
-
-WORKDIR /opt/ti-processor-sdk-rtos-j721e-evm-08_01_00_11/psdk_rtos
-RUN echo . \
-    && ln -sf $PWD/j7_c_models/lib/PC/x86_64/LINUX/release/libDOF.so /usr/lib/x86_64-linux-gnu/libDOF.so \
-    && ln -sf $PWD/j7_c_models/lib/PC/x86_64/LINUX/release/libglbce.so /usr/lib/x86_64-linux-gnu/libApicalSIM.so.1 \
     && dpkg --add-architecture i386 \
     && apt update && apt upgrade -y \
     && apt install -y --no-install-recommends \
-    gcc-7 \
-    g++-7 \
+    wget \
+    ca-certificates \
+    xz-utils \
     libpng-dev \
     zlib1g-dev \
     libtiff-dev \
@@ -80,40 +44,30 @@ RUN echo . \
     python3-pyelftools \
     python3-dev \
     libx11-dev \
-    && echo .
-
-WORKDIR /opt/ti-processor-sdk-rtos-j721e-evm-08_01_00_11
-RUN echo . \
-    && apt update && apt upgrade -y \
-    && apt install -y --no-install-recommends \
     unzip \
-    && echo .
+    libncurses5 \
+    && rm -rf /var/lib/apt/lists/*
 
-WORKDIR /opt/ti-processor-sdk-rtos-j721e-evm-08_01_00_11
+WORKDIR /opt
 RUN echo . \
+    && wget https://software-dl.ti.com/jacinto7/esd/processor-sdk-linux-jacinto7/08_01_00_07/exports/ti-processor-sdk-linux-j7-evm-08_01_00_07-Linux-x86-Install.bin \
+    && chmod +x ./ti-processor-sdk-linux-j7-evm-08_01_00_07-Linux-x86-Install.bin \
+    && ./ti-processor-sdk-linux-j7-evm-08_01_00_07-Linux-x86-Install.bin \
+    && rm /opt/ti-processor-sdk-linux-j7-evm-08_01_00_07-Linux-x86-Install.bin \
+    && wget https://software-dl.ti.com/jacinto7/esd/processor-sdk-rtos-jacinto7/08_01_00_11/exports/ti-processor-sdk-rtos-j721e-evm-08_01_00_11.tar.gz \
+    && tar xf ti-processor-sdk-rtos-j721e-evm-08_01_00_11.tar.gz \
+    && rm /opt/ti-processor-sdk-rtos-j721e-evm-08_01_00_11.tar.gz \
+    && cd /opt/ti-processor-sdk-rtos-j721e-evm-08_01_00_11 \
+    && ln -s /opt/ti-processor-sdk-linux-j7-evm-08_01_00_07/board-support/prebuilt-images/boot-j7-evm.tar.gz \
+    && ln -s /opt/ti-processor-sdk-linux-j7-evm-08_01_00_07/filesystem/tisdk-default-image-j7-evm.tar.xz \
+    && cd /opt/ti-processor-sdk-rtos-j721e-evm-08_01_00_11/psdk_rtos \
+    && ln -sf $PWD/j7_c_models/lib/PC/x86_64/LINUX/release/libDOF.so /usr/lib/x86_64-linux-gnu/libDOF.so \
+    && ln -sf $PWD/j7_c_models/lib/PC/x86_64/LINUX/release/libglbce.so /usr/lib/x86_64-linux-gnu/libApicalSIM.so.1 \
+    && cd /opt/ti-processor-sdk-rtos-j721e-evm-08_01_00_11 \
     && /bin/bash ./psdk_rtos/scripts/setup_psdk_rtos.sh --skip_sudo \
-    && echo .
-
-WORKDIR /opt/ti-processor-sdk-rtos-j721e-evm-08_01_00_11
-RUN echo . \
     && cd glew-2.0.0 \
     && make install \
-    && echo .
-
-WORKDIR /opt/ti-processor-sdk-rtos-j721e-evm-08_01_00_11
-RUN echo . \
-    && /bin/bash ./psdk_rtos/scripts/setup_psdk_rtos.sh --skip_sudo \
-    && echo .
-
-WORKDIR /opt/ti-processor-sdk-rtos-j721e-evm-08_01_00_11
-RUN echo . \
-    && apt update && apt upgrade -y \
-    && apt install -y --no-install-recommends \
-    libncurses5 \
-    && echo .
-
-WORKDIR /opt/ti-processor-sdk-rtos-j721e-evm-08_01_00_11
-RUN echo . \
+    && cd /opt/ti-processor-sdk-rtos-j721e-evm-08_01_00_11 \
     && echo "BUILD_EMULATION=no" >> tiovx/build_flags.mak \
     && echo "BUILD_TARGET_MODE=yes" >> tiovx/build_flags.mak \
     && echo "BUILD_LINUX_A72=yes" >> tiovx/build_flags.mak \
@@ -242,12 +196,10 @@ WORKDIR ${ROS_WS}
 
 ENTRYPOINT ["/root/entrypoint.sh"]
 
-# When this is done, clean-up should be done earlier to avoid image bloat
-RUN rm /opt/ti-processor-sdk-rtos-j721e-evm-08_01_00_11.tar.gz
-RUN rm /opt/ti-processor-sdk-linux-j7-evm-08_01_00_07-Linux-x86-Install.bin
 
 RUN echo . \
     && cd /opt/ti-processor-sdk-rtos-j721e-evm-08_01_00_11/vision_apps \
+    && make all \
     && make linux_fs_stage \
     && cd /tmp/tivision_apps_targetfs_stage \
     && tar cJf /opt/tivision_apps.tar.xz . \
