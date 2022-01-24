@@ -86,3 +86,53 @@ RUN colcon mixin add default \
 COPY /tivision_apps.tar.xz /opt/
 RUN tar xf /opt/tivision_apps.tar.xz --skip-old-files -C /
 
+RUN echo . \
+    && apt install -y --no-install-recommends \
+    autotools-dev \
+    autoconf \
+    automake \
+    libtool \
+    && echo .
+
+WORKDIR /root/src
+RUN echo . \
+    && git clone https://git.ti.com/cgit/rpmsg/ti-rpmsg-char \
+    && cd ti-rpmsg-char \
+    && aclocal \
+    && autoreconf -i \
+    && ./configure --prefix=/usr/local \
+    && make \
+    && make install \
+    && echo .
+
+RUN echo . \
+    && apt install -y --no-install-recommends \
+    unzip \
+    libsm6 \
+    libxext6 \
+    libxrender1 \
+    cmake \
+    libprotobuf-dev \
+    protobuf-compiler \
+    libprotoc-dev \
+    graphviz \
+    swig \
+    curl \
+    vim \
+    git \
+    wget \
+    gdb \
+    nano \
+    zip \
+    pkg-config \
+    libgtk-3-dev \
+    libyaml-cpp-dev \
+    && echo .
+
+WORKDIR /root/src
+RUN echo . \
+    && git clone https://github.com/TexasInstruments/edgeai-tidl-tools \
+    && cd edgeai-tidl-tools \
+    && /bin/bash -c "source ./setup.sh --skip_arm_gcc_download" \
+    && echo .
+
