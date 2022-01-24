@@ -191,3 +191,8 @@ WORKDIR ${ROS_WS}
 
 ENTRYPOINT ["/root/entrypoint.sh"]
 
+RUN echo . \
+    && cd /opt/ti-processor-sdk-rtos-j721e-evm-08_01_00_11/targetfs \
+    && tar cJf /opt/rtos_dlr.tar.xz `find . | grep dlr` \
+    && echo .
+
