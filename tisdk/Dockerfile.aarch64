@@ -52,6 +52,30 @@ RUN echo . \
     && curl -sSL 'http://keyserver.ubuntu.com/pks/lookup?op=get&search=0xC1CF6E31E6BADE8868B172B4F42ED6FBAB17C654' | apt-key add - \
     && apt update && apt upgrade -y \
     && apt install -y --no-install-recommends \
+    unzip \
+    libsm6 \
+    libxext6 \
+    libxrender1 \
+    cmake \
+    libprotobuf-dev \
+    protobuf-compiler \
+    libprotoc-dev \
+    graphviz \
+    swig \
+    curl \
+    vim \
+    git \
+    wget \
+    gdb \
+    nano \
+    zip \
+    pkg-config \
+    libgtk-3-dev \
+    libyaml-cpp-dev \
+    autotools-dev \
+    autoconf \
+    automake \
+    libtool \
     ros-foxy-ros-base=0.9.2-1* \
     ros-foxy-rmw-cyclonedds-cpp \
     ros-foxy-cv-bridge \
@@ -83,17 +107,6 @@ RUN colcon mixin add default \
       https://raw.githubusercontent.com/colcon/colcon-metadata-repository/master/index.yaml && \
     colcon metadata update
 
-COPY /tivision_apps.tar.xz /opt/
-RUN tar xf /opt/tivision_apps.tar.xz --skip-old-files -C /
-
-RUN echo . \
-    && apt install -y --no-install-recommends \
-    autotools-dev \
-    autoconf \
-    automake \
-    libtool \
-    && echo .
-
 WORKDIR /root/src
 RUN echo . \
     && git clone https://git.ti.com/cgit/rpmsg/ti-rpmsg-char \
@@ -105,36 +118,11 @@ RUN echo . \
     && make install \
     && echo .
 
-RUN echo . \
-    && apt install -y --no-install-recommends \
-    unzip \
-    libsm6 \
-    libxext6 \
-    libxrender1 \
-    cmake \
-    libprotobuf-dev \
-    protobuf-compiler \
-    libprotoc-dev \
-    graphviz \
-    swig \
-    curl \
-    vim \
-    git \
-    wget \
-    gdb \
-    nano \
-    zip \
-    pkg-config \
-    libgtk-3-dev \
-    libyaml-cpp-dev \
-    && echo .
-
-WORKDIR /root/src
+WORKDIR /opt
 RUN echo . \
     && git clone https://github.com/TexasInstruments/edgeai-tidl-tools \
     && cd edgeai-tidl-tools \
     && /bin/bash -c "source ./setup.sh --skip_arm_gcc_download" \
-    #&& cp /src/edgeai-tidl-tools/tidl_tools/itidl_rt.h /usr/include/ \
     && echo .
 
 COPY /tivision_apps.tar.xz /opt/
@@ -144,8 +132,8 @@ COPY /rtos_dlr.tar.xz /opt/
 RUN tar xf /opt/rtos_dlr.tar.xz --skip-old-files -C /
 RUN ln -s /usr/lib/python3.8/site-packages/libdlr.so /lib/
 
-WORKDIR /root/src
-RUN echo . \
+#WORKDIR /root/src
+#RUN echo . \
     #&& rm -rf neo-ai-dlr \
     #&& git clone --branch tidl-j7-fixups https://github.com/jadonk/neo-ai-dlr \
     #&& cd neo-ai-dlr \
@@ -155,12 +143,7 @@ RUN echo . \
     #&& cmake -DUSE_TIDL=ON -DUSE_TIDL_RT_PATH=/root/neo-ai-dlr .. \
     #&& make \
     #&& make install \
-    && echo .
-
-WORKDIR /root/src
-RUN echo . \
-    && git clone https://git.ti.com/git/processor-sdk-vision/jacinto_ros_perception.git \
-    && echo .
+    #&& echo .
 
 WORKDIR /root/src
 RUN echo . \
@@ -183,22 +166,27 @@ RUN echo . \
     && ldconfig \
     && rm -rf /root/src/edgeai-gst-plugins
 
-WORKDIR /root/src
+WORKDIR /opt
 RUN echo . \
     && git clone https://git.ti.com/git/edgeai/edge_ai_apps \
-    && /root/src/edge_ai_apps/download_models.sh --download ONR-OD-8050-ssd-lite-regNetX-800mf-fpn-bgr-coco-512x512 \
-    && /root/src/edge_ai_apps/download_models.sh --download TFL-OD-2020-ssdLite-mobDet-DSP-coco-320x320 \
+    && git clone https://git.ti.com/git/processor-sdk-vision/jacinto_ros_perception.git robotics_sdk \
+    && cd /opt/robotics_sdk \
+    && ./init_setup.sh \
+    && ln -s /root/src/model_zoo /opt/model_zoo \
     && echo .
 
 WORKDIR /root
-RUN echo "if [ -n \"$BASH_VERSION\" ]; then"     >  .profile && \
-    echo "    # include .bashrc if it exists"    >> .profile && \
-    echo "    if [ -f \"$HOME/.bashrc\" ]; then" >> .profile && \
-    echo "        . \"$HOME/.bashrc\""           >> .profile && \
-    echo "    fi"                                >> .profile && \
-    echo "fi"                                    >> .profile && \
-    echo "#!/bin/bash"                           >  .bashrc  && \
-    echo "export PS1=\"${debian_chroot:+($debian_chroot)}\u@j7-docker:\w\$ \"" >> .bashrc
+RUN echo . \
+    && echo "if [ -n \"$BASH_VERSION\" ]; then"     >  .profile \
+    && echo "    # include .bashrc if it exists"    >> .profile \
+    && echo "    if [ -f \"$HOME/.bashrc\" ]; then" >> .profile \
+    && echo "        . \"$HOME/.bashrc\""           >> .profile \
+    && echo "    fi"                                >> .profile \
+    && echo "fi"                                    >> .profile \
+    && echo "#!/bin/bash"                           >  .bashrc  \
+    && echo ". /opt/ros/foxy/setup.bash"            >> .bashrc \
+    && echo "export PS1=\"${debian_chroot:+($debian_chroot)}\u@j7-docker:\w\$ \"" >> .bashrc \
+    && echo .
 
 # workdir for ROS apps
 ARG PROJECT_HOME=j7ros_home
@@ -209,4 +197,3 @@ WORKDIR ${ROS_WS}
 # change the DDS implementation to Cyclone DDS
 ENV RMW_IMPLEMENTATION rmw_cyclonedds_cpp
 
-RUN ln -s /root/src/model_zoo /opt/model_zoo
