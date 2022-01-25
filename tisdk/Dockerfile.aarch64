@@ -134,5 +134,52 @@ RUN echo . \
     && git clone https://github.com/TexasInstruments/edgeai-tidl-tools \
     && cd edgeai-tidl-tools \
     && /bin/bash -c "source ./setup.sh --skip_arm_gcc_download" \
+    #&& cp /src/edgeai-tidl-tools/tidl_tools/itidl_rt.h /usr/include/ \
     && echo .
+
+COPY /tivision_apps.tar.xz /opt/
+RUN tar xf /opt/tivision_apps.tar.xz --skip-old-files -C /
+
+COPY /rtos_dlr.tar.xz /opt/
+RUN tar xf /opt/rtos_dlr.tar.xz --skip-old-files -C /
+RUN ln -s /usr/lib/python3.8/site-packages/libdlr.so /lib/
+
+WORKDIR /root/src
+RUN echo . \
+    #&& rm -rf neo-ai-dlr \
+    #&& git clone --branch tidl-j7-fixups https://github.com/jadonk/neo-ai-dlr \
+    #&& cd neo-ai-dlr \
+    #&& git submodule update --init --recursive \
+    #&& mkdir -p build \
+    #&& cd build \
+    #&& cmake -DUSE_TIDL=ON -DUSE_TIDL_RT_PATH=/root/neo-ai-dlr .. \
+    #&& make \
+    #&& make install \
+    && echo .
+
+WORKDIR /root/src
+RUN echo . \
+    && git clone https://git.ti.com/git/processor-sdk-vision/jacinto_ros_perception.git \
+    && echo .
+
+WORKDIR /root/src
+RUN echo . \
+    && git clone --branch main https://github.com/TexasInstruments/edgeai-tiovx-modules.git \
+    && cd edgeai-tiovx-modules \
+    && mkdir build \
+    && cd build \
+    && cmake .. \
+    && make -j1 \
+    && make install \
+    && echo .
+
+WORKDIR /root/src
+RUN echo . \
+    && git clone --branch fix/pkgconfig-imaging-sdk-update https://github.com/TexasInstruments/edgeai-gst-plugins.git \
+    && cd edgeai-gst-plugins \
+    && meson build --prefix=/usr -Dpkg_config_path=pkgconfig \
+    && ninja -C build \
+    && ninja -C build install \
+    && ldconfig \
+    && rm -rf /root/src/edgeai-gst-plugins
 
