@@ -183,3 +183,30 @@ RUN echo . \
     && ldconfig \
     && rm -rf /root/src/edgeai-gst-plugins
 
+WORKDIR /root/src
+RUN echo . \
+    && git clone https://git.ti.com/git/edgeai/edge_ai_apps \
+    && /root/src/edge_ai_apps/download_models.sh --download ONR-OD-8050-ssd-lite-regNetX-800mf-fpn-bgr-coco-512x512 \
+    && /root/src/edge_ai_apps/download_models.sh --download TFL-OD-2020-ssdLite-mobDet-DSP-coco-320x320 \
+    && echo .
+
+WORKDIR /root
+RUN echo "if [ -n \"$BASH_VERSION\" ]; then"     >  .profile && \
+    echo "    # include .bashrc if it exists"    >> .profile && \
+    echo "    if [ -f \"$HOME/.bashrc\" ]; then" >> .profile && \
+    echo "        . \"$HOME/.bashrc\""           >> .profile && \
+    echo "    fi"                                >> .profile && \
+    echo "fi"                                    >> .profile && \
+    echo "#!/bin/bash"                           >  .bashrc  && \
+    echo "export PS1=\"${debian_chroot:+($debian_chroot)}\u@j7-docker:\w\$ \"" >> .bashrc
+
+# workdir for ROS apps
+ARG PROJECT_HOME=j7ros_home
+ENV WORK_DIR=/root/${PROJECT_HOME}
+ENV ROS_WS=${WORK_DIR}/ros_ws
+WORKDIR ${ROS_WS}
+
+# change the DDS implementation to Cyclone DDS
+ENV RMW_IMPLEMENTATION rmw_cyclonedds_cpp
+
+RUN ln -s /root/src/model_zoo /opt/model_zoo
