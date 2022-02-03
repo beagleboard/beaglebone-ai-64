@@ -1,3 +1,4 @@
+# syntax=docker/dockerfile:1.3-labs
 FROM ubuntu:20.04 AS ubuntu-tiros-foxy
 ENV DEBIAN_FRONTEND=noninteractive
 ENV ROS_DISTRO=foxy
@@ -215,8 +216,7 @@ RUN echo . \
     && echo .
 
 WORKDIR /root/neo-ai-dlr
-RUN && echo . \
-    && patch -p1 <<EOF
+RUN patch -p1 <<EOF
  diff --git a/CMakeLists.txt b/CMakeLists.txt
 index f2c333c..df3586a 100644
 --- a/CMakeLists.txt
@@ -230,10 +230,19 @@ index f2c333c..df3586a 100644
  # Option for Android on Arm --- has to come before project() function
  option(ANDROID_BUILD "Build for Android target" OFF)
  option(AAR_BUILD "Build Android Archive (AAR)" OFF)
-EOF \
+EOF
+
+RUN echo . \
+    && git submodule update --init --recursive \
     && mkdir -p build \
     && cd build \
     && cmake -DUSE_TESTS=OFF -DUSE_TIDL_RT_PATH=/root/src/meta-psdkla/recipes-core/packagegroups/neo-ai-tvm/ -DUSE_TIDL=ON .. \
+    && echo .
+
+RUN echo . \
+    && cd build \
+    && make \
+    && make install \
     && echo .
 
 
