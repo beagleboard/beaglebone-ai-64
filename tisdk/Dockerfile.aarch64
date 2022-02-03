@@ -197,3 +197,43 @@ WORKDIR ${ROS_WS}
 # change the DDS implementation to Cyclone DDS
 ENV RMW_IMPLEMENTATION rmw_cyclonedds_cpp
 
+WORKDIR /root/src
+RUN git clone --depth 1 --single-branch -b master  https://git.ti.com/git/jacinto-linux/meta-psdkla.git
+
+RUN echo . \
+    && python3 -m pip install \
+        numpy \
+        pybind11 \
+    && apt install -y --no-install-recommends \
+        clang-10 \
+        libtinfo-dev \
+        software-properties-common lsb-release \
+    && wget -O - https://apt.kitware.com/keys/kitware-archive-latest.asc 2>/dev/null | gpg --dearmor - > /etc/apt/trusted.gpg.d/kitware.gpg \
+    && apt-add-repository "deb https://apt.kitware.com/ubuntu/ $(lsb_release -cs) main" \
+    && apt install kitware-archive-keyring \
+    && apt update && apt upgrade -y \
+    && echo .
+
+WORKDIR /root/neo-ai-dlr
+RUN && echo . \
+    && patch -p1 <<EOF
+ diff --git a/CMakeLists.txt b/CMakeLists.txt
+index f2c333c..df3586a 100644
+--- a/CMakeLists.txt
++++ b/CMakeLists.txt
+@@ -3,6 +3,8 @@ include(cmake/Utils.cmake)
+ include(3rdparty/tvm/cmake/utils/Utils.cmake)
+ include(3rdparty/tvm/cmake/utils/FindCUDA.cmake)
+
++set(THREADS_HAVE_PTHREAD_ARG ON)
++
+ # Option for Android on Arm --- has to come before project() function
+ option(ANDROID_BUILD "Build for Android target" OFF)
+ option(AAR_BUILD "Build Android Archive (AAR)" OFF)
+EOF \
+    && mkdir -p build \
+    && cd build \
+    && cmake -DUSE_TESTS=OFF -DUSE_TIDL_RT_PATH=/root/src/meta-psdkla/recipes-core/packagegroups/neo-ai-tvm/ -DUSE_TIDL=ON .. \
+    && echo .
+
+
