@@ -246,3 +246,7 @@ RUN echo . \
     && echo .
 
 
+RUN echo . \
+    && cd python \
+    && python3 setup.py install \
+    && echo .
