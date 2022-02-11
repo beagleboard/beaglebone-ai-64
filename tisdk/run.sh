@@ -1,6 +1,9 @@
 #!/bin/sh
 docker run \
 	-it \
-	--dns 192.168.0.1 \
+	--privileged \
+	-v /dev:/dev \
+	--network host \
 	tisdk \
 	/bin/bash
+
