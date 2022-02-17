@@ -126,6 +126,8 @@ RUN echo . \
     && /bin/bash -c "source ./setup.sh --skip_arm_gcc_download" \
     && echo .
 
+RUN touch .
+
 COPY /tivision_apps.tar.xz /opt/
 RUN tar xf /opt/tivision_apps.tar.xz --skip-old-files -C /
 
@@ -239,14 +241,14 @@ RUN echo . \
     && cmake -DUSE_TESTS=OFF -DUSE_TIDL_RT_PATH=/root/src/meta-psdkla/recipes-core/packagegroups/neo-ai-tvm/ -DUSE_TIDL=ON .. \
     && echo .
 
-RUN echo . \
-    && cd build \
-    && make \
-    && make install \
-    && echo .
+#RUN echo . \
+    #&& cd build \
+    #&& make \
+    #&& make install \
+    #&& echo .
 
 
-RUN echo . \
-    && cd python \
-    && python3 setup.py install \
-    && echo .
+#RUN echo . \
+    #&& cd python \
+    #&& python3 setup.py install \
+    #&& echo .
