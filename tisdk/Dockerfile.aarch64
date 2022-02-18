@@ -268,8 +268,9 @@ RUN apt-get install -y \
         Dlr && \
     pip3 install --extra-index-url https://google-coral.github.io/py-repo/ tflite_runtime
 
-WORKDIR /opt/edge_ai_apps
-RUN echo . \
-    && ./setup_script.sh \
-    && echo .
+#WORKDIR /opt/edge_ai_apps
+#RUN echo . \
+#    && ./setup_script.sh \
+#    && echo .
+
 
