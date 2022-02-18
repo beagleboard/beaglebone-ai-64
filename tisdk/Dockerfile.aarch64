@@ -268,9 +268,25 @@ RUN apt-get install -y \
         Dlr && \
     pip3 install --extra-index-url https://google-coral.github.io/py-repo/ tflite_runtime
 
+WORKDIR /opt
+RUN echo . \
+    && wget https://software-dl.ti.com/jacinto7/esd/processor-sdk-rtos-jacinto7/08_01_00_11/exports/ti-processor-sdk-rtos-j721e-evm-08_01_00_11.tar.gz \
+    && tar xf ti-processor-sdk-rtos-j721e-evm-08_01_00_11.tar.gz \
+    && rm /opt/ti-processor-sdk-rtos-j721e-evm-08_01_00_11.tar.gz \
+    && echo .
+
+RUN echo . \
+    && cd /opt/ti-processor-sdk-rtos-j721e-evm-08_01_00_11
+    && /bin/bash ./psdk_rtos/scripts/setup_psdk_rtos.sh --skip_sudo \
+    && cd glew-2.0.0 \
+    && make install \
+    && cd /opt/ti-processor-sdk-rtos-j721e-evm-08_01_00_11/vision_apps \
+    && BUILD_EMULATION=no BUILD_TARGET_MODE=yes BUILD_LINUX_A72=yes BUILD_EDGEAI=yes PROFILE=release make all -j2 \
+    && BUILD_EMULATION=no BUILD_TARGET_MODE=yes BUILD_LINUX_A72=yes BUILD_EDGEAI=yes PROFILE=release make linux_fs_stage \
+    && echo .
+
 #WORKDIR /opt/edge_ai_apps
 #RUN echo . \
 #    && ./setup_script.sh \
 #    && echo .
-
 
