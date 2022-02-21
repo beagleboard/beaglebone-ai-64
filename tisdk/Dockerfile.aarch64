@@ -331,3 +331,19 @@ RUN echo . \
 	&& pip install pycrypto pycryptodomex \
 	&& echo .
 
+RUN echo . \
+	&& apt install -y llvm clang \
+	&& echo .
+
+WORKDIR /opt
+RUN echo . \
+	&& wget https://github.com/llvm/llvm-project/releases/download/llvmorg-13.0.1/clang+llvm-13.0.1-armv7a-linux-gnueabihf.tar.xz \
+	&& tar xf clang+llvm-13.0.1-armv7a-linux-gnueabihf.tar.xz \
+	&& apt install -y libc6-armhf-cross linux-libc-dev-armhf-cross \
+	&& echo .
+
+RUN echo . \
+	&& apt install -y qemu-system-x86 \
+	&& echo .
+
+
