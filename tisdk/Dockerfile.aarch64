@@ -346,4 +346,23 @@ RUN echo . \
 	&& apt install -y qemu-system-x86 \
 	&& echo .
 
+RUN echo . \
+	&& wget https://releases.bazel.build/5.0.0/release/bazel-5.0.0-dist.zip \
+	&& mkdir -p bazel \
+	&& cd bazel \
+	&& unzip ../bazel-5.0.0-dist.zip \
+	&& rm ../bazel-5.0.0-dist.zip \
+	&& apt install -y openjdk-11-jdk \
+	&& env EXTRA_BAZEL_ARGS="--host_javabase=@local_jdk//:jdk" bash ./compile.sh \
+	&& echo .
 
+#WORKDIR /opt/edge_ai_apps
+#RUN echo . \
+#	&& ./setup_script.sh \
+#	&& echo .
+#
+#RUN echo . \
+#	&& cd python \
+#	&& python3 setup.py install \
+#	&& echo .
+# 
