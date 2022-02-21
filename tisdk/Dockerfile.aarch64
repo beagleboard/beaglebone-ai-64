@@ -290,3 +290,44 @@ RUN echo . \
 #    && ./setup_script.sh \
 #    && echo .
 
+COPY /ti_cgt_c7000_2.1.0.LTS_armlinuxaarch64_busybox_installer.sh /opt/
+RUN echo . \
+    && chmod +x ti_cgt_c7000_2.1.0.LTS_armlinuxaarch64_busybox_installer.sh \
+    && ./ti_cgt_c7000_2.1.0.LTS_armlinuxaarch64_busybox_installer.sh \
+    && rm ./ti_cgt_c7000_2.1.0.LTS_armlinuxaarch64_busybox_installer.sh \
+    && echo .
+RUN echo . \
+    && wget https://software-dl.ti.com/codegen/esd/cgt_public_sw/C6000/8.3.11/ti_cgt_c6000_8.3.11_armlinuxa8hf_busybox_installer.sh \
+    && chmod +x ti_cgt_c6000_8.3.11_armlinuxa8hf_busybox_installer.sh \
+    && ./ti_cgt_c6000_8.3.11_armlinuxa8hf_busybox_installer.sh \
+    && rm ./ti_cgt_c6000_8.3.11_armlinuxa8hf_busybox_installer.sh \
+    && echo .
+
+
+WORKDIR /opt/ti-processor-sdk-rtos-j721e-evm-08_01_00_11
+RUN echo . \
+	&& wget https://git.yoctoproject.org/cgit/cgit.cgi/opkg-utils/snapshot/opkg-utils-master.tar.gz \
+	&& tar xf opkg-utils-master.tar.gz \
+	&& rm opkg-utils-master.tar.gz \
+	&& echo .
+
+RUN echo . \
+	&& wget https://github.com/g-truc/glm/releases/download/0.9.8.0/glm-0.9.8.0.zip --no-check-certificate \
+	&& unzip glm-0.9.8.0.zip > /dev/null \
+	&& rm glm-0.9.8.0.zip \
+	&& echo .
+
+RUN echo . \
+	&& wget https://sourceforge.net/projects/glew/files/glew/2.0.0/glew-2.0.0.zip/download --no-check-certificate \
+	&& mv download glew-2.0.0.zip \
+	&& unzip glew-2.0.0.zip > /dev/null \
+	&& rm glew-2.0.0.zip \
+	&& cd glew-2.0.0 \
+	&& make > /dev/null \
+	&& make install \
+	&& echo .
+
+RUN echo . \
+	&& pip install pycrypto pycryptodomex \
+	&& echo .
+
