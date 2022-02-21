@@ -365,4 +365,7 @@ RUN echo . \
 #	&& cd python \
 #	&& python3 setup.py install \
 #	&& echo .
-# 
+
+WORKDIR /opt/onnxruntime/tidl_demos
+RUN ./tidl_build.sh
+
