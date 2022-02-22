@@ -391,3 +391,8 @@ RUN echo . \
 	&& make install \
 	&& echo .
 
+WORKDIR /opt/edge_ai_apps
+RUN echo . \
+	&& ./setup_script.sh \
+	&& echo .
+
