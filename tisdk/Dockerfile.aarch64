@@ -409,13 +409,40 @@ RUN echo . \
 WORKDIR /opt
 RUN echo . \
 	&& rm -rf /root/src/neo-ai-dlr \
-	&& cd neo-ai-dlr \
+	&& git clone --branch TIDL_PSDK_8.1 https://github.com/TexasInstruments/neo-ai-dlr \
+	&& echo .
+
+WORKDIR /opt/neo-ai-dlr
+RUN patch -p1 <<EOF
+ diff --git a/CMakeLists.txt b/CMakeLists.txt
+index f2c333c..df3586a 100644
+--- a/CMakeLists.txt
++++ b/CMakeLists.txt
+@@ -3,6 +3,8 @@ include(cmake/Utils.cmake)
+ include(3rdparty/tvm/cmake/utils/Utils.cmake)
+ include(3rdparty/tvm/cmake/utils/FindCUDA.cmake)
+
++set(THREADS_HAVE_PTHREAD_ARG ON)
++
+ # Option for Android on Arm --- has to come before project() function
+ option(ANDROID_BUILD "Build for Android target" OFF)
+ option(AAR_BUILD "Build Android Archive (AAR)" OFF)
+EOF
+
+RUN echo . \
 	&& git submodule update --init --recursive \
+	&& echo .
+
+RUN echo . \
+	&& ln -s /root/tvm /opt/tvm \
 	&& mkdir build \
 	&& cd build \
 	&& cmake -DUSE_TESTS=OFF -DUSE_TIDL_RT_PATH=/root/src/meta-psdkla/recipes-core/packagegroups/neo-ai-tvm/ -DUSE_TIDL=ON .. \
-	&& make \
+	&& make -j4 \
 	&& make install \
+	&& echo .
+
+RUN echo . \
 	&& cd python \
 	&& python3 setup.py install \
 	&& echo .
