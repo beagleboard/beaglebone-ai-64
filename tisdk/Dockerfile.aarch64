@@ -391,3 +391,28 @@ RUN echo . \
 	&& make install \
 	&& echo .
 
+WORKDIR /opt/tensorflow
+RUN echo . \
+	&& apt install -y fakeroot dh-make dh-python python3-pybind11 pybind11-dev \
+	&& cd tensorflow/lite/tools/make \
+	&& ./download_dependencies.sh \
+	&& cd /opt/tensorflow \
+	&& make -f tensorflow/lite/tools/make/Makefile \
+	&& BUILD_DEB=y tensorflow/lite/tools/pip_package/build_pip_package.sh \
+	&& echo .
+
+WORKDIR /opt/edge_ai_apps
+RUN echo . \
+	&& ./setup_script.sh \
+	&& echo .
+
+# Still cannot find itvm_rt.h
+#WORKDIR /root/neo-ai-dlr
+#RUN echo . \
+#	&& cd build \
+#	&& make \
+#	&& make install \
+#	&& cd python \
+#	&& python3 setup.py install \
+#	&& echo .
+
