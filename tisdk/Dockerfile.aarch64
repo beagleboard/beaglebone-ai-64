@@ -406,13 +406,17 @@ RUN echo . \
 	&& ./setup_script.sh \
 	&& echo .
 
-# Still cannot find itvm_rt.h
-#WORKDIR /root/neo-ai-dlr
-#RUN echo . \
-#	&& cd build \
-#	&& make \
-#	&& make install \
-#	&& cd python \
-#	&& python3 setup.py install \
-#	&& echo .
+WORKDIR /opt
+RUN echo . \
+	&& rm -rf /root/src/neo-ai-dlr \
+	&& cd neo-ai-dlr \
+	&& git submodule update --init --recursive \
+	&& mkdir build \
+	&& cd build \
+	&& cmake -DUSE_TESTS=OFF -DUSE_TIDL_RT_PATH=/root/src/meta-psdkla/recipes-core/packagegroups/neo-ai-tvm/ -DUSE_TIDL=ON .. \
+	&& make \
+	&& make install \
+	&& cd python \
+	&& python3 setup.py install \
+	&& echo .
 
