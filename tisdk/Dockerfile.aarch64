@@ -376,23 +376,18 @@ RUN echo . \
 	&& make install \
 	&& echo .
 
-WORKDIR /opt
+ENV TIDL_PATH=/opt/ti-processor-sdk-rtos-j721e-evm-08_01_00_11/tidl_j7_08_01_00_05/
+WORKDIR /root
 RUN echo . \
 	&& wget https://git.ti.com/cgit/jacinto-linux/meta-psdkla/plain/recipes-core/packagegroups/neo-ai-tvm/inc/itidl_rt.h -o /usr/local/include/itidl_rt.h \
-	&& cd /root/src \
-	&& rm -rf neo-ai-dlr \
-	&& git clone --branch tidl-j7-fixups https://github.com/jadonk/neo-ai-dlr \
-	&& cd neo-ai-dlr \
+	&& git clone --single-branch -b tidl-j7 https://github.com/TexasInstruments/tvm.git \
+	&& cd tvm \
+	&& git checkout TIDL_PSDK_8.1_UPDATE1 \
 	&& git submodule update --init --recursive \
-	&& mkdir -p build \
+	&& mkdir build \
 	&& cd build \
-	&& cmake -DUSE_TIDL=ON -DUSE_TIDL_RT_PATH=/root/neo-ai-dlr .. \
-	&& make \
+	&& cmake -DUSE_SORT=ON -DUSE_LLVM=llvm-config -DUSE_TIDL=ON -DUSE_TIDL_RT_PATH=${TIDL_PATH}/ti_dl/rt .. \
+	&& make -j4 \
 	&& make install \
-	&& echo .
-
-WORKDIR /opt/edge_ai_apps
-RUN echo . \
-	&& ./setup_script.sh \
 	&& echo .
 
