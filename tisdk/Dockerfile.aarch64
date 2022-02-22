@@ -369,10 +369,14 @@ RUN echo . \
 WORKDIR /opt/onnxruntime/tidl_demos
 RUN echo . \
 	&& ./tidl_build.sh \
-	&& /opt/onnxruntime/build/Linux/RelWithDebInfo \
+	&& echo .
+
+WORKDIR /opt/onnxruntime/build/Linux/RelWithDebInfo
+RUN echo . \
 	&& make install \
 	&& echo .
 
+WORKDIR /opt
 RUN echo . \
 	&& wget https://git.ti.com/cgit/jacinto-linux/meta-psdkla/plain/recipes-core/packagegroups/neo-ai-tvm/inc/itidl_rt.h -o /usr/local/include/itidl_rt.h \
 	&& cd /root/src \
