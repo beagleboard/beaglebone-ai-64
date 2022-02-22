@@ -367,5 +367,23 @@ RUN echo . \
 #	&& echo .
 
 WORKDIR /opt/onnxruntime/tidl_demos
-RUN ./tidl_build.sh
+RUN echo . \
+	&& ./tidl_build.sh \
+	&& /opt/onnxruntime/build/Linux/RelWithDebInfo \
+	&& make install \
+	&& echo .
+
+RUN echo . \
+	&& wget https://git.ti.com/cgit/jacinto-linux/meta-psdkla/plain/recipes-core/packagegroups/neo-ai-tvm/inc/itidl_rt.h -o /usr/local/include/itidl_rt.h \
+	&& cd /root/src \
+	&& rm -rf neo-ai-dlr \
+	&& git clone --branch tidl-j7-fixups https://github.com/jadonk/neo-ai-dlr \
+	&& cd neo-ai-dlr \
+	&& git submodule update --init --recursive \
+	&& mkdir -p build \
+	&& cd build \
+	&& cmake -DUSE_TIDL=ON -DUSE_TIDL_RT_PATH=/root/neo-ai-dlr .. \
+	&& make \
+	&& make install \
+	&& echo .
 
