@@ -447,3 +447,24 @@ RUN echo . \
 	&& python3 setup.py install \
 	&& echo .
 
+RUN echo . \
+	&& dpkg -i /opt/tensorflow/tensorflow/lite/tools/pip_package/gen/tflite_pip/python3-tflite-runtime_2.4.0-1_arm64.deb \
+	&& echo .
+
+FROM ubuntu-tiros-foxy AS tisdk-minimal
+RUN echo . \
+	&& rm /opt/clang+llvm-13.0.1-armv7a-linux-gnueabihf.tar.xz \
+	&& rm -rf /opt/clang+llvm-13.0.1-armv7a-linux-gnueabihf \
+	&& rm -rf /opt/ti-processor-sdk-rtos-j721e-evm-08_01_00_11 \
+	&& rm -rf /opt/bazel \
+	&& rm -rf /opt/tensorflow \
+	&& rm -rf /root/tensorflow \
+	&& rm -rf /opt/onnxruntime \
+	&& rm -rf /root/onnxruntime \
+	&& rm -rf /opt/neo-ai-dlr \
+	&& rm -rf /root/neo-ai-dlr \
+	&& rm -rf /root/tvm \
+	&& rm -rf /opt/tivision_apps.tar.xz \
+	&& rm -rf /opt/rtos_dlr.tar.xz \
+	&& echo .
+
