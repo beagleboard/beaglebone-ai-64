@@ -451,6 +451,16 @@ RUN echo . \
 	&& dpkg -i /opt/tensorflow/tensorflow/lite/tools/pip_package/gen/tflite_pip/python3-tflite-runtime_2.4.0-1_arm64.deb \
 	&& echo .
 
+WORKDIR /opt/edgeai-gst-plugins/build \
+RUN echo . \
+	&& ninja install \
+	&& ln -s /usr/lib/edgeai-tiovx-modules/libedgeai-tiovx-modules.so /usr/local/lib/ \
+	&& ln -s /usr/lib/edgeai-tiovx-modules/libedgeai-tiovx-modules.so.0.1.0 /usr/local/lib/ \
+	&& ldconfig \
+	&& echo .
+
+WORKDIR /opt
+
 FROM ubuntu-tiros-foxy AS tisdk-minimal
 RUN echo . \
 	&& rm /opt/clang+llvm-13.0.1-armv7a-linux-gnueabihf.tar.xz \

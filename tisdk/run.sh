@@ -4,6 +4,6 @@ docker run \
 	--privileged \
 	-v /dev:/dev \
 	--network host \
-	tisdk \
+	tisdk-minimal \
 	/bin/bash
 
