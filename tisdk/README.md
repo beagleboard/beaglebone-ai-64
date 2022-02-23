@@ -1,3 +1,12 @@
+On x86 configure Docker:
+
+```
+echo $'{\n    "experimental": true\n}' | sudo tee /etc/docker/daemon.json
+```
+Then restart docker.service
+```
+sudo systemctl restart docker.service
+```
 
 On x86:
 ```
