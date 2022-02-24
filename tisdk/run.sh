@@ -7,6 +7,6 @@ docker run \
 	-e DISPLAY=$DISPLAY \
 	-v $HOME/.Xauthority:/root/.Xauthority \
 	--network host \
-	tisdk-minimal \
+	tisdk \
 	/bin/bash
 
