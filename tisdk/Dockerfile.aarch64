@@ -459,6 +459,86 @@ RUN echo . \
 	&& ldconfig \
 	&& echo .
 
+#WORKDIR /opt/onnxruntime
+#RUN echo . \
+#	&& cd build \
+#	&& cmake \
+#		-DONNX_CUSTOM_PROTOC_EXECUTABLE=${STAGING_BINDIR_NATIVE}/protoc \
+#		-Donnxruntime_RUN_ONNX_TESTS=OFF \
+#		-Donnxruntime_BUILD_WINML_TESTS=ON \
+#		-Donnxruntime_GENERATE_TEST_REPORTS=ON \
+#		-Donnxruntime_DEV_MODE=ON \
+#		-DPYTHON_EXECUTABLE=${PYTHON} \
+#		-Donnxruntime_USE_CUDA=OFF \
+#		-Donnxruntime_CUDA_VERSION= \
+#		-Donnxruntime_CUDA_HOME= \
+#		-Donnxruntime_CUDNN_HOME= \
+#		-Donnxruntime_USE_FEATURIZERS=OFF \
+#		-Donnxruntime_USE_MIMALLOC_STL_ALLOCATOR=OFF \
+#		-Donnxruntime_USE_MIMALLOC_ARENA_ALLOCATOR=OFF \
+#		-Donnxruntime_ENABLE_PYTHON=ON \
+#		-Donnxruntime_BUILD_CSHARP=OFF \
+#		-Donnxruntime_BUILD_JAVA=OFF \
+#		-Donnxruntime_BUILD_NODEJS=OFF \
+#		-Donnxruntime_BUILD_SHARED_LIB=ON \
+#		-Donnxruntime_USE_DNNL=OFF \
+#		-Donnxruntime_DNNL_GPU_RUNTIME= \
+#		-Donnxruntime_DNNL_OPENCL_ROOT= \
+#		-Donnxruntime_USE_NNAPI_BUILTIN=OFF \
+#		-Donnxruntime_USE_RKNPU=OFF \
+#		-Donnxruntime_USE_OPENMP=OFF \
+#		-Donnxruntime_USE_TVM=OFF \
+#		-Donnxruntime_USE_LLVM=OFF \
+#		-Donnxruntime_ENABLE_MICROSOFT_INTERNAL=OFF \
+#		-Donnxruntime_USE_VITISAI=OFF \
+#		-Donnxruntime_USE_NUPHAR=OFF \
+#		-Donnxruntime_USE_TENSORRT=OFF \
+#		-Donnxruntime_TENSORRT_HOME= \
+#		-Donnxruntime_USE_MIGRAPHX=OFF \
+#		-Donnxruntime_MIGRAPHX_HOME= \
+#		-Donnxruntime_CROSS_COMPILING=OFF \
+#		-Donnxruntime_DISABLE_CONTRIB_OPS=OFF \
+#		-Donnxruntime_DISABLE_ML_OPS=OFF \
+#		-Donnxruntime_DISABLE_RTTI=OFF \
+#		-Donnxruntime_DISABLE_EXCEPTIONS=OFF \
+#		-Donnxruntime_DISABLE_ORT_FORMAT_LOAD=OFF \
+#		-Donnxruntime_MINIMAL_BUILD=OFF \
+#		-Donnxruntime_EXTENDED_MINIMAL_BUILD=OFF \
+#		-Donnxruntime_MINIMAL_BUILD_CUSTOM_OPS=OFF \
+#		-Donnxruntime_REDUCED_OPS_BUILD=OFF \
+#		-Donnxruntime_MSVC_STATIC_RUNTIME=OFF \
+#		-Donnxruntime_ENABLE_LANGUAGE_INTEROP_OPS=OFF \
+#		-Donnxruntime_USE_DML=OFF \
+#		-Donnxruntime_USE_WINML=OFF \
+#		-Donnxruntime_BUILD_MS_EXPERIMENTAL_OPS=OFF \
+#		-Donnxruntime_USE_TELEMETRY=OFF \
+#		-Donnxruntime_ENABLE_LTO=OFF \
+#		-Donnxruntime_USE_ACL=OFF \
+#		-Donnxruntime_USE_ACL_1902=OFF \
+#		-Donnxruntime_USE_ACL_1905=OFF \
+#		-Donnxruntime_USE_ACL_1908=OFF \
+#		-Donnxruntime_USE_ACL_2002=OFF \
+#		-Donnxruntime_USE_ARMNN=OFF \
+#		-Donnxruntime_ARMNN_RELU_USE_CPU=ON \
+#		-Donnxruntime_ARMNN_BN_USE_CPU=ON \
+#		-Donnxruntime_ENABLE_NVTX_PROFILE=OFF \
+#		-Donnxruntime_ENABLE_TRAINING=OFF \
+#		-Donnxruntime_ENABLE_TRAINING_OPS=OFF \
+#		-Donnxruntime_ENABLE_CPU_FP16_OPS=OFF \
+#		-Donnxruntime_USE_NCCL=ON \
+#		-Donnxruntime_BUILD_BENCHMARKS=OFF \
+#		-Donnxruntime_USE_ROCM=OFF \
+#		-Donnxruntime_ROCM_HOME= \
+#		-DOnnxruntime_GCOV_COVERAGE=OFF \
+#		-Donnxruntime_USE_MPI=ON \
+#		-Donnxruntime_ENABLE_MEMORY_PROFILE=OFF \
+#		-Donnxruntime_ENABLE_CUDA_LINE_NUMBER_INFO=OFF \
+#		-Donnxruntime_PYBIND_EXPORT_OPSCHEMA=OFF \
+#		-Donnxruntime_ENABLE_MEMLEAK_CHECKER=OFF \
+#		-DCMAKE_BUILD_TYPE=Release \
+#		-Donnxruntime_USE_TIDL=ON \
+#	&& echo ..
+
 WORKDIR /opt
 
 #FROM ubuntu-tiros-foxy AS tisdk-minimal
@@ -477,4 +557,17 @@ WORKDIR /opt
 #	&& rm -rf /opt/tivision_apps.tar.xz \
 #	&& rm -rf /opt/rtos_dlr.tar.xz \
 #	&& echo .
+
+WORKDIR /opt/onnxruntime
+RUN echo . \
+	&& ./build.sh --parallel $NPROC \
+		--skip_tests \
+		--enable_onnx_tests \
+		--build_shared_lib \
+		--config Release \
+		--cmake_extra_defines="CMAKE_TOOLCHAIN_FILE=$(pwd)/tool.cmake" \
+		--path_to_protoc_exe $(pwd)/cmake/external/protoc-${PROTOBUF_VER}-linux-aarch_64/bin/protoc \
+		--use_tidl \
+		--build_wheel \
+	&& echo .
 
