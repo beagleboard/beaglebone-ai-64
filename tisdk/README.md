@@ -16,6 +16,8 @@ On x86:
 
 Make sure Docker points to a 64GB or more storage area based on the current scripts.
 
+You'll need at least 2GB of swapfile to build this image.
+
 Copy the \*.tar.xz files to BeagleBone AI-64
 
 On BeagleBone AI-64:
