@@ -8,19 +8,17 @@ Then restart docker.service
 sudo systemctl restart docker.service
 ```
 
-On x86:
+Then build and extract he tarballs
 ```
 ./build.sh
 ./extract_visionapps.sh
 ```
 
-Make sure Docker points to a 64GB or more storage area based on the current scripts.
-
-You'll need at least 2GB of swapfile to build this image.
-
-Copy the \*.tar.xz files to BeagleBone AI-64
-
 On BeagleBone AI-64:
+* Make sure Docker points to a 64GB or more storage area based on the current scripts.
+* You'll need at least 2GB of swapfile to build this image.
+* Copy the \*.tar.xz files from x86
+
 ```
 ./build.sh
 ./run.sh
