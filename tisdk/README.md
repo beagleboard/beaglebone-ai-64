@@ -8,7 +8,7 @@ Then restart docker.service
 sudo systemctl restart docker.service
 ```
 
-Then build and extract he tarballs
+Then build and extract the tarballs
 ```
 ./build.sh
 ./extract_visionapps.sh
