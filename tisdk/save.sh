@@ -11,3 +11,5 @@ COPY --from=tisdk / /
 EOF
 
 docker save tisdk-minimal -o tisdk.tar
+
+xz tisdk.tar
