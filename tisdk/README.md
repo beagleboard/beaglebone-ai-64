@@ -14,9 +14,11 @@ On x86:
 ./extract_visionapps.sh
 ```
 
-Copy the *.tar.xz files to BB-AI-64
+Make sure Docker points to a 64GB or more storage area based on the current scripts.
 
-On BB-AI-64:
+Copy the \*.tar.xz files to BeagleBone AI-64
+
+On BeagleBone AI-64:
 ```
 ./build.sh
 ./run.sh
