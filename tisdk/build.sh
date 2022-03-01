@@ -1,6 +1,6 @@
 #!/bin/bash -ex
 DOCKER_BUILDKIT=1 docker build \
-	-t tisdk \
-	-f Dockerfile.`arch` \
+	-t tisdk2 \
+	-f Dockerfile2.`arch` \
 	.
 
