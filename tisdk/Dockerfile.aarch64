@@ -366,15 +366,15 @@ RUN echo . \
 #	&& python3 setup.py install \
 #	&& echo .
 
-WORKDIR /opt/onnxruntime/tidl_demos
-RUN echo . \
-	&& ./tidl_build.sh \
-	&& echo .
+#WORKDIR /opt/onnxruntime/tidl_demos
+#RUN echo . \
+#	&& ./tidl_build.sh \
+#	&& echo .
 
-WORKDIR /opt/onnxruntime/build/Linux/RelWithDebInfo
-RUN echo . \
-	&& make install \
-	&& echo .
+#WORKDIR /opt/onnxruntime/build/Linux/RelWithDebInfo
+#RUN echo . \
+#	&& make install \
+#	&& echo .
 
 ENV TIDL_PATH=/opt/ti-processor-sdk-rtos-j721e-evm-08_01_00_11/tidl_j7_08_01_00_05/
 WORKDIR /root
@@ -401,9 +401,40 @@ RUN echo . \
 	&& BUILD_DEB=y tensorflow/lite/tools/pip_package/build_pip_package.sh \
 	&& echo .
 
-WORKDIR /opt/edge_ai_apps
+ENV PROTOBUF_VER=3.11.3
+ENV ZIP_FILE=protoc-${PROTOBUF_VER}-linux-aarch_64.zip
+WORKDIR /opt/onnxruntime
 RUN echo . \
-	&& ./setup_script.sh \
+	&& wget https://github.com/protocolbuffers/protobuf/releases/download/v${PROTOBUF_VER}/${ZIP_FILE}\
+	&& unzip ${ZIP_FILE} -d cmake/external/protoc-${PROTOBUF_VER}-linux-aarch_64 \
+	&& echo .
+
+RUN cat > ./tool.cmake <<EOF
+SET(CMAKE_SYSTEM_NAME Linux)
+SET(CMAKE_SYSTEM_PROCESSOR aarch64)
+SET(CMAKE_SYSTEM_VERSION 1)
+SET(CMAKE_C_COMPILER /usr/bin/aarch64-linux-gnu-gcc)
+SET(CMAKE_CXX_COMPILER /usr/bin/aarch64-linux-gnu-g++)
+SET(CMAKE_FIND_ROOT_PATH_MODE_PROGRAM NEVER)
+SET(CMAKE_FIND_ROOT_PATH_MODE_LIBRARY ONLY)
+SET(CMAKE_FIND_ROOT_PATH_MODE_INCLUDE ONLY)
+SET(CMAKE_FIND_ROOT_PATH_MODE_PACKAGE ONLY)
+EOF
+
+RUN echo . \
+	&& ./build.sh --parallel $NPROC \
+		--skip_tests \
+		--enable_onnx_tests \
+		--build_shared_lib \
+		--config Release \
+		--cmake_extra_defines="CMAKE_TOOLCHAIN_FILE=$(pwd)/tool.cmake" \
+		--path_to_protoc_exe $(pwd)/cmake/external/protoc-${PROTOBUF_VER}-linux-aarch_64/bin/protoc \
+		--use_tidl \
+		--build_wheel \
+	&& echo .
+
+RUN echo . \
+	&& python3 -m pip install build/Linux/Release/dist/onnxruntime_tidl-1.7.0-cp38-cp38-linux_aarch64.whl \
 	&& echo .
 
 WORKDIR /opt
@@ -451,6 +482,24 @@ RUN echo . \
 	&& dpkg -i /opt/tensorflow/tensorflow/lite/tools/pip_package/gen/tflite_pip/python3-tflite-runtime_2.4.0-1_arm64.deb \
 	&& echo .
 
+WORKDIR /opt
+RUN echo . \
+	&& ln -sf /usr/lib/python3.8/site-packages/libdlr.so /usr/local/lib/python3.8/dist-packages/dlr/libdlr.so \
+	&& rm /lib/*.map \
+	&& ldconfig \
+	&& ./edge_ai_apps/download_models.sh --recommended \
+	&& echo .
+
+RUN echo . \
+	&& cd /opt/onnxruntime/build/Linux/Release \
+	&& make install \
+	&& echo .
+
+WORKDIR /opt/edge_ai_apps
+RUN echo . \
+	&& ./setup_script.sh \
+	&& echo .
+
 WORKDIR /opt/edgeai-gst-plugins/build
 RUN echo . \
 	&& ninja install \
@@ -458,8 +507,6 @@ RUN echo . \
 	&& ln -s /usr/lib/edgeai-tiovx-modules/libedgeai-tiovx-modules.so.0.1.0 /usr/local/lib/ \
 	&& ldconfig \
 	&& echo .
-
-WORKDIR /opt
 
 #FROM ubuntu-tiros-foxy AS tisdk-minimal
 #RUN echo . \
@@ -477,47 +524,3 @@ WORKDIR /opt
 #	&& rm -rf /opt/tivision_apps.tar.xz \
 #	&& rm -rf /opt/rtos_dlr.tar.xz \
 #	&& echo .
-
-RUN echo . \
-	&& ln -sf /usr/lib/python3.8/site-packages/libdlr.so /usr/local/lib/python3.8/dist-packages/dlr/libdlr.so \
-	&& rm /lib/*.map \
-	&& ldconfig \
-	&& ./edge_ai_apps/download_models.sh --recommended \
-	&& echo .
-
-ENV PROTOBUF_VER=3.11.3
-ENV ZIP_FILE=protoc-${PROTOBUF_VER}-linux-aarch_64.zip
-WORKDIR /opt/onnxruntime
-RUN echo . \
-	&& wget https://github.com/protocolbuffers/protobuf/releases/download/v${PROTOBUF_VER}/${ZIP_FILE}\
-	&& unzip ${ZIP_FILE} -d cmake/external/protoc-${PROTOBUF_VER}-linux-aarch_64 \
-	&& echo .
-
-RUN cat > ./tool.cmake <<EOF
-SET(CMAKE_SYSTEM_NAME Linux)
-SET(CMAKE_SYSTEM_PROCESSOR aarch64)
-SET(CMAKE_SYSTEM_VERSION 1)
-SET(CMAKE_C_COMPILER /usr/bin/aarch64-linux-gnu-gcc)
-SET(CMAKE_CXX_COMPILER /usr/bin/aarch64-linux-gnu-g++)
-SET(CMAKE_FIND_ROOT_PATH_MODE_PROGRAM NEVER)
-SET(CMAKE_FIND_ROOT_PATH_MODE_LIBRARY ONLY)
-SET(CMAKE_FIND_ROOT_PATH_MODE_INCLUDE ONLY)
-SET(CMAKE_FIND_ROOT_PATH_MODE_PACKAGE ONLY)
-EOF
-
-RUN echo . \
-	&& ./build.sh --parallel $NPROC \
-		--skip_tests \
-		--enable_onnx_tests \
-		--build_shared_lib \
-		--config Release \
-		--cmake_extra_defines="CMAKE_TOOLCHAIN_FILE=$(pwd)/tool.cmake" \
-		--path_to_protoc_exe $(pwd)/cmake/external/protoc-${PROTOBUF_VER}-linux-aarch_64/bin/protoc \
-		--use_tidl \
-		--build_wheel \
-	&& echo .
-
-RUN echo . \
-	&& python3 -m pip install build/Linux/Release/dist/onnxruntime_tidl-1.7.0-cp38-cp38-linux_aarch64.whl \
-	&& echo .
-
