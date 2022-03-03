@@ -253,16 +253,6 @@ RUN echo . \
 ENV FLATBUFFERS_VERSION=v1.12.0
 WORKDIR /opt
 RUN echo . \
-	#&& wget https://releases.bazel.build/5.0.0/release/bazel-5.0.0-dist.zip \
-	#&& mkdir -p bazel \
-	#&& cd bazel \
-	#&& unzip ../bazel-5.0.0-dist.zip \
-	#&& rm ../bazel-5.0.0-dist.zip \
-	#&& env EXTRA_BAZEL_ARGS="--host_javabase=@local_jdk//:jdk" bash ./compile.sh \
-	&& wget https://github.com/bazelbuild/bazel/releases/download/5.0.0/bazel-5.0.0-linux-arm64 \
-	&& echo .
-
-RUN echo . \
 	&& git clone --single-branch --branch tidl-j7 --depth 1 https://github.com/TexasInstruments/tensorflow.git \
 	&& cd tensorflow \
 	&& mkdir -p tensorflow/lite/tools/make/downloads \
