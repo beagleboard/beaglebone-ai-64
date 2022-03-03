@@ -1,3 +1,98 @@
+# ubuntu-20.04-base
+# Copyright (C) 2020-2021 Intel Corporation
+#
+# SPDX-License-Identifier: GPL-2.0-only
+#
+
+FROM ubuntu:20.04 AS yocto-sdk
+ENV DEBIAN_FRONTEND=noninteractive
+
+RUN apt-get update && \
+    apt-get install -y \
+        gawk \
+        wget \
+        git-core \
+        subversion \
+        diffstat \
+        unzip \
+        sysstat \
+        texinfo \
+        build-essential \
+        chrpath \
+        socat \
+        python \
+        python3 \
+        python3-pip \
+        python3-pexpect \
+        xz-utils  \
+        locales \
+        cpio \
+        screen \
+        tmux \
+        sudo \
+        iputils-ping \
+        python3-git \
+        python3-jinja2 \
+        libegl1-mesa \
+        libsdl1.2-dev \
+        pylint3 \
+        xterm \
+        iproute2 \
+        fluxbox \
+        tightvncserver \
+        lz4 \
+	gcc-multilib g++-multilib \
+        zstd && \
+    cp -af /etc/skel/ /etc/vncskel/ && \
+    echo "export DISPLAY=1" >>/etc/vncskel/.bashrc && \
+    mkdir  /etc/vncskel/.vnc && \
+    echo "" | vncpasswd -f > /etc/vncskel/.vnc/passwd && \
+    chmod 0600 /etc/vncskel/.vnc/passwd && \
+    useradd -U -m yoctouser && \
+    /usr/sbin/locale-gen en_US.UTF-8 && \
+    echo 'dash dash/sh boolean false' | debconf-set-selections && \
+    dpkg-reconfigure dash
+
+COPY build-install-dumb-init.sh /
+RUN  bash /build-install-dumb-init.sh && \
+     rm /build-install-dumb-init.sh && \
+     apt-get clean
+
+USER yoctouser
+WORKDIR /home/yoctouser
+CMD /bin/bash
+
+FROM yocto-sdk AS arago-sdk
+
+RUN echo . \
+	&& mkdir -p /opt \
+	&& wget https://developer.arm.com/-/media/Files/downloads/gnu-a/9.2-2019.12/binrel/gcc-arm-9.2-2019.12-x86_64-arm-none-linux-gnueabihf.tar.xz \
+	&& tar xf gcc-arm-9.2-2019.12-x86_64-arm-none-linux-gnueabihf.tar.xz \
+	&& rm gcc-arm-9.2-2019.12-x86_64-arm-none-linux-gnueabihf.tar.xz \
+	&& wget https://developer.arm.com/-/media/Files/downloads/gnu-a/9.2-2019.12/binrel/gcc-arm-9.2-2019.12-x86_64-aarch64-none-linux-gnu.tar.xz \
+	&& tar xf gcc-arm-9.2-2019.12-x86_64-aarch64-none-linux-gnu.tar.xz \
+	&& rm gcc-arm-9.2-2019.12-x86_64-aarch64-none-linux-gnu.tar.xz \
+	&& echo .
+
+ENV TOOLCHAIN_BASE_ARMV7=/home/yoctouser/gcc-arm-9.2-2019.12-x86_64-arm-none-linux-gnueabihf
+ENV TOOLCHAIN_BASE_ARMV8=/home/yoctouser/gcc-arm-9.2-2019.12-x86_64-aarch64-none-linux-gnu
+ENV MACHINE=j7-evm
+
+ENV PSDK_VERSION=08_01_00_07
+WORKDIR /home/yoctouser/yocto-build
+RUN echo . \
+	&& git clone https://
+	&& ./oe-layertool-setup.sh -f configs/processor-sdk-linux/processor-sdk-linux-08.01.00.39.txt \
+	&& cd build \
+	&& echo "INHERIT += \"own-mirrors\"" >> conf/local.conf \
+	&& echo "SOURCE_MIRROR_URL = \"https://software-dl.ti.com/processor-sdk-mirror/sources/\"" >> conf/local.conf \
+	&& echo "ARAGO_BRAND  = \"psdkla\"" >> conf/local.conf \
+	&& echo "DISTRO_FEATURES_append = \" virtualization\"" >> conf/local.conf \
+	&& . conf/setenv \
+	&& echo .
+
+	#&& TOOLCHAIN_BASE_ARMV7= TOOLCHAIN_BASE_ARMV8= MACHINE=j7-evm bitbake -k arago-core-psdkla-bundle \
+
 FROM ubuntu:20.04 AS ubuntu-tisdk1
 ENV DEBIAN_FRONTEND=noninteractive
 ENV LANG=C.UTF-8
@@ -188,3 +283,5 @@ ENV ROS_WS=${WORK_DIR}/ros_ws
 WORKDIR ${ROS_WS}
 
 ENTRYPOINT ["/root/entrypoint.sh"]
+
+

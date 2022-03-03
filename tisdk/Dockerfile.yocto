@@ -61,3 +61,32 @@ RUN  bash /build-install-dumb-init.sh && \
 USER yoctouser
 WORKDIR /home/yoctouser
 CMD /bin/bash
+
+WORKDIR /opt
+RUN echo . \
+	&& wget https://developer.arm.com/-/media/Files/downloads/gnu-a/9.2-2019.12/binrel/gcc-arm-9.2-2019.12-x86_64-arm-none-linux-gnueabihf.tar.xz \
+	&& tar xf gcc-arm-9.2-2019.12-x86_64-arm-none-linux-gnueabihf.tar.xz \
+	&& rm gcc-arm-9.2-2019.12-x86_64-arm-none-linux-gnueabihf.tar.xz \
+	&& wget https://developer.arm.com/-/media/Files/downloads/gnu-a/9.2-2019.12/binrel/gcc-arm-9.2-2019.12-x86_64-aarch64-none-linux-gnu.tar.xz \
+	&& tar xf gcc-arm-9.2-2019.12-x86_64-aarch64-none-linux-gnu.tar.xz \
+	&& rm gcc-arm-9.2-2019.12-x86_64-aarch64-none-linux-gnu.tar.xz \
+RUN echo . \
+
+ENV TOOLCHAIN_BASE_ARMV7=/opt/gcc-arm-9.2-2019.12-x86_64-arm-none-linux-gnueabihf
+ENV TOOLCHAIN_BASE_ARMV8=/opt/gcc-arm-9.2-2019.12-x86_64-aarch64-none-linux-gnu
+ENV MACHINE=j7-evm
+
+ENV PSDK_VERSION=08_01_00_07
+WORKDIR /home/yoctouser/yocto-build
+RUN echo . \
+	&& ./oe-layertool-setup.sh -f configs/processor-sdk-linux/processor-sdk-linux-08_01_00.txt \
+	&& cd build \
+	&& echo "INHERIT += \"own-mirrors\"" >> conf/local.conf \
+	&& echo "SOURCE_MIRROR_URL = \"https://software-dl.ti.com/processor-sdk-mirror/sources/\"" >> conf/local.conf \
+	&& echo "ARAGO_BRAND  = \"psdkla\"" >> conf/local.conf \
+	&& echo "DISTRO_FEATURES_append = \" virtualization\"" >> conf/local.conf \
+	&& . conf/setenv \
+	&& echo .
+
+	#&& TOOLCHAIN_BASE_ARMV7= TOOLCHAIN_BASE_ARMV8= MACHINE=j7-evm bitbake -k arago-core-psdkla-bundle \
+
