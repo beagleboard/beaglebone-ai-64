@@ -206,62 +206,10 @@ RUN echo . \
 	&& echo .
 
 ######
-# TVM
-######
-ENV TIDL_PATH=/opt/ti-processor-sdk-rtos-j721e-evm-08_01_00_13/tidl_j7_08_01_00_05/
-WORKDIR /opt
-RUN echo . \
-	&& git clone --single-branch -b tidl-j7 https://github.com/TexasInstruments/tvm.git \
-	&& cd tvm \
-	&& git checkout TIDL_PSDK_8.1_UPDATE1 \
-	&& git submodule update --init --recursive \
-	&& mkdir build \
-	&& cd build \
-	&& cmake -DUSE_SORT=ON -DUSE_LLVM=llvm-config -DUSE_TIDL=ON -DUSE_TIDL_RT_PATH=${TIDL_PATH}/ti_dl/rt .. \
-	&& make -j4 \
-	&& make install \
-	&& echo .
-
-RUN echo . \
-	&& git clone --branch TIDL_PSDK_8.1 https://github.com/TexasInstruments/neo-ai-dlr \
-	&& echo .
-
-WORKDIR /opt/neo-ai-dlr
-RUN patch -p1 <<EOF
- diff --git a/CMakeLists.txt b/CMakeLists.txt
-index f2c333c..df3586a 100644
---- a/CMakeLists.txt
-+++ b/CMakeLists.txt
-@@ -3,6 +3,8 @@ include(cmake/Utils.cmake)
- include(3rdparty/tvm/cmake/utils/Utils.cmake)
- include(3rdparty/tvm/cmake/utils/FindCUDA.cmake)
-
-+set(THREADS_HAVE_PTHREAD_ARG ON)
-+
- # Option for Android on Arm --- has to come before project() function
- option(ANDROID_BUILD "Build for Android target" OFF)
- option(AAR_BUILD "Build Android Archive (AAR)" OFF)
-EOF
-
-RUN echo . \
-	&& git submodule update --init --recursive \
-	&& echo .
-
-######
 # TFL
 ######
 ENV FLATBUFFERS_VERSION=v1.12.0
 WORKDIR /opt
-RUN echo . \
-	#&& wget https://releases.bazel.build/5.0.0/release/bazel-5.0.0-dist.zip \
-	#&& mkdir -p bazel \
-	#&& cd bazel \
-	#&& unzip ../bazel-5.0.0-dist.zip \
-	#&& rm ../bazel-5.0.0-dist.zip \
-	#&& env EXTRA_BAZEL_ARGS="--host_javabase=@local_jdk//:jdk" bash ./compile.sh \
-	&& wget https://github.com/bazelbuild/bazel/releases/download/5.0.0/bazel-5.0.0-linux-arm64 \
-	&& echo .
-
 RUN echo . \
 	&& git clone --single-branch --branch tidl-j7 --depth 1 https://github.com/TexasInstruments/tensorflow.git \
 	&& cd tensorflow \
@@ -330,13 +278,62 @@ RUN echo . \
 	&& make install \
 	&& echo .
 
+######
+# TVM
+######
+ENV TIDL_PATH=/opt/ti-processor-sdk-rtos-j721e-evm-08_01_00_13/tidl_j7_08_01_00_05/
+WORKDIR /opt
+RUN echo . \
+	&& git clone --single-branch -b tidl-j7 https://github.com/TexasInstruments/tvm.git \
+	&& cd tvm \
+	&& git checkout TIDL_PSDK_8.1_UPDATE1 \
+	&& git submodule update --init --recursive \
+	&& mkdir build \
+	&& cd build \
+	&& cmake -DUSE_SORT=ON -DUSE_LLVM=llvm-config -DUSE_TIDL=ON -DUSE_TIDL_RT_PATH=${TIDL_PATH}/ti_dl/rt .. \
+	&& make -j4 \
+	&& make install \
+	&& echo .
+
+RUN echo . \
+	&& git clone --branch TIDL_PSDK_8.1 https://github.com/TexasInstruments/neo-ai-dlr \
+	&& cd neo-ai-dlr \
+	&& git submodule update --init --recursive \
+	&& mkdir -p build \
+	&& cd build \
+	&& cmake -DUSE_TESTS=OFF -DUSE_SORT=ON -DUSE_LLVM=llvm-config -DUSE_TIDL=ON -DUSE_TIDL_RT_PATH=${TIDL_PATH}/ti_dl/rt .. \
+	&& make -j4 \
+	&& make install \
+	&& cd ../python \
+	&& python3 setup.py install \
+	&& echo .
+
 ##############
 # Edge AI SDK
 ##############
+ENV OPENCV_VER=4.2.0
 WORKDIR /opt
+RUN echo . \
+	&& wget https://github.com/opencv/opencv/archive/${OPENCV_VER}.zip \
+	&& unzip ${OPENCV_VER}.zip \
+	&& cd opencv-${OPENCV_VER}/cmake \
+	&& cmake -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=/usr/local -DBUILD_opencv_highgui:BOOL="1" -DBUILD_opencv_videoio:BOOL="0" -DWITH_IPP:BOOL="0" -DWITH_WEBP:BOOL="1" -DWITH_OPENEXR:BOOL="1" -DWITH_IPP_A:BOOL="0" -DBUILD_WITH_DYNAMIC_IPP:BOOL="0" -DBUILD_opencv_cudacodec:BOOL="0" -DBUILD_PNG:BOOL="1" -DBUILD_opencv_cudaobjdetect:BOOL="0" -DBUILD_ZLIB:BOOL="1" -DBUILD_TESTS:BOOL="0" -DWITH_CUDA:BOOL="0" -DBUILD_opencv_cudafeatures2d:BOOL="0" -DBUILD_opencv_cudaoptflow:BOOL="0" -DBUILD_opencv_cudawarping:BOOL="0" -DINSTALL_TESTS:BOOL="0" -DBUILD_TIFF:BOOL="1" -DBUILD_JPEG:BOOL="1" -DBUILD_opencv_cudaarithm:BOOL="0" -DBUILD_PERF_TESTS:BOOL="0" -DBUILD_opencv_cudalegacy:BOOL="0" -DBUILD_opencv_cudaimgproc:BOOL="0" -DBUILD_opencv_cudastereo:BOOL="0" -DBUILD_opencv_cudafilters:BOOL="0" -DBUILD_opencv_cudabgsegm:BOOL="0" -DBUILD_SHARED_LIBS:BOOL="0" ../ \
+	&& make \
+	&& make install \
+	&& echo .
+
 RUN echo . \
 	&& git clone https://git.ti.com/git/edgeai/edge_ai_apps \
 	&& ./edge_ai_apps/download_models.sh --recommended \
+	&& echo .
+
+############
+# TVM fixes
+############
+RUN echo . \
+	&& install -m 0644 /opt/neo-ai-dlr/build/lib/libdlr.so /usr/local/lib/python3.8/dist-packages/dlr \
+	&& install -m 0644 /opt/neo-ai-dlr/build/lib/libdlr.so /usr/local/lib \
+	&& ldconfig \
 	&& echo .
 
 RUN echo . \
@@ -344,7 +341,7 @@ RUN echo . \
 	&& cd edgeai-tiovx-modules \
 	&& mkdir build \
 	&& cd build \
-	&& cmake .. \
+	&& cmake -DCMAKE_INSTALL_PREFIX=/usr/local .. \
 	&& make -j1 \
 	&& make install \
 	&& ln -s /usr/lib/edgeai-tiovx-modules/libedgeai-tiovx-modules.so /usr/local/lib/ \
@@ -358,7 +355,7 @@ RUN echo . \
 	&& cd edgeai-gst-plugins \
 	&& meson build --prefix=/usr/local -Dpkg_config_path=pkgconfig \
 	&& ninja -C build \
-	&& ninja install \
+	&& ninja -C build install \
 	&& echo .
 
 ###############
@@ -396,20 +393,13 @@ WORKDIR ${ROS_WS}
 # change the DDS implementation to Cyclone DDS
 ENV RMW_IMPLEMENTATION rmw_cyclonedds_cpp
 
-#FROM ubuntu-tiros-foxy AS tisdk-minimal
-#RUN echo . \
-#	&& rm -rf /opt/clang+llvm-13.0.1-armv7a-linux-gnueabihf \
-#	&& rm -rf /opt/ti-processor-sdk-rtos-j721e-evm-08_01_00_11 \
-#	&& rm -rf /opt/bazel \
-#	&& rm -rf /opt/tensorflow \
-#	&& rm -rf /root/tensorflow \
-#	&& rm -rf /opt/onnxruntime \
-#	&& rm -rf /root/onnxruntime \
-#	&& rm -rf /opt/neo-ai-dlr \
-#	&& rm -rf /root/neo-ai-dlr \
-#	&& rm -rf /root/tvm \
-#	&& rm -rf /opt/tivision_apps.tar.xz \
-#	&& rm -rf /opt/rtos_dlr.tar.xz \
-#	&& echo .
-#
+FROM ubuntu-tiros-foxy AS tisdk-minimal
+RUN echo . \
+	&& rm -rf /opt/ti-processor-sdk-rtos-j721e-evm-08_01_00_11 \
+	&& rm -rf /opt/tensorflow \
+	&& rm -rf /opt/onnxruntime \
+	&& rm -rf /opt/neo-ai-dlr \
+	&& rm -rf /opt/tivision_apps.tar.xz \
+	&& echo .
+
 
