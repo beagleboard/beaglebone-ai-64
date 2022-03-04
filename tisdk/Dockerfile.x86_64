@@ -81,8 +81,9 @@ ENV MACHINE=j7-evm
 ENV PSDK_VERSION=08_01_00_07
 WORKDIR /home/yoctouser/yocto-build
 RUN echo . \
-	&& git clone https://
-	&& ./oe-layertool-setup.sh -f configs/processor-sdk-linux/processor-sdk-linux-08.01.00.39.txt \
+	&& git clone http://arago-project.org/git/projects/oe-layersetup.git \
+	&& cd oe-layersetup \
+	&& ./oe-layertool-setup.sh -f configs/processor-sdk-linux/processor-sdk-linux-08_01_00.txt \
 	&& cd build \
 	&& echo "INHERIT += \"own-mirrors\"" >> conf/local.conf \
 	&& echo "SOURCE_MIRROR_URL = \"https://software-dl.ti.com/processor-sdk-mirror/sources/\"" >> conf/local.conf \
@@ -91,7 +92,7 @@ RUN echo . \
 	&& . conf/setenv \
 	&& echo .
 
-	#&& TOOLCHAIN_BASE_ARMV7= TOOLCHAIN_BASE_ARMV8= MACHINE=j7-evm bitbake -k arago-core-psdkla-bundle \
+	#&& MACHINE=j7-evm bitbake -k arago-core-psdkla-bundle \
 
 FROM ubuntu:20.04 AS ubuntu-tisdk1
 ENV DEBIAN_FRONTEND=noninteractive
