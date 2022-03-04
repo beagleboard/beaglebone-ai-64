@@ -508,6 +508,9 @@ RUN echo . \
 	&& ldconfig \
 	&& echo .
 
+WORKDIR /opt
+ENV LD_PRELOAD=/usr/lib/aarch64-linux-gnu/libgomp.so.1
+
 #FROM ubuntu-tiros-foxy AS tisdk-minimal
 #RUN echo . \
 #	&& rm /opt/clang+llvm-13.0.1-armv7a-linux-gnueabihf.tar.xz \
