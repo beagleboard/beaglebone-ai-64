@@ -357,6 +357,8 @@ RUN echo . \
 	&& ninja -C build \
 	&& ninja -C build install \
 	&& echo .
+ENV GST_PLUGIN_PATH=/usr/local/lib/aarch64-linux-gnu/gstreamer-1.0
+ENV LD_PRELOAD=/usr/lib/aarch64-linux-gnu/libgomp.so.1
 
 ###############
 # Robotics SDK
