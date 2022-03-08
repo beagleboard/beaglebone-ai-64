@@ -3,62 +3,71 @@ This is a list of symlink interfaces based on BeagleBone Cape header pins.<ref>[
 = Overall =
 
 {| class="wikitable" style="text-align: center;"
-|+ Bone header definition
+|+ BeagleBone Cape header definition
 |-
-! colspan=4 | P9                        !! colspan=4 | P8
+! colspan=4 | P9                        !! !! colspan=4 | P8
 |-
-! Functions !! odd !! even !! Functions !! Functions !! odd !! even !! Functions
+! Functions !! odd !! even !! Functions !! !! Functions !! odd !! even !! Functions
 |-
-| USB D+    || E1  || E2   || USB D-    || -         || -   || -    || -
+| USB D+    || E1  || E2   || USB D-    || || -         || -   || -    || -
 |-
-| 5V OUT    || E3  || E4   || GND       || -         || -   || -    || -
+| 5V OUT    || E3  || E4   || GND       || || -         || -   || -    || -
 |-
-| GND       || 1   || 2    || GND       || GND       || 1   || 2    || GND
+| GND       || 1   || 2    || GND       || || GND       || 1   || 2    || GND
 |-
-| 3V3 OUT   || 3   || 4    || 3V3 OUT   ||           || 3   || 4    ||
+| 3V3 OUT   || 3   || 4    || 3V3 OUT   || || G M       || 3   || 4    || G M
 |-
-| 5V IN     || 5   || 6    || 5V IN     ||           || 5   || 6    ||
+| 5V IN     || 5   || 6    || 5V IN     || || G M       || 5   || 6    || G M
+|-                                            
+| 5V OUT    || 7   || 8    || 5V OUT    || ||           || 7   || 8    ||
+|-                                            
+| PWR BUT   || 9   || 10   || RESET     || ||           || 9   || 10   ||
+|-                                            
+|           || 11  || 12   ||           || ||           || 11  || 12   ||
 |-
-| 5V OUT    || 7   || 8    || 5V OUT    ||           || 7   || 8    ||
+|           || 13  || 14   ||           || ||           || 13  || 14   ||
+|-                                            
+|           || 15  || 16   ||           || ||           || 15  || 16   ||
+|-                                            
+|           || 17  || 18   ||           || ||           || 17  || 18   ||
+|-                                            
+|           || 19  || 20   ||           || ||           || 19  || 20   ||
 |-
-| PWR BUT   || 9   || 10   || RESET     ||           || 9   || 10   ||
+|           || 21  || 22   ||           || ||           || 21  || 22   ||
+|-                                            
+|           || 23  || 24   ||           || ||           || 23  || 24   ||
+|-                                            
+|           || 25  || 26   ||           || ||           || 25  || 26   ||
+|-                                            
+|           || 27  || 28   ||           || ||           || 27  || 28   ||
 |-
-|           || 11  || 12   ||           ||           || 11  || 12   ||
+|           || 29  || 30   ||           || ||           || 29  || 30   ||
+|-                                            
+|           || 31  || 32   ||           || ||           || 31  || 32   ||
+|-                                            
+|           || 33  || 34   ||           || ||           || 33  || 34   ||
+|-                                            
+|           || 35  || 36   ||           || ||           || 35  || 36   ||
 |-
-|           || 13  || 14   ||           ||           || 13  || 14   ||
+|           || 37  || 38   ||           || ||           || 37  || 38   ||
+|-                                            
+|           || 39  || 40   ||           || ||           || 39  || 40   ||
+|-                                            
+|           || 41  || 42   ||           || ||           || 41  || 42   ||
+|-                                            
+| GND       || 43  || 44   || GND       || ||           || 43  || 44   ||
 |-
-|           || 15  || 16   ||           ||           || 15  || 16   ||
-|-
-|           || 17  || 18   ||           ||           || 17  || 18   ||
-|-
-|           || 19  || 20   ||           ||           || 19  || 20   ||
-|-
-|           || 21  || 22   ||           ||           || 21  || 22   ||
-|-
-|           || 23  || 24   ||           ||           || 23  || 24   ||
-|-
-|           || 25  || 26   ||           ||           || 25  || 26   ||
-|-
-|           || 27  || 28   ||           ||           || 27  || 28   ||
-|-
-|           || 29  || 30   ||           ||           || 29  || 30   ||
-|-
-|           || 31  || 32   ||           ||           || 31  || 32   ||
-|-
-|           || 33  || 34   ||           ||           || 33  || 34   ||
-|-
-|           || 35  || 36   ||           ||           || 35  || 36   ||
-|-
-|           || 37  || 38   ||           ||           || 37  || 38   ||
-|-
-|           || 39  || 40   ||           ||           || 39  || 40   ||
-|-
-|           || 41  || 42   ||           ||           || 41  || 42   ||
-|-
-| GND       || 43  || 44   || GND       ||           || 43  || 44   ||
-|-
-| GND       || 45  || 46   || GND       ||           || 45  || 46   ||
+| GND       || 45  || 46   || GND       || ||           || 45  || 46   ||
 |}
+
+* A: ADC
+* C: CAN
+* G: GPIO
+* M: MMC/SDIO
+* P: PWM
+* Q: eQEP
+* S: SPI
+* U: UART
 
 = LEDs =
 
@@ -86,7 +95,7 @@ The compatibility layer comes with simple reference nodes for attaching LEDs to 
 {| class="wikitable" style="text-align: center;"
 |+ Bone LEDs
 |-
-! LED !! Header pin !! BBBWL/BBB !! BBAI
+! LED !! Header pin !! BBBWL/BBB !! BBAI !! BBAI64
 |-
 ! /sys/class/leds/led_P8_03 
 | P8_03 || gpio1_6 || gpio1_24
