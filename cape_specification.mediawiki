@@ -5,17 +5,17 @@ This is a list of symlink interfaces based on BeagleBone Cape header pins.<ref>[
 {| class="wikitable" style="text-align: center;"
 |+ BeagleBone Cape header definition
 |-
-! colspan=4 | P9                        !! !! colspan=4 | P8
+! colspan=4 | P9                        !!.!! colspan=4 | P8
 |-
-! Functions !! odd !! even !! Functions !! !! Functions !! odd !! even !! Functions
+! Functions !! odd !! even !! Functions !!.!! Functions !! odd !! even !! Functions
 |-
-| USB D+    || E1  || E2   || USB D-    || || -         || -   || -    || -
+| USB D+    || E1  || E2   || USB D-    ||.|| -         || -   || -    || -
 |-
-| 5V OUT    || E3  || E4   || GND       || || -         || -   || -    || -
+| 5V OUT    || E3  || E4   || GND       ||.|| -         || -   || -    || -
 |-
-| GND       || 1   || 2    || GND       || || GND       || 1   || 2    || GND
+| GND       || 1   || 2    || GND       ||.|| GND       || 1   || 2    || GND
 |-
-| 3V3 OUT   || 3   || 4    || 3V3 OUT   || || G M       || 3   || 4    || G M
+| 3V3 OUT   || 3   || 4    || 3V3 OUT   ||.|| G M       || 3   || 4    || G M
 |-
 | 5V IN     || 5   || 6    || 5V IN     || || G M       || 5   || 6    || G M
 |-                                            
