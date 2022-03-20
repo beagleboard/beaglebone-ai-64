@@ -250,3 +250,5 @@ RUN echo . \
     && cd python \
     && python3 setup.py install \
     && echo .
+
+RUN python3 -m pip install scikit-learn scipy matplotlib
