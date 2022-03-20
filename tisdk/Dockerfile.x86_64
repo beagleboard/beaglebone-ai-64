@@ -54,30 +54,28 @@ RUN echo . \
     && chmod +x ./ti-processor-sdk-linux-j7-evm-08_01_00_07-Linux-x86-Install.bin \
     && ./ti-processor-sdk-linux-j7-evm-08_01_00_07-Linux-x86-Install.bin \
     && rm /opt/ti-processor-sdk-linux-j7-evm-08_01_00_07-Linux-x86-Install.bin \
-    && wget https://software-dl.ti.com/jacinto7/esd/processor-sdk-rtos-jacinto7/08_01_00_11/exports/ti-processor-sdk-rtos-j721e-evm-08_01_00_11.tar.gz \
-    && tar xf ti-processor-sdk-rtos-j721e-evm-08_01_00_11.tar.gz \
-    && rm /opt/ti-processor-sdk-rtos-j721e-evm-08_01_00_11.tar.gz \
-    && cd /opt/ti-processor-sdk-rtos-j721e-evm-08_01_00_11 \
+    && wget https://software-dl.ti.com/jacinto7/esd/processor-sdk-rtos-jacinto7/08_01_00_13/exports/ti-processor-sdk-rtos-j721e-evm-08_01_00_13.tar.gz \
+    && tar xf ti-processor-sdk-rtos-j721e-evm-08_01_00_13.tar.gz \
+    && rm /opt/ti-processor-sdk-rtos-j721e-evm-08_01_00_13.tar.gz \
+    && cd /opt/ti-processor-sdk-rtos-j721e-evm-08_01_00_13 \
     && ln -s /opt/ti-processor-sdk-linux-j7-evm-08_01_00_07/board-support/prebuilt-images/boot-j7-evm.tar.gz \
     && ln -s /opt/ti-processor-sdk-linux-j7-evm-08_01_00_07/filesystem/tisdk-default-image-j7-evm.tar.xz \
-    && cd /opt/ti-processor-sdk-rtos-j721e-evm-08_01_00_11/psdk_rtos \
+    && cd /opt/ti-processor-sdk-rtos-j721e-evm-08_01_00_13/psdk_rtos \
     && ln -sf $PWD/j7_c_models/lib/PC/x86_64/LINUX/release/libDOF.so /usr/lib/x86_64-linux-gnu/libDOF.so \
     && ln -sf $PWD/j7_c_models/lib/PC/x86_64/LINUX/release/libglbce.so /usr/lib/x86_64-linux-gnu/libApicalSIM.so.1 \
-    && cd /opt/ti-processor-sdk-rtos-j721e-evm-08_01_00_11 \
+    && cd /opt/ti-processor-sdk-rtos-j721e-evm-08_01_00_13 \
     && /bin/bash ./psdk_rtos/scripts/setup_psdk_rtos.sh --skip_sudo \
     && cd glew-2.0.0 \
     && make install \
-    && cd /opt/ti-processor-sdk-rtos-j721e-evm-08_01_00_11 \
-    && echo "BUILD_EMULATION=no" >> tiovx/build_flags.mak \
-    && echo "BUILD_TARGET_MODE=yes" >> tiovx/build_flags.mak \
-    && echo "BUILD_LINUX_A72=yes" >> tiovx/build_flags.mak \
-    && echo "PROFILE=release" >> tiovx/build_flags.mak \
-    && cd vision_apps \
-    && make all -j2 \
-    && make linux_fs_stage \
+    && cd /opt/ti-processor-sdk-rtos-j721e-evm-08_01_00_13/vision_apps \
+    && BUILD_EMULATION=no BUILD_TARGET_MODE=yes BUILD_LINUX_A72=yes BUILD_EDGEAI=yes PROFILE=release make all -j2 \
+    && BUILD_EMULATION=no BUILD_TARGET_MODE=yes BUILD_LINUX_A72=yes BUILD_EDGEAI=yes PROFILE=release make linux_fs_stage \
     && cd /tmp/tivision_apps_targetfs_stage \
     && tar cJf /opt/tivision_apps.tar.xz . \
+    && cd \
     && rm -rf /tmp/tivision_apps_targetfs_stage \
+    && cd /opt/ti-processor-sdk-rtos-j721e-evm-08_01_00_13/targetfs \
+    && tar cJf /opt/rtos_dlr.tar.xz `find . | grep dlr` \
     && echo .
 
 FROM ubuntu-tisdk1 AS ubuntu-tiros-foxy
@@ -190,9 +188,3 @@ ENV ROS_WS=${WORK_DIR}/ros_ws
 WORKDIR ${ROS_WS}
 
 ENTRYPOINT ["/root/entrypoint.sh"]
-
-RUN echo . \
-    && cd /opt/ti-processor-sdk-rtos-j721e-evm-08_01_00_11/targetfs \
-    && tar cJf /opt/rtos_dlr.tar.xz `find . | grep dlr` \
-    && echo .
-

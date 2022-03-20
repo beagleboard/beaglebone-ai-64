@@ -1,13 +1,24 @@
+On x86 configure Docker:
 
-On x86:
+```
+echo $'{\n    "experimental": true\n}' | sudo tee /etc/docker/daemon.json
+```
+Then restart docker.service
+```
+sudo systemctl restart docker.service
+```
+
+Then build and extract the tarballs
 ```
 ./build.sh
 ./extract_visionapps.sh
 ```
 
-Copy the *.tar.xz files to BB-AI-64
+On BeagleBone AI-64:
+* Make sure Docker points to a 64GB or more storage area based on the current scripts.
+* You'll need at least 2GB of swapfile to build this image.
+* Copy the \*.tar.xz files from x86
 
-On BB-AI-64:
 ```
 ./build.sh
 ./run.sh

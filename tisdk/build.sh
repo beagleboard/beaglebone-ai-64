@@ -1,7 +1,7 @@
-#!/bin/sh
-export DOCKER_BUILDKIT=1
-docker build \
-	--network host \
+#!/bin/bash -ex
+DOCKER_BUILDKIT=1 docker build \
 	-t tisdk \
 	-f Dockerfile.`arch` \
+	--target=ubuntu-tiros-foxy \
 	.
+
