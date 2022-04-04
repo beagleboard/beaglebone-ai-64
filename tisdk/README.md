@@ -6,6 +6,8 @@ Flash with Balena Etcher:
 
 Power the board with the USER button pressed and the freshly programmed uSD card. After about 30 seconds, the LEDs should start lighting up in a sweeping pattern. Wait for the flashing to complete (LEDs stop flashing).
 
+Remove uSD and reboot the board. You'll be running off the eMMC (16GB). 
+
 On x86 configure Docker:
 
 ```
