@@ -1,3 +1,11 @@
+Download the latest eMMC flasher image:
+* [eMMC flasher](https://rcn-ee.net/rootfs/debian-arm64/2022-04-04/j721e_evm-emmc-flasher-debian-11.3-xfce-arm64-2022-04-04-8gb.img.xz)
+
+Flash with Balena Etcher:
+* https://www.balena.io/etcher/
+
+Boot the board with the freshly programmed uSD card and wait for the flashing to complete (LEDs stop flashing).
+
 On x86 configure Docker:
 
 ```
