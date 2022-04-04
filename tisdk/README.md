@@ -1,7 +1,7 @@
 Download the latest eMMC flasher image:
 * [eMMC flasher](https://rcn-ee.net/rootfs/debian-arm64/2022-04-04/j721e_evm-emmc-flasher-debian-11.3-xfce-arm64-2022-04-04-8gb.img.xz)
 
-Flash with Balena Etcher:
+Flash the image to a uSD card with Balena Etcher:
 * https://www.balena.io/etcher/
 
 Power the board with the USER button pressed and the freshly programmed uSD card. After about 30 seconds, the LEDs should start lighting up in a sweeping pattern. Wait for the flashing to complete (LEDs stop flashing).
