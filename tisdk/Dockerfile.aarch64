@@ -398,7 +398,7 @@ WORKDIR ${ROS_WS}
 # change the DDS implementation to Cyclone DDS
 ENV RMW_IMPLEMENTATION rmw_cyclonedds_cpp
 
-FROM ubuntu-tiros-foxy AS tisdk-minimal
+FROM ubuntu-tiros-foxy AS tisdk
 RUN echo . \
 	&& rm -rf /opt/ti-processor-sdk-rtos-j721e-evm-08_01_00_11 \
 	&& rm -rf /opt/tensorflow \
