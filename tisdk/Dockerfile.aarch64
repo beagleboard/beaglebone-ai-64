@@ -244,7 +244,7 @@ ENV PROTOBUF_VER=3.11.3
 ENV ZIP_FILE=protoc-${PROTOBUF_VER}-linux-aarch_64.zip
 WORKDIR /opt
 RUN echo . \
-	&& git clone --single-branch --branch tidl-j7 --depth 1 https://github.com/TexasInstruments/onnxruntime.git \
+	&& git clone --single-branch --branch TIDL_PSDK_8.1 --depth 1 https://github.com/TexasInstruments/onnxruntime.git \
 	&& echo .
 
 RUN echo . \
@@ -354,7 +354,7 @@ RUN echo . \
 
 WORKDIR /opt
 RUN echo . \
-	&& git clone --branch fix/pkgconfig-imaging-sdk-update https://github.com/TexasInstruments/edgeai-gst-plugins.git \
+	&& git clone --branch v0.5.3 https://github.com/TexasInstruments/edgeai-gst-plugins.git \
 	&& cd edgeai-gst-plugins \
 	&& meson build --prefix=/usr/local -Dpkg_config_path=pkgconfig \
 	&& ninja -C build \
