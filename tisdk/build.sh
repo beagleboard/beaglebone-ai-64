@@ -1,7 +1,7 @@
 #!/bin/bash -ex
 DOCKER_BUILDKIT=1 docker build \
-	-t tisdk2 \
+	-t tisdk \
 	-f Dockerfile.`arch` \
-	--target=arago-sdk \
+	--target=tisdk \
 	.
 
