@@ -4,7 +4,8 @@ docker-build:
   services:
     - docker:dind
   script:
-    - cd tisdk && ./build.sh && ./save.sh
+    - docker build -t ti-tflite -f tisdk/Dockerfile.aarch64 tisdk/ 
+    - docker save ti-tflite | xz > ti-tflite.tar.xz
   artifacts:
     paths:
       - ti-tflite.tar.xz
