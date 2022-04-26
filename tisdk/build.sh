@@ -1,6 +1,6 @@
 #!/bin/bash -ex
 DOCKER_BUILDKIT=1 docker build \
-	-t tisdk \
+	-t ti-tflite \
 	-f Dockerfile.`arch` \
 	--target=ti-tflite \
 	.
