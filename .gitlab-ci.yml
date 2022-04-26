@@ -1,0 +1,10 @@
+docker-build:
+  image: docker:latest
+  stage: build
+  services:
+    - docker:dind
+  script:
+    - cd tisdk && ./build.sh && ./save.sh
+  artifacts:
+    paths:
+      - ti-tflite.tar.xz
