@@ -2,6 +2,6 @@
 DOCKER_BUILDKIT=1 docker build \
 	-t tisdk \
 	-f Dockerfile.`arch` \
-	--target=tisdk \
+	--target=ti-tflite \
 	.
 
