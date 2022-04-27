@@ -5,59 +5,60 @@ This is a list of symlink interfaces based on BeagleBone Cape header pins.<ref>[
 {| class="wikitable" style="text-align: center;"
 |+ BeagleBone Cape header definition
 |-
-! colspan=4 | P9                        !!.!! colspan=4 | P8
+! colspan="4" style="text-align: center;" |P9  !! .
+! colspan="4" style="text-align: center;" |P8
 |-
-! Functions !! odd !! even !! Functions !!.!! Functions !! odd !! even !! Functions
+! Functions !! odd !! even !! Functions !! &nbsp; !! Functions !! odd !! even !! Functions
 |-
-| USB D+    || E1  || E2   || USB D-    ||.|| -         || -   || -    || -
+| USB D+    || E1  || E2   || USB D-    || &nbsp; || -         || -   || -    || -
 |-
-| 5V OUT    || E3  || E4   || GND       ||.|| -         || -   || -    || -
+| 5V OUT    || E3  || E4   || GND       || &nbsp; || -         || -   || -    || -
 |-
-| GND       || 1   || 2    || GND       ||.|| GND       || 1   || 2    || GND
+| GND       || 1   || 2    || GND       || &nbsp; || GND       || 1   || 2    || GND
 |-
-| 3V3 OUT   || 3   || 4    || 3V3 OUT   ||.|| D M       || 3   || 4    || D M
+| 3V3 OUT   || 3   || 4    || 3V3 OUT   || &nbsp; || D M       || 3   || 4    || D M
 |-
-| 5V IN     || 5   || 6    || 5V IN     ||.|| D M       || 5   || 6    || D M
+| 5V IN     || 5   || 6    || 5V IN     || &nbsp; || D M       || 5   || 6    || D M
 |-                                            
-| 5V OUT    || 7   || 8    || 5V OUT    ||.|| D         || 7   || 8    || D
+| 5V OUT    || 7   || 8    || 5V OUT    || &nbsp; || D         || 7   || 8    || D
 |-                                            
-| PWR BUT   || 9   || 10   || RESET     ||.|| D         || 9   || 10   || D
+| PWR BUT   || 9   || 10   || RESET     || &nbsp; || D         || 9   || 10   || D
 |-                                            
-| D U4      || 11  || 12   || D         ||.|| D         || 11  || 12   || D
+| D U4      || 11  || 12   || D         || &nbsp; || D         || 11  || 12   || D
 |-
-| D U4      || 13  || 14   || D E       ||.|| D E       || 13  || 14   || D
+| D U4      || 13  || 14   || D E       || &nbsp; || D E       || 13  || 14   || D
 |-                                            
-| D         || 15  || 16   || D E       ||.|| D         || 15  || 16   || D
-|-                                            
-| D I1 S0   || 17  || 18   || D I1 S0   ||.|| D         || 17  || 18   || D
-|-                                            
-| D I2      || 19  || 20   || D I2      ||.|| D E       || 19  || 20   || D M P1
+| D         || 15  || 16   || D E       || &nbsp; || D         || 15  || 16   || D
 |-
-| D E S0 U2 || 21  || 22   || D E S0 U2 ||.|| D M P1    || 21  || 22   || D M
-|-                                            
-| D         || 23  || 24   || D I U1    ||.|| D M       || 23  || 24   || D M
-|-                                            
-| D P0      || 25  || 26   || D I U1    ||.|| D M       || 25  || 26   || D
-|-                                            
-| D P0      || 27  || 28   || D P0 S1   ||.|| D L P1    || 27  || 28   || D L P1
+| D I1 S0   || 17  || 18   || D I1 S0   || &nbsp; || D         || 17  || 18   || D
 |-
-| D E S1 P0 || 29  || 30   || D P0 S1   ||.|| D L P1    || 29  || 30   || D L P1
-|-                                            
-| D E S1 P0 || 31  || 32   || VDD_ADC   ||.|| D L       || 31  || 32   || D L
-|-                                            
-| A         || 33  || 34   || GND_ADC   ||.|| D L       || 33  || 34   || D E L
-|-                                            
-| A         || 35  || 36   || A         ||.|| D L       || 35  || 36   || D E L
+| D I2      || 19  || 20   || D I2      || &nbsp; || D E       || 19  || 20   || D M P1
 |-
-| A         || 37  || 38   || A         ||.|| D L U5    || 37  || 38   || D L U5
+| D E S0 U2 || 21  || 22   || D E S0 U2 || &nbsp; || D M P1    || 21  || 22   || D M
 |-                                            
-| A         || 39  || 40   || A         ||.|| D L P1    || 39  || 40   || D L P1
+| D         || 23  || 24   || D I U1    || &nbsp; || D M       || 23  || 24   || D M
 |-                                            
-| D         || 41  || 42   || D         ||.|| D L P1    || 41  || 42   || D L P1
+| D P0      || 25  || 26   || D I U1    || &nbsp; || D M       || 25  || 26   || D
 |-                                            
-| GND       || 43  || 44   || GND       ||.|| D L P1    || 43  || 44   || D L P1
+| D P0      || 27  || 28   || D P0 S1   || &nbsp; || D L P1    || 27  || 28   || D L P1
 |-
-| GND       || 45  || 46   || GND       ||.|| D E L P1  || 45  || 46   || D E L P1
+| D E S1 P0 || 29  || 30   || D P0 S1   || &nbsp; || D L P1    || 29  || 30   || D L P1
+|-                                            
+| D E S1 P0 || 31  || 32   || VDD_ADC   || &nbsp; || D L       || 31  || 32   || D L
+|-                                            
+| A         || 33  || 34   || GND_ADC   || &nbsp; || D L       || 33  || 34   || D E L
+|-                                            
+| A         || 35  || 36   || A         || &nbsp; || D L       || 35  || 36   || D E L
+|-
+| A         || 37  || 38   || A         || &nbsp; || D L U5    || 37  || 38   || D L U5
+|-                                            
+| A         || 39  || 40   || A         || &nbsp; || D L P1    || 39  || 40   || D L P1
+|-                                            
+| D         || 41  || 42   || D         || &nbsp; || D L P1    || 41  || 42   || D L P1
+|-                                            
+| GND       || 43  || 44   || GND       || &nbsp; || D L P1    || 43  || 44   || D L P1
+|-
+| GND       || 45  || 46   || GND       || &nbsp; || D E L P1  || 45  || 46   || D E L P1
 |}
 
 * A: ADC
