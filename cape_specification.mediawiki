@@ -318,89 +318,34 @@ Compatibility layer provides simple I2C bone bus nodes for creating compatible o
 {| class="wikitable" style="text-align: center;"
 |+ Bone bus I2C
 |-
-! Bone bus !! BBBWL/BBB !! BBAI !! SCL !! SDA !! Overlay 
+! SYSFS !! DT symbol !! BBBWL/BBB !! BBAI !! BBAI64 !! SCL !! SDA !! Overlay 
 |-
 !/dev/bone/i2c/0
-| I2C0 || I2C1 
+| I2C0 || I2C1 || TBD
 | colspan="3" style="text-align: center;" |❌ (On-board) 
 |-
 |-
 !/dev/bone/i2c/1
-| I2C1 || I2C5 || P9.17 || P9.18
+| I2C1 || I2C5 || MAIN_I2C6 || P9.17 || P9.18
 | [https://github.com/lorforlinux/bb.org-overlays/blob/bone_i2c/src/arm/BONE-I2C1.dts BONE-I2C1.dts]
 |-
 |-
 !/dev/bone/i2c/2
-| I2C2 || I2C4 || P9.19 || P9.20
+| I2C2 || I2C4 || MAIN_I2C3 || P9.19 || P9.20
 | [https://github.com/lorforlinux/bb.org-overlays/blob/bone_i2c/src/arm/BONE-I2C2.dts BONE-I2C2.dts]
 |-
 |-
 !/dev/bone/i2c/2a
-| I2C2 || N/A || P9.21 || P9.22
+| I2C2 || N/A || TBD || P9.21 || P9.22
 | [https://github.com/lorforlinux/bb.org-overlays/blob/bone_i2c/src/arm/BONE-I2C2A.dts BONE-I2C2A.dts]
 |-
 |-
 !/dev/bone/i2c/3
-| I2C1 || I2C3 || P9.24 || P9.26
+| I2C1 || I2C3 || MAIN_I2C4 || P9.24 || P9.26
 | [https://github.com/lorforlinux/bb.org-overlays/blob/bone_i2c/src/arm/BONE-I2C3.dts BONE-I2C3.dts]
 |-
-
 |}
 
-
-
-<!--
-=== /dev/bone/i2c/0 ===
-AM3358 I2C0<br>
-AM5729 I2C1
-* On-board peripherals
-
-=== /dev/bone/i2c/1 ===
-https://github.com/beagleboard/bb.org-overlays/blob/master/src/arm/BB-I2C1-00A0.dts <br>
-AM3358 I2C1<br>
-AM5729 I2C5
-* P9.17 - SCL
-* P9.18 - SDA
-
-=== /dev/bone/i2c/2 ===
-https://github.com/beagleboard/bb.org-overlays/blob/master/src/arm/BB-I2C2-00A0.dts <br>
-AM3358 I2C2<br>
-AM5729 I2C4
-* P9.19 - SCL
-* P9.20 - SDA
-
-=== /dev/bone/i2c/2a ===
-TODO<br>
-AM3358 I2C2<br>
-AM5729 ''N/A''
-* P9.21 - SCL
-* P9.22 - SDA
-
-=== /dev/bone/i2c/3 ===
-TODO<br>
-AM3358 I2C1<br>
-AM5729 I2C3
-* P9.24 - SCL
-* P9.26 - SDA
-
-=== /dev/bone/i2c/5 ===
-AM3358 ''N/A''<br>
-AM5729 I2C3
-* P9.29 - SCL
-* P9.31 - SDA
-
-=== /dev/bone/i2c/6 ===
-AM3358 ''N/A''<br>
-AM5729 I2C4
-* P9.27 - SCL
-* P9.12 - SDA
-
-=== /dev/bone/i2c/7 ===
-AM3358 ''N/A''<br>
-AM5729 I2C4
-* P8.37 - SCL
-* P8.38 - SDA
--->
 
 = SPI =
 SPI bone bus nodes allow creating compatible overlays for BBBWl, BBB, & BBAI. For the definitions, you can see [https://github.com/lorforlinux/BeagleBoard-DeviceTrees/blob/97a6f0daa9eab09633a2064f68a53b107d6e3968/src/arm/bbai-bone-buses.dtsi#L406 bbai-bone-buses.dtsi#L406] & [https://github.com/lorforlinux/BeagleBoard-DeviceTrees/blob/97a6f0daa9eab09633a2064f68a53b107d6e3968/src/arm/bbb-bone-buses.dtsi#L423 bbb-bone-buses.dtsi#L423].
