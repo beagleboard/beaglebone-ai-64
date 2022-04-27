@@ -377,48 +377,6 @@ SPI bone bus nodes allow creating compatible overlays for BBBWl, BBB, & BBAI. Fo
 |}
 
 
-
-
-<!--
-Need to add a symlink from /dev/spi to /dev/bone/spi.
-
-== /dev/bone/spi/0.''x'' ==
-https://github.com/beagleboard/bb.org-overlays/blob/master/src/arm/BB-SPIDEV0-00A0.dts <br>
-AM3358 SPI0<br>
-AM5729 SPI2
-* P9.18 - MOSI
-* P9.21 - MISO
-* P9.22 - CLK
-
-=== /dev/bone/spi/0.0 ===
-AM3358 SPI0 CS0<br>
-AM5729 SPI2 CS0
-* P9.17 - CS
-
-== /dev/bone/spi/1.''x'' ==
-https://github.com/beagleboard/bb.org-overlays/blob/master/src/arm/BB-SPIDEV1-00A0.dts <br>
-AM3358 SPI1<br>
-AM5729 SPI3
-* P9.31 - CLK
-* P9.30 - MOSI
-* P9.29 - MISO
-
-=== /dev/bone/spi/1.0 ===
-AM3358 SPI1 CS0<br>
-AM5729 SPI3 CS0 
-* P9.28 - CS
-
-=== /dev/bone/spi/1.1 ===
-AM3358 SPI1 CS1<br>
-AM5729 SPI3 CS1 
-* P9.42 - CS
-
-=== /dev/bone/spi/1.2 ===
-AM3358 SPI1 GPIO1_17<br>
-AM5729 SPI3 GPIO7_11 
-* P9.23 - CS
--->
-
 = UART =
 UART bone bus nodes allow creating compatible overlays for BBBWl, BBB, & BBAI. For the definitions, you can see [https://github.com/lorforlinux/BeagleBoard-DeviceTrees/blob/97a6f0daa9eab09633a2064f68a53b107d6e3968/src/arm/bbai-bone-buses.dtsi#L367 bbai-bone-buses.dtsi#L367] & [https://github.com/lorforlinux/BeagleBoard-DeviceTrees/blob/97a6f0daa9eab09633a2064f68a53b107d6e3968/src/arm/bbb-bone-buses.dtsi#L382 bbb-bone-buses.dtsi#L382].
 {| class="wikitable" style="text-align: center;"
@@ -478,65 +436,7 @@ UART bone bus nodes allow creating compatible overlays for BBBWl, BBB, & BBAI. F
 | P8.31
 | [https://github.com/lorforlinux/bb.org-overlays/blob/bone_uart/src/arm/BONE-UART5.dts BONE-UART5.dts]
 |-
-
 |}
-
-<!--
-=== /dev/bone/uart/0 ===
-AM3358 UART0<br>
-AM5729 UART1
-* console debug header pins
-
-=== /dev/bone/uart/1 ===
-https://github.com/beagleboard/bb.org-overlays/blob/master/src/arm/BB-UART1-00A0.dts <br>
-https://github.com/beagleboard/bb.org-overlays/blob/master/src/arm/BB-UART1-RTSCTS-00A0.dts <br>
-AM3358 UART1<br>
-AM5729 UART10
-* P9.24 - TX
-* P9.26 - RX
-* P9.19 - RTSn
-* P9.20 - CTSn
-* P8.4 - RTSn (''N/A'' on AM3358)
-* P8.3 - CTSn (''N/A'' on AM3358)
-
-=== /dev/bone/uart/2 ===
-https://github.com/beagleboard/bb.org-overlays/blob/master/src/arm/BB-UART2-00A0.dts <br>
-https://github.com/beagleboard/bb.org-overlays/blob/master/src/arm/BB-UART2-RTSCTS-00A0.dts <br>
-AM3358 UART2<br>
-AM5729 UART3
-* P9.21 - TX
-* P9.22 - RX
-* P8.38 - RTSn (''N/A'' on AM5729)
-* P8.37 - CTSn (''N/A'' on AM5729)
-
-=== /dev/bone/uart/3 ===
-https://github.com/beagleboard/bb.org-overlays/blob/master/src/arm/BB-UART3-00A0.dts <br>
-AM3358 UART3<br>
-AM5729 ''N/A''
-* P9.42 - TX
-
-=== /dev/bone/uart/4 ===
-https://github.com/beagleboard/bb.org-overlays/blob/master/src/arm/BB-UART4-00A0.dts <br>
-https://github.com/beagleboard/bb.org-overlays/blob/master/src/arm/BB-UART4-RTSCTS-00A0.dts <br>
-AM3358 UART4<br>
-AM5729 UART5
-* P9.13 - TX
-* P9.11 - RX
-* P8.33 - RTSn (''N/A'' on AM5729)
-* P8.35 - CTSn (''N/A'' on AM5729)
-* P8.6 - RTSn (''N/A'' on AM3358)
-* P8.5 - CTSn (''N/A'' on AM3358)
-
-=== /dev/bone/uart/5 ===
-https://github.com/beagleboard/bb.org-overlays/blob/master/src/arm/BB-UART5-00A0.dts <br>
-https://github.com/beagleboard/bb.org-overlays/blob/master/src/arm/BB-UART5-RTSCTS-00A0.dts <br>
-AM3358 UART5<br>
-AM5729 UART8
-* P8.37 - TX
-* P8.38 - RX
-* P8.32 - RTSn
-* P8.31 - CTSn
--->
 
 = CAN =
 CAN bone bus nodes allow creating compatible overlays for BBBWl, BBB, & BBAI. For the definitions, you can see [https://github.com/lorforlinux/BeagleBoard-DeviceTrees/blob/97a6f0daa9eab09633a2064f68a53b107d6e3968/src/arm/bbai-bone-buses.dtsi#L440 bbai-bone-buses.dtsi#L440] & [https://github.com/lorforlinux/BeagleBoard-DeviceTrees/blob/97a6f0daa9eab09633a2064f68a53b107d6e3968/src/arm/bbb-bone-buses.dtsi#L457 bbb-bone-buses.dtsi#L457].
