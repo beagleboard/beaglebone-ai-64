@@ -357,20 +357,22 @@ SPI bone bus nodes allow creating compatible overlays for BBBWl, BBB, & BBAI. Fo
 {| class="wikitable" style="text-align: center;"
 |+ Bone bus SPI
 |-
-! Bone bus !! BBBWL/BBB !! BBAI !! MOSI !! MISO !! CLK !! CS !! Overlay 
+! Bone bus !! DT symbol !! BBBWL/BBB !! BBAI !! BBAI64 !! MOSI !! MISO !! CLK !! CS !! Overlay 
 |-
 !/dev/bone/spi/0.''x''
-| SPI0 || SPI2 || P9.18 || P9.21 || P9.22
+!bone_spi_0
+| SPI0 || SPI2 || MAIN_SPI6 || P9.18 || P9.21 || P9.22
 | 
 * P9.17 (CS0)
-* P9.23 (CS1 - BBAI only)
+* P9.23 (CS1 - BBAI and BBAI64 only)
 | 
 * [https://github.com/lorforlinux/bb.org-overlays/blob/bone_spi/src/arm/BONE-SPI0_0.dts BONE-SPI0_0.dts]
 * [https://github.com/beagleboard/BeagleBoard-DeviceTrees/blob/v4.19.x-ti-overlays/src/arm/overlays/BBAI-SPI0_1.dts BBAI-SPI0_1.dts]
 |-
 |-
 !/dev/bone/spi/1.''x''
-| SPI1 || SPI3 || P9.30 || P9.29 || P9.31
+!bone_spi_1
+| SPI1 || SPI3 || TBD || P9.30 || P9.29 || P9.31
 |
 * P9.28 (CS0)
 * P9.42 (CS1)
