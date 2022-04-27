@@ -63,6 +63,7 @@ This is a list of symlink interfaces based on BeagleBone Cape header pins.<ref>[
 * A: ADC
 * C: CAN
 * G: GPIO
+* I: I2C
 * M: MMC/SDIO
 * P: PWM
 * Q: eQEP
