@@ -44,9 +44,9 @@ This is a list of symlink interfaces based on BeagleBone Cape header pins.<ref>[
 |-
 | D E S1 P0 || 29  || 30   || D P0 S1   || &nbsp; || D L P1    || 29  || 30   || D L P1
 |-                                            
-| D E S1 P0 || 31  || 32   || VDD_ADC   || &nbsp; || D L       || 31  || 32   || D L
+| D E S1 P0 || 31  || 32   || ADC VDD  || &nbsp; || D L       || 31  || 32   || D L
 |-                                            
-| A         || 33  || 34   || GND_ADC   || &nbsp; || D L       || 33  || 34   || D E L
+| A         || 33  || 34   || ADC GND   || &nbsp; || D L       || 33  || 34   || D E L
 |-                                            
 | A         || 35  || 36   || A         || &nbsp; || D L       || 35  || 36   || D E L
 |-
