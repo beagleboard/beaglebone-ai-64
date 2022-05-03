@@ -34,10 +34,7 @@ RUN echo . \
 		usbutils \
 		ncurses-dev \
 		libyaml-cpp-dev \
-		rsync \
-		strace \
 		sysstat \
-		gdb \
 		net-tools \
 		dialog \
 		chrony \
@@ -65,7 +62,7 @@ RUN echo . \
 		llvm-dev \
 		qemu-system-x86 \
 		cmake \
-		clang-10 \
+		clang \
 		libtinfo-dev \
 		fakeroot dh-make dh-python \
 		libeigen3-dev \
