@@ -952,6 +952,9 @@ AM5729 ''N/A'
 = PRU =
 The overlay situation for PRUs is a bit more complex than with other peripherals. The mechanism for loading, starting and stopping the PRUs can go through either UIO or RemoteProc.<ref>reference needed</ref>
 
+* /dev/remoteproc/prussX-coreY (AM3358 X = "", other x = "1|2")
+
+
 {| class="wikitable" style="text-align: center;"
 |+ Bone PRU eCAP
 |-
