@@ -23,6 +23,7 @@ ENV LC_ALL=C.UTF-8
 # Build arguments for component versions
 ARG PSDK_RTOS_VER
 ARG TIDL_LIB_PKG
+ARG TENSORFLOW_TAG
 ARG OSRT_TAG
 ARG ROBOTICS_SDK_TAG
 ARG EDGEAI_APPS_TAG
@@ -109,7 +110,7 @@ RUN echo . \
 ######
 WORKDIR /opt
 RUN echo . \
-	&& git clone --single-branch --branch tidl-j7 --depth 1 https://github.com/TexasInstruments/tensorflow.git \
+	&& git clone --single-branch --branch ${TENSORFLOW_TAG} --depth 1 https://github.com/TexasInstruments/tensorflow.git \
 	&& cd tensorflow \
 	&& mkdir -p tensorflow/lite/tools/make/downloads \
 	&& cd tensorflow/lite/tools/make/downloads \
