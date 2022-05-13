@@ -74,9 +74,8 @@ WORKDIR /opt
 COPY /tivision_apps.tar.xz /opt/
 RUN tar xf /opt/tivision_apps.tar.xz --skip-old-files -C /
 
-#	&& wget https://software-dl.ti.com/jacinto7/esd/processor-sdk-rtos-jacinto7/${PSDK_RTOS_VER}/exports/ti-processor-sdk-rtos-j721e-evm-${PSDK_RTOS_VER}.tar.gz \
 RUN echo . \
-	&& wget https://dr-download.ti.com/software-development/software-development-kit-sdk/MD-bA0wfI4X2g/08.02.00.05/ti-processor-sdk-rtos-j721e-evm-${PSDK_RTOS_VER}.tar.gz \
+	&& wget https://software-dl.ti.com/jacinto7/esd/processor-sdk-rtos-jacinto7/${PSDK_RTOS_VER}/exports/ti-processor-sdk-rtos-j721e-evm-${PSDK_RTOS_VER}.tar.gz \
 	&& tar xf ti-processor-sdk-rtos-j721e-evm-${PSDK_RTOS_VER}.tar.gz \
 	&& rm /opt/ti-processor-sdk-rtos-j721e-evm-${PSDK_RTOS_VER}.tar.gz \
 	&& cd ti-processor-sdk-rtos-j721e-evm-${PSDK_RTOS_VER} \
