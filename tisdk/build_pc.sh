@@ -20,7 +20,7 @@ DOCKER_BUILDKIT=1 docker build \
     --build-arg USE_PROXY=$USE_PROXY \
     --build-arg REPO_LOCATION=$REPO_LOCATION \
     --build-arg HTTP_PROXY=$HTTP_PROXY \
-    --build-arg PSDK_LINUX_VER=08_02_00_03 \
-    --build-arg PSDK_RTOS_VER=08_02_00_05 \
+    --build-arg PSDK_LINUX_VER=08_01_00_05  \
+    --build-arg PSDK_RTOS_VER=08_01_00_13 \
     -f $DOCKERFILE .
 
