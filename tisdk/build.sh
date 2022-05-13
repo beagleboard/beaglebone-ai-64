@@ -22,6 +22,7 @@ DOCKER_BUILDKIT=1 docker build \
     --build-arg HTTP_PROXY=$HTTP_PROXY \
     --build-arg PSDK_RTOS_VER=08_01_00_13 \
     --build-arg TIDL_LIB_PKG=tidl_j7_08_01_00_05 \
+    --build-arg TENSORFLOW_TAG=TIDL_PSDK_8.1 \
     --build-arg OSRT_TAG=TIDL_PSDK_8.1 \
     --build-arg ROBOTICS_SDK_TAG=REL.08.01.00.05 \
     --build-arg EDGEAI_APPS_TAG=REL.PSDK.LINUX.SK.TDA4VM.08.01 \
