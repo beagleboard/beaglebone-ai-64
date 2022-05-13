@@ -80,7 +80,7 @@ ARG PSDK_LINUX_VER
 ARG PSDK_RTOS_VER
 WORKDIR /opt
 RUN echo . \
-    && wget https://software-dl.ti.com/jacinto7/esd/processor-sdk-linux-jacinto7/08_01_00_07/exports/ti-processor-sdk-linux-j7-evm-08_01_00_07-Linux-x86-Install.bin
+    && wget https://software-dl.ti.com/jacinto7/esd/processor-sdk-linux-jacinto7/08_01_00_07/exports/ti-processor-sdk-linux-j7-evm-08_01_00_07-Linux-x86-Install.bin \
     && chmod +x ./ti-processor-sdk-linux-j7-evm-08_01_00_07-Linux-x86-Install.bin \
     && ./ti-processor-sdk-linux-j7-evm-08_01_00_07-Linux-x86-Install.bin \
     && rm /opt/ti-processor-sdk-linux-j7-evm-08_01_00_07-Linux-x86-Install.bin \
