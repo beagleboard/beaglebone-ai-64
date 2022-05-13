@@ -84,7 +84,7 @@ RUN echo . \
 	&& echo .
 
 RUN echo . \
-	&& git clone --depth 1 --single-branch -b master https://git.ti.com/git/jacinto-linux/meta-psdkla.git \
+	&& git clone --depth 1 --single-branch -b PSDKLA-08_01_00_J7 https://git.ti.com/git/jacinto-linux/meta-psdkla.git \
 	&& cp /opt/meta-psdkla/recipes-core/packagegroups/neo-ai-tvm/inc/itidl_rt.h /usr/local/include/itidl_rt.h \
 	&& echo .
 
