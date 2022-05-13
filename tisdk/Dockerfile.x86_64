@@ -80,14 +80,14 @@ ARG PSDK_LINUX_VER
 ARG PSDK_RTOS_VER
 WORKDIR /opt
 RUN echo . \
-    && wget https://dr-download.ti.com/software-development/software-development-kit-sdk/MD-U6uMjOroyO/08.02.00.03/ti-processor-sdk-linux-j7-evm-08_02_00_03-Linux-x86-Install.bin \
-    && chmod +x ./ti-processor-sdk-linux-j7-evm-${PSDK_LINUX_VER}-Linux-x86-Install.bin \
-    && ./ti-processor-sdk-linux-j7-evm-${PSDK_LINUX_VER}-Linux-x86-Install.bin \
-    && rm /opt/ti-processor-sdk-linux-j7-evm-${PSDK_LINUX_VER}-Linux-x86-Install.bin \
-    && wget https://dr-download.ti.com/software-development/software-development-kit-sdk/MD-bA0wfI4X2g/08.02.00.05/ti-processor-sdk-rtos-j721e-evm-08_02_00_05.tar.gz \
-    && tar xf ti-processor-sdk-rtos-j721e-evm-${PSDK_RTOS_VER}.tar.gz \
-    && rm ti-processor-sdk-rtos-j721e-evm-${PSDK_RTOS_VER}.tar.gz \
-    && cd ti-processor-sdk-rtos-j721e-evm-${PSDK_RTOS_VER} \
+    && wget https://software-dl.ti.com/jacinto7/esd/processor-sdk-linux-jacinto7/08_01_00_07/exports/ti-processor-sdk-linux-j7-evm-08_01_00_07-Linux-x86-Install.bin
+    && chmod +x ./ti-processor-sdk-linux-j7-evm-08_01_00_07-Linux-x86-Install.bin \
+    && ./ti-processor-sdk-linux-j7-evm-08_01_00_07-Linux-x86-Install.bin \
+    && rm /opt/ti-processor-sdk-linux-j7-evm-08_01_00_07-Linux-x86-Install.bin \
+    && wget https://software-dl.ti.com/jacinto7/esd/processor-sdk-rtos-jacinto7/08_01_00_13/exports/ti-processor-sdk-rtos-j721e-evm-08_01_00_13.tar.gz  \
+    && tar xf ti-processor-sdk-rtos-j721e-evm-08_01_00_13.tar.gz \
+    && rm ti-processor-sdk-rtos-j721e-evm-08_01_00_13.tar.gz \
+    && cd ti-processor-sdk-rtos-j721e-evm-08_01_00_13 \
     && ln -s /opt/ti-processor-sdk-linux-j7-evm-${PSDK_LINUX_VER}/board-support/prebuilt-images/boot-j7-evm.tar.gz \
     && ln -s /opt/ti-processor-sdk-linux-j7-evm-${PSDK_LINUX_VER}/filesystem/tisdk-default-image-j7-evm.tar.xz \
     && echo .
