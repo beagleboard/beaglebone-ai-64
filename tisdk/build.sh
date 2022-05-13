@@ -24,6 +24,7 @@ DOCKER_BUILDKIT=1 docker build \
     --build-arg TIDL_LIB_PKG=tidl_j7_08_01_00_05 \
     --build-arg TENSORFLOW_TAG=TIDL_PSDK_8.1 \
     --build-arg OSRT_TAG=TIDL_PSDK_8.1 \
+    --build-arg TVM_TAG=TIDL_PSDK_8.1 \
     --build-arg ROBOTICS_SDK_TAG=REL.08.01.00.05 \
     --build-arg EDGEAI_APPS_TAG=REL.PSDK.LINUX.SK.TDA4VM.08.01 \
     --build-arg EDGEAI_GST_PLUGINS_TAG=release-0.5.3 \
