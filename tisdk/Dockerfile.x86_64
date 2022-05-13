@@ -1,7 +1,35 @@
-FROM ubuntu:20.04 AS ubuntu-tisdk1
+ARG USE_PROXY
+ARG HTTP_PROXY
+ARG REPO_LOCATION
+ARG DEBIAN_FRONTEND=noninteractive
+
+#=========================================================================
+FROM ${REPO_LOCATION}ubuntu:20.04 AS base-0
+
+#=========================================================================
+FROM base-0 AS base-1
+ARG USE_PROXY
+ENV USE_PROXY=${USE_PROXY}
+ARG HTTP_PROXY
+ENV http_proxy=${HTTP_PROXY}
+ENV https_proxy=${HTTP_PROXY}
+
+#=========================================================================
+FROM base-${USE_PROXY} AS ubuntu-stage1
+ARG DEBIAN_FRONTEND
+
+# setup proxy settings
+RUN mkdir -p /opt/scripts
+ADD setup_proxy.sh /opt/scripts
+RUN /opt/scripts/setup_proxy.sh
+#=========================================================================
+ENV LANG=C.UTF-8
+ENV LC_ALL=C.UTF-8
+
 ENV DEBIAN_FRONTEND=noninteractive
 ENV LANG=C.UTF-8
 ENV LC_ALL=C.UTF-8
+
 RUN echo . \
     && dpkg --add-architecture i386 \
     && apt update && apt upgrade -y \
@@ -48,125 +76,44 @@ RUN echo . \
     libncurses5 \
     && rm -rf /var/lib/apt/lists/*
 
+ARG PSDK_LINUX_VER
+ARG PSDK_RTOS_VER
 WORKDIR /opt
 RUN echo . \
-    && wget https://software-dl.ti.com/jacinto7/esd/processor-sdk-linux-jacinto7/08_01_00_07/exports/ti-processor-sdk-linux-j7-evm-08_01_00_07-Linux-x86-Install.bin \
-    && chmod +x ./ti-processor-sdk-linux-j7-evm-08_01_00_07-Linux-x86-Install.bin \
-    && ./ti-processor-sdk-linux-j7-evm-08_01_00_07-Linux-x86-Install.bin \
-    && rm /opt/ti-processor-sdk-linux-j7-evm-08_01_00_07-Linux-x86-Install.bin \
-    && wget https://software-dl.ti.com/jacinto7/esd/processor-sdk-rtos-jacinto7/08_01_00_13/exports/ti-processor-sdk-rtos-j721e-evm-08_01_00_13.tar.gz \
-    && tar xf ti-processor-sdk-rtos-j721e-evm-08_01_00_13.tar.gz \
-    && rm /opt/ti-processor-sdk-rtos-j721e-evm-08_01_00_13.tar.gz \
-    && cd /opt/ti-processor-sdk-rtos-j721e-evm-08_01_00_13 \
-    && ln -s /opt/ti-processor-sdk-linux-j7-evm-08_01_00_07/board-support/prebuilt-images/boot-j7-evm.tar.gz \
-    && ln -s /opt/ti-processor-sdk-linux-j7-evm-08_01_00_07/filesystem/tisdk-default-image-j7-evm.tar.xz \
-    && cd /opt/ti-processor-sdk-rtos-j721e-evm-08_01_00_13/psdk_rtos \
-    && ln -sf $PWD/j7_c_models/lib/PC/x86_64/LINUX/release/libDOF.so /usr/lib/x86_64-linux-gnu/libDOF.so \
-    && ln -sf $PWD/j7_c_models/lib/PC/x86_64/LINUX/release/libglbce.so /usr/lib/x86_64-linux-gnu/libApicalSIM.so.1 \
-    && cd /opt/ti-processor-sdk-rtos-j721e-evm-08_01_00_13 \
+    && wget https://dr-download.ti.com/software-development/software-development-kit-sdk/MD-U6uMjOroyO/08.02.00.03/ti-processor-sdk-linux-j7-evm-08_02_00_03-Linux-x86-Install.bin \
+    && chmod +x ./ti-processor-sdk-linux-j7-evm-${PSDK_LINUX_VER}-Linux-x86-Install.bin \
+    && ./ti-processor-sdk-linux-j7-evm-${PSDK_LINUX_VER}-Linux-x86-Install.bin \
+    && rm /opt/ti-processor-sdk-linux-j7-evm-${PSDK_LINUX_VER}-Linux-x86-Install.bin \
+    && wget https://dr-download.ti.com/software-development/software-development-kit-sdk/MD-bA0wfI4X2g/08.02.00.05/ti-processor-sdk-rtos-j721e-evm-08_02_00_05.tar.gz \
+    && tar xf ti-processor-sdk-rtos-j721e-evm-${PSDK_RTOS_VER}.tar.gz \
+    && rm ti-processor-sdk-rtos-j721e-evm-${PSDK_RTOS_VER}.tar.gz \
+    && cd ti-processor-sdk-rtos-j721e-evm-${PSDK_RTOS_VER} \
+    && ln -s /opt/ti-processor-sdk-linux-j7-evm-${PSDK_LINUX_VER}/board-support/prebuilt-images/boot-j7-evm.tar.gz \
+    && ln -s /opt/ti-processor-sdk-linux-j7-evm-${PSDK_LINUX_VER}/filesystem/tisdk-default-image-j7-evm.tar.xz \
+    && echo .
+
+WORKDIR /opt
+RUN echo . \
+    && cd /opt/ti-processor-sdk-rtos-j721e-evm-${PSDK_RTOS_VER}/psdk_rtos \
+    && cd /opt/ti-processor-sdk-rtos-j721e-evm-${PSDK_RTOS_VER} \
     && /bin/bash ./psdk_rtos/scripts/setup_psdk_rtos.sh --skip_sudo \
     && cd glew-2.0.0 \
     && make install \
-    && cd /opt/ti-processor-sdk-rtos-j721e-evm-08_01_00_13/vision_apps \
+    && echo .
+
+WORKDIR /opt
+RUN echo . \
+    && cd /opt/ti-processor-sdk-rtos-j721e-evm-${PSDK_RTOS_VER}/vision_apps \
     && BUILD_EMULATION=no BUILD_TARGET_MODE=yes BUILD_LINUX_A72=yes BUILD_EDGEAI=yes PROFILE=release make all -j2 \
     && BUILD_EMULATION=no BUILD_TARGET_MODE=yes BUILD_LINUX_A72=yes BUILD_EDGEAI=yes PROFILE=release make linux_fs_stage \
     && cd /tmp/tivision_apps_targetfs_stage \
     && tar cJf /opt/tivision_apps.tar.xz . \
     && cd \
     && rm -rf /tmp/tivision_apps_targetfs_stage \
-    && cd /opt/ti-processor-sdk-rtos-j721e-evm-08_01_00_13/targetfs \
+    && cd /opt/ti-processor-sdk-rtos-j721e-evm-${PSDK_RTOS_VER}/targetfs \
     && tar cJf /opt/rtos_dlr.tar.xz `find . | grep dlr` \
     && echo .
 
-FROM ubuntu-tisdk1 AS ubuntu-tiros-foxy
-ENV DEBIAN_FRONTEND=noninteractive
-ENV ROS_DISTRO=foxy
-
-RUN echo . \
-    && apt update && apt upgrade -y \
-    && apt install -y --no-install-recommends \
-    curl gnupg2 lsb-release \
-    && curl -sSL https://raw.githubusercontent.com/ros/rosdistro/master/ros.key  -o /usr/share/keyrings/ros-archive-keyring.gpg \
-    && echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/ros-archive-keyring.gpg] http://packages.ros.org/ros2/ubuntu focal main" > /etc/apt/sources.list.d/ros2.list \
-    && apt update \
-    && apt install -y --no-install-recommends \
-    libgstreamer1.0-0 \
-    libgstreamer1.0-dev \
-    libgstreamer-plugins-base1.0-dev \
-    libgstreamer-plugins-good1.0-dev \
-    gstreamer1.0-plugins-base \
-    gstreamer1.0-plugins-good \
-    gstreamer1.0-plugins-bad \
-    gstreamer1.0-libav \
-    gstreamer1.0-tools \
-    gir1.2-gst-rtsp-server-1.0 \
-    ninja-build \
-    python3-pip \
-    libdevil-dev libglu1-mesa-dev freeglut3-dev mesa-common-dev \
-    wget \
-    vim \
-    less \
-    tmux \
-    gdb \
-    iputils-ping \
-    usbutils \
-    ncurses-dev \
-    libyaml-cpp-dev \
-    rsync \
-    strace \
-    sysstat \
-    gdb \
-    net-tools \
-    dialog \
-    chrony \
-    nfs-common \
-    corkscrew \
-    v4l-utils \
-    libeigen3-dev \
-    ros-foxy-ros-base \
-    ros-foxy-desktop \
-    ros-foxy-rmw-cyclonedds-cpp \
-    ros-foxy-cv-bridge \
-    ros-foxy-image-transport \
-    ros-foxy-camera-info-manager \
-    ros-foxy-rmw-cyclonedds-cpp \
-    ros-foxy-cv-bridge \
-    ros-foxy-image-transport \
-    ros-foxy-camera-info-manager \
-    ros-foxy-rviz2 \
-    ros-foxy-image-view \
-    ros-foxy-rqt-image-view \
-    ros-foxy-rqt-console \
-    ros-foxy-rqt-graph \
-    libcanberra-gtk-module \
-    libcanberra-gtk3-0 \
-    libcanberra-gtk3-module \
-    python3-opencv \
-    python3-colcon-common-extensions \
-    python3-colcon-mixin \
-    python3-rosdep \
-    python3-vcstool \
-    && python3 -m pip install --upgrade pip \
-    && python3 -m pip install rosbags \
-    && python3 -m pip install \
-        meson \
-        configparser \
-        argparse \
-    && rm -rf /var/lib/apt/lists/*
-
-RUN rosdep init && \
-    rosdep update --rosdistro foxy
-
-WORKDIR /opt
-RUN git clone --single-branch --depth 1 --branch REL.08.01.00.03 git://git.ti.com/processor-sdk-vision/jacinto_ros_perception
-
-WORKDIR /opt/jacinto_ros_perception/ros2
-RUN git clone --branch ti-ros2 https://github.com/jadonk/gscam
-RUN git clone https://github.com/ptrmu/ros2_shared.git
-RUN /bin/bash -c "source /opt/ros/foxy/setup.bash && \
-    colcon build"
-RUN cp /opt/jacinto_ros_perception/docker/entrypoint_x86_64.sh /root/entrypoint.sh
-RUN cp /opt/jacinto_ros_perception/docker/ros_setup.sh /root/
 
 WORKDIR /root
 RUN echo "if [ -n \"$BASH_VERSION\" ]; then"     >  .profile && \
@@ -177,14 +124,11 @@ RUN echo "if [ -n \"$BASH_VERSION\" ]; then"     >  .profile && \
     echo "fi"                                    >> .profile && \
     echo "#!/bin/bash"                           >  .bashrc  && \
     echo "export PS1=\"${debian_chroot:+($debian_chroot)}\u@pc-docker:\w\$ \"" >> .bashrc
+
 RUN echo "#!/bin/sh" >  setup_proxy.sh \
     && echo "" >> setup_proxy.sh \
     && chmod +x setup_proxy.sh \
     && echo .
 
-ARG PROJECT_HOME=j7ros_home
-ENV WORK_DIR=/root/${PROJECT_HOME}
-ENV ROS_WS=${WORK_DIR}/ros_ws
-WORKDIR ${ROS_WS}
+ENV WORK_DIR=/root/${HOME}
 
-ENTRYPOINT ["/root/entrypoint.sh"]

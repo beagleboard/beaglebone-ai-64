@@ -8,6 +8,6 @@ docker run \
 	-e DISPLAY=$DISPLAY \
 	-v $HOME/.Xauthority:/root/.Xauthority \
 	--network host \
-	tisdk \
+	tisdk_x86 \
 	/bin/bash
 
