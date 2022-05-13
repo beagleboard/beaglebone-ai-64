@@ -25,6 +25,7 @@ ARG PSDK_RTOS_VER
 ARG TIDL_LIB_PKG
 ARG TENSORFLOW_TAG
 ARG OSRT_TAG
+ARG TVM_TAG
 ARG ROBOTICS_SDK_TAG
 ARG EDGEAI_APPS_TAG
 ARG EDGEAI_GST_PLUGINS_TAG
@@ -183,7 +184,7 @@ RUN echo . \
 ENV TIDL_PATH=/opt/ti-processor-sdk-rtos-j721e-evm-${PSDK_RTOS_VER}/${TIDL_LIB_PKG}/
 WORKDIR /opt
 RUN echo . \
-	&& git clone --single-branch -b tidl-j7 https://github.com/TexasInstruments/tvm.git \
+	&& git clone --single-branch -b ${TVM_TAG} https://github.com/TexasInstruments/tvm.git \
 	&& cd tvm \
 	&& git checkout ${OSRT_TAG}_UPDATE1 \
 	&& git submodule update --init --recursive \
