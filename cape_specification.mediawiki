@@ -5,66 +5,70 @@ This is a list of symlink interfaces based on BeagleBone Cape header pins.<ref>[
 {| class="wikitable" style="text-align: center;"
 |+ BeagleBone Cape header definition
 |-
-! colspan=4 | P9                        !!.!! colspan=4 | P8
+! colspan="4" style="text-align: center;" |P9  !! &nbsp;
+! colspan="4" style="text-align: center;" |P8
 |-
-! Functions !! odd !! even !! Functions !!.!! Functions !! odd !! even !! Functions
+! Functions !! odd !! even !! Functions !! &nbsp; !! Functions !! odd !! even !! Functions
 |-
-| USB D+    || E1  || E2   || USB D-    ||.|| -         || -   || -    || -
+| USB D+    || E1  || E2   || USB D-    || &nbsp; || -         || -   || -    || -
 |-
-| 5V OUT    || E3  || E4   || GND       ||.|| -         || -   || -    || -
+| 5V OUT    || E3  || E4   || GND       || &nbsp; || -         || -   || -    || -
 |-
-| GND       || 1   || 2    || GND       ||.|| GND       || 1   || 2    || GND
+| GND       || 1   || 2    || GND       || &nbsp; || GND       || 1   || 2    || GND
 |-
-| 3V3 OUT   || 3   || 4    || 3V3 OUT   ||.|| G M       || 3   || 4    || G M
+| 3V3 OUT   || 3   || 4    || 3V3 OUT   || &nbsp; || D M       || 3   || 4    || D M
 |-
-| 5V IN     || 5   || 6    || 5V IN     ||.|| G M       || 5   || 6    || G M
+| 5V IN     || 5   || 6    || 5V IN     || &nbsp; || D M       || 5   || 6    || D M
 |-                                            
-| 5V OUT    || 7   || 8    || 5V OUT    ||.||           || 7   || 8    ||
+| 5V OUT    || 7   || 8    || 5V OUT    || &nbsp; || D         || 7   || 8    || D
 |-                                            
-| PWR BUT   || 9   || 10   || RESET     ||.||           || 9   || 10   ||
+| PWR BUT   || 9   || 10   || RESET     || &nbsp; || D         || 9   || 10   || D
 |-                                            
-|           || 11  || 12   ||           ||.||           || 11  || 12   ||
+| D U4      || 11  || 12   || D         || &nbsp; || D         || 11  || 12   || D
 |-
-|           || 13  || 14   ||           ||.||           || 13  || 14   ||
+| D U4      || 13  || 14   || D E       || &nbsp; || D E       || 13  || 14   || D
 |-                                            
-|           || 15  || 16   ||           ||.||           || 15  || 16   ||
-|-                                            
-|           || 17  || 18   ||           ||.||           || 17  || 18   ||
-|-                                            
-|           || 19  || 20   ||           ||.||           || 19  || 20   ||
+| D         || 15  || 16   || D E       || &nbsp; || D         || 15  || 16   || D
 |-
-|           || 21  || 22   ||           ||.||           || 21  || 22   ||
-|-                                            
-|           || 23  || 24   ||           ||.||           || 23  || 24   ||
-|-                                            
-|           || 25  || 26   ||           ||.||           || 25  || 26   ||
-|-                                            
-|           || 27  || 28   ||           ||.||           || 27  || 28   ||
+| D I1 S0   || 17  || 18   || D I1 S0   || &nbsp; || D         || 17  || 18   || D
 |-
-|           || 29  || 30   ||           ||.||           || 29  || 30   ||
-|-                                            
-|           || 31  || 32   ||           ||.||           || 31  || 32   ||
-|-                                            
-|           || 33  || 34   ||           ||.||           || 33  || 34   ||
-|-                                            
-|           || 35  || 36   ||           ||.||           || 35  || 36   ||
+| D I2      || 19  || 20   || D I2      || &nbsp; || D E       || 19  || 20   || D M P1
 |-
-|           || 37  || 38   ||           ||.||           || 37  || 38   ||
+| D E S0 U2 || 21  || 22   || D E S0 U2 || &nbsp; || D M P1    || 21  || 22   || D M
 |-                                            
-|           || 39  || 40   ||           ||.||           || 39  || 40   ||
+| D         || 23  || 24   || D I U1    || &nbsp; || D M       || 23  || 24   || D M
 |-                                            
-|           || 41  || 42   ||           ||.||           || 41  || 42   ||
+| D P0      || 25  || 26   || D I U1    || &nbsp; || D M       || 25  || 26   || D
 |-                                            
-| GND       || 43  || 44   || GND       ||.||           || 43  || 44   ||
+| D P0      || 27  || 28   || D P0 S1   || &nbsp; || D L P1    || 27  || 28   || D L P1
 |-
-| GND       || 45  || 46   || GND       ||.||           || 45  || 46   ||
+| D E S1 P0 || 29  || 30   || D P0 S1   || &nbsp; || D L P1    || 29  || 30   || D L P1
+|-                                            
+| D E S1 P0 || 31  || 32   || ADC VDD   || &nbsp; || D L       || 31  || 32   || D L
+|-                                            
+| A         || 33  || 34   || ADC GND   || &nbsp; || D L       || 33  || 34   || D E L
+|-                                            
+| A         || 35  || 36   || A         || &nbsp; || D L       || 35  || 36   || D E L
+|-
+| A         || 37  || 38   || A         || &nbsp; || D L U5    || 37  || 38   || D L U5
+|-                                            
+| A         || 39  || 40   || A         || &nbsp; || D L P1    || 39  || 40   || D L P1
+|-                                            
+| D         || 41  || 42   || D         || &nbsp; || D L P1    || 41  || 42   || D L P1
+|-                                            
+| GND       || 43  || 44   || GND       || &nbsp; || D L P1    || 43  || 44   || D L P1
+|-
+| GND       || 45  || 46   || GND       || &nbsp; || D E L P1  || 45  || 46   || D E L P1
 |}
 
 * A: ADC
 * C: CAN
-* G: GPIO
+* D: Digital GPIO
+* E: EHRPWM
+* I: I2C
+* L: LCD
 * M: MMC/SDIO
-* P: PWM
+* P: PRU
 * Q: eQEP
 * S: SPI
 * U: UART
@@ -318,89 +322,34 @@ Compatibility layer provides simple I2C bone bus nodes for creating compatible o
 {| class="wikitable" style="text-align: center;"
 |+ Bone bus I2C
 |-
-! Bone bus !! BBBWL/BBB !! BBAI !! SCL !! SDA !! Overlay 
+! SYSFS !! DT symbol !! BBBWL/BBB !! BBAI !! BBAI64 !! SCL !! SDA !! Overlay 
 |-
-!/dev/bone/i2c/0
-| I2C0 || I2C1 
+! /dev/bone/i2c/0 !! bone_i2c_0
+| I2C0 || I2C1 || TBD
 | colspan="3" style="text-align: center;" |❌ (On-board) 
 |-
 |-
-!/dev/bone/i2c/1
-| I2C1 || I2C5 || P9.17 || P9.18
+!/dev/bone/i2c/1 !! bone_i2c_1
+| I2C1 || I2C5 || MAIN_I2C6 || P9.17 || P9.18
 | [https://github.com/lorforlinux/bb.org-overlays/blob/bone_i2c/src/arm/BONE-I2C1.dts BONE-I2C1.dts]
 |-
 |-
-!/dev/bone/i2c/2
-| I2C2 || I2C4 || P9.19 || P9.20
+!/dev/bone/i2c/2 !! bone_i2c_2
+| I2C2 || I2C4 || MAIN_I2C3 || P9.19 || P9.20
 | [https://github.com/lorforlinux/bb.org-overlays/blob/bone_i2c/src/arm/BONE-I2C2.dts BONE-I2C2.dts]
 |-
 |-
-!/dev/bone/i2c/2a
-| I2C2 || N/A || P9.21 || P9.22
+!/dev/bone/i2c/2a !! bone_i2c_2a
+| I2C2 || N/A || TBD || P9.21 || P9.22
 | [https://github.com/lorforlinux/bb.org-overlays/blob/bone_i2c/src/arm/BONE-I2C2A.dts BONE-I2C2A.dts]
 |-
 |-
-!/dev/bone/i2c/3
-| I2C1 || I2C3 || P9.24 || P9.26
+!/dev/bone/i2c/3 !! bone_i2c_3
+| I2C1 || I2C3 || MAIN_I2C4 || P9.24 || P9.26
 | [https://github.com/lorforlinux/bb.org-overlays/blob/bone_i2c/src/arm/BONE-I2C3.dts BONE-I2C3.dts]
 |-
-
 |}
 
-
-
-<!--
-=== /dev/bone/i2c/0 ===
-AM3358 I2C0<br>
-AM5729 I2C1
-* On-board peripherals
-
-=== /dev/bone/i2c/1 ===
-https://github.com/beagleboard/bb.org-overlays/blob/master/src/arm/BB-I2C1-00A0.dts <br>
-AM3358 I2C1<br>
-AM5729 I2C5
-* P9.17 - SCL
-* P9.18 - SDA
-
-=== /dev/bone/i2c/2 ===
-https://github.com/beagleboard/bb.org-overlays/blob/master/src/arm/BB-I2C2-00A0.dts <br>
-AM3358 I2C2<br>
-AM5729 I2C4
-* P9.19 - SCL
-* P9.20 - SDA
-
-=== /dev/bone/i2c/2a ===
-TODO<br>
-AM3358 I2C2<br>
-AM5729 ''N/A''
-* P9.21 - SCL
-* P9.22 - SDA
-
-=== /dev/bone/i2c/3 ===
-TODO<br>
-AM3358 I2C1<br>
-AM5729 I2C3
-* P9.24 - SCL
-* P9.26 - SDA
-
-=== /dev/bone/i2c/5 ===
-AM3358 ''N/A''<br>
-AM5729 I2C3
-* P9.29 - SCL
-* P9.31 - SDA
-
-=== /dev/bone/i2c/6 ===
-AM3358 ''N/A''<br>
-AM5729 I2C4
-* P9.27 - SCL
-* P9.12 - SDA
-
-=== /dev/bone/i2c/7 ===
-AM3358 ''N/A''<br>
-AM5729 I2C4
-* P8.37 - SCL
-* P8.38 - SDA
--->
 
 = SPI =
 SPI bone bus nodes allow creating compatible overlays for BBBWl, BBB, & BBAI. For the definitions, you can see [https://github.com/lorforlinux/BeagleBoard-DeviceTrees/blob/97a6f0daa9eab09633a2064f68a53b107d6e3968/src/arm/bbai-bone-buses.dtsi#L406 bbai-bone-buses.dtsi#L406] & [https://github.com/lorforlinux/BeagleBoard-DeviceTrees/blob/97a6f0daa9eab09633a2064f68a53b107d6e3968/src/arm/bbb-bone-buses.dtsi#L423 bbb-bone-buses.dtsi#L423].
@@ -408,20 +357,22 @@ SPI bone bus nodes allow creating compatible overlays for BBBWl, BBB, & BBAI. Fo
 {| class="wikitable" style="text-align: center;"
 |+ Bone bus SPI
 |-
-! Bone bus !! BBBWL/BBB !! BBAI !! MOSI !! MISO !! CLK !! CS !! Overlay 
+! Bone bus !! DT symbol !! BBBWL/BBB !! BBAI !! BBAI64 !! MOSI !! MISO !! CLK !! CS !! Overlay 
 |-
 !/dev/bone/spi/0.''x''
-| SPI0 || SPI2 || P9.18 || P9.21 || P9.22
+!bone_spi_0
+| SPI0 || SPI2 || MAIN_SPI6 || P9.18 || P9.21 || P9.22
 | 
 * P9.17 (CS0)
-* P9.23 (CS1 - BBAI only)
+* P9.23 (CS1 - BBAI and BBAI64 only)
 | 
 * [https://github.com/lorforlinux/bb.org-overlays/blob/bone_spi/src/arm/BONE-SPI0_0.dts BONE-SPI0_0.dts]
 * [https://github.com/beagleboard/BeagleBoard-DeviceTrees/blob/v4.19.x-ti-overlays/src/arm/overlays/BBAI-SPI0_1.dts BBAI-SPI0_1.dts]
 |-
 |-
 !/dev/bone/spi/1.''x''
-| SPI1 || SPI3 || P9.30 || P9.29 || P9.31
+!bone_spi_1
+| SPI1 || SPI3 || TBD || P9.30 || P9.29 || P9.31
 |
 * P9.28 (CS0)
 * P9.42 (CS1)
@@ -432,61 +383,19 @@ SPI bone bus nodes allow creating compatible overlays for BBBWl, BBB, & BBAI. Fo
 |}
 
 
-
-
-<!--
-Need to add a symlink from /dev/spi to /dev/bone/spi.
-
-== /dev/bone/spi/0.''x'' ==
-https://github.com/beagleboard/bb.org-overlays/blob/master/src/arm/BB-SPIDEV0-00A0.dts <br>
-AM3358 SPI0<br>
-AM5729 SPI2
-* P9.18 - MOSI
-* P9.21 - MISO
-* P9.22 - CLK
-
-=== /dev/bone/spi/0.0 ===
-AM3358 SPI0 CS0<br>
-AM5729 SPI2 CS0
-* P9.17 - CS
-
-== /dev/bone/spi/1.''x'' ==
-https://github.com/beagleboard/bb.org-overlays/blob/master/src/arm/BB-SPIDEV1-00A0.dts <br>
-AM3358 SPI1<br>
-AM5729 SPI3
-* P9.31 - CLK
-* P9.30 - MOSI
-* P9.29 - MISO
-
-=== /dev/bone/spi/1.0 ===
-AM3358 SPI1 CS0<br>
-AM5729 SPI3 CS0 
-* P9.28 - CS
-
-=== /dev/bone/spi/1.1 ===
-AM3358 SPI1 CS1<br>
-AM5729 SPI3 CS1 
-* P9.42 - CS
-
-=== /dev/bone/spi/1.2 ===
-AM3358 SPI1 GPIO1_17<br>
-AM5729 SPI3 GPIO7_11 
-* P9.23 - CS
--->
-
 = UART =
 UART bone bus nodes allow creating compatible overlays for BBBWl, BBB, & BBAI. For the definitions, you can see [https://github.com/lorforlinux/BeagleBoard-DeviceTrees/blob/97a6f0daa9eab09633a2064f68a53b107d6e3968/src/arm/bbai-bone-buses.dtsi#L367 bbai-bone-buses.dtsi#L367] & [https://github.com/lorforlinux/BeagleBoard-DeviceTrees/blob/97a6f0daa9eab09633a2064f68a53b107d6e3968/src/arm/bbb-bone-buses.dtsi#L382 bbb-bone-buses.dtsi#L382].
 {| class="wikitable" style="text-align: center;"
 |+ Bone bus UART
 |-
-! Bone bus !! BBBWL/BBB !! BBAI !! TX !! RX !! RTSn !! CTSn !! Overlays
+! Bone bus !! BBBWL/BBB !! BBAI !! BBAI64 !! TX !! RX !! RTSn !! CTSn !! Overlays
 |-
 ! /dev/bone/uart/0
-| UART0 || UART1
+| UART0 || UART1 || MAIN_UART0
 | colspan="5" style="text-align: center;" | ❌ (console debug header pins)
 |-
 ! /dev/bone/uart/1
-| UART1 || UART10 || P9.24 || P9.26 
+| UART1 || UART10 || MAIN_UART2 || P9.24 || P9.26 
 | 
 * P9.19
 * P8.4 (''N/A'' on AM3358)
@@ -498,7 +407,7 @@ UART bone bus nodes allow creating compatible overlays for BBBWl, BBB, & BBAI. F
 
 |-
 ! /dev/bone/uart/2
-| UART2 || UART3 || P9.21 || P9.22 
+| UART2 || UART3 || TBD || P9.21 || P9.22 
 | 
 * P8.38 (N/A on AM5729)
 | 
@@ -508,7 +417,7 @@ UART bone bus nodes allow creating compatible overlays for BBBWl, BBB, & BBAI. F
 
 |-
 ! /dev/bone/uart/3
-| UART3 || ❌ || P9.42 || ❌ 
+| UART3 || ❌ || TBD || P9.42 || ❌ 
 | ❌
 | ❌
 | [https://github.com/lorforlinux/bb.org-overlays/blob/bone_uart/src/arm/BONE-UART3.dts BONE-UART3.dts]
@@ -516,7 +425,7 @@ UART bone bus nodes allow creating compatible overlays for BBBWl, BBB, & BBAI. F
 
 |-
 ! /dev/bone/uart/4
-| UART4 || UART5 || P9.13 || P9.11
+| UART4 || UART5 || TBD || P9.13 || P9.11
 | 
 * P8.33 (N/A on AM5729)
 * P8.6 (N/A on AM3358)
@@ -528,70 +437,12 @@ UART bone bus nodes allow creating compatible overlays for BBBWl, BBB, & BBAI. F
 
 |-
 ! /dev/bone/uart/5
-| UART5 || UART8 || P8.37 || P8.38
+| UART5 || UART8 || MAIN_UART5 || P8.37 || P8.38
 | P8.32
 | P8.31
 | [https://github.com/lorforlinux/bb.org-overlays/blob/bone_uart/src/arm/BONE-UART5.dts BONE-UART5.dts]
 |-
-
 |}
-
-<!--
-=== /dev/bone/uart/0 ===
-AM3358 UART0<br>
-AM5729 UART1
-* console debug header pins
-
-=== /dev/bone/uart/1 ===
-https://github.com/beagleboard/bb.org-overlays/blob/master/src/arm/BB-UART1-00A0.dts <br>
-https://github.com/beagleboard/bb.org-overlays/blob/master/src/arm/BB-UART1-RTSCTS-00A0.dts <br>
-AM3358 UART1<br>
-AM5729 UART10
-* P9.24 - TX
-* P9.26 - RX
-* P9.19 - RTSn
-* P9.20 - CTSn
-* P8.4 - RTSn (''N/A'' on AM3358)
-* P8.3 - CTSn (''N/A'' on AM3358)
-
-=== /dev/bone/uart/2 ===
-https://github.com/beagleboard/bb.org-overlays/blob/master/src/arm/BB-UART2-00A0.dts <br>
-https://github.com/beagleboard/bb.org-overlays/blob/master/src/arm/BB-UART2-RTSCTS-00A0.dts <br>
-AM3358 UART2<br>
-AM5729 UART3
-* P9.21 - TX
-* P9.22 - RX
-* P8.38 - RTSn (''N/A'' on AM5729)
-* P8.37 - CTSn (''N/A'' on AM5729)
-
-=== /dev/bone/uart/3 ===
-https://github.com/beagleboard/bb.org-overlays/blob/master/src/arm/BB-UART3-00A0.dts <br>
-AM3358 UART3<br>
-AM5729 ''N/A''
-* P9.42 - TX
-
-=== /dev/bone/uart/4 ===
-https://github.com/beagleboard/bb.org-overlays/blob/master/src/arm/BB-UART4-00A0.dts <br>
-https://github.com/beagleboard/bb.org-overlays/blob/master/src/arm/BB-UART4-RTSCTS-00A0.dts <br>
-AM3358 UART4<br>
-AM5729 UART5
-* P9.13 - TX
-* P9.11 - RX
-* P8.33 - RTSn (''N/A'' on AM5729)
-* P8.35 - CTSn (''N/A'' on AM5729)
-* P8.6 - RTSn (''N/A'' on AM3358)
-* P8.5 - CTSn (''N/A'' on AM3358)
-
-=== /dev/bone/uart/5 ===
-https://github.com/beagleboard/bb.org-overlays/blob/master/src/arm/BB-UART5-00A0.dts <br>
-https://github.com/beagleboard/bb.org-overlays/blob/master/src/arm/BB-UART5-RTSCTS-00A0.dts <br>
-AM3358 UART5<br>
-AM5729 UART8
-* P8.37 - TX
-* P8.38 - RX
-* P8.32 - RTSn
-* P8.31 - CTSn
--->
 
 = CAN =
 CAN bone bus nodes allow creating compatible overlays for BBBWl, BBB, & BBAI. For the definitions, you can see [https://github.com/lorforlinux/BeagleBoard-DeviceTrees/blob/97a6f0daa9eab09633a2064f68a53b107d6e3968/src/arm/bbai-bone-buses.dtsi#L440 bbai-bone-buses.dtsi#L440] & [https://github.com/lorforlinux/BeagleBoard-DeviceTrees/blob/97a6f0daa9eab09633a2064f68a53b107d6e3968/src/arm/bbb-bone-buses.dtsi#L457 bbb-bone-buses.dtsi#L457].
