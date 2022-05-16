@@ -1,4 +1,3 @@
-
 = BeagleBone AI-64 System Reference Manual
 :xrefstyle: full
 :table-caption!: 
@@ -16,10 +15,10 @@ image:media/image1.jpg[media/image1.jpg,title="media/image1.jpg",width=598,heigh
 *Last PDF conversion: August 24, 2021*
 
 ______________________________________________________________________________________________________________________________________________________
-*Maintaining editor:* James Anderson _jim_255@yahoo.com_
+*Maintaining editor:* Deepak Khatri _lorforlinux@beagleboard.org_
 
 *Supply comments and errors via:*
-https://github.com/beagleboard/beaglebone-ai-64/issues
+https://git.beagleboard.org/beagleboard/beaglebone-ai-64/-/issues
 
 *All information in this document is subject to change without notice.*
 
