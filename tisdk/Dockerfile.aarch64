@@ -61,7 +61,7 @@ WORKDIR /opt
 RUN echo . \
 	&& chmod +x ti_cgt_c7000_${TI_CGT_C7000_VER}_${TI_CGT_C7000_ARCH}_busybox_installer.sh \
 	&& ./ti_cgt_c7000_${TI_CGT_C7000_VER}_${TI_CGT_C7000_ARCH}_busybox_installer.sh \
-	&& rm ./ti_cgt_c7000_${TI_CGT_C7000_VER}_${TI_CGT_C7000_ARCh}_busybox_installer.sh \
+	&& rm ./ti_cgt_c7000_${TI_CGT_C7000_VER}_${TI_CGT_C7000_ARCH}_busybox_installer.sh \
 	&& wget https://software-dl.ti.com/codegen/esd/cgt_public_sw/C6000/${TI_CGT_C6000_VER}/ti_cgt_c6000_${TI_CGT_C6000_VER}_${TI_CGT_C6000_ARCH}_busybox_installer.sh \
 	&& chmod +x ti_cgt_c6000_${TI_CGT_C6000_VER}_${TI_CGT_C6000_ARCH}_busybox_installer.sh \
 	&& ./ti_cgt_c6000_${TI_CGT_C6000_VER}_${TI_CGT_C6000_ARCH}_busybox_installer.sh \
