@@ -26,6 +26,8 @@ RUN echo . \
 		python3-opencv \
 		python3-pip \
 		python3-dev \
+		python3-flake8 \
+		python3-numpy \
 	&& echo .
 
 FROM debian-base-0 AS tisdk-debian
@@ -34,7 +36,7 @@ ENV LANG=C.UTF-8
 ENV LC_ALL=C.UTF-8
 
 # Build arguments for component versions
-ENV TI_CGT_C7000_VER=2.1.0.LTS_armlinuxaarch64
+ENV TI_CGT_C7000_VER=2.1.0.LTS
 ENV TI_CGT_C7000_ARCH=armlinuxaarch64
 ENV TI_CGT_C6000_VER=8.3.11
 ENV TI_CGT_C6000_ARCH=armlinuxa8hf
