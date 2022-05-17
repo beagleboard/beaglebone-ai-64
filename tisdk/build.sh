@@ -1,7 +1,7 @@
 #!/bin/bash -ex
-DOCKER_BUILDKIT=1 docker build \
-	-t ti-tflite \
+docker build \
+	-t tisdk-debian \
 	-f Dockerfile.`arch` \
-	--target=ti-tflite \
+	--target=tisdk-debian \
 	.
 

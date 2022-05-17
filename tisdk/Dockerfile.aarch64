@@ -1,54 +1,69 @@
-ARG USE_PROXY
-ARG HTTP_PROXY
-ARG REPO_LOCATION=linux/arm64
-ARG DEBIAN_FRONTEND=noninteractive
+FROM debian:buster AS debian-base-0
+ENV DEBIAN_FRONTEND=noninteractive
 
-#=========================================================================
-FROM --platform=${REPO_LOCATION} tisdk_base AS base-0
+RUN echo . \
+	&& apt update && apt install -y \
+		gpg apt-utils \
+	&& echo .
 
-#=========================================================================
-FROM base-0 AS base-1
-ARG USE_PROXY
-ENV USE_PROXY=${USE_PROXY}
-ARG HTTP_PROXY
-ENV http_proxy=${HTTP_PROXY}
-ENV https_proxy=${HTTP_PROXY}
+RUN echo "deb [arch=armhf] http://repos.rcn-ee.net/debian/ buster main" >> /etc/apt/sources.list \
+	&& apt-key adv --batch --keyserver keyserver.ubuntu.com --recv-key D284E608A4C46402
 
-#=========================================================================
-FROM base-${USE_PROXY} AS ubuntu-stage1
-ARG DEBIAN_FRONTEND
+RUN echo . \
+	&& apt update && apt install -y \
+		build-essential \
+		cmake \
+		ninja-build \
+		git \
+		vim \
+		ca-certificates \
+		curl \
+		unzip \
+		fakeroot dh-make dh-python \
+		python3 \
+		pybind11-dev \
+		python3-pybind11 \
+		python3-opencv \
+		python3-pip \
+		python3-dev \
+	&& echo .
+
+FROM debian-base-0 AS tisdk-debian
+ENV DEBIAN_FRONTEND=noninteractive
 ENV LANG=C.UTF-8
 ENV LC_ALL=C.UTF-8
 
 # Build arguments for component versions
-ARG PSDK_RTOS_VER
-ARG TIDL_LIB_PKG
-ARG TENSORFLOW_TAG
-ARG OSRT_TAG
-ARG TVM_TAG
-ARG ROBOTICS_SDK_TAG
-ARG EDGEAI_APPS_TAG
-ARG EDGEAI_GST_PLUGINS_TAG
-ARG EDGEAI_TIOVX_MODULES_TAG
-ARG FLATBUFFERS_VERSION
-ARG PROTOBUF_VER
-
-RUN /opt/scripts/setup_proxy.sh
+ENV TI_CGT_C7000_VER=2.1.0.LTS_armlinuxaarch64
+ENV TI_CGT_C7000_ARCH=armlinuxaarch64
+ENV TI_CGT_C6000_VER=8.3.11
+ENV TI_CGT_C6000_ARCH=armlinuxa8hf
+ENV PSDK_RTOS_VER=08_01_00_13
+ENV TIDL_LIB_PKG=tidl_j7_08_01_00_05
+ENV TENSORFLOW_TAG=TIDL_PSDK_8.1
+ENV OSRT_TAG=TIDL_PSDK_8.1
+ENV TVM_TAG=TIDL_PSDK_8.1
+ENV ROBOTICS_SDK_TAG=REL.08.01.00.05
+ENV EDGEAI_APPS_TAG=REL.PSDK.LINUX.SK.TDA4VM.08.01
+ENV EDGEAI_GST_PLUGINS_TAG=release-0.5.3
+ENV EDGEAI_TIOVX_MODULES_TAG=release-0.2
+ENV FLATBUFFERS_VERSION=v1.12.0
+ENV PROTOBUF_VER=3.11.3
 
 ####################
 # TI compiler tools
 ####################
-COPY /ti_cgt_c7000_2.1.0.LTS_armlinuxaarch64_busybox_installer.sh /opt/
+COPY /ti_cgt_c7000_${TI_CGT_C7000_VER}_${TI_CGT_C7000_ARCH}_busybox_installer.sh /opt/
 WORKDIR /opt
 
 RUN echo . \
-	&& chmod +x ti_cgt_c7000_2.1.0.LTS_armlinuxaarch64_busybox_installer.sh \
-	&& ./ti_cgt_c7000_2.1.0.LTS_armlinuxaarch64_busybox_installer.sh \
-	&& rm ./ti_cgt_c7000_2.1.0.LTS_armlinuxaarch64_busybox_installer.sh \
-	&& wget https://software-dl.ti.com/codegen/esd/cgt_public_sw/C6000/8.3.11/ti_cgt_c6000_8.3.11_armlinuxa8hf_busybox_installer.sh \
-	&& chmod +x ti_cgt_c6000_8.3.11_armlinuxa8hf_busybox_installer.sh \
-	&& ./ti_cgt_c6000_8.3.11_armlinuxa8hf_busybox_installer.sh \
-	&& rm ./ti_cgt_c6000_8.3.11_armlinuxa8hf_busybox_installer.sh \
+	&& chmod +x ti_cgt_c7000_${TI_CGT_C7000_VER}_&{TI_CGT_C7000_ARCH}_busybox_installer.sh \
+	&& ./ti_cgt_c7000_${TI_CGT_C7000_VER}_${TI_CGT_C7000_ARCH}_busybox_installer.sh \
+	&& rm ./ti_cgt_c7000_${TI_CGT_C7000_VER}_${TI_CGT_C7000_ARCh}_busybox_installer.sh \
+	&& wget https://software-dl.ti.com/codegen/esd/cgt_public_sw/C6000/${TI_CGT_C6000_VER}/ti_cgt_c6000_${TI_CGT_C6000_VER}_${TI_CGT_C6000_ARCH}_busybox_installer.sh \
+	&& chmod +x ti_cgt_c6000_${TI_CGT_C6000_VER}_${TI_CGT_C6000_ARCH}_busybox_installer.sh \
+	&& ./ti_cgt_c6000_${TI_CGT_C6000_VER}_${TI_CGT_C6000_ARCH}_busybox_installer.sh \
+	&& rm ./ti_cgt_c6000_${TI_CGT_C6000_VER}_${TI_CGT_C6000_ARCH}_busybox_installer.sh \
 	&& echo .
 
 ################
