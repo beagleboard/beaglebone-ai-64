@@ -18,6 +18,7 @@ RUN echo . \
 		vim \
 		ca-certificates \
 		curl \
+		wget \
 		unzip \
 		fakeroot dh-make dh-python \
 		python3 \
