@@ -1,76 +1,54 @@
-# syntax=docker/dockerfile:1.3-labs
-FROM ubuntu:20.04 AS ti-tflite
-ENV DEBIAN_FRONTEND=noninteractive
+ARG USE_PROXY
+ARG HTTP_PROXY
+ARG REPO_LOCATION=linux/arm64
+ARG DEBIAN_FRONTEND=noninteractive
+
+#=========================================================================
+FROM --platform=${REPO_LOCATION} tisdk_base AS base-0
+
+#=========================================================================
+FROM base-0 AS base-1
+ARG USE_PROXY
+ENV USE_PROXY=${USE_PROXY}
+ARG HTTP_PROXY
+ENV http_proxy=${HTTP_PROXY}
+ENV https_proxy=${HTTP_PROXY}
+
+#=========================================================================
+FROM base-${USE_PROXY} AS ubuntu-stage1
+ARG DEBIAN_FRONTEND
 ENV LANG=C.UTF-8
 ENV LC_ALL=C.UTF-8
 
+# Build arguments for component versions
+ARG PSDK_RTOS_VER
+ARG TIDL_LIB_PKG
+ARG TENSORFLOW_TAG
+ARG OSRT_TAG
+ARG TVM_TAG
+ARG ROBOTICS_SDK_TAG
+ARG EDGEAI_APPS_TAG
+ARG EDGEAI_GST_PLUGINS_TAG
+ARG EDGEAI_TIOVX_MODULES_TAG
+ARG FLATBUFFERS_VERSION
+ARG PROTOBUF_VER
+
+RUN /opt/scripts/setup_proxy.sh
+
+####################
+# TI compiler tools
+####################
+COPY /ti_cgt_c7000_2.1.0.LTS_armlinuxaarch64_busybox_installer.sh /opt/
+WORKDIR /opt
+
 RUN echo . \
-	&& echo 'Etc/UTC' > /etc/timezone \
-	&& ln -sf /usr/share/zoneinfo/Etc/UTC /etc/localtime \
-	&& apt update \
-	&& apt install -y --no-install-recommends \
-		gnupg2 \
-		ca-certificates \
-		curl \
-		wget \
-		software-properties-common lsb-release \
-	&& apt upgrade -y \
-	&& wget -O - https://apt.kitware.com/keys/kitware-archive-latest.asc 2>/dev/null | gpg --dearmor - > /etc/apt/trusted.gpg.d/kitware.gpg \
-	&& apt-add-repository "deb https://apt.kitware.com/ubuntu/ $(lsb_release -cs) main" \
-	&& apt install kitware-archive-keyring \
-	&& apt update && apt upgrade -y \
-	&& apt install -y --no-install-recommends \
-		tzdata \
-		ninja-build \
-		dirmngr \
-		build-essential \
-		git \
-		vim \
-		nano \
-		tmux \
-		tilix \
-		gdb \
-		iputils-ping \
-		usbutils \
-		ncurses-dev \
-		libyaml-cpp-dev \
-		sysstat \
-		net-tools \
-		dialog \
-		chrony \
-		nfs-common \
-		corkscrew \
-		v4l-utils \
-		unzip \
-		libsm6 \
-		libxext6 \
-		libxrender1 \
-		libprotobuf-dev \
-		protobuf-compiler \
-		libprotoc-dev \
-		graphviz \
-		swig \
-		curl \
-		zip \
-		pkg-config \
-		libgtk-3-dev \
-		libyaml-cpp-dev \
-		autotools-dev \
-		autoconf \
-		automake \
-		libtool \
-		llvm-dev \
-		qemu-system-x86 \
-		cmake \
-		clang \
-		libtinfo-dev \
-		fakeroot dh-make dh-python \
-		libeigen3-dev \
-		python3-pybind11 pybind11-dev \
-		python3-opencv \
-		python3-pip \
-		python3-dev \
-		python3-numpy \
+	&& chmod +x ti_cgt_c7000_2.1.0.LTS_armlinuxaarch64_busybox_installer.sh \
+	&& ./ti_cgt_c7000_2.1.0.LTS_armlinuxaarch64_busybox_installer.sh \
+	&& rm ./ti_cgt_c7000_2.1.0.LTS_armlinuxaarch64_busybox_installer.sh \
+	&& wget https://software-dl.ti.com/codegen/esd/cgt_public_sw/C6000/8.3.11/ti_cgt_c6000_8.3.11_armlinuxa8hf_busybox_installer.sh \
+	&& chmod +x ti_cgt_c6000_8.3.11_armlinuxa8hf_busybox_installer.sh \
+	&& ./ti_cgt_c6000_8.3.11_armlinuxa8hf_busybox_installer.sh \
+	&& rm ./ti_cgt_c6000_8.3.11_armlinuxa8hf_busybox_installer.sh \
 	&& echo .
 
 ################
@@ -88,19 +66,51 @@ RUN echo . \
 	&& rm -rf /opt/ti-rpmsg-char \
 	&& echo .
 
-# RTOS SDK dependancies
+
+###########
+# RTOS SDK
+###########
+WORKDIR /opt
+COPY /tivision_apps.tar.xz /opt/
+RUN tar xf /opt/tivision_apps.tar.xz --skip-old-files -C /
+
 RUN echo . \
-	&& git clone --depth 1 --single-branch -b master https://git.ti.com/git/jacinto-linux/meta-psdkla.git \
+	&& wget https://software-dl.ti.com/jacinto7/esd/processor-sdk-rtos-jacinto7/${PSDK_RTOS_VER}/exports/ti-processor-sdk-rtos-j721e-evm-${PSDK_RTOS_VER}.tar.gz \
+	&& tar xf ti-processor-sdk-rtos-j721e-evm-${PSDK_RTOS_VER}.tar.gz \
+	&& rm /opt/ti-processor-sdk-rtos-j721e-evm-${PSDK_RTOS_VER}.tar.gz \
+	&& cd ti-processor-sdk-rtos-j721e-evm-${PSDK_RTOS_VER} \
+	&& wget https://git.yoctoproject.org/cgit/cgit.cgi/opkg-utils/snapshot/opkg-utils-master.tar.gz \
+	&& tar xf opkg-utils-master.tar.gz \
+	&& rm opkg-utils-master.tar.gz \
+	&& echo .
+
+RUN echo . \
+	&& git clone --depth 1 --single-branch -b PSDKLA-08_01_00_J7 https://git.ti.com/git/jacinto-linux/meta-psdkla.git \
 	&& cp /opt/meta-psdkla/recipes-core/packagegroups/neo-ai-tvm/inc/itidl_rt.h /usr/local/include/itidl_rt.h \
+	&& echo .
+
+RUN echo . \
+	&& wget https://github.com/g-truc/glm/releases/download/0.9.8.0/glm-0.9.8.0.zip --no-check-certificate \
+	&& unzip glm-0.9.8.0.zip > /dev/null \
+	&& rm glm-0.9.8.0.zip \
+	&& echo .
+
+RUN echo . \
+	&& wget https://sourceforge.net/projects/glew/files/glew/2.0.0/glew-2.0.0.zip/download --no-check-certificate \
+	&& mv download glew-2.0.0.zip \
+	&& unzip glew-2.0.0.zip > /dev/null \
+	&& rm glew-2.0.0.zip \
+	&& cd glew-2.0.0 \
+	&& make > /dev/null \
+	&& make install \
 	&& echo .
 
 ######
 # TFL
 ######
-ENV FLATBUFFERS_VERSION=v1.12.0
 WORKDIR /opt
 RUN echo . \
-	&& git clone --single-branch --branch tidl-j7 --depth 1 https://github.com/TexasInstruments/tensorflow.git \
+	&& git clone --single-branch --branch ${TENSORFLOW_TAG} --depth 1 https://github.com/TexasInstruments/tensorflow.git \
 	&& cd tensorflow \
 	&& mkdir -p tensorflow/lite/tools/make/downloads \
 	&& cd tensorflow/lite/tools/make/downloads \
@@ -123,5 +133,190 @@ RUN echo . \
 	&& dpkg -i /opt/tensorflow/tensorflow/lite/tools/pip_package/gen/tflite_pip/python3-tflite-runtime_2.4.0-1_arm64.deb \
 	&& echo .
 
+#######
+# ONNX
+#######
+ENV ZIP_FILE=protoc-${PROTOBUF_VER}-linux-aarch_64.zip
+WORKDIR /opt
+RUN echo . \
+	&& git clone --single-branch --branch ${OSRT_TAG} --depth 1 https://github.com/TexasInstruments/onnxruntime.git \
+	&& echo .
+
+RUN echo . \
+	&& cd onnxruntime \
+	&& wget https://github.com/protocolbuffers/protobuf/releases/download/v${PROTOBUF_VER}/${ZIP_FILE}\
+	&& unzip ${ZIP_FILE} -d cmake/external/protoc-${PROTOBUF_VER}-linux-aarch_64 \
+	&& echo .
+
+RUN echo . \
+        && echo "" > ./onnxruntime/tool.cmake \
+        && echo "SET(CMAKE_SYSTEM_NAME Linux)\n" >> ./onnxruntime/tool.cmake \
+        && echo "SET(CMAKE_SYSTEM_PROCESSOR aarch64)\n" >> ./onnxruntime/tool.cmake \
+        && echo "SET(CMAKE_SYSTEM_VERSION 1)\n" >> ./onnxruntime/tool.cmake \
+        && echo "SET(CMAKE_C_COMPILER /usr/bin/aarch64-linux-gnu-gcc)\n" >> ./onnxruntime/tool.cmake \
+        && echo "SET(CMAKE_CXX_COMPILER /usr/bin/aarch64-linux-gnu-g++)\n" >> ./onnxruntime/tool.cmake \
+        && echo "SET(CMAKE_FIND_ROOT_PATH_MODE_PROGRAM NEVER)\n" >> ./onnxruntime/tool.cmake \
+        && echo "SET(CMAKE_FIND_ROOT_PATH_MODE_LIBRARY ONLY)\n" >> ./onnxruntime/tool.cmake \
+        && echo "SET(CMAKE_FIND_ROOT_PATH_MODE_INCLUDE ONLY)\n" >> ./onnxruntime/tool.cmake \
+        && echo "SET(CMAKE_FIND_ROOT_PATH_MODE_PACKAGE ONLY)\n" >> ./onnxruntime/tool.cmake \
+	&& echo .
+
+
+RUN echo . \
+	&& cd onnxruntime \
+	&& ./build.sh --parallel 6 \
+		--skip_tests \
+		--build_shared_lib \
+		--config Release \
+		--cmake_extra_defines="CMAKE_TOOLCHAIN_FILE=$(pwd)/tool.cmake" \
+		--path_to_protoc_exe $(pwd)/cmake/external/protoc-${PROTOBUF_VER}-linux-aarch_64/bin/protoc \
+		--use_tidl \
+		--build_wheel \
+	&& python3 -m pip install build/Linux/Release/dist/onnxruntime_tidl-1.7.0-cp38-cp38-linux_aarch64.whl \
+	&& cd /opt/onnxruntime/build/Linux/Release \
+	&& make install \
+	&& echo .
+
+######
+# TVM
+######
+ENV TIDL_PATH=/opt/ti-processor-sdk-rtos-j721e-evm-${PSDK_RTOS_VER}/${TIDL_LIB_PKG}/
+WORKDIR /opt
+RUN echo . \
+	&& git clone --single-branch -b ${TVM_TAG} https://github.com/TexasInstruments/tvm.git \
+	&& cd tvm \
+	&& git checkout ${OSRT_TAG}_UPDATE1 \
+	&& git submodule update --init --recursive \
+	&& mkdir build \
+	&& cd build \
+	&& cmake -DUSE_SORT=ON -DUSE_LLVM=llvm-config -DUSE_TIDL=ON -DUSE_TIDL_RT_PATH=${TIDL_PATH}/ti_dl/rt .. \
+	&& make -j6 \
+	&& make install \
+	&& echo .
+
+RUN echo . \
+	&& git clone --branch ${OSRT_TAG} https://github.com/TexasInstruments/neo-ai-dlr \
+	&& cd neo-ai-dlr \
+	&& git submodule update --init --recursive \
+	&& mkdir -p build \
+	&& cd build \
+	&& cmake -DUSE_TESTS=OFF -DUSE_SORT=ON -DUSE_LLVM=llvm-config -DUSE_TIDL=ON -DUSE_TIDL_RT_PATH=${TIDL_PATH}/ti_dl/rt .. \
+	&& make -j6 \
+	&& make install \
+	&& cd ../python \
+	&& python3 setup.py install \
+	&& echo .
+
+#############
+## TVM fixes
+#############
+WORKDIR /opt
+RUN echo . \
+	&& install -m 0644 /opt/neo-ai-dlr/build/lib/libdlr.so /usr/local/lib/python3.8/dist-packages/dlr \
+	&& install -m 0644 /opt/neo-ai-dlr/build/lib/libdlr.so /usr/local/lib \
+	&& mkdir -p /usr/local/dlr \
+	&& cp /opt/neo-ai-dlr/include/dlr.h /usr/local/dlr \
+	&& ldconfig \
+	&& echo .
+
+###############
+# Build TIDL libraries
+###############
+WORKDIR /opt
+RUN echo . \
+	&& ln -s /usr/bin/g++ /usr/bin/aarch64-none-linux-gnu-g++ \
+	&& cd ti-processor-sdk-rtos-j721e-evm-${PSDK_RTOS_VER}/${TIDL_LIB_PKG} \
+        && sed -i.bak '/STATIC_LIBS += $(VISION_APPS_UTILS_LIBS)/d' ./ti_dl/rt/src/a72/concerto.mak \
+        && sed -i.bak 's/ti_rpmsg_char/ti_rpmsg_char tivision_apps/' ./ti_dl/rt/src/a72/concerto.mak \
+        && PSDK_INSTALL_PATH=/opt/ti-processor-sdk-rtos-j721e-evm-${PSDK_RTOS_VER} \
+           GCC_LINUX_ARM_ROOT=/usr \
+           TF_REPO_PATH=/opt/tensorflow \
+           ONNX_REPO_PATH=/opt/onnxruntime \
+           TVM_HOME=/opt/tvm \
+           TIDL_PROTOBUF_PATH=/opt/onnxruntime/cmake/external/protobuf \
+           make tfl_delegate onnxrt_EP -j6 \
+        && cp ./ti_dl/tfl_delegate/out/J7/A72/LINUX/release/libtidl_tfl_delegate.so /usr/lib \
+        && cp ./ti_dl/onnxrt_EP/out/J7/A72/LINUX/release/libtidl_onnxrt_EP.so /usr/lib \
+	&& echo .
+
+##############
+# Edge AI SDK
+##############
+WORKDIR /opt
+RUN echo . \
+	&& git clone --single-branch --branch ${EDGEAI_TIOVX_MODULES_TAG} https://github.com/TexasInstruments/edgeai-tiovx-modules.git \
+	&& cd edgeai-tiovx-modules \
+	&& mkdir build \
+	&& cd build \
+	&& cmake -DCMAKE_INSTALL_PREFIX=/usr/local .. \
+	&& make -j6 \
+	&& make install \
+	&& ln -s /usr/lib/edgeai-tiovx-modules/libedgeai-tiovx-modules.so /usr/local/lib/ \
+	&& ln -s /usr/lib/edgeai-tiovx-modules/libedgeai-tiovx-modules.so.0.1.0 /usr/local/lib/ \
+	&& ldconfig \
+	&& echo .
+
+RUN echo . \
+	&& git clone --single-branch -b master https://github.com/dmlc/dlpack.git \
+        && cd dlpack \
+        && git checkout -b tidl_branch 3ec0443 \
+	&& echo .
+
+WORKDIR /opt
+RUN echo . \
+	&& git clone --single-branch --branch ${EDGEAI_GST_PLUGINS_TAG} https://github.com/TexasInstruments/edgeai-gst-plugins.git \
+	&& cd edgeai-gst-plugins \
+	&& meson build --prefix=/usr/local -Dpkg_config_path=pkgconfig \
+	&& ninja -C build \
+	&& ninja -C build install \
+	&& echo .
+ENV GST_PLUGIN_PATH=/usr/local/lib/aarch64-linux-gnu/gstreamer1.0
+ENV LD_PRELOAD=/usr/lib/aarch64-linux-gnu/libgomp.so.1
+
+###############
+# EdgeAI Apps
+###############
+WORKDIR /opt
+RUN echo . \
+	&& git clone --branch ${EDGEAI_APPS_TAG} https://git.ti.com/git/edgeai/edge_ai_apps \
+	&& cd edge_ai_apps \
+	&& ./download_models.sh --recommended \
+        && cd apps_cpp \
+        && cmake . -B build \
+        && cmake --build build -j6 \
+	&& echo .
+
+###############
+# Robotics SDK
+###############
+WORKDIR /opt
+RUN echo . \
+	&& git clone --branch ${ROBOTICS_SDK_TAG} https://git.ti.com/git/processor-sdk-vision/jacinto_ros_perception.git robotics_sdk \
+	&& cd /opt/robotics_sdk \
+	&& ./init_setup.sh \
+	&& echo .
+
+WORKDIR /opt
+RUN echo . \
+        && rm -rf /opt/ti-processor-sdk-rtos-j721e-evm-${PSDK_RTOS_VER} \
+        && rm -rf /opt/tivision_apps.tar.xz \
+	&& echo .
+
+##############
+# Environment
+##############
 WORKDIR /root
+RUN echo . \
+    && echo "if [ -n \"$BASH_VERSION\" ]; then"     >  .profile \
+    && echo "    # include .bashrc if it exists"    >> .profile \
+    && echo "    if [ -f \"$HOME/.bashrc\" ]; then" >> .profile \
+    && echo "        . \"$HOME/.bashrc\""           >> .profile \
+    && echo "    fi"                                >> .profile \
+    && echo "fi"                                    >> .profile \
+    && echo "#!/bin/bash"                           >  .bashrc  \
+    && echo "export PS1=\"${debian_chroot:+($debian_chroot)}\u@j7-docker:\w\$ \"" >> .bashrc \
+    && echo .
+
+ENV WORK_DIR=/root/${HOME}
+
 
