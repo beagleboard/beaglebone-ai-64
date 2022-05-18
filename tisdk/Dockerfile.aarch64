@@ -197,7 +197,7 @@ RUN echo . \
 		--path_to_protoc_exe $(pwd)/cmake/external/protoc-${PROTOBUF_VER}-linux-aarch_64/bin/protoc \
 		--use_tidl \
 		--build_wheel \
-	&& python3 -m pip install build/Linux/Release/dist/onnxruntime_tidl-1.7.0-cp38-cp38-linux_aarch64.whl \
+	&& python3 -m pip install build/Linux/Release/dist/onnxruntime_tidl-1.7.0-cp39-cp39-linux_aarch64.whl \
 	&& cd /opt/onnxruntime/build/Linux/Release \
 	&& make install \
 	&& echo .
