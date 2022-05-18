@@ -1,4 +1,4 @@
-FROM debian:buster AS debian-base-0
+FROM debian:bullseye AS debian-base-0
 ENV DEBIAN_FRONTEND=noninteractive
 
 RUN echo . \
@@ -6,7 +6,7 @@ RUN echo . \
 		gpg apt-utils \
 	&& echo .
 
-RUN echo "deb [arch=armhf] http://repos.rcn-ee.net/debian/ buster main" >> /etc/apt/sources.list \
+RUN echo "deb [arch=armhf] http://repos.rcn-ee.net/debian/ bullseye main" >> /etc/apt/sources.list \
 	&& apt-key adv --batch --keyserver keyserver.ubuntu.com --recv-key D284E608A4C46402
 
 RUN echo . \
@@ -197,7 +197,7 @@ RUN echo . \
 		--path_to_protoc_exe $(pwd)/cmake/external/protoc-${PROTOBUF_VER}-linux-aarch_64/bin/protoc \
 		--use_tidl \
 		--build_wheel \
-	&& python3 -m pip install build/Linux/Release/dist/onnxruntime_tidl-1.7.0-cp39-cp39-linux_aarch64.whl \
+	&& python3 -m pip install build/Linux/Release/dist/onnxruntime_tidl-1.7.0-*.whl \
 	&& cd /opt/onnxruntime/build/Linux/Release \
 	&& make install \
 	&& echo .
