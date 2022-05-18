@@ -8,7 +8,8 @@
 :base_font_size_min: 0
 :table_cell_padding: 0
 
-image:media/image1.jpg[media/image1.jpg,title="media/image1.jpg",width=598,height=400,align="center"]
+image::media/front.png[]
+
 
 *Revision 1*
 
@@ -39,9 +40,9 @@ HOLDERS AND/OR OTHER PARTIES PROVIDE THE DESIGN MATERIALS “AS IS”
 WITHOUT WARRANTY OF ANY KIND, EITHER EXPRESSED OR IMPLIED, INCLUDING,
 BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND
 FITNESS FOR A PARTICULAR PURPOSE. THE ENTIRE RISK AS TO THE QUALITY AND
-ERFORMANCE OF THE DESIGN MATERIALS IS WITH YOU. SHOULD THE DESIGN
+THE PERFORMANCE OF THE DESIGN MATERIALS IS WITH YOU. SHOULD THE DESIGN
 MATERIALS PROVE DEFECTIVE, YOU ASSUME THE COST OF ALL NECESSARY
-SERVICING, REPAIR OR CORRECTION.
+SERVICING, REPAIRING, OR CORRECTION.
 
 This board was designed as an evaluation and development tool. It was
 not designed with any other application in mind. As such, the design
@@ -57,7 +58,7 @@ BeagleBoard.org Foundation and logo-licensed manufacturers provide the
 enclosed BeagleBone under the following conditions:
 
 The user assumes all responsibility and liability for proper and safe
-handling of the goods. Further, the user indemnifies Supplier from all
+handling of the goods. Further, the user indemnifies the Supplier from all
 claims arising from the handling or use of the goods.
 
 Should the BeagleBone not meet the specifications indicated in the
@@ -80,7 +81,7 @@ property right of Supplier covering or relating to any machine, process,
 or combination in which such Supplier products or services might be or
 are used. The Supplier currently deals with a variety of customers for
 products, and therefore our arrangement with the user is not exclusive.
-The Supplier assume no liability for applications assistance, customer
+The Supplier assumes no liability for applications assistance, customer
 product design, software performance, or infringement of patents or
 services described herein.
 
@@ -97,10 +98,6 @@ the equipment.
 This Class A or B digital apparatus complies with Canadian ICES-003.
 Changes or modifications not expressly approved by the party responsible
 for compliance could void the user’s authority to operate the equipment.
-Cet appareil numérique de la classe A ou B est conforme à la norme
-NMB-003 du Canada. Les changements ou les modifications pas expressément
-approuvés par la partie responsible de la conformité ont pu vider
-l’autorité de l'utilisateur pour actionner l'équipement.
 
 == *BEAGLEBONE WARNINGS, RESTRICTIONS AND DISCLAIMERS*
 
@@ -116,7 +113,7 @@ product.
 *Your Sole Responsibility and Risk* you acknowledge, represent, and
 agree that:
 
-1.  You have unique knowledge concerning Federal, State and local
+1.  You have unique knowledge concerning Federal, State, and local
 regulatory requirements (including but not limited to Food and Drug
 Administration regulations, if applicable) which relate to your products
 and which relate to your use (and/or that of your employees, affiliates,
@@ -137,7 +134,7 @@ be associated with similar items. You assume full responsibility to
 determine and/or assure compliance with any such standards and related
 certifications as may be applicable. You will employ reasonable
 safeguards to ensure that your use of the BeagleBone will not result in
-any property damage, injury or death, even if the BeagleBone should fail
+any property damage, injury, or death, even if the BeagleBone should fail
 to perform as described or expected.
 
 *Certain Instructions*. It is important to operate the BeagleBone AI-64
@@ -145,13 +142,13 @@ within Supplier’s _recommended specifications and environmental
 considerations per the user guidelines._ _Exceeding the specified
 BeagleBone ratings (including but not limited to input and output_
 _voltage, current, power, and environmental ranges) may cause property
-damage, personal_ _injury or death. If there are questions concerning
-these ratings please contact the Supplier_ _representative prior to
+damage, personal_ _injury, or death. If there are questions concerning
+these ratings please contact the Supplier_ _representative before
 connecting interface electronics including input power and intended_
 _loads. Any loads applied outside of the specified output range may
 result in unintended_ _and/or inaccurate operation and/or possible
 permanent damage to the BeagleBone and/or_ _interface electronics.
-Please consult the System Reference Manual prior to connecting any_
+Please consult the System Reference Manual before connecting any_
 _load to the BeagleBone output. If there is uncertainty as to the load
 specification, please_ _contact the Supplier representative. During
 normal operation, some circuit components_ _may have case temperatures
@@ -168,12 +165,12 @@ diagnostics normally found in development environments_ _should use the
 BeagleBone._
 
 *Agreement to Defend, Indemnify and Hold Harmless*. You agree to defend,
-indemnify'' _and hold the Suppliers, its licensors and their
+indemnify'' _and hold the Suppliers, their licensors and their
 representatives harmless from and against_ _any and all claims, damages,
 losses, expenses, costs and liabilities (collectively,_ _"Claims")
 arising out of or in connection with any use of the BeagleBone that is
 not in_ _accordance with the terms of the agreement. This obligation
-shall apply whether Claims_ _arise under law of tort or contract or any
+shall apply whether Claims_ _arise under the law of tort or contract or any
 other legal theory, and even if the BeagleBone_ _fails to perform as
 described or expected._
 
@@ -305,9 +302,10 @@ This is sufficient for the tethered scenario and creates an out of box
 experience where the board can be used immediately with no other
 equipment needed.
 
+#TODO: Add BBAI-64 in the box (media/BBAI-in-Box.png)#
 [[figure-1,Figure 1]]
 .Figure 1. In The Box
-image:media/image7.jpg[media/image7.jpg,title="media/image7.jpg",width=574,height=399]
+image:media/BBAI-in-Box.png[media/BBAI-in-Box.png,title="media/BBAI-in-Box.png",width=574,height=399]
 
 [[main-connection-scenarios]]
 === 3.2 Main Connection Scenarios
@@ -348,7 +346,7 @@ shows this configuration.
 
 [[figure-2,Figure 2]]
 .Figure 2. Tethered Configuration
-image:media/image8.jpg[media/image8.jpg,title="media/image8.jpg",width=632,height=166,align="center"]
+image::media/USB-Tathering.png[title="Tethered Configuration"]
 
 All the power for the board is provided by the PC via the USB cable. In
 some instances, the PC may not be able to supply sufficient power for
@@ -363,7 +361,7 @@ in <<figure-3>>. The connector is on the bottom side of the board.
 +
 [[figure-3,Figure 3]]
 .Figure 3. USB Connection to the Board
-image:media/image9.jpg[media/image9.jpg,title="media/image9.jpg",width=451,height=206,float="right"]
+image::media/USB-Connection.png[title="USB Connection to the Board"]
 2.  Connect the large connector of the USB cable to your PC or laptop
 USB port.
 3.  The board will power on and the power LED will be on as shown in
@@ -371,7 +369,7 @@ USB port.
 +
 [[figure-4,Figure 4]]
 .Figure 4. Board Power LED
-image:media/image10.jpg[media/image10.jpg,title="media/image10.jpg",width=401,height=267,float="right"]
+image::media/Power-LED.png[title="Board Power LED"]
 4. When the board starts to the booting process started by the process
 of applying power, the LEDs will come on in sequence as shown in <<figure-5>>
 below. It will take a few seconds for the status LEDs to come on, so
@@ -380,7 +378,7 @@ to boot the Linux kernel.
 +
 [[figure-5,Figure 5]]
 .Figure 5. Board Boot Status
-image:media/image11.jpg[media/image11.jpg,title="media/image11.jpg",width=541,height=254,float="right"]
+image::media/LED-Pattern.png[title="media/Board Boot Status"]
 
 [[accessing-the-board-as-a-storage-drive]]
 ==== 3.3.2 Accessing the Board as a Storage Drive
@@ -408,9 +406,9 @@ instructions are described in the following section.
 
 [[figure-6,Figure 6]]
 .Figure 6. Desktop Configuration
-image:media/image12.jpg[media/image12.jpg,title="media/image12.jpg",width=356,height=409]
+image::media/Desktop-Configuration.png[title="Desktop Configuration"]
 
-Optionally an Ethernet cable can also be used for network access.
+Ethernet cable and M.2 WiFi + Bluetooth card are optional. They can be used if network access required.
 
 [[required-accessories]]
 ==== 3.4.1 Required Accessories
@@ -435,19 +433,19 @@ https://github.com/beagleboard/beaglebone-ai-64/wiki/Accessories.
 
 1. Connect the monitor
 +
-
+#TODO#
 [[figure-7,Figure 7]]
 .Figure 7. Connect microDP Cable to the Monitor
 image:media/image13.jpg[media/image13.jpg,title="media/image13.jpg",width=260,height=95,align="center"]
-
+#TODO#
 2. If you have an HDMI or VGA monitor connect your adapter as shown in. <<figure-8>> below from two perspectives.
 +
 [[figure-8,Figure 8]]
 .Figure 8. microDP to HDMI Adapter
 (insert pictures.)
 image:media/image14.jpg[media/image14.jpg,title="media/image14.jpg",width=243,height=140,align="center"]
-
-3. I you have USB keyboard and mouse such as
+#TODO#
+3. If you have USB keyboard and mouse such as
 +
 seen in <<figure-9>> below, you need to plug the receiver in the USB host
 port of the board as shown in <<figure-10>>.
@@ -466,14 +464,14 @@ work.
 [[figure-12,Figure 12]]
 .Figure 12. Ethernet Cable Connection
 image:media/image24.jpg[media/image24.jpg,title="media/image24.jpg",width=433,height=264,align="center"]
-
+#TODO#
 5. The final step is to plug in the DC power supply to the DC power jack as
 shown in <<figure-13>> below.
 +
 [[figure-13,Figure 13]]
 .Figure 13. External DC Power
 image:media/image25.jpg[media/image25.jpg,title="media/image25.jpg",width=618,height=298,align="center"]
-
+#TODO#
 6. The cable needed to connect to your display is a microHDMI to HDMI.
 Connect the microHDMI connector end to the board at this time. The
 connector is on the bottom side of the board as shown in <<figure-14>>
@@ -537,7 +535,7 @@ image:media/image27.jpg[media/image27.jpg,title="media/image27.jpg",width=513,he
 The BeagleBone AI-64 is the latest addition to the BeagleBoard.org
 family and like its predecessors, is designed to address the Open Source
 Community, early adopters, and anyone interested in a low cost ARM
-Cortex-A8 based processor.
+Cortex-A8 processor based Single Board Computer (SBC).
 
 It has been equipped with a minimum set of features to allow the user to
 experience the power of the processor and is not intended as a full
@@ -557,24 +555,23 @@ BeagleBone AI-64 is manufactured and warranted by partners listed at
 https://beagleboard.org/logo for the benefit of the community and its
 supporters.
 
-Jason Kridner of Texas Instruments handles the community promotions and
-is the spokesman for BeagleBoard.org.
+#Update: Jason Kridner of Texas Instruments handles the community promotions and is the spokesman for BeagleBoard.org.#
 
-The board is designed by Gerald Coley of EmProDesign, a charter member
-of the BeagleBoard.org community.
+#Update: The board is designed by Gerald Coley of EmProDesign, a charter member
+of the BeagleBoard.org community.#
 
-The PCB layout up through PCB revision B was done by Circuitco and
+#Update: The PCB layout up through PCB revision B was done by Circuitco and
 Circuitco is the sole funder of its development and transition to
 production. Later PCB revisions have been made by Embest, a subsidiary
-of Avent.
+of Avent.#
 
-The Software is written and supported by the thousands of community
+#Update: The Software is written and supported by the thousands of community
 members, including Jason Kridner, employee of Texas Instruments, and
-Robert Nelson, employee of DigiKey.
+Robert Nelson, employee of DigiKey.#
 
 [[beaglebone-compatibility]]
 === 4.1 BeagleBone Compatibility
-
+#TODO:#
 The board is intended to be compatible with the original BeagleBone as
 much as possible. There are several areas where there are differences
 between the two designs. These differences are listed below, along with
@@ -767,7 +764,7 @@ the board..
 * There are four blue **LED**S that can be used by the user.
 * *Reset Button* allows the user to reset the processor.
 * *microSD* slot is where a microSD card can be installed.
-* *microDP* connector is where the display is connected to.
+* *miniDP* connector is where the display is connected to.
 * *USB Host* can be connected different USB interfaces such as Wi-Fi,
 BT, Keyboard, etc.
 
