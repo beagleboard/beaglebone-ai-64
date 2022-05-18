@@ -20,6 +20,8 @@ RUN echo . \
 		curl \
 		wget \
 		unzip \
+		libx11-dev \
+		libgl-dev \
 		fakeroot dh-make dh-python \
 		python3 \
 		pybind11-dev \
@@ -126,6 +128,11 @@ RUN echo . \
 ######
 # TFL
 ######
+RUN echo . \
+	&& apt update && apt install -y \
+		zlib1g-dev \
+	&& echo .
+
 WORKDIR /opt
 RUN echo . \
 	&& git clone --single-branch --branch ${TENSORFLOW_TAG} --depth 1 https://github.com/TexasInstruments/tensorflow.git \
