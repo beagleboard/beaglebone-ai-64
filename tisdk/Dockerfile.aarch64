@@ -208,10 +208,15 @@ RUN echo . \
 ######
 ENV TIDL_PATH=/opt/ti-processor-sdk-rtos-j721e-evm-${PSDK_RTOS_VER}/${TIDL_LIB_PKG}/
 WORKDIR /opt
+
 RUN echo . \
-	&& git clone --single-branch -b ${TVM_TAG} https://github.com/TexasInstruments/tvm.git \
+	&& apt update && apt install -y \
+		llvm \
+	&& echo .
+
+RUN echo . \
+	&& git clone --single-branch -b ${OSRT_TAG} https://github.com/TexasInstruments/tvm.git \
 	&& cd tvm \
-	&& git checkout ${OSRT_TAG}_UPDATE1 \
 	&& git submodule update --init --recursive \
 	&& mkdir build \
 	&& cd build \
@@ -238,7 +243,6 @@ RUN echo . \
 #############
 WORKDIR /opt
 RUN echo . \
-	&& install -m 0644 /opt/neo-ai-dlr/build/lib/libdlr.so /usr/local/lib/python3.8/dist-packages/dlr \
 	&& install -m 0644 /opt/neo-ai-dlr/build/lib/libdlr.so /usr/local/lib \
 	&& mkdir -p /usr/local/dlr \
 	&& cp /opt/neo-ai-dlr/include/dlr.h /usr/local/dlr \
