@@ -293,6 +293,14 @@ RUN echo . \
         && git checkout -b tidl_branch 3ec0443 \
 	&& echo .
 
+RUN echo . \
+	&& apt update && apt install -y \
+		meson \
+		libgstreamer1.0-dev \
+		libgstreamer-plugins-base1.0-dev \
+		libdevil1c2 \
+	&& echo .
+
 WORKDIR /opt
 RUN echo . \
 	&& git clone --single-branch --branch ${EDGEAI_GST_PLUGINS_TAG} https://github.com/TexasInstruments/edgeai-gst-plugins.git \
@@ -307,7 +315,13 @@ ENV LD_PRELOAD=/usr/lib/aarch64-linux-gnu/libgomp.so.1
 ###############
 # EdgeAI Apps
 ###############
-WORKDIR /opt
+RUN echo . \
+	&& apt update && apt install -y \
+		libyaml-cpp-dev \
+		libopencv-core-dev \
+	 	libopencv-imgproc-dev \
+	&& echo .
+
 RUN echo . \
 	&& git clone --branch ${EDGEAI_APPS_TAG} https://git.ti.com/git/edgeai/edge_ai_apps \
 	&& cd edge_ai_apps \
