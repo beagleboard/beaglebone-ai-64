@@ -279,7 +279,7 @@ RUN echo . \
 	&& mkdir build \
 	&& cd build \
 	&& cmake -DCMAKE_INSTALL_PREFIX=/usr/local .. \
-	&& sed -i.bak s!^build_app!#build_app! test/CMakeLists.txt \
+	&& sed -i.bak s!^build_app!#build_app! ../test/CMakeLists.txt \
 	&& make -j6 \
 	&& make install \
 	&& ln -s /usr/lib/edgeai-tiovx-modules/libedgeai-tiovx-modules.so /usr/local/lib/ \
