@@ -1,0 +1,12 @@
+[glossary]
+== Glossary
+
+[glossary]
+BeagleBoard.org::
+    A Michigan,USA-based 501(c)(3) non-profit corporation.
+
+BeagleBone::
+    Original BeagleBone
+  
+Board:: 
+    BeagleBone AI 64

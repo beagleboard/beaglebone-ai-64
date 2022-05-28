@@ -1,0 +1,10 @@
+[[pictures]]
+== 10.0 Pictures
+
+image:media/image91.jpg[media/image91.jpg,title="media/image91.jpg",width=476,height=768]
+
+*Figure 74. Top Side*
+
+image:media/image92.jpg[media/image92.jpg,title="media/image92.jpg",width=486,height=764]
+
+*Figure 75. Bottom Side*

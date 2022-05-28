@@ -1,0 +1,17 @@
+[colophon]
+== *Revision 1.1*
+
+*Last PDF conversion: May 25, 2022*
+
+
+*Maintaining editor:* Deepak Khatri _lorforlinux@beagleboard.org_
+
+*Supply comments and errors via:*
+
+https://git.beagleboard.org/beagleboard/beaglebone-ai-64/-/issues
+
+*All information in this document is subject to change without notice.*
+
+*For an up to date version of this document refer to:*
+
+https://github.com/beagleboard/beaglebone-ai-64/System-Reference-Manual

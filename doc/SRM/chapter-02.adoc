@@ -1,0 +1,35 @@
+[[change-history]]
+== Change History
+
+This section describes the change history of this document and board.
+Document changes are not always a result of a board change. A board
+change will always result in a document change.
+
+[[document-change-history]]
+=== Document Change History
+
+[[table-1]]
+.Table 1. Change History
+[cols="1,7,2,1",options="header",]
+|=======================================================================
+|*Rev* |*Changes* |*Date* |*By*
+|A0 |Preliminary |September 2021|JA
+|A1 |Production release |December 2021 |JA
+|=======================================================================
+
+[[board-changes]]
+=== Board Changes
+
+Full issue list at
+https://github.com/beagleboard/beaglebone-ai-64/issues
+
+[[rev-A0]]
+==== Rev B0
+
+We are starting with revision B based on this being an update to the original BeagleBone AI. However, because this board ended up being so different, we've decided to name it BeagleBone AI-64, rather than simply a new revision.
+
+This is the initial engineering prototype release of the board. We will be tracking
+changes from this point forward.
+
+===== Known issues
+* USB SuperSpeed cannot function
