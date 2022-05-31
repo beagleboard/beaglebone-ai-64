@@ -1,0 +1,252 @@
+[[beaglebone-ai-64-overview]]
+== BeagleBone AI-64 Overview
+
+The BeagleBone AI-64 is the latest addition to the BeagleBoard.org
+family and like its predecessors, is designed to address the Open Source
+Community, early adopters, and anyone interested in a low cost ARM
+Cortex-A8 processor based Single Board Computer (SBC).
+
+It has been equipped with a minimum set of features to allow the user to
+experience the power of the processor and is not intended as a full
+development platform as many of the features and interfaces supplied by
+the processor are not accessible from the BeagleBone AI-64 via onboard
+support of some interfaces. It is not a complete product designed to do
+any particular function. It is a foundation for experimentation and
+learning how to program the processor and to access the peripherals by
+the creation of your own software and hardware.
+
+It also offers access to many of the interfaces and allows for the use
+of add-on boards called capes, to add many different combinations of
+features. A user may also develop their own board or add their own
+circuitry.
+
+BeagleBone AI-64 is manufactured and warranted by partners listed at
+https://beagleboard.org/logo for the benefit of the community and its
+supporters including the current BeagleBoard.org Foundation board members
+
+Jason Kridner, principal of JK Embedded Consulting an independent contractor and architect for new Beagle designs. He is also the spokesman for BeagleBoard.org.
+Drew Fustini, independent Linux developer
+Robert Nelson, applications engineer at Digi-Key
+Mark Yoder, professor at Rose-Hulman Institute of Technology
+Kathy Giori, product engineer at ZEDEDA
+See bbb.io/about
+
+The BBAI-64 board is designed designed by Seeed Studio (Seeed Development Limited) under guidance from the BeagleBoard.org Foundation.
+
+
+
+[[beaglebone-compatibility]]
+=== BeagleBone Compatibility
+#TODO:#
+The board is intended to be compatible with the original BeagleBone as
+much as possible. There are several areas where there are differences
+between the two designs. These differences are listed below, along with
+the reasons for the differences.
+
+* J721E DRA829/TDA4VM/AM752x, 2GHZ, 64 Bit, processor.
+** Sorry, we just had to make it WAY faster.
+* 4GB LPDDR4
+** _Cost reduction ???_
+** Performance boost!!!
+** Memory size increase
+** Lower power
+* Debug TTL serial.
+** _Cost reduction_
+** Can be added by buying a TTL to USB Cable that is widely available
+** Single largest cost reduction action taken
+* EEPROM Reduced from 4KB to 1KB
+** _Cost Reduction_
+* Onboard Managed NAND (eMMC)
+** 16GB
+** _Cost reduction_
+** Performance boost x8 vs. x4 bits
+** Performance boost due to deterministic properties vs. microSD card
+* GPMC bus may not be accessible from the expansion headers in some
+cases
+** Result of eMMC on the main board
+** Signals are still routed to the expansion connector
+** If eMMC is not used, signals can be used via expansion if eMMC is
+held in reset
+* There may be 10 less GPIO pins available
+** Result of eMMC
+** If eMMC is not used, could still be used
+* The power expansion header, for battery and back-light, has been
+removed
+** __Cost reduction,__space reduction
+** Four pins were added to provide access to the battery charger
+function.
+* Display Port interface onboard
+** Feature addition
+** Audio and video capable
+** Micro DP
+* No three function USB cable
+** _Cost reduction_
+* GPIO3_21 has a 24.576 MHZ clock on it.
+** This is required by the display Framer for Audio purposes. We needed to
+run a clock into the processor to generate the correct clock frequency.
+The pin on the processor was already routed to the expansion header. In
+order not to remove this feature on the expansion header, it was left
+connected. In order to use the pin as a GPIO pin, you need to disable
+the clock. While this disables audio to the display, the fact that you want
+to use this pin for something else, does the same thing.
+
+[[beaglebone-ai-64-features-and-specification]]
+=== BeagleBone AI-64 Features and Specification
+
+This section covers the specifications and features of the board and
+provides a high level description of the major components and interfaces
+that make up the board.
+
+<<table-2>> provides a list of the features.
+
+[[table-2,Table 2]]
+.Table 2. BeagleBone AI-64 Features
+[cols="1h,3",options="header",]
+|=======================================================================
+| |*Feature*
+|*Processor* | TI J721E DRA829/TDA4VM/AM752x  2GHz, 4000 MIPS
+
+I’m not going to list all specifications of this monster SoC, and we’ll do with J721E highlights instead:
+
+CPU
+Dual Cortex-A72 up to 2.0 GHz in a single cluster
+Up to three clusters of lockstep capable dual Cortex-R5F MCUs @ 1.0 GHz
+AI Accelerator / DSP
+Deep-learning Matrix Multiply Accelerator (MMA) @ up to 1.0 GHz (8 TOPS for 8-bit inference)
+C7x floating-point Vector DSP @ up to 1.0 GHz (80 GFLOPS)
+Up to two TMS320C66x floating-point DSPs @ up to 1.35 GHz (40 GFLOPS)
+Multimedia
+GPU – Imagination PowerVR Rogue 8XE GE8430 GPU
+Vision Processing Accelerator (VPAC) with image signal processor
+Depth and Motion Processing Accelerator (DMPAC)
+1x dual-core multi-standard HD Video Decoder
+1x dual-core multi-standard HD Video Encoder
+Memory I/F –
+Storage I/F – 1x Octal SPI (OSPI), GPMC for 8-/16-bit parallel NOR or NAND flash, 3x MMC/SD controllers, 1x UFS interface
+Two Navigator Subsystems (NAVSS) for data movement and control
+System MMU (SMMU) Version 3.0 and advanced virtualization capabilities.
+Peripherals
+Display – 1x eDP/DP, 1x MIPI DSI, and up to 2x DPI interfaces.
+Camera –  2x 4-lane MIPI CSI 2.0 Rx (camera receiver), 1x 4-lane MIPI CSI 2.0 Tx (camera transmitter)
+Audio – 12x MCASP (Multichannel Audio Serial Port)  supporting up to 16 channels
+Networking
+Up to 2x Gigabit Industrial Communication Subsystems (ICSSG), each with dual PRUs and dual RTUs
+Integrated Ethernet switch supporting up to a total of 8 external ports in addition to legacy Ethernet switch of up to 2 ports.
+Up to 4 PCIe GEN3 controllers
+2x USB 3.0 Dual-role device subsystems
+16 MCANs, 12 McASP, eMMC and SD, UFS, OSPI/HyperBus memory controller, QSPI,
+3x I3C, 12x I2C, 11x master/slave MCSPI, 12x UART, 10x GPIO modules
+Security
+2x hardware accelerator blocks containing AES/DES/SHA/MD5 called SA2UL management
+Secure Boot Management
+Public Key Accelerator (PKA) for large vector math operation
+Trusted Execution Environment (TEE)
+Secure storage support
+On-the-fly encryption and authentication support for OSPI interface
+Manufacturing Process – 16-nm FinFET technology
+Package – 24 x 24 mm, 0.8-mm pitch, 827-pin FCBGA (ALF), enables IPC class 3 PCB routing
+The device is partitioned into three functional domains, each containing specific processing cores and peripherals:
+Wake-up (WKUP) domain
+Microcontroller (MCU) domain with one of the dual Cortex-R5 cluster
+MAIN domain
+
+
+
+|*Graphics Engine* |SGX530 3D, 20M Polygons/S
+See Processor data sheet at https://www.ti.com/lit/gpn/dra829v
+
+|*SDRAM Memory* |4GB LPDDR4 1000MHZ
+
+|*Onboard Flash* |16GB, 8bit Embedded MMC
+
+|*PMIC* |TPS659411 and TPS659413 PMICs regulator and one additional LDO.
+
+|*Debug Support* | 3 pin Serial Header
+
+|*Power Source* | USB C or DC Jack
+
+|*PCB* | This beagle is not the standard 3.4” x 2.1”, It’s grown in size to 4” x 3.1”
+
+|*Indicators* |1-Power, 2-Ethernet, 4-User Controllable LEDs
+
+|*HS USB 2.0 Client Port* |Access to USB0, Client mode via USB-C
+
+|*HS USB 2.0 Host Port* |Access to USB1 & USB2, Type A Socket, 500mA LS/FS/HS
+
+|*Serial Port* |UART0 access via 3 pin 3.3V TTL micro Header. micro Header is
+populated cable was supplied
+
+|*Ethernet* |10/100, RJ45
+
+|*SD/MMC Connector* |microSD , 3.3V
+
+|*User Input* |Reset Button +
+Boot Button +
+Power Button
+
+|*Video Out* | uDP ,Unknown supported resolutions.
+
+|*Audio* |Via uDP Interface, Stereo
+
+|*Expansion Connectors* |Power 5V, 3.3V , VDD_ADC(1.8V) +
+3.3V I/O on all signals +
+McASP0, SPI1, I2C, GPIO(69 max), LCD, GPMC, MMC1, MMC2, 7 +
+AIN _(1.8V MAX)_, 4 Timers, 4 Serial Ports, CAN0, +
+EHRPWM(0,2),XDMA Interrupt, Power button, Expansion Board ID (Up to 4
+can be stacked)
+
+|*Weight* | )
+
+|*Power* |Refer to <<section-6-1-7>>
+|=======================================================================
+
+[[board-component-locations]]
+=== Board Component Locations
+
+This section describes the key components on the board. It provides
+information on their location and function. Familiarize yourself with
+the various components on the board.
+
+[[connectors-leds-and-switches]]
+==== Connectors, LEDs, and Switches
+
+<<figure-17>> below shows the locations of the connectors, LEDs, and
+switches on the PCB layout of the board.
+
+[[figure-17,Figure 17]]
+.Figure 17. Connectors, LEDs and Switches
+image:media/image28.jpg[media/image28.jpg,title="media/image28.jpg",width=509,height=340]
+
+* *DC Power* is the main DC input that accepts 5V power.
+* *Power Button* alerts the processor to initiate the power down
+sequence and is used to power down the board.
+* *10/100 Ethernet* is the connection to the LAN.
+* *Serial Debug* is the serial debug port.
+* *USB Client* is a USB-C connection to a PC that can also power the
+board.
+* *BOOT switch* can be used to force a boot from the microSD card if the
+power is cycled on the board, removing power and reapplying the power to
+the board..
+* There are four blue **LED**S that can be used by the user.
+* *Reset Button* allows the user to reset the processor.
+* *microSD* slot is where a microSD card can be installed.
+* *miniDP* connector is where the display is connected to.
+* *USB Host* can be connected different USB interfaces such as Wi-Fi,
+BT, Keyboard, etc.
+
+[[key-components]]
+==== Key Components
+
+<<figure-18>> below shows the locations of the key components on the PCB
+layout of the board.
+
+[[figure-18,Figure 18]]
+.Figure 18. Key Components
+image:media/image29.jpg[media/image29.jpg,title="media/image29.jpg",width=575,height=417]
+
+* *TI J721E DRA829/TDA4VM/AM752x* is the processor for the board.
+* *4GB LPDDR4L is the Dual Data Rate RAM memory.
+* *SMSC Ethernet PHY* is the physical interface to the network.
+* *Micron eMMC* is an onboard MMC chip that holds up to 16GB of data.
+* *uDP* Framer provides control for a DP HDMI or DVI-D display with an
+adapter.
