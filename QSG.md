@@ -71,4 +71,4 @@ _**NOTE**_: Please [update your software](https://beagleboard.org/update-ai64).
 
 # Trademarks
 * ARM® and Cortex® are trademarks of ARM Ltd.
-* BeagleBone® and BeagleBoard.org® are trademarks of the BeagleBoard.org Foundation
+* BeagleBone® and BeagleBoard.org® are trademarks of BeagleBoard.org Foundation
