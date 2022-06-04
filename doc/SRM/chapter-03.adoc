@@ -56,7 +56,7 @@ Each of these configurations is discussed in general terms in the
 following sections.
 
 For an up-to-date list of confirmed working accessories please go to
-https://github.com/beagleboard/beaglebone-ai-64/wiki/Accessories[_https://github.com/beagleboard/beaglebone-ai-64/wiki/Accesories_]
+https://git.beagleboard.org/beagleboard/beaglebone-ai-64/wiki/Accessories[_https://git.beagleboard.org/beagleboard/beaglebone-ai-64/wiki/Accesories_]
 
 [[tethered-to-a-pc]]
 === Tethered To A PC
@@ -142,7 +142,7 @@ has been tested and worked beautifully.)
 
 For an up-to-date list of confirmed working accessories please go to
 #TO-UPDATE#
-https://github.com/beagleboard/beaglebone-ai-64/wiki/Accessories.
+https://git.beagleboard.org/beagleboard/beaglebone-ai-64/wiki/Accessories.
 
 [[connecting-up-the-board]]
 ==== Connecting Up the Board
@@ -150,7 +150,7 @@ https://github.com/beagleboard/beaglebone-ai-64/wiki/Accessories.
 1. Connect the miniDP to HDMI or miniDP to DP cable from your BBAI-64 to your monitor.
 +
 [[display-cable-figure,miniDP-HDMI or miniDP-DP cable connection figure]]
-image::images/ch03/BBAI-64-to-monitor-cable.png[title="Connect miniDP/HDMI cable to the BBAI-64"]
+image::images/ch03/BBAI-64-to-monitor-cable.png[title="Connect miniDP/HDMI cable to BBAI-64"]
 
 2. If you have an Display Port or HDMI monitor with HDMI-HDMI or DP-DP cable you can use adapters as shown in. <<display-adaptors-figure>>.
 +

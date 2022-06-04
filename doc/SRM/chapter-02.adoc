@@ -21,7 +21,7 @@ change will always result in a document change.
 === Board Changes
 
 Full issue list at
-https://github.com/beagleboard/beaglebone-ai-64/issues
+https://git.beagleboard.org/beagleboard/beaglebone-ai-64/-/issues
 
 [[rev-A0]]
 ==== Rev B0

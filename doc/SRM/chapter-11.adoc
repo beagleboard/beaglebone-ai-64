@@ -1,97 +1,52 @@
 [[support-information]]
 == Support Information
 
-All support for this design is through the BeagleBoard.org community at:
+All support for this design is through BeagleBoard.org community at:
 
-_beagleboard@googlegroups.com_ or
+link:https://forum.beagleboard.org/[BeagleBoard.org fourm].
 
-http://beagleboard.org/discuss[_http://beagleboard.org/discuss_] .
 
 [[hardware-design]]
 === Hardware Design
 
-Design documentation can be found on the eMMC of the board under the
-documents/hardware directory when connected using the USB cable.
-Provided there is:
+#Update required#
 
-* Schematic in PDF
-* Schematic in OrCAD (Cadence Design Entry CIS 16.3)
-* PCB Gerber
-* PCB Layout (Allegro)
-* Bill of Material
-* System Reference Manual (This document).
+You can find all BBAI-64 hardware files https://git.beagleboard.org/beagleboard/beaglebone-ai-64/-/tree/master/hw[here].
 
-This directory is not always kept up to date in every SW release due to
-the frequency of changes of the SW. The best solution is to download the
-files from
-https://beagleboard.org/latest-images[_beagleboard.org/latest-images_]
-
-We do not track SW revision of what is in the eMMC. SW is tracked
-separately from the HW due to the frequency of changes which would
-require massive relabeling of boards due to the frequent SW changes. You
-should always use the latest SW revision.
-
-To see what SW revision is loaded into the eMMC follow the instructions
-at
-http://elinux.org/Beagleboard:Updating_The_Software#Checking_The_Angstrom_Image_Version[_http://elinux.org/Beagleboard:Updating_The_Software#Checking_The_Angstrom_Image_Version_]
 
 [[software-updates]]
 === Software Updates
 
-It is a good idea to always use the latest software. Instructions for
-how to update your software to the latest version can be found at:
+You can download and flash the new image onto your BBAI-64 from 
+https://rcn-ee.net/rootfs/debian-arm64/[this] image repository from Robert.
 
-http://elinux.org/BeagleBoneBlack#Updating_the_eMMC_Software[_http://elinux.org/BeagleBoneBlack#Updating_the_eMMC_S
-oftware_]
+#Update required#
+
+To see what SW revision is loaded into the eMMC check `/etc/dogtag`.
+It should look something like as shown below,
+
+```
+debian@BeagleBone:~$ cat /etc/dogtag 
+BeagleBoard.org Debian Bullseye Xfce Image 2022-05-26
+```
 
 [[rma-support]]
 === RMA Support
 
-If you feel your board is defective or has issues, request an RMA by
-filling out the form at
-http://beagleboard.org/support/rma[_http://beagleboard.org/support/rma_]
-. You will need the serial number and revision of the board. The serial
-numbers and revisions keep moving. Different boards can have different
-locations depending on when they were made. The following figures show
-the three locations of the serial and revision number.
+#Update required#
 
-[[figure-76,Figure 76]]
-.Figure 76. Initial Serial Number and Revision Locations
-image:media/image93.jpg[media/image93.jpg,title="media/image93.jpg",width=518,height=308]
+If you feel your board is defective or has issues, request an Return Merchandise Application (RMA) by filling out the form at
+http://beagleboard.org/support/rma . You will need the serial number and revision of the board. The
+serial numbers and revisions keep moving. Different boards can have different locations depending
+on when they were made. The following figures show the three locations of the serial and revision
+number.
 
+#TODO: Add serial number images#
 
-[[figure-77,Figure 77]]
-.Figure 77. Second Phase Serial Number and Revision Location
-image:media/image94.jpg[media/image94.jpg,title="media/image94.jpg",width=518,height=230]
+[[trouble-shooting-video-output-issues]]
+=== Troubleshooting video output issues
 
-.Figure 78. Third Phase Serial Number and Revision Location
-image:media/image95.jpg[media/image95.jpg,title="media/image95.jpg",width=575,height=222]
-
-
-[[trouble-shooting-hdmi-issues]]
-=== Trouble Shooting HDMI Issues
-
-Many people are having issues with getting HDMI to work on their
-TV/Display. Unfortunately, we do not have the resources to buy all the
-TVs and Monitors on the market today nor go to eBay and buy all of the
-TVs and monitors made over the last five years to thoroughly test each
-and every one. We are depending on community members to help us get
-these tested and information provided on how to get them to work.
-
-One would think that if it worked on a lot of different TVs and monitors
-it would work on most if not all of them, assuming they meet the
-specification. However, there are other issues that could also result in
-these various TVs and monitors not working. The intent is that this page
-will be useful in navigating some of these issues. As others also find
-solutions, as long as we know about them, they will be added here as
-well. For access to the most up to date troubleshooting capabilities, go
-to the support wiki at
-http://www.elinux.org/Beagleboard:BeagleBoneBlack_HDMI[_http://www.elinux.org/Beagleboard:BeagleBoneBlack_HDMI_]
-
-The early release of the Software had some issues in the HDMI driver. Be
-sure and use the latest SW to take advantage of the improvements.
-
-http://www.elinux.org/Beagleboard:BeagleBoneBlack#Software_Resources[_http://www.elinux.org/Beagleboard:BeagleBoneBlack#Software_Resources_]
+#TODO#
 
 [[edid]]
 ==== EDID
@@ -166,6 +121,5 @@ highest audio supported resolution.
 [[getting-help]]
 ==== Getting Help
 
-If you need some up to date troubleshooting techniques, we have a Wiki
-set up at
-http://elinux.org/Beagleboard:BeagleBoneBlack_HDMI[_http://elinux.org/Beagleboard:BeagleBoneBlack_HDMI_]
+If you need some up to date troubleshooting techniques,
+you can post your queries on link:https://forum.beagleboard.org/[BeagleBoard.org fourm].

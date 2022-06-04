@@ -1,24 +1,176 @@
 [[beaglebone-ai-64-high-level-specification]]
 == BeagleBone AI-64 High Level Specification
 
-This section provides the high level specification of the BeagleBone
-AI-64.
+<<bbai-64-block-diagram-ch05>> below shows the high level block diagram of BeagleBone
+AI-64 board surrounding TDA4VM SoC.
 
-[[block-diagram]]
-=== Block Diagram
-
-<<figure-19>> below is the high level block diagram of the BeagleBone
-AI-64.
-
-[[figure-19,Figure 19]]
-.Figure 19. BeagleBone AI-64 Key Components
-image:media/image30.jpg[media/image30.jpg,title="media/image30.jpg",width=512,height=454,align="center"]
+[[bbai-64-block-diagram-ch05,BeagleBone AI-64 Key Components figure]]
+image::images/ch05/board-block-diagram.svg[title="BeagleBone AI-64 Key Components"]
 
 [[processor]]
 === Processor
 
-The revision A and later boards have moved to the TI J721E DRA829/TDA4VM/AM752x
-device.
+BeagleBone AI-64 uses TI J721E https://www.ti.com/product/DRA829V[DRA829]/
+https://www.ti.com/product/TDA4VM[TDA4VM] monster of an SoC, not necessarily 
+in terms of CPU processing power, but it has an amazing amount of features and peripherals.
+The DRA829 and TDA4VM SoCs are part of the K3 Multicore SoC architecture platform. The SoCs are targeted
+for automotive applications and aim to meet the complex processing needs of modern embedded products.
+
+They are designed as a low power, high performance and highly integrated device architecture, adding
+significant enhancement on processing power, graphics capability, video and imaging processing, virtualization
+and coherent memory support. In addition, these SoCs support state of the art security and functional safety
+features. For the remaining of this section device, SoC, and processor will be used interchangeably. 
+
+==== Some of the main distinguished characteristics of the device are:
+
+* 64-bit architecture with virtualization and coherent memory support, which leverages full processing capability
+of 64-bit Arm® Cortex®-A72
+* Fully programmable industrial communication subsystems to enable future-proof designs for customers that
+need to adopt the new Gigabit Time-sensitive Networks (TSN) standards, but still need full support on legacy
+protocols and continuous system optimization over the product deployment
+* Integration of vision hardware processing accelerators to facilitate extensive processing requirements in low
+power budget for automotive ADAS and machine vision applications
+* Integration of a general-purpose microcontroller unit (MCU) with a dual Arm® Cortex®-R5F MCU subsystem,
+available for general purpose use as two cores or in lockstep, intended to help customers achieve functional
+safety goals for their end products
+* Integration of a next-generation fixed and floating-point C71x Digital Signal Processor (DSP) that significantly
+boosts power over a broad range of general signal processing tasks for both general applications and
+automotive functions which also incorporates advanced techniques to improve control code efficiency and
+ease of programming such as branch prediction, protected pipeline, precise exception and virtual memory
+management
+* Tightly coupled Matrix Multiplication Accelerator (MMA) that extends the C71x DSP architecture's scalar and
+vector facilities enabling deep learning and enhance vision, analytics and wide range of general applications.
+The achieved total TOPS (Tera Operations Per Second) performance significantly differentiates the device for
+single board computer in machine vision and deep learning applications
+* Key display features including flexibility to interface with different panel types (eDP, DSI, DPI) with multi-layer
+hardware composition
+* Integration of hardware features that help applications to achieve functional safety mechanisms
+* Robust security architecture with sandboxed DMSC controller managing all secure configurations with high
+performance client-server messaging scheme between secure DMSC and all cores
+* Simplified solution for power supply management, enabling lower cost system solution (on-die bias LDOs and
+power good comparators for minimal power sequencing requirements consistent with low cost supply design)
+
+#### The device is composed of the following main subsystems, across different domains of the SoC, among others:
+
+* One dual-core 64-bit Arm Cortex-A72 microprocessor subsystem at up to 2.0 GHz and up to 24K DMIPS
+(Dhrystone Million Instructions per Second)
+* Up to three Microcontroller Units (MCU), based on dual-core Arm Cortex-R5F processor running at up to 1.0
+GHz, up to 12K DMIPS
+* Up to two TMS320C66x DSP CorePac modules running at up to 1.35 GHz, up to 40 GFLOPS
+* One C71x floating point, vector DSP running at up to up to 1.0 GHz, up to 80 GFLOPS
+* One deep-learning MMA, up to 8 TOPS (8b) at 1.0 GHz
+* Up to two gigabit dual-core Programmable Real-Time Unit and Industrial Communication Subsystems
+(PRU_ICSSG)
+* Two Navigator Subsystems (NAVSS) for data movement and control
+* One multi-pipeline Display Subsystem (DSS) with one MIPI® Display Serial Interface Controller (DSI) and
+shared MIPI D-PHY Transmitter (DPHY_TX), one Embedded DisplayPort Transmitter (EDP) with shared
+Serializer/Deserializer (SERDES), and two MIPI Display Pixel Interface (DPI) ports
+* Two Camera Streaming Interface Receivers (CSI_RX_IF) with dedicated MIPI D-PHYs (DPHY_RX)
+* One Camera Streaming Interface Transmitter (CSI_TX_IF) with MIPI D-PHY Transmitter (DPHY_TX) shared
+with DSI
+* One Vision Processing Accelerator (VPAC) with image signal processor
+* One Depth and Motion Processing Accelerator (DMPAC)
+* One dual-core multi-standard HD Video Decoder (DECODER)
+* One dual-core multi-standard HD Video Encoder (ENCODER)
+* One Graphics Processing Unit (GPU)
+* One Device Management and Security Controller (DMSC)
+
+#### The device provides a rich set of peripherals such as:
+
+* General connectivity peripherals, including:
+** Two 12-bit general purpose Analog-to-Digital Converters (ADC)
+** Ten Inter-Integrated Circuit (I2C) interfaces
+** Three Improved Inter-Integrated Circuit (I3C) controllers
+** Eleven master/slave Multichannel Serial Peripheral Interfaces (MCSPI)
+** Twelve configurable Universal Asynchronous Receiver/Transmitter (UART) interfaces
+** Ten General-Purpose Input/Output (GPIO) modules
+
+* High-speed interfaces, including:
+** Two Gigabit Ethernet Switch (CPSW) modules
+** Two Dual-Role-Device (DRD) Universal Serial Bus Subsystems (USBSS) with integrated PHY
+** Four Peripheral Component Interconnect express (PCIe) Gen3 subsystems
+
+* Flash memory interfaces, including:
+** One Octal SPI (OSPI) interface and one Quad SPI (QSPI) or one QSPI and one HyperBus^TM^
+** One General Purpose Memory Controller (GPMC) with Error Location Module (ELM) and 8- or 16-
+bit-wide data bus width (supports parallel NOR or NAND FLASH devices)
+** Three Multimedia Card/Secure Digital (MMCSD) controllers
+** One Universal Flash Storage (UFS) interface
+
+* Industrial and control interfaces, including:
+** Sixteen Controller Area Network (MCAN) interfaces with flexible data rate support
+** Three Enhanced Capture (ECAP) modules
+** Six Enhanced Pulse-Width Modulation (EPWM) subsystems
+** Three Enhanced Quadrature Encoder Pulse (EQEP) modules
+
+* Audio peripherals, including:
+** One Audio Tracking Logic (ATL)
+** Twelve Multichannel Audio Serial Port (MCASP) modules supporting up to 16 channels with independent
+TX/RX clock/sync domain
+
+* One Video Processing Front End (VPFE) interface module
+
+#### The device also integrates:
+
+* Power distribution, reset controls and clock management components
+
+* Power-management techniques for device power consumption minimization:
+** Adaptive Voltage Scaling (AVS)
+** Dynamic Frequency Scaling (DFS)
+** Gated clocks
+** Multiple voltage domains
+** Independently controlled power domains for major modules
+** Voltage and Temperature Management (VTM) module
+** Power-on Reset Generators (PRG)
+** Power Sleep Controllers (PSC)
+
+* Optimized interconnect (CBASS) architecture to enable latency-critical real time network and IO applications
+
+* Control modules (CTRL_MMRs) mainly associated with device top-level configurations such as:
+** IO Pad and pin multiplexing configuration
+** PLL control and associated High-Speed Dividers (HSDIV)
+** Clock selection
+** Analog function controls
+
+* Multicore Shared Memory Controller (MSMC)
+* DDR Subsystem (DDRSS) with Error Correcting Code (ECC), supporting LPDDR4
+* 1KB RAM with ECC support for C71x boot vectors
+* 2KB RAM with ECC support for A72 and R5F boot vectors
+* 512KB On-Chip SRAM protected by ECC
+* One Global Time Counter (GTC) module
+* Thirty 32-bit counter timers with compare and capture modes
+* Debug and trace capabilities
+
+#### The device includes different modules for functional safety requirements support:
+
+* MCU island with dual lock step Arm Cortex-R5F
+* Safety enabled interconnect with implemented features to help with Freedom From Interference (FFI)
+* Twelve Real Time Interrupt (RTI) modules with Windowed Watchdog Timer (WWDT) functionality to monitor
+processor cores
+* Sixteen Dual-Clock Comparators (DCC) to monitor clocking sources during run-time
+* Three Error Signaling Modules (ESM) to enable error monitoring
+* Temperature monitoring sensors
+* ECC on all critical memories
+* Dedicated hardware Memory Cyclic Redundancy Check (MCRC) blocks
+
+#### The device supports the following main security functionalities among others:
+
+* Secure Boot Management
+* Public Key Accelerator (PKA) for large vector math operation
+* Cryptographic acceleration (AES, 3DES, MD5, SHA1, SHA2-224, 256, 512 operation)
+* Trusted Execution Environment (TEE)
+* Secure storage support
+* On-the-fly encryption and authentication support for OSPI interface
+
+The device is partitioned into three functional domains as shown in <<soc-block-diagram>>, 
+each containing specific processing cores and peripherals:
+
+* Wake-up (WKUP) domain
+* Microcontroller (MCU) domain with one of the dual Cortex-R5 cluster
+* MAIN domain
+
+[[soc-block-diagram,Device Top-level Block Diagram]]
+image::images/ch05/soc-block-diagram.svg[title="Device Top-level Block Diagram"]
 
 [[memory]]
 === Memory
@@ -180,7 +332,7 @@ from power derived on a cape. The DC supply should be well regulated and
 === Reset Button
 
 When pressed and released, causes a reset of the board. The reset button
-used on the BeagleBone AI-64 is a little larger than the one used on the
+used on BeagleBone AI-64 is a little larger than the one used on the
 original BeagleBone. It has also been moved out to the edge of the board
 so that it is more accessible.
 
@@ -241,16 +393,16 @@ Ethernet connector on the main board. This notch acts as a key to ensure
 proper orientation of the cape.
 
 The majority of capes designed for the original BeagleBone will work on
-the BeagleBone AI-64. The two main expansion headers will be populated
+BeagleBone AI-64. The two main expansion headers will be populated
 on the board. There are a few exceptions where certain capabilities may
-not be present or are limited to the BeagleBone AI-64. These include:
+not be present or are limited to BeagleBone AI-64. These include:
 
 * GPMC bus may NOT be available due to the use of those signals by the
 eMMC. If the eMMC is used for booting only and the file system is on the
 microSD card, then these signals could be used.
 * Another option is to use the microSD or serial boot modes and not use
 the eMMC.
-* The power expansion header is not on the BeagleBone AI-64 so those
+* The power expansion header is not on BeagleBone AI-64 so those
 functions are not supported.
 
 For more information on cape support refer to <<section-9>>.

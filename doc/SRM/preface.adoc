@@ -36,8 +36,8 @@ The user assumes all responsibility and liability for proper and safe
 handling of the goods. Further, the user indemnifies the Supplier from all
 claims arising from the handling or use of the goods.
 
-Should the BeagleBone not meet the specifications indicated in the
-System Reference Manual, the BeagleBone may be returned within 90 days
+Should BeagleBone not meet the specifications indicated in the
+System Reference Manual, BeagleBone may be returned within 90 days
 from the date of delivery to the distributor of purchase for a full
 refund. THE FOREGOING LIMITED WARRANTY IS THE EXCLUSIVE WARRANTY MADE BY
 SELLER TO BUYER AND IS IN LIEU OF ALL OTHER WARRANTIES, EXPRESSED,
@@ -92,27 +92,27 @@ agree that:
 regulatory requirements (including but not limited to Food and Drug
 Administration regulations, if applicable) which relate to your products
 and which relate to your use (and/or that of your employees, affiliates,
-contractors or designees) of the BeagleBone for evaluation, testing and
+contractors or designees) of BeagleBone for evaluation, testing and
 other purposes.
 2.  You have full and exclusive responsibility to assure the safety and
 compliance of your products with all such laws and other applicable
 regulatory requirements, and also to assure the safety of any activities
 to be conducted by you and/or your employees, affiliates, contractors or
-designees, using the BeagleBone. Further, you are responsible to assure
+designees, using BeagleBone. Further, you are responsible to assure
 that any interfaces (electronic and/or mechanical) between the
 BeagleBone and any human body are designed with suitable isolation and
 means to safely limit accessible leakage currents to minimize the risk
 of electrical shock hazard.
-3.  Since the BeagleBone is not a completed product, it may not meet all
+3.  Since BeagleBone is not a completed product, it may not meet all
 applicable regulatory and safety compliance standards which may normally
 be associated with similar items. You assume full responsibility to
 determine and/or assure compliance with any such standards and related
 certifications as may be applicable. You will employ reasonable
-safeguards to ensure that your use of the BeagleBone will not result in
-any property damage, injury, or death, even if the BeagleBone should fail
+safeguards to ensure that your use of BeagleBone will not result in
+any property damage, injury, or death, even if BeagleBone should fail
 to perform as described or expected.
 
-*Certain Instructions*. It is important to operate the BeagleBone AI-64
+*Certain Instructions*. It is important to operate BeagleBone AI-64
 within Supplier’s _recommended specifications and environmental
 considerations per the user guidelines._ _Exceeding the specified
 BeagleBone ratings (including but not limited to input and output_
@@ -122,16 +122,16 @@ these ratings please contact the Supplier_ _representative before
 connecting interface electronics including input power and intended_
 _loads. Any loads applied outside of the specified output range may
 result in unintended_ _and/or inaccurate operation and/or possible
-permanent damage to the BeagleBone and/or_ _interface electronics.
+permanent damage to BeagleBone and/or_ _interface electronics.
 Please consult the System Reference Manual before connecting any_
-_load to the BeagleBone output. If there is uncertainty as to the load
+_load to BeagleBone output. If there is uncertainty as to the load
 specification, please_ _contact the Supplier representative. During
 normal operation, some circuit components_ _may have case temperatures
 greater than 60 C as long as the input and output are_ _maintained at a
 normal ambient operating temperature. These components include but are_
 _not limited to linear regulators, switching transistors, pass
 transistors, and current sense_ _resistors which can be identified using
-the BeagleBone schematic located at the link in the_ _BeagleBone System
+BeagleBone schematic located at the link in the_ _BeagleBone System
 Reference Manual. When placing measurement probes near these_ _devices
 during normal operation, please be aware that these devices may be very
 warm to_ _the touch. As with all electronic evaluation tools, only
@@ -143,10 +143,10 @@ BeagleBone._
 indemnify'' _and hold the Suppliers, their licensors and their
 representatives harmless from and against_ _any and all claims, damages,
 losses, expenses, costs and liabilities (collectively,_ _"Claims")
-arising out of or in connection with any use of the BeagleBone that is
+arising out of or in connection with any use of BeagleBone that is
 not in_ _accordance with the terms of the agreement. This obligation
 shall apply whether Claims_ _arise under the law of tort or contract or any
-other legal theory, and even if the BeagleBone_ _fails to perform as
+other legal theory, and even if BeagleBone_ _fails to perform as
 described or expected._
 
 *Safety-Critical or Life-Critical Applications*. If you intend to
