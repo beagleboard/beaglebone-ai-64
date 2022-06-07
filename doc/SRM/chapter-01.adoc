@@ -4,7 +4,7 @@
 This document is the *System Reference Manual* for BeagleBone AI-64
 and covers its use and design. The board will primarily be referred to
 in the remainder of this document simply as the board, although it may
-also be referred to as AI-64 / BBAI-64 / BeagleBone AI-64 as a reminder. There are
+also be referred to as AI-64 / BeagleBone AI-64 as a reminder. There are
 also references to the original BeagleBone as well, and will be
 referenced as simply BeagleBone.
 
@@ -15,6 +15,6 @@ the hardware revisions and as such not result in a change in the
 revision number.
 
 Make sure you frequently check the 
-https://git.beagleboard.org/beagleboard/beaglebone-ai-64/-/tree/master/doc[doc folder in BBAI-64 git repository]
+https://git.beagleboard.org/beagleboard/beaglebone-ai-64/[BeagleBone AI-64 git repository]
 for the most up to date support documents.
 

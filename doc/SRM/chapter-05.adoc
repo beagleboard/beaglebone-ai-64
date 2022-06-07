@@ -11,17 +11,16 @@ image::images/ch05/board-block-diagram.svg[title="BeagleBone AI-64 Key Component
 === Processor
 
 BeagleBone AI-64 uses TI J721E https://www.ti.com/product/DRA829V[DRA829]/
-https://www.ti.com/product/TDA4VM[TDA4VM] monster of an SoC, not necessarily 
-in terms of CPU processing power, but it has an amazing amount of features and peripherals.
-The DRA829 and TDA4VM SoCs are part of the K3 Multicore SoC architecture platform. The SoCs are targeted
-for automotive applications and aim to meet the complex processing needs of modern embedded products.
+https://www.ti.com/product/TDA4VM[TDA4VM] whoch is part of the K3 Multicore SoC architecture platform 
+and it is targeted for the reliability and low-latency needs of the automotive market provide for a great 
+general purpose platform suitable for industrial automation, mobile robotics, building automation and numerous hobby projects.
 
-They are designed as a low power, high performance and highly integrated device architecture, adding
+The SoC designed as a low power, high performance and highly integrated device architecture, adding
 significant enhancement on processing power, graphics capability, video and imaging processing, virtualization
 and coherent memory support. In addition, these SoCs support state of the art security and functional safety
 features. For the remaining of this section device, SoC, and processor will be used interchangeably. 
 
-==== Some of the main distinguished characteristics of the device are:
+*Some of the main distinguished characteristics of the device are:*
 
 * 64-bit architecture with virtualization and coherent memory support, which leverages full processing capability
 of 64-bit Arm® Cortex®-A72
@@ -50,7 +49,7 @@ performance client-server messaging scheme between secure DMSC and all cores
 * Simplified solution for power supply management, enabling lower cost system solution (on-die bias LDOs and
 power good comparators for minimal power sequencing requirements consistent with low cost supply design)
 
-#### The device is composed of the following main subsystems, across different domains of the SoC, among others:
+*The device is composed of the following main subsystems, across different domains of the SoC, among others:*
 
 * One dual-core 64-bit Arm Cortex-A72 microprocessor subsystem at up to 2.0 GHz and up to 24K DMIPS
 (Dhrystone Million Instructions per Second)
@@ -75,7 +74,7 @@ with DSI
 * One Graphics Processing Unit (GPU)
 * One Device Management and Security Controller (DMSC)
 
-#### The device provides a rich set of peripherals such as:
+*The device provides a rich set of peripherals such as:*
 
 * General connectivity peripherals, including:
 ** Two 12-bit general purpose Analog-to-Digital Converters (ADC)
@@ -110,7 +109,7 @@ TX/RX clock/sync domain
 
 * One Video Processing Front End (VPFE) interface module
 
-#### The device also integrates:
+*The device also integrates:*
 
 * Power distribution, reset controls and clock management components
 
@@ -141,7 +140,7 @@ TX/RX clock/sync domain
 * Thirty 32-bit counter timers with compare and capture modes
 * Debug and trace capabilities
 
-#### The device includes different modules for functional safety requirements support:
+*The device includes different modules for functional safety requirements support:*
 
 * MCU island with dual lock step Arm Cortex-R5F
 * Safety enabled interconnect with implemented features to help with Freedom From Interference (FFI)
@@ -153,7 +152,7 @@ processor cores
 * ECC on all critical memories
 * Dedicated hardware Memory Cyclic Redundancy Check (MCRC) blocks
 
-#### The device supports the following main security functionalities among others:
+*The device supports the following main security functionalities among others:*
 
 * Secure Boot Management
 * Public Key Accelerator (PKA) for large vector math operation
@@ -181,15 +180,15 @@ on the board.
 [[mb-ddr4l]]
 ==== 4GB LPDDR4
 
-A single 512Gb x16 LPDDR4 4Gb memory device is used. The memory
+A single (1024M x 16bits x 2channels) LPDDR4 4Gb memory device is used. The memory
 used is is:
 
-* Q3222PM1WDGTK
+* Q3222PM1WDGTK-U
 
 [[kb-eeprom]]
-==== 4KB EEPROM
+==== 4Kb EEPROM
 
-A single 4KB EEPROM is provided on I2C0 that holds the board
+A single 4Kb EEPROM (24FC04HT-I/OT) is provided on I2C0 that holds the board
 information. This information includes board name, serial number, and
 revision information. This is the not the same as the one used on the
 original BeagleBone. The device was changed for cost reduction reasons.
@@ -260,12 +259,12 @@ warm reset only and will not force a boot mode_ _change._
 [[power-management]]
 === Power Management
 
-The *TPS659411 and TPS659413* power management device is used along with a separate
-LDO to provide power to the system. The**TPS659411 and TPS659413** version provides
+The *TPS65941213 and TPS65941111* power management device is used along with a separate
+LDO to provide power to the system. The**TPS65941213 and TPS65941111** version provides
 for the proper voltages required for the LPDDR4. This is the same device
 as used on the original BeagleBone with the exception of the power rail
 configuration settings which will be changed in the internal EEPROM to
-the *TPS659411 and TPS659413* to support the new voltages.
+the *TPS65941213 and TPS65941111* to support the new voltages.
 
 LPDDR4 requires 1.5V instead of 1.8V on the DDR2 as is the case on the
 original BeagleBone. The 1.8V regulator setting has been changed to 1.5V
@@ -277,132 +276,66 @@ rest of the board.
 [[pc-usb-interface]]
 === PC USB Interface
 
-The board has a miniUSB connector that connects the USB0 port to the
+The board has a USB type-C connector that connects the USB0 port to the
 processor. This is the same connector as used on the original
 BeagleBone.
 
-[[serial-debug-port]]
-=== Serial Debug Port
+[[serial-debug-ports]]
+=== Serial Debug Ports
 
-Serial debug is provided via UART0 on the processor via a single 1x6 pin
-header. In order to use the interface a USB to TTL adapter will be
-required. The header is compatible with the one provided by FTDI and can
-be purchased for about $$12 to $$20 from various sources. Signals
-supported are TX and RX. None of the handshake signals are supported.
+Two serial debug ports are provided on board via 3pin micro headers,
+
+1. WKUP_UART0: Wake-up domain serial port
+2. UART0: Main domain serial port
+
+
+In order to use the interfaces a 
+https://uk.farnell.com/element14/1103004000156/beaglebone-ai-serials-cable/dp/3291081[3pin micro to 6pin dupont adaptor header] 
+is required with a 6 pin USB to TTL adapter. The header is compatible with 
+the one provided by FTDI and canbe purchased for about $$12 to $$20 from 
+various sources. Signals supported are TX and RX. None of the handshake 
+signals are supported.
 
 [[usb1-host-port]]
 === USB1 Host Port
 
 On the board is a single USB Type A female connector with full LS/FS/HS
 Host support that connects to USB1 on the processor. The port can
-provide power on/off control and up to 500mA of current at 5V. Under USB
-power, the board will not be able to supply the full 500mA, but should
+provide power on/off control and up to 1.5A of current at 5V. Under USB
+power, the board will not be able to supply the full 1.5A, but should
 be sufficient to supply enough current for a lower power USB device
 supplying power between 50 to 100mA.
-
-You can use a wireless keyboard/mouse configuration or you can add a HUB
-for standard keyboard and mouse interfacing.
 
 [[power-sources]]
 === Power Sources
 
 The board can be powered from two different sources:
 
-* A USB port on a PC
-* A 5VDC 3A power supply plugged into the DC connector.
-* A power supply with a USB C connec
-
-The USB cable is shipped with each board. This port is limited to 500mA
-by the Power Management IC. It is possible to change the settings in the
-*TPS659411 and TPS659413* to increase this current, but only after the initial boot.
-And, at that point the PC most likely will complain, but you can also
-use a dual connector USB cable to the PC to get to 1A.
+* A 5V ≥ 3A power supply plugged into the barrel jack.
+* A wall adaptor with 5V ≥ 3A output power.
 
 The power supply is not provided with the board but can be easily
-obtained from numerous sources. A 1A supply is sufficient to power the
-board, but if there is a cape plugged into the board or you have a power
+obtained from numerous sources. A 5V ≥ 3A supply is mandatory to have with
+the board, but if there is a cape plugged into the board or you have a power
 hungry device or hub plugged into the host port, then more current may
 needed from the DC supply.
-
-Power routed to the board via the expansion header could be provided
-from power derived on a cape. The DC supply should be well regulated and
-5V +/-.25V.
 
 [[reset-button]]
 === Reset Button
 
-When pressed and released, causes a reset of the board. The reset button
-used on BeagleBone AI-64 is a little larger than the one used on the
-original BeagleBone. It has also been moved out to the edge of the board
-so that it is more accessible.
+When pressed and released, causes a reset of the board.
 
 [[power-button]]
 === Power Button
 
-A power button is provided near the reset button close to the Ethernet
-connector. This button takes advantage of the input to the PMIC for
-power down features. While a lot of capes have a button, it was decided
-to add this feature to the board to ensure everyone had access to some
-new features. These features include:
-
-* Interrupt is sent to the processor to facilitate an orderly shutdown
-to save files and to un-mount drives.
-* Provides ability to let processor put board into a sleep mode to save
-power.
-* Can alert processor to wake up from sleep mode and restore state
-before sleep was entered.
-
-If you hold the button down longer than 8 seconds, the board will power
-off if you release the button when the power LED turns off. If you
-continue to hold it, the board will power back up completing a power
-cycle.
-
-_We recommend that you use this method to power down the board. It will
-also help prevent contamination of the SD card or the eMMC._
-
-If you do not remove the power jack, you can press the button again and
-the board will power up.
+This button takes advantage of the input to the PMIC for
+power down features.
 
 [[indicators]]
 === Indicators
 
-There are a total of five blue LEDs on the board.
+There are a total of six green LEDs on the board.
 
-* One blue power LED indicates that power is applied and the power
-management IC is up. If this LED flashes when applying power, it means
-that an excess current flow was detected and the PMIC has shut down.
-* Four blue LEDs that can be controlled via the SW by setting GPIO pins.
-
-In addition, there are two LEDs on the RJ45 to provide Ethernet status
-indication. One is yellow (100M Link up if on) and the other is green
-(Indicating traffic when flashing).
-
-
-[[DP-interface]]
-=== DP Interface
-
-A single uDP interface is connected to the 16 bit LCD interface on the
-processor. 
-[[cape-board-support]]
-=== Cape Board Support
-
-The BeagleBone AI-64 has the ability to accept up to four expansion
-boards or capes that can be stacked onto the expansion headers. The word
-cape comes from the shape of the board as it is fitted around the
-Ethernet connector on the main board. This notch acts as a key to ensure
-proper orientation of the cape.
-
-The majority of capes designed for the original BeagleBone will work on
-BeagleBone AI-64. The two main expansion headers will be populated
-on the board. There are a few exceptions where certain capabilities may
-not be present or are limited to BeagleBone AI-64. These include:
-
-* GPMC bus may NOT be available due to the use of those signals by the
-eMMC. If the eMMC is used for booting only and the file system is on the
-microSD card, then these signals could be used.
-* Another option is to use the microSD or serial boot modes and not use
-the eMMC.
-* The power expansion header is not on BeagleBone AI-64 so those
-functions are not supported.
-
-For more information on cape support refer to <<section-9>>.
+* One green power LED indicates that power is applied and the power
+management IC is up.
+* Five blue LEDs that can be controlled via the SW by setting GPIO pins.

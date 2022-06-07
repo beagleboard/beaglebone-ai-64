@@ -52,9 +52,9 @@ will also be compatible with BeeagleBone AI-64.
 This section is still being worked on, please make sure you have the
 latest system reference manual (SRM).
 
-#TODO: Add BBAI-64 LCD pins information#
+#TODO: Add BeagleBone AI-64 LCD pins information#
 
-#TODO: Add BBAI-64 eMMC pins information#
+#TODO: Add BeagleBone AI-64 eMMC pins information#
 
 [[eeprom]]
 === EEPROM
@@ -560,7 +560,7 @@ boards.*
 *Powering the processor via its I/O pins can cause damage to the
 processor.*
 
-#TODO: Add BBAI-64 cape mechanical characteristics#
+#TODO: Add BeagleBone AI-64 cape mechanical characteristics#
 
 [[standard-cape-size]]
 ==== Standard Cape Size

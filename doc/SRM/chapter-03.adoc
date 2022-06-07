@@ -1,12 +1,21 @@
 [[connecting-up-your-beaglebone-ai-64]]
-== Connecting Up Your BeagleBone AI-64
+== Connecting up your BeagleBone AI-64
 
 This section provides instructions on how to hook up your board. This
-beagle requires a 5V ≥ 3A power adapter via either USB Type-C power adapter or a barrel jack power adapter.
+beagle requires a 5V ≥ 3A power supply to work properly via either 
+USB Type-C power adapter or a barrel jack power adapter. 
 
 Recommended adapters:
 
-* https://www.digikey.com/en/products/detail/raspberry-pi/RPI-USB-C-power-supply-White-US/10258760
+* 5V @ 3A https://www.digikey.com/en/products/detail/raspberry-pi/RPI-USB-C-power-supply-White-US/10258760[USB C power supply] adaptor for SBCs.
+* 5V ≥ 3A laptop/mobile adaptor with USB-C cable.
+
+All the <<bbai-ports>> we will use in this chapter 
+are shown in the figure below.
+
+[[bbai-ports,BeagleBone AI-64 conections ports]]
+image::images/ch03/ports.jpg[title="BeagleBone AI-64 conections ports."]
+
 
 === 3.0.1 Methods of operation
 
@@ -19,16 +28,15 @@ Recommended adapters:
 In the box you will find three main items as shown in <<bbai-64-pacakage>>.
 
 * BeagleBone AI-64
-* USB Type-A to USB Type-C Cable
 * Instruction card with link to the support WIKI address.
 
-This is sufficient for the tethered scenario and creates an out of box
-experience where the board can be used immediately with no other
-equipment needed.
+Get yourself a USB-A to USB-C and you have a setup for 
+the tethered scenario and creates an out of box
+experience where the board can be used immediately with 
+no other equipment needed.
 
-#TODO: Add BBAI-64 in the box (media/BBAI-in-Box.png)#
-[[bbai-64-pacakage,BBAI-64 box image]]
-image:images/ch03/BBAI-in-Box.png[title="media/BBAI-in-Box.png"]
+[[bbai-64-pacakage,BeagleBone AI-64 box image]]
+image::images/ch03/bbai64-in-box.jpg[title="BeagleBone AI-64 box content"]
 
 [[main-connection-scenarios]]
 === Main Connection Scenarios
@@ -50,13 +58,10 @@ Guide card that comes in the box.
 * Standalone desktop 
 ** Display
 ** Keyboard and mouse
-** External 5V power supply
+** External 5V ≥ 3A power supply
 
 Each of these configurations is discussed in general terms in the
 following sections.
-
-For an up-to-date list of confirmed working accessories please go to
-https://git.beagleboard.org/beagleboard/beaglebone-ai-64/wiki/Accessories[_https://git.beagleboard.org/beagleboard/beaglebone-ai-64/wiki/Accesories_]
 
 [[tethered-to-a-pc]]
 === Tethered To A PC
@@ -64,29 +69,36 @@ https://git.beagleboard.org/beagleboard/beaglebone-ai-64/wiki/Accessories[_https
 In this configuration, the board is powered by the PC via the provided
 USB cable--no other cables are required. The board is accessed either as
 a USB storage drive or via the browser on the PC. You need to use either
-Firefox or Chrome on the PC, Internet Explorer will not work properly. <<tethered-figure>>
-shows this configuration.
+Firefox or Chrome on the PC, Internet Explorer will not work properly. 
+<<tethered-figure>> shows this configuration.
 
 [[tethered-figure,Tethered Configuration figure]]
-image::images/USB-Tathering.png[title="Tethered Configuration"]
+image::images/ch03/usb-tethering.jpg[title="Tethered Configuration"]
 
-At least 5V @ 3A is required to power the board, In most cases the PC may not be able to supply sufficient power for
-the board. You should always use an external 5VDC power supply connected to the barrel jack.
+At least 5V @ 3A is required to power the board, In most cases 
+the PC may not be able to supply sufficient power for
+the board. You should always use an external 5V ≥ 3A DC 
+power supply connected to the barrel jack.
 
 [[connect-the-cable-to-the-board]]
 ==== Connect the Cable to the Board
 
 1. Connect the type C USB cable to the board as shown
-in <<usb-c-connect-figure>>. The connector is on the top side of the board near barrel jack.
+in <<usb-c-connect-figure>>. The connector is on the 
+top side of the board near barrel jack.
 +
 [[usb-c-connect-figure,USB Connection to the Board figure]]
-image::images/USB-Connection.png[title="USB Connection to the Board"]
-2.  Connect the other end of the USB cable to your PC or laptop USB port.
+image::images/ch03/usb-c-connection.jpg[title="USB Connection to the Board"]
+2.  Connect the USB-A end of thecable tp your PC or laptop USB 
+port as shown in the <<usb-a-connect-figure>> below.
++
+[[usb-a-connect-figure,USB Connection to the PC/Laptop figure]]
+image::images/ch03/usb-a-connection.jpg[title="USB Connection to the PC/Laptop"]
 3.  The board will power on and the power LED will be on as shown in
 <<power-led-figure>> below.
 +
 [[power-led-figure,Board Power LED figure]]
-image::images/Power-LED.png[title="Board Power LED"]
+image::images/ch03/power-led.jpg[title="Board Power LED"]
 4. When the board starts to the booting process started by the process
 of applying power, the LEDs will come on in sequence as shown in <<boot-status-figure>>
 below. It will take a few seconds for the status LEDs to come on, so
@@ -94,7 +106,7 @@ be patient. The LEDs will be flashing in an erratic manner as it begins
 to boot the Linux kernel.
 +
 [[boot-status-figure,Board Boot Status figure]]
-image::images/LED-Pattern.png[title="media/Board Boot Status"]
+image::images/ch03/led-pattern.jpg[title="Board Boot Status"]
 
 [[accessing-the-board-as-a-storage-drive]]
 ==== Accessing the Board as a Storage Drive
@@ -121,7 +133,7 @@ however require certain common PC accessories. These accessories and
 instructions are described in the following section.
 
 [[desktop-config-figure,Desktop Configuration figure]]
-image::images/Desktop-Configuration.png[title="Desktop Configuration"]
+image::images/ch03/desktop-configuration.jpg[title="Desktop Configuration"]
 
 Ethernet cable and M.2 WiFi + Bluetooth card are optional. They can be used if network access required.
 
@@ -131,31 +143,28 @@ Ethernet cable and M.2 WiFi + Bluetooth card are optional. They can be used if n
 In order to use the board in this configuration, you will need the
 following accessories:
 
-* (1) 5VDC ≥ 3A power supply.
-* (1) Display Port or HDMI monitor (or a recommended miniDP-HDMI or miniDP-DP adapter.
- https://www.amazon.com/dp/B089GF8M87
-has been tested and worked beautifully.)
-* (1) miniDP-DP or miniDP-HDMI cable.
-* (1) USB wired/wireless keyboard and mouse.
-* (1) powered USB HUB (OPTIONAL). The board has only two USB Type-A host ports, so you may need to use a powered USB Hub if you wish to add additional USB devices, such as a USB WiFi adapter.
-* (1) M.2 Bluetooth & WiFi module (OPTIONAL). For wireless connections, a USB WiFi adapter or a recommended M.2 WiFi module can provide wireless networking.
-
-For an up-to-date list of confirmed working accessories please go to
-#TO-UPDATE#
-https://git.beagleboard.org/beagleboard/beaglebone-ai-64/wiki/Accessories.
+* 5VDC ≥ 3A power supply.
+* Display Port or HDMI monitor.
+* miniDP-DP or miniDP-HDMI cable 
+(or a recommended *active miniDP-HDMI or miniDP-DP adapter* 
+https://www.amazon.com/dp/B089GF8M87 
+has been tested and worked beautifully.).
+* USB wired/wireless keyboard and mouse.
+* powered USB HUB (OPTIONAL). The board has only two USB Type-A host ports, so you may need to use a powered USB Hub if you wish to add additional USB devices, such as a USB WiFi adapter.
+* M.2 Bluetooth & WiFi module (OPTIONAL). For wireless connections, a USB WiFi adapter or a recommended M.2 WiFi module can provide wireless networking.
 
 [[connecting-up-the-board]]
 ==== Connecting Up the Board
 
-1. Connect the miniDP to HDMI or miniDP to DP cable from your BBAI-64 to your monitor.
+1. Connect the miniDP to HDMI or miniDP to DP cable from your BeagleBone AI-64 to your monitor.
 +
 [[display-cable-figure,miniDP-HDMI or miniDP-DP cable connection figure]]
-image::images/ch03/BBAI-64-to-monitor-cable.png[title="Connect miniDP/HDMI cable to BBAI-64"]
+image::images/ch03/monitor-cable.jpg[title="Connect miniDP/HDMI cable to BeagleBone AI-64"]
 
 2. If you have an Display Port or HDMI monitor with HDMI-HDMI or DP-DP cable you can use adapters as shown in. <<display-adaptors-figure>>.
 +
 [[display-adaptors-figure,Display adaptors figure]]
-image::images/ch03/display-adaptors.png[title="Display adaptors"]
+image::images/ch03/display-adaptors.jpg[title="Display adaptors"]
 
 3. If you have wired/wireless USB keyboard and mouse such as
 +
@@ -163,7 +172,7 @@ seen in <<keyboard-mouse-figure>> below, you need to plug the receiver in the US
 port of the board as shown in <<keyboard-mouse-figure>>.
 +
 [[keyboard-mouse-figure,Keyboard and Mouse figure]]
-image::images/ch03/mouse-keyboard.png[title="Keyboard and Mouse"]
+image::images/ch03/mouse-keyboard.jpg[title="Keyboard and Mouse"]
 +
 4. Connect the Ethernet Cable
 +
@@ -173,13 +182,13 @@ port as shown in <<ethernet-cable-figure>. Any standard 100M Ethernet cable shou
 work.
 +
 [[ethernet-cable-figure,Ethernet Cable Connection figure]]
-image::images/ch03/ethernet-cable.png[title="Ethernet Cable Connection"]
+image::images/ch03/ethernet-cable.jpg[title="Ethernet Cable Connection"]
 
 5. The final step is to plug in the DC power supply to the DC power jack as
 shown in <<barrel-jack-figure>> below.
 +
 [[barrel-jack-figure,External DC Power figure]]
-image::images/ch03/barrel-jack.png[title="External DC Power"]
+image::images/ch03/barrel-jack.jpg[title="External DC Power"]
 
 6. The cable needed to connect to your display is a miniDP to HDMI/DP.
 Connect the miniDP connector end to the board at this time. The
@@ -187,7 +196,7 @@ connector is on the top side of the board as shown in <<miniDP-figure>>
 below.
 +
 [[miniDP-figure,miniDP to HDMI/DP connection figure]]
-image::images/ch03/miniDP-connector.png[title="Connect miniDP Cable to the Board"]
+image::images/ch03/miniDP-connector.jpg[title="Connect miniDP Cable to the Board"]
 +
 The connector is fairly robust, but we suggest that you not use the
 cable as a leash for your Beagle. Take proper care not to put too much
@@ -200,19 +209,19 @@ up process. When the board starts to boot the LEDs will come on. It will take a 
 the status LEDs to come on, so be patient. The LEDs will be flashing in
 an erratic manner as it boots the Linux kernel.
 +
-[[LEDs-figure,BBAI-64 LEDs figure]]
-image::images/ch03/LEDs.png[title="BBAI-64 LEDs"]
+[[LEDs-figure,BeagleBone AI-64 LEDs figure]]
+image::images/ch03/leds.jpg[title="BeagleBone AI-64 LEDs"]
 +
 While the four user LEDS can be over written and used as desired, they
 do have specific meanings in the image that is shipped with the board
 once the Linux kernel has booted.
 +
-* *USER0* is the heartbeat indicator from the Linux kernel.
-* *USER1* turns on when the microSD card is being accessed
-* *USER2* is an activity indicator. It turns on when the kernel is not
+* *USR0* is the heartbeat indicator from the Linux kernel.
+* *USR1* turns on when the microSD card is being accessed
+* *USR2* is an activity indicator. It turns on when the kernel is not
 in the idle loop.
-* *USER3* turns on when the onboard eMMC is being accessed.
-* *USER4* is an activity indicator for WiFi.
+* *USR3* turns on when the onboard eMMC is being accessed.
+* *USR4* is an activity indicator for WiFi.
 
 8. A Booted System
 .. The board will have a mouse pointer appear on the screen as it
@@ -230,8 +239,4 @@ after booting.
 +
 [[figure-16,Figure 16]]
 .Figure 16. Desktop Screen
-image::images/ch03/XFCE-Desktop.png[title="BeagleBone XFCE Desktop Screen"]
-9. Powering Down
-.. Press the power button momentarily.
-.. The system will power down automatically. 
-.. Remove the power jack.
+image::images/ch03/xfce-desktop.jpg[title="BeagleBone XFCE Desktop Screen"]

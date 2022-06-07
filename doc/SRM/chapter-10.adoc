@@ -1,18 +1,18 @@
 [[pictures]]
 == Pictures
 
-image::images/front.png[title="BBAI-64 front"]
+image::images/ch10/front.jpg[title="BeagleBone AI-64 front"]
 
-image::images/back.png[title="BBAI-64 back"]
+image::images/ch10/back.jpg[title="BeagleBone AI-64 back"]
 
-image::images/back-heatsink.png[title="BBAI-64 back with heatsink"]
+image::images/ch10/back-heatsink.jpg[title="BeagleBone AI-64 back with heatsink"]
 
-image::images/45-front.png[title="BBAI-64 front at 45° angle"]
+image::images/ch10/45-front.jpg[title="BeagleBone AI-64 front at 45° angle"]
 
-image::images/45-back.png[title="BBAI-64 back at 45° angle"]
+image::images/ch10/45-back.jpg[title="BeagleBone AI-64 back at 45° angle"]
 
-image::images/45-back-heatsink.png[title="BBAI-64 back with heatsink at 45° angle"]
+image::images/ch10/45-back-heatsink.jpg[title="BeagleBone AI-64 back with heatsink at 45° angle"]
 
-image::images/feature.png[title="BBAI-64 ports"]
+image::images/ch10/feature.jpg[title="BeagleBone AI-64 ports"]
 
 

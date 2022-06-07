@@ -4,10 +4,10 @@
 
 *BEAGLEBONE AI-64 DESIGN*
 
-These design materials referred to in this document are **NOT
-SUPPORTED** and *DO NOT* constitute a reference design. Only “community”
-support is allowed via resources at
-http://beagleboard.org/discuss[_BeagleBoard.org/discuss._]
+These design materials referred to in this document are 
+*NOT SUPPORTED* and *DO NOT* constitute a reference design. 
+Only “community” support is allowed via resources at
+https://forum.beagleboard.org/[_BeagleBoard.org forum_].
 
 THERE IS NO WARRANTY FOR THE DESIGN MATERIALS, TO THE EXTENT PERMITTED
 BY APPLICABLE LAW. EXCEPT WHEN OTHERWISE STATED IN WRITING THE COPYRIGHT
@@ -181,7 +181,7 @@ For up to date SW images and technical information refer to
 https://beagleboard.org/latest-images[_https://beagleboard.org/latest-images_]
 
 All support for this board is provided via community support at
-https://beagleboard.org/discuss[_beagleboard.org/discuss_]
+https://forum.beagleboard.org/[_BeagleBoard.org forum_]
 
 To return a defective board for repair, please request an RMA at
 https://beagleboard.org/support/rma[_beagleboard.org/support/rma_]

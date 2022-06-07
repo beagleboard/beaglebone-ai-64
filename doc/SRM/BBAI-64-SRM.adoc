@@ -1,4 +1,5 @@
 = BeagleBone AI-64 System Reference Manual
+Pre-Release
 :xrefstyle: full
 :doctype: book
 :encoding: utf-8
@@ -31,11 +32,11 @@ include::chapter-04.adoc[]
 
 include::chapter-05.adoc[]
 
-include::chapter-06.adoc[]
+// include::chapter-06.adoc[]
 
-include::chapter-07.adoc[]
+// include::chapter-07.adoc[]
 
-include::chapter-08.adoc[]
+// include::chapter-08.adoc[]
 
 include::chapter-09.adoc[]
 

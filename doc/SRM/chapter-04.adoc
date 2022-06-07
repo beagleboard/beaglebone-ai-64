@@ -2,9 +2,9 @@
 == BeagleBone AI-64 Overview
 
 BeagleBone AI-64 is the latest addition to BeagleBoard.org
-family and like its predecessors, is designed to address the Open Source
-Community, early adopters, and anyone interested in a low cost ARM
-Cortex-A8 processor based Single Board Computer (SBC).
+family and like its predecessors, is designed to address the open-source
+Community, early adopters, and anyone interested in a low cost
+64-bit Dual Arm® Cortex®-A72 processor based Single Board Computer (SBC).
 
 It has been equipped with a minimum set of features to allow the user to
 experience the power of the processor and is not intended as a full
@@ -24,72 +24,34 @@ BeagleBone AI-64 is manufactured and warranted by partners listed at
 https://beagleboard.org/logo for the benefit of the community and its
 supporters including the current BeagleBoard.org Foundation board members
 
-Jason Kridner, principal of JK Embedded Consulting an 
+* Jason Kridner, principal of JK Embedded Consulting an 
 independent contractor and architect for new Beagle designs.
-Drew Fustini, independent Linux developer
-Robert Nelson, applications engineer at Digi-Key
-Mark Yoder, professor at Rose-Hulman Institute of Technology
-Kathy Giori, product engineer at ZEDEDA
+* Drew Fustini, independent Linux developer
+* Robert Nelson, applications engineer at Digi-Key
+* Mark Yoder, professor at Rose-Hulman Institute of Technology
+* Kathy Giori, product engineer at ZEDEDA
+
 See bbb.io/about
 
-The BBAI-64 board is designed designed 
+The BeagleBone AI-64 board is designed designed 
 by Seeed Studio (Seeed Development Limited) 
 under guidance from BeagleBoard.org Foundation.
 
 [[beaglebone-compatibility]]
 === BeagleBone Compatibility
-#TODO:#
 The board is intended to be compatible with the original BeagleBone as
 much as possible. There are several areas where there are differences
 between the two designs. These differences are listed below, along with
 the reasons for the differences.
 
-* J721E DRA829/TDA4VM/AM752x, 2GHZ, 64 Bit, processor.
-** Sorry, we just had to make it WAY faster.
+* J721E DRA829/TDA4VM/AM752x, 2GHZ, 64 Bit, multicore processor.
 * 4GB LPDDR4
-** _Cost reduction ???_
-** Performance boost!!!
-** Memory size increase
-** Lower power
 * Debug TTL serial.
-** _Cost reduction_
-** Can be added by buying a TTL to USB Cable that is widely available
-** Single largest cost reduction action taken
 * EEPROM Reduced from 4KB to 1KB
-** _Cost Reduction_
-* Onboard Managed NAND (eMMC)
-** 16GB
-** _Cost reduction_
-** Performance boost x8 vs. x4 bits
-** Performance boost due to deterministic properties vs. microSD card
-* GPMC bus may not be accessible from the expansion headers in some
-cases
-** Result of eMMC on the main board
-** Signals are still routed to the expansion connector
-** If eMMC is not used, signals can be used via expansion if eMMC is
-held in reset
+* Onboard Managed NAND (16GB eMMC)
 * There may be 10 less GPIO pins available
-** Result of eMMC
-** If eMMC is not used, could still be used
-* The power expansion header, for battery and back-light, has been
-removed
-** __Cost reduction,__space reduction
-** Four pins were added to provide access to the battery charger
-function.
-* Display Port interface onboard
-** Feature addition
-** Audio and video capable
-** Micro DP
-* No three function USB cable
-** _Cost reduction_
-* GPIO3_21 has a 24.576 MHZ clock on it.
-** This is required by the display Framer for Audio purposes. We needed to
-run a clock into the processor to generate the correct clock frequency.
-The pin on the processor was already routed to the expansion header. In
-order not to remove this feature on the expansion header, it was left
-connected. In order to use the pin as a GPIO pin, you need to disable
-the clock. While this disables audio to the display, the fact that you want
-to use this pin for something else, does the same thing.
+* Mini Display Port (iniDP) interface onboard
+* Dual USB-3 ports.
 
 [[beaglebone-ai-64-features-and-specification]]
 === BeagleBone AI-64 Features and Specification
@@ -106,51 +68,28 @@ that make up the board.
 |=======================================================================
 | |*Feature*
 |*Processor* | TI J721E DRA829/TDA4VM/AM752x
-
 |*Graphics Engine* | PowerVR® Series8XE GE8430
-
 |*SDRAM Memory* |LPDDR4 (4GB) Q3222PM1WDGTK-U
-
 |*Onboard Flash* | eMMC (16GB) EMMC16G-TB29-PZ90
-
-|*PMIC* |TPS659411 and TPS659413 PMICs regulator and one additional LDO.
-
+|*PMIC* |TPS65941213 and TPS65941111 PMICs regulator and one additional LDO.
 |*Debug Support* | 3 pin Serial Header
-
 |*Power Source* | USB C or DC Jack
-
 |*PCB* | This beagle is not the standard 3.4” x 2.1”, It’s grown in size to 4” x 3.1”
+|*Indicators* |1-Power, 5-User Controllable LEDs
+|*HS USB-3.0 Client Port* |Access to USB0, Client mode via USB-C
+|*HS USB-3.0 Host Port* |Access to USB1 & USB2, Type A Socket, 1.5A
+|*Serial Port* | 1. WKUP_UART0: Wake-up domain serial port +
+2. UART0: Main domain serial port
 
-|*Indicators* |1-Power, 2-Ethernet, 4-User Controllable LEDs
-
-|*HS USB 2.0 Client Port* |Access to USB0, Client mode via USB-C
-
-|*HS USB 2.0 Host Port* |Access to USB1 & USB2, Type A Socket, 1500mA LS/FS/HS
-
-|*Serial Port* |UART0 access via 3 pin 3.3V TTL micro Header.
-
+Access via 3 pin 3.3V TTL micro header.
 |*Ethernet* |Gigabit, RJ45
-
-|*SD/MMC Connector* |microSD , 3.3V
-
-|*User Input* |Reset Button +
-Boot Button +
-Power Button
-
+|*SD/MMC Connector* |microSD , 1.8/3.3V
+|*User Input* |1. Reset Button +
+2. Boot Button +
+3. Power Button
 |*Video Out* | miniDP
-
 |*Audio* | via miniDP Interface, Stereo
-
-|*Expansion Connectors* |#Update required# +
-Power 5V, 3.3V , VDD_ADC(1.8V) +
-3.3V I/O on all signals +
-McASP0, SPI1, I2C, GPIO(69 max), LCD, GPMC, MMC1, MMC2, 7 +
-AIN _(1.8V MAX)_, 4 Timers, 4 Serial Ports, CAN0, +
-EHRPWM(0,2),XDMA Interrupt, Power button, Expansion Board ID (Up to 4
-can be stacked)
-
 |*Weight* | 192gm (with heatsink)
-
 |*Power* |Refer to <<main-board-power>> section
 |=======================================================================
 
@@ -174,13 +113,14 @@ image::images/ch04/components.png[title="BeagleBone AI-64 board components"]
 * *Power Button* alerts the processor to initiate the power down
 sequence and is used to power down the board.
 * *GigaBit Ethernet* is the connection to the LAN.
-* *Serial Debug* is the serial debug port.
+* *Serial Debug ports* WKUP_UART0 for early boot from the management MCU 
+and UART0 is for the main processor.
 * *USB Client* is a USB-C connection to a PC that can also power the
 board.
 * *BOOT switch* can be used to force a boot from the microSD card if the
 power is cycled on the board, removing power and reapplying the power to
 the board..
-* There are four blue **LED**S that can be used by the user.
+* There are five green **LEDs** that can be used by the user.
 * *Reset Button* allows the user to reset the processor.
 * *microSD* slot is where a microSD card can be installed.
 * *miniDP* connector is where the display is connected to.
@@ -193,5 +133,4 @@ On bottom side we have,
 * *4GB LPDDR4L* Dual Data Rate RAM memory.
 * *Ethernet PHY* physical interface to the network.
 * *eMMC* onboard MMC chip that holds up to 16GB of data.
-* *miniDP* Framer provides control for a DP HDMI or DVI-D display with an
-adapter.
+* *miniDP* Framer provides control for a DP/HDMI display with an adapter.

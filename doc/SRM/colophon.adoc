@@ -1,7 +1,7 @@
 [colophon]
-== *Revision 0.2b*
+== *Revision 0.0.3-beta1*
 
-*Last PDF conversion: June 3^rd^, 2022*
+*Last PDF conversion: June 8^th^, 2022*
 
 
 *Maintaining editor:* mailto:lorforlinux@beagleboard.org[Deepak Khatri]

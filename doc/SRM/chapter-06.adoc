@@ -1097,9 +1097,9 @@ insert processor  Display Port audio doc here
 guesing this doesn’t exist on this device
 
 [[hdmi-connector-interface]]
-==== uDP Connector Interface
+==== miniDP Connector Interface
 
-insert processor  Micro Display Port connector  doc here
+insert processor  Mini Display Port connector  doc here
 
 [[usb-host]]
 === USB Host
