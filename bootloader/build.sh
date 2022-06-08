@@ -18,8 +18,8 @@ fi
 
 #2022.01.21 -> 489c767a153ff26e9230746e04dd4b1ad0809901
 #08.00.00.004 -> 08.01.00.006
-#https://github.com/beagleboard/k3-image-gen/compare/08.00.00.004...08.01.00.006
-git clone -b 08.01.00.006 https://github.com/beagleboard/k3-image-gen --depth=10
+#https://git.beagleboard.org/beagleboard/k3-image-gen/compare/08.00.00.004...08.01.00.006
+git clone -b 08.01.00.006 https://git.beagleboard.org/beagleboard/k3-image-gen --depth=10
 cd ./k3-image-gen/
 make SOC=j721e CONFIG=evm CROSS_COMPILE=arm-linux-gnueabihf-
 cp -v sysfw.itb ../deploy/
@@ -31,7 +31,7 @@ fi
 
 #https://git.ti.com/gitweb?p=atf/arm-trusted-firmware.git;a=summary
 #https://git.ti.com/gitweb?p=atf/arm-trusted-firmware.git;a=shortlog;h=refs/tags/08.01.00.006
-git clone -b bbb.io-08.01.00.006 https://github.com/beagleboard/arm-trusted-firmware --depth=10
+git clone -b bbb.io-08.01.00.006 https://git.beagleboard.org/beagleboard/arm-trusted-firmware --depth=10
 cd ./arm-trusted-firmware/
 make -j4 CROSS_COMPILE=aarch64-linux-gnu- ARCH=aarch64 PLAT=k3 TARGET_BOARD=generic SPD=opteed all
 cp -v build/k3/generic/release/bl31.bin ../deploy/
@@ -43,7 +43,7 @@ fi
 
 #https://git.ti.com/gitweb?p=optee/ti-optee-os.git;a=summary
 #https://git.ti.com/gitweb?p=optee/ti-optee-os.git;a=shortlog;h=refs/tags/08.01.00.005
-git clone -b 08.01.00.005 https://github.com/beagleboard/optee_os --depth=10
+git clone -b 08.01.00.005 https://git.beagleboard.org/beagleboard/optee_os --depth=10
 cd ./optee_os/
 make -j4 PLATFORM=k3-j721e CFG_ARM64_core=y
 cp -v out/arm-plat-k3/core/tee-pager_v2.bin ../deploy/
@@ -53,7 +53,7 @@ if [ -d ./u-boot ] ; then
 	rm -rf ./u-boot || true
 fi
 
-git clone -b v2021.01-ti-08.00.00.004 https://github.com/beagleboard/u-boot --depth=10
+git clone -b v2021.01-ti-08.00.00.004 https://git.beagleboard.org/beagleboard/u-boot --depth=10
 cd ./u-boot/
 make CROSS_COMPILE=arm-linux-gnueabihf- j721e_evm_r5_defconfig O=/tmp/r5
 make -j4 CROSS_COMPILE=arm-linux-gnueabihf- O=/tmp/r5

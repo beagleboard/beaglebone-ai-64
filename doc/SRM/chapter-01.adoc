@@ -1,10 +1,10 @@
 [[introduction]]
 == Introduction
 
-This document is the *System Reference Manual* for the BeagleBone AI-64
+This document is the *System Reference Manual* for BeagleBone AI-64
 and covers its use and design. The board will primarily be referred to
 in the remainder of this document simply as the board, although it may
-also be referred to as the BeagleBone AI-64 as a reminder. There are
+also be referred to as AI-64 / BeagleBone AI-64 as a reminder. There are
 also references to the original BeagleBone as well, and will be
 referenced as simply BeagleBone.
 
@@ -14,8 +14,7 @@ experience. Software updates will be frequent and will be independent of
 the hardware revisions and as such not result in a change in the
 revision number.
 
-Make sure you check the support Wikis frequently for the most up to date
-information.
+Make sure you frequently check the 
+https://git.beagleboard.org/beagleboard/beaglebone-ai-64/[BeagleBone AI-64 git repository]
+for the most up to date support documents.
 
-#UPDATE LINK#
-https://github.com/beagleboard/beaglebone-ai-64/wiki

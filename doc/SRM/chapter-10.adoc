@@ -1,10 +1,18 @@
 [[pictures]]
-== 10.0 Pictures
+== Pictures
 
-image:media/image91.jpg[media/image91.jpg,title="media/image91.jpg",width=476,height=768]
+image::images/ch10/front.jpg[title="BeagleBone AI-64 front"]
 
-*Figure 74. Top Side*
+image::images/ch10/back.jpg[title="BeagleBone AI-64 back"]
 
-image:media/image92.jpg[media/image92.jpg,title="media/image92.jpg",width=486,height=764]
+image::images/ch10/back-heatsink.jpg[title="BeagleBone AI-64 back with heatsink"]
 
-*Figure 75. Bottom Side*
+image::images/ch10/45-front.jpg[title="BeagleBone AI-64 front at 45° angle"]
+
+image::images/ch10/45-back.jpg[title="BeagleBone AI-64 back at 45° angle"]
+
+image::images/ch10/45-back-heatsink.jpg[title="BeagleBone AI-64 back with heatsink at 45° angle"]
+
+image::images/ch10/feature.jpg[title="BeagleBone AI-64 ports"]
+
+

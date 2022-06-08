@@ -1,14 +1,20 @@
 [[cape-board-support-1]]
 == Cape Board Support
 
-The BeagleBone AI-64 has the ability to accept up to four expansion
-boards or capes that can be stacked onto the expansion headers. The word
-cape comes from the shape of the board as it is fitted around the
-Ethernet connector on the main board. This notch acts as a key to ensure
-proper orientation of the cape.
+*BeagleBone AI-64* has the ability to accept up to 
+four EEPROM addressable expansion boards or capes stacked onto 
+the expansion headers. The word cape comes from the shape of the
+expansion board for BeagleBone boards as it is fitted around the
+Ethernet connector on the main board. For BeagleBone this notch acts as a 
+key to ensure proper orientation of the cape. On AI-64 you can see a clear
+silkscreen marking for the cape orientation. Most of BeagleBone capes
+can be used with your BeagleBone AI-64 also like shown in <<bbai-cape-placement-figure>> below.
 
-This section describes the rules for creating capes to ensure proper
-operation with the BeagleBone AI-64 and proper interoperability with
+[[bbai-cape-placement-figure, BeagleBone Ai Cape Placement figure]]
+image::images/ch08/cape-placement.jpg[title="BeagleBone cape placement"]
+
+This section describes the rules & guidelines for creating capes to ensure proper
+operation with BeagleBone AI-64 and proper interoperability with
 other capes that are intended to coexist with each other. Co-existence
 is not a requirement and is in itself, something that is impossible to
 control or administer. But, people will be able to create capes that
@@ -16,187 +22,57 @@ operate with other capes that are already available based on public
 information as it pertains to what pins and features each cape uses.
 This information will be able to be read from the EEPROM on each cape.
 
-This section is intended as a guideline for those wanting to create
-their own capes. Its intent is not to put limits on the creation of
-capes and what they can do, but to set a few basic rules that will allow
-the SW to administer their operation with the BeagleBone AI-64. For this
+For those wanting to create their own capes this should not put limits on the creation of
+capes and what they can do, but may set a few basic rules that will allow
+the software to administer their operation with BeagleBone AI-64. For this
 reason there is a lot of flexibility in the specification that we hope
-most people will find liberating and in the spirit of Open Source
-Hardware. I am sure there are others that would like to see tighter
+most people will find it liberating in the spirit of Open Source
+Hardware. On the other hand we are sure that there are others who would like to see tighter
 control, more details, more rules and much more order to the way capes
 are handled.
 
 Over time, this specification will change and be updated, so please
-refer to the latest version of this manual prior to designing your own
-capes to get the latest information.
+refer to the https://git.beagleboard.org/beagleboard/beaglebone-ai-64/[latest version of this manual]
+prior to designing your own capes to get the latest information.
 
-*DO NOT APPLY VOLTAGE TO ANY I/O PIN WHEN*
 
-*POWER IS NOT SUPPLIED TO THE BOARD. IT WILL DAMAGE THE PROCESSOR AND
-VOID THE WARRANTY.*
-
-*NO PINS ARE TO BE DRIVEN UNTIL AFTER THE SYS_RESET LINE GOES HIGH.*
+[WARNING]
+Do not apply voltage to any I/O pin when power is not supplied to the board.
+It will damage the processor and void the warranty. 
 
 [[beaglebone-ai-64-cape-compatibility]]
 === BeagleBone AI-64 Cape Compatibility
 
-The main expansion headers are the same between the BeagleBone and
-BeagleBone AI-64. While the pins are the same, some of these pins are
-now used on the BeagleBone AI-64. The following sections discuss these
-pins.
+The expansion headers on BeagleBone Black and BeagleBone AI-64 provides
+similar pin configuration options on P8 and P9 expansion header pins thus provide 
+cape compatibility to a certain extent. Which means most BeagleBone Black capes
+will also be compatible with BeeagleBone AI-64.
 
-The Power Expansion header was removed from the BeagleBone AI-64 and is
-not available.
+[IMPORTANT]
+This section is still being worked on, please make sure you have the
+latest system reference manual (SRM).
 
-_***PAY VERY CLOSE ATTENTION TO THIS SECTION AND READ CAREFULLY!!***_
+#TODO: Add BeagleBone AI-64 LCD pins information#
 
-[[lcd-pins]]
-==== LCD Pins
-
-The LCD pins are used on the BeagleBone AI-64 to drive the HDMI framer.
-These signals are listed in *Table 15* below.
-
-[[table-15.-p8-lcd-conflict-pins]]
-Table 15. P8 LCD Conflict Pins
-
-[cols=",,,",options="header",]
-|================================
-|*PIN* |*PROC* |*NAME* |*MODE0*
-|27 |U5 |GPIO2_22 |lcd_vsync
-|28 |V5 |GPIO2_24 |lcd_pclk
-|29 |R5 |GPIO2_23 |lcd_hsync
-|30 |R6 |GPIO2_25 |lcd_ac_bias_en
-|31 |V4 |UART5_CTSN |lcd_data14
-|32 |T5 |UART5_RTSN |lcd_data15
-|33 |V3 |UART4_RTSN |lcd_data13
-|34 |U4 |UART3_RTSN |lcd_data11
-|35 |V2 |UART4_CTSN |lcd_data12
-|36 |U3 |UART3_CTSN |lcd_data10
-|37 |U1 |UART5_TXD |lcd_data8
-|38 |U2 |UART5_RXD |lcd_data9
-|39 |T3 |GPIO2_12 |lcd_data6
-|40 |T4 |GPIO2_13 |lcd_data7
-|41 |T1 |GPIO2_10 |lcd_data4
-|42 |T2 |GPIO2_11 |lcd_data5
-|43 |R3 |GPIO2_8 |lcd_data2
-|44 |R4 |GPIO2_9 |lcd_data3
-|45 |R1 |GPIO2_6 |lcd_data0
-|46 |R2 |GPIO2_7 |lcd_data1
-|================================
-
-If you are using these pins for other functions, there are a few things
-to keep in mind:
-
-* On the HDMI Framer, these signals are all inputs so the framer will
-not be driving these pins.
-* The HDMI framer will add a load onto these pins.
-* There are small filter caps on these signals which could also change
-the operation of these pins if used for other functions.
-* When used for other functions, the HDMI framer cannot be used.
-* There is no way to power off the framer as this would result in the
-framer being powered through these input pins which would not a be a
-good idea.
-* These pins are also the *SYSBOOT* pins. DO NOT drive them before
-the**SYS_RESETN** signal goes high. If you do, the board may not boot
-because you would be changing the boot order of the processor.
-
-In order to use these pins, the SW will need to reconfigure them to
-whatever function you need the pins to do. To keep power low, the HDMI
-framer should be put in a low power mode via the SW using the *I2C0*
-interface.
-
-[[emmc-pins]]
-==== eMMC Pins
-
-The BeagleBone AI-64 uses 10 pins to connect to the processor that also
-connect to the
-
-P8 expansion connector. These signals are listed below in *Table 16*.
-The proper mode is
-
-MODE2.
-
-[[table-16.-p8-emmc-conflict-pins]]
-Table 16. P8 eMMC Conflict Pins
-
-[cols=",,,",options="header",]
-|===============================
-|*PIN* |*PROC* |*SIGNAL* |*MODE*
-|22 |V8 |MMC1_DAT5 |1
-|23 |U8 |MMC1_DAT4 |1
-|24 |V7 |MMC1_DAT1 |1
-|5 |R8 |MMC1_DAT2 |1
-|4 |T9 |MMC1_DAT7 |1
-|3 |R9 |MMC1_DAT6 |1
-|6 |T8 |MMC1_DAT3 |1
-|25 |U7 |MMC1_DAT0 |1
-|20 |V9 |MMC1_CMD |2
-|21 |U9 |MMC1_CLK |2
-|===============================
-
-If using these pins, several things need to be kept in mind when doing
-so:
-
-* On the eMMC device, these signals are inputs and outputs.
-* The eMMC device will add a load onto these pins.
-* When used for other functions, the eMMC cannot be used. This means you
-must boot from the microSD slot.
-* If using these pins, you need to put the eMMC into reset. This
-requires that the eMMC be accessible from the processor in order to set
-the eMMC to accept the eMMC pins.
-* DO NOT drive the eMMC pins until the eMMC has been put into reset.
-This means that if you choose to use these pins, they must not drive any
-signal until enabled via Software. This requires a buffer or some other
-form of hold off function enabled by a GPIO pin on the expansion header.
-
-On power up, the eMMC is NOT reset. If you hold the Boot button down,
-this will force a boot from the microSD. This is not convenient when a
-cape is plugged into the board. There are two solutions to this issue:
-
-1.  Wipe the eMMC clean. This will cause the board to default to microSD
-boot. If you want to use the eMMC later, it can be reprogrammed.
-2.  You can also tie LCD_DATA2 low on the cape during boot. This will be
-the same as if you were holding the boot button. However, in order to
-prevent unforeseen issues, you need to gate this signal with RESET, when
-the data is sampled. After reset goes high, the signal should be removed
-from the pin.
-
-_BEFORE_ the SW reinitializes the pins, it _MUST_ put the eMMC in reset.
-This is done by taking eMMC_RSTn (GPIO1_20) LOW _**after**_ the eMMC has
-been put into a mode to enable the reset line. This pin does not connect
-to the expansion header and is accessible only on the board.
-
-*DO NOT* automatically drive any conflicting pins until the SW enables
-it. This puts the SW in control to ensure that the eMMC is in reset
-before the signals are used from the cape. You can use a GPIO pin for
-this. No, we will not designate a pin for this function. It will be
-determined on a cape by cape basis by the designer of the respective
-cape.
+#TODO: Add BeagleBone AI-64 eMMC pins information#
 
 [[eeprom]]
 === EEPROM
 
 Each cape must have its own EEPROM containing information that will
-allow the SW to identify the board and to configure the expansion
-headers pins as needed. The one exception is proto boards intended for
+allow the software to identify the board and to configure the expansion
+headers pins during boot as needed. The one exception is proto boards intended for
 prototyping. They may or may not have an EEPROM on them. An EEPROM is
 required for all capes sold in order for them operate correctly when
-plugged into the BeagleBone AI-64.
+plugged into BeagleBone AI-64.
 
 The address of the EEPROM will be set via either jumpers or a dipswitch
-on each expansion board. *Figure 61* below is the design of the EEPROM
-circuit.
+on each expansion board. <<expansion-board-eeprom-without-write-protect-figure>> 
+below is the design of the EEPROM circuit.
 
-The EEPROM used is the same one as is used on the BeagleBone and the
-BeagleBone AI-64, a CAT24C256. The CAT24C256 is a 256 kb Serial CMOS
-EEPROM, internally organized as 32,768 words of 8 bits each. It features
-a 64-byte page write buffer and supports the Standard (100 kHz), Fast
-(400 kHz) and Fast-Plus (1 MHz) I2C protocol.
+[[expansion-board-eeprom-without-write-protect-figure, Expansion board EEPROM without write protect figure]]
+image::images/ch08/eeprom.png[title="Expansion board EEPROM without write protect"]
 
-image:media/image78.png[media/image78.png,title="media/image78.png",width=509,height=228]
-
-[[figure-61.-expansion-board-eeprom-without-write-protect]]
-Figure 61. Expansion Board EEPROM Without Write Protect
 
 The addressing of this device requires two bytes for the address which
 is not used on smaller size EEPROMs, which only require only one byte.
@@ -252,7 +128,8 @@ address as the cape EEPROM.
 [[eeprom-write-protect]]
 ==== EEPROM Write Protect
 
-The design in *Figure 62* has the write protect disabled. If the write
+The design in <<expansion-board-eeprom-with-write-protect-figure>>
+has the write protect disabled. If the write
 protect is not enabled, this does expose the EEPROM to being corrupted
 if the I2C2 bus is used on the cape and the wrong address written to. It
 is recommended that a write protection function be implemented and a
@@ -266,25 +143,25 @@ discretion of the cape designer.
 
 *Variable & MAC Memory*
 
-VDD_3V3B
+VSYS_IO_3V3
 
-image:media/image79.png[media/image79.png,title="media/image79.png",width=567,height=189]
+[[expansion-board-eeprom-with-write-protect-figure, Expansion board EEPROM with write protect figure]]
+image::images/ch08/eeprom-write-protect.png[title="Expansion board EEPROM with write protect"]
 
-[[figure-62.-expansion-board-eeprom-write-protect]]
-Figure 62. Expansion Board EEPROM Write Protect
 
 [[eeprom-data-format]]
 ==== EEPROM Data Format
 
-*Table 17* shows the format of the contents of the expansion board
+<<expansion-board-eeprom-table>> 
+shows the format of the contents of the expansion board
 EEPROM. Data is stored in Big Endian with the least significant value on
 the right. All addresses read as a single byte data from the EEPROM, but
 two byte addressing is used. ASCII values are intended to be easily read
 by the user when the EEPROM contents are dumped.
 
-[[table-17.-expansion-board-eeprom]]
-Table 17. Expansion Board EEPROM
+#Clean/Update table#
 
+[[expansion-board-eeprom-table, Expansion Board EEPROM table]]
 [cols=",,,",options="header",]
 |=======================================================================
 |*Name* |*Offset* |*Size (bytes)* |*Contents*
@@ -333,20 +210,20 @@ the 74 pins on the expansion* +
 *Bit 3....Pull Up/DN enabled...0=Enabled 1=Disabled* +
 *Bits 2-0 ...Mux Mode Selection...Mode 0-7*
 
-|*VDD_3V3B Current* |*236* |*2* |*Maximum current in milliamps. This is
+|*VSYS_IO_3V3 Current* |*236* |*2* |*Maximum current in milliamps. This is
 HEX value of the current in decimal* +
 *1500mA=0x05 0xDC 325mA=0x01 0x45*
 
-|*VDD_5V Current* |*238* |*2* |*Maximum current in milliamps. This is
+|*DC_VDD_5V Current* |*238* |*2* |*Maximum current in milliamps. This is
 HEX value of the current in decimal* +
 *1500mA=0x05 0xDC 325mA=0x01 0x45*
 
-|*SYS_5V Current* |*240* |*2* |*Maximum current in milliamps. This is
+|*VSYS_5V0 Current* |*240* |*2* |*Maximum current in milliamps. This is
 HEX value of the current in decimal* +
 *1500mA=0x05 0xDC 325mA=0x01 0x45*
 
 |*DC Supplied* |*242* |*2* |*Indicates whether or not the board is
-supplying voltage on the VDD_5V rail and the current rating 000=No
+supplying voltage on the DC_VDD_5V rail and the current rating 000=No
 1-0xFFFF is the current supplied storing the decimal* +
 *equivalent in HEX format*
 
@@ -358,30 +235,30 @@ also store presets for use by SW.*
 [[pin-usage]]
 ==== Pin Usage
 
-*Table 18* is the locations in the EEPROM to set the I/O pin usage for
+<<eeprom-pin-usage-table>> shows the locations in the EEPROM to set the I/O pin usage for
 the cape. It contains the value to be written to the Pad Control
-Registers. Details on this can be found in section**9.2.2** of the
+Registers. Details on this can be found in section *9.2.2* of the
 *TDA4VM Technical Reference Manual*, The table is left blank as a
 convenience and can be printed out and used as a template for creating a
 custom setting for each cape. The 16 bit integers and all 16 bit fields
 are to be stored in Big Endian format.
 
-***Bit 15 PIN USAGE*** is an indicator and should be a 1 if the pin is
+*Bit 15 PIN USAGE* is an indicator and should be a 1 if the pin is
 used or 0 if it is unused.
 
-***Bits 14-7 RESERVED*** is not to be used and left as 0.
+*Bits 14-7 RESERVED* is not to be used and left as 0.
 
-***Bit 6 SLEW CONTROL*** 0=Fast 1=Slow
+*Bit 6 SLEW CONTROL* 0=Fast 1=Slow
 
-***Bit 5 RX Enabled*** 0=Disabled 1=Enabled
+*Bit 5 RX Enabled* 0=Disabled 1=Enabled
 
-***Bit 4 PU/PD*** 0=Pulldown 1=Pullup.
+*Bit 4 PU/PD* 0=Pulldown 1=Pullup.
 
-***Bit 3 PULLUP/DN*** 0=Pullup/pulldown enabled
+*Bit 3 PULLUP/DN* 0=Pullup/pulldown enabled
 
 1= Pullup/pulldown disabled
 
-***Bit 2-0 MUX MODE SELECT*** Mode 0-7. (refer to TRM)
+*Bit 2-0 MUX MODE SELECT* Mode 0-7. (refer to TRM)
 
 Refer to the TRM for proper settings of the pin MUX mode based on the
 signal selection to be used.
@@ -390,253 +267,19 @@ The *AIN0-6* pins do not have a pin mux setting, but they need to be set
 to indicate if each of the pins is used on the cape. Only bit 15 is used
 for the AIN signals.
 
-[[table-18.-eeprom-pin-usage]]
-Table 18. EEPROM Pin Usage
+#Add tables#
 
-[cols=",,,,,,,,,,,,,",options="header",]
-|=======================================================================
-| + | + | + |*15* |*14* |*13* |*12* |*11* |*10* |*9* |*8* |*7* |*6* |*5*
-|*Off set* |*Conn* |*Name* |*Pin* +
-*Usage* |*Type* | + |*Reserved* | + | + |*S* +
-*L* +
-*E* +
-*W* |*R* +
-*X* |*P* +
-*U* +
-*-* +
-*P* +
-*D* |*P* +
-*U* +
-*/* +
-*D E* +
-*N* |*Mux Mode*
+[[eeprom-pin-usage-table, EEPROM Pin Usage table]]
 
-|*88* |*P9-22* |*UART2_RXD* | + | + | + | + | + | + | + | + | + | + | +
+[[p8-header-pins-table, P8 header pins table]]
 
-|*90* |*P9-21* |*UART2_TXD* | + | + | + | + | + | + | + | + | + | + | +
-
-|*92* |*P9-18* |*I2C1_SDA* | + | + | + | + | + | + | + | + | + | + | +
-
-|*94* |*P9-17* |*I2C1_SCL* | + | + | + | + | + | + | + | + | + | + | +
-
-|*96* |*P9-42* |*GPIO0_7* | + | + | + | + | + | + | + | + | + | + | +
-
-|*98* |*P8-35* |*UART4_CTSN* | + | + | + | + | + | + | + | + | + | + | +
-
-|*100* |*P8-33* |*UART4_RTSN* | + | + | + | + | + | + | + | + | + | +
-| +
-
-|*102* |*P8-31* |*UART5_CTSN* | + | + | + | + | + | + | + | + | + | +
-| +
-
-|*104* |*P8-32* |*UART5_RTSN* | + | + | + | + | + | + | + | + | + | +
-| +
-
-|*106* |*P9-19* |*I2C2_SCL* | + | + | + | + | + | + | + | + | + | + | +
-
-|*108* |*P9-20* |*I2C2_SDA* | + | + | + | + | + | + | + | + | + | + | +
-
-|*110* |*P9-26* |*UART1_RXD* | + | + | + | + | + | + | + | + | + | + | +
-
-|*112* |*P9-24* |*UART1_TXD* | + | + | + | + | + | + | + | + | + | + | +
-
-|*114* |*P9-41* |*CLKOUT2* | + | + | + | + | + | + | + | + | + | + | +
-
-|*116* |*P8-19* |*EHRPWM2A* | + | + | + | + | + | + | + | + | + | + | +
-
-|*118* |*P8-13* |*EHRPWM2B* | + | + | + | + | + | + | + | + | + | + | +
-
-|*120* |*P8-14* |*GPIO0_26* | + | + | + | + | + | + | + | + | + | + | +
-
-|*122* |*P8-17* |*GPIO0_27* | + | + | + | + | + | + | + | + | + | + | +
-
-|*124* |*P9-11* |*UART4_RXD* | + | + | + | + | + | + | + | + | + | + | +
-
-|*126* |*P9-13* |*UART4_TXD* | + | + | + | + | + | + | + | + | + | + | +
-
-|*128* |*P8-25* |*GPIO1_0* | + | + | + | + | + | + | + | + | + | + | +
-
-|*130* |*P8-24* |*GPIO1_1* | + | + | + | + | + | + | + | + | + | + | +
-
-|*132* |*P8-5* |*GPIO1_2* | + | + | + | + | + | + | + | + | + | + | +
-
-|*134* |*P8-6* |*GPIO1_3* | + | + | + | + | + | + | + | + | + | + | +
-
-|*136* |*P8-23* |*GPIO1_4* | + | + | + | + | + | + | + | + | + | + | +
-
-|*138* |*P8-22* |*GPIO1_5* | + | + | + | + | + | + | + | + | + | + | +
-
-|*140* |*P8-3* |*GPIO1_6* | + | + | + | + | + | + | + | + | + | + | +
-
-|*142* |*P8-4* |*GPIO1_7* | + | + | + | + | + | + | + | + | + | + | +
-
-|*144* |*P8-12* |*GPIO1_12* | + | + | + | + | + | + | + | + | + | + | +
-
-|*146* |*P8-11* |*GPIO1_13* | + | + | + | + | + | + | + | + | + | + | +
-
-|*148* |*P8-16* |*GPIO1_14* | + | + | + | + | + | + | + | + | + | + | +
-
-|*150* |*P8-15* |*GPIO1_15* | + | + | + | + | + | + | + | + | + | + | +
-
-|*152* |*P9-15* |*GPIO1_16* | + | + | + | + | + | + | + | + | + | + | +
-|=======================================================================
-
-[cols=",,,,,,,,,,,,,",options="header",]
-|=======================================================================
-| | | |*15* |*14* |*13* |*12* |*11* |*10* |*9* |*8* |*7* |*6* |*5*
-|*Off set* |*Conn* |*Name* |*Pin* +
-*Usage* |*Type* | |*Reserved* | | |*S* +
-*L* +
-*E* +
-*W* |*R* +
-*X* |*P* +
-*U* +
-*-* +
-*P* +
-*D* |*P* +
-*U* +
-*/* +
-*D E* +
-*N* |*Mux Mode*
-
-|*154* |*P9-23* |*GPIO1_17* | | | | | | | | | | |
-
-|*156* |*P9-14* |*EHRPWM1A* | | | | | | | | | | |
-
-|*158* |*P9-16* |*EHRPWM1B* | | | | | | | | | | |
-
-|*160* |*P9-12* |*GPIO1_28* | | | | | | | | | | |
-
-|*162* |*P8-26* |*GPIO1_29* | | | | | | | | | | |
-
-|*164* |*P8-21* |*GPIO1_30* | | | | | | | | | | |
-
-|*166* |*P8-20* |*GPIO1_31* | | | | | | | | | | |
-
-|*168* |*P8-18* |*GPIO2_1* | | | | | | | | | | |
-
-|*170* |*P8-7* |*TIMER4* | | | | | | | | | | |
-
-|*172* |*P8-9* |*TIMER5* | + | + | + | + | + | + | + | + | + | + | +
-
-|*174* |*P8-10* |*TIMER6* | + | + | + | + | + | + | + | + | + | + | +
-
-|*176* |*P8-8* |*TIMER7* | + | + | + | + | + | + | + | + | + | + | +
-
-|*178* |*P8-45* |*GPIO2_6* | + | + | + | + | + | + | + | + | + | + | +
-
-|*180* |*P8-46* |*GPIO2_7* | + | + | + | + | + | + | + | + | + | + | +
-
-|*182* |*P8-43* |*GPIO2_8* | + | + | + | + | + | + | + | + | + | + | +
-
-|*184* |*P8-44* |*GPIO2_9* | + | + | + | + | + | + | + | + | + | + | +
-
-|*186* |*P8-41* |*GPIO2_10* | + | + | + | + | + | + | + | + | + | + | +
-
-|*188* |*P8-42* |*GPIO2_11* | + | + | + | + | + | + | + | + | + | + | +
-
-|*190* |*P8-39* |*GPIO2_12* | + | + | + | + | + | + | + | + | + | + | +
-
-|*192* |*P8-40* |*GPIO2_13* | + | + | + | + | + | + | + | + | + | + | +
-
-|*194* |*P8-37* |*UART5_TXD* | + | + | + | + | + | + | + | + | + | + | +
-
-|*196* |*P8-38* |*UART5_RXD* | + | + | + | + | + | + | + | + | + | + | +
-
-|*198* |*P8-36* |*UART3_CTSN* | + | + | + | + | + | + | + | + | + | +
-| +
-
-|*200* |*P8-34* |*UART3_RTSN* | + | + | + | + | + | + | + | + | + | +
-| +
-
-|*202* |*P8-27* |*GPIO2_22* | + | + | + | + | + | + | + | + | + | + | +
-
-|*204* |*P8-29* |*GPIO2_23* | + | + | + | + | + | + | + | + | + | + | +
-
-|*206* |*P8-28* |*GPIO2_24* | + | + | + | + | + | + | + | + | + | + | +
-
-|*208* |*P8-30* |*GPIO2_25* | + | + | + | + | + | + | + | + | + | + | +
-
-|*210* |*P9-29* |*SPI1_D0* | + | + | + | + | + | + | + | + | + | + | +
-
-|*212* |*P9-30* |*SPI1_D1* | + | + | + | + | + | + | + | + | + | + | +
-
-|*214* |*P9-28* |*SPI1_CS0* | + | + | + | + | + | + | + | + | + | + | +
-
-|*216* |*P9-27* |*GPIO3_19* | + | + | + | + | + | + | + | + | + | + | +
-
-|*218* |*P9-31* |*SPI1_SCLK* | + | + | + | + | + | + | + | + | + | + | +
-
-|*220* |*P9-25* |*GPIO3_21* | + | + | + | + | + | + | + | + | + | + | +
-
-| + | + | + |*15* |*14* |*13* |*12* |*11* |*10* |*9* |*8* |*7* |*6* |*5*
-
-|*Off set* |*Conn* |*Name* |*Pin* +
-*Usage* |*Type* | + |*Reserved* | + | + |*S* +
-*L* +
-*E* +
-*W* |*R* +
-*X* |*P* +
-*U* +
-*-* +
-*P* +
-*D* |*P* +
-*U* +
-*/* +
-*D E* +
-*N* |*Mux Mode*
-
-| + | + | + | + |*0* |*0* |*0* |*0* |*0* |*0* |*0* |*0* |*0* |*0*
-
-|*222* |*P9-39* |*AIN0* | + | + | + | + | + | + | + | + | + | + | +
-
-|*224* |*P9-40* |*AIN1* | + | + | + | + | + | + | + | + | + | + | +
-
-|*226* |*P9-37* |*AIN2* | + | + | + | + | + | + | + | + | + | + | +
-
-|*228* |*P9-38* |*AIN3* | + | + | + | + | + | + | + | + | + | + | +
-
-|*230* |*P9-33* |*AIN4* | + | + | + | + | + | + | + | + | + | + | +
-
-|*232* |*P9-36* |*AIN5* | + | + | + | + | + | + | + | + | + | + | +
-
-|*234* |*P9-35* |*AIN6* | + | + | + | + | + | + | + | + | + | + | +
-|=======================================================================
+[[p9-header-pins-table, P9 header pins table]]
 
 [[pin-usage-consideration]]
 === Pin Usage Consideration
 
 This section covers things to watch for when hooking up to certain pins
 on the expansion headers.
-
-[[boot-pins]]
-==== Boot Pins
-
-There are 16 pins that control the boot mode of the processor that are
-exposed on the expansion headers. *Figure 63* below shows those signals
-as they appear on the BeagleBone AI-64.:
-
-image:media/image80.png[media/image80.png,title="media/image80.png",width=530,height=468]
-
-If you plan to use any of these signals, then on power up, these pins
-should not be driven. If you do, it can affect the boot mode of the
-processor and could keep the processor from booting or working
-correctly.
-
-If you are designing a cape that is intended to be used as a boot
-source, such as a NAND board, then you should drive the pins to
-reconfigure the boot mode, but only at reset. After the reset phase, the
-signals should not be driven to allow them to be used for the other
-functions found on those pins. You will need to override the resistor
-values in order to change the settings. The DC pull-up requirement
-should be based on the TDA4VM Vih min voltage of 2 volts and TDA4VM
-maximum input leakage current of 18uA. Also take into account any other
-current leakage paths on these signals which could be caused by your
-specific cape design.
-
-The DC pull-down requirement should be based on the TDA4VM Vil max
-voltage of 0.8 volts and TDA4VM maximum input leakage current of 18uA
-plus any other current leakage paths on these signals.
 
 [[expansion-connectors-1]]
 === Expansion Connectors
@@ -659,45 +302,41 @@ and used for each of the different configurations.
 
 For non-stacking capes single configurations or where the cape can be
 the last board on the stack, the two 46 pin expansion headers use the
-same connectors. *Figure 64* is a picture of the connector. These are
-dual row 23 position 2.54mm x 2.54mm connectors.
+same connectors. <<single-expansion-connector-figure>> is a picture of 
+the connector. These are dual row 23 position 2.54mm x 2.54mm connectors.
 
-image:media/image81.jpg[media/image81.jpg,title="media/image81.jpg",width=65,height=90]
-
-[[figure-64.-single-expansion-connector]]
-Figure 64. Single Expansion Connector
+[[single-expansion-connector-figure,Single expansion connector figure]]
+image::images/ch08/single-expansion-connector.jpg[title="Single expansion connector"]
 
 The connector is typically mounted on the bottom side of the board as
-shown in *Figure 65*. These are very common connectors and should be
+shown in <<single-cape-expansion-connector-figure>>. These are very common connectors and should be
 easily located. You can also use two single row 23 pin headers for each
 of the dual row headers.
 
-image:media/image82.jpg[media/image82.jpg,title="media/image82.jpg",width=575,height=54]
+image::images/ch08/proto.jpg[title="Single cape expansion connector on BeagleBone Proto Cape with EEPROM from onlogic"]
 
-[[figure-65.-single-cape-expansion-connector]]
-Figure 65. Single Cape Expansion Connector
+[[single-cape-expansion-connector-figure, Single cape expansion connector figure]]
+
 
 It is allowed to only populate the pins you need. As this is a
 non-stacking configuration, there is no need for all headers to be
 populated. This can also reduce the overall cost of the cape. This
 decision is up to the cape designer.
 
-For convenience listed in *Table 19* are some possible choices for part
-numbers on this connector. They have varying pin lengths and some may be
-more suitable than others for your use. It should be noted, that the
-longer the pin and the further it is inserted into the BeagleBone AI-64
+For convenience listed in <<single-cape-connectors-figure>> are some possible 
+choices for part numbers on this connector. They have varying pin lengths and 
+some may be more suitable than others for your use. It should be noted, that the
+longer the pin and the further it is inserted into BeagleBone AI-64
 connector, the harder it will be to remove due to the tension on 92
 pins. This can be minimized by using shorter pins or removing those pins
 that are not used by your particular design. The first item in**Table
 18** is on the edge and may not be the best solution. Overhang is the
 amount of the pin that goes past the contact point of the connector on
-the BeagleBone AI-64
+BeagleBone AI-64
 
 .
 
-[[table-19.-single-cape-connectors]]
-Table 19. Single Cape Connectors
-
+[[single-cape-connectors-figure, Single Cape Connectors]]
 [cols=",,,",options="header",]
 |=======================================================================
 |*SUPPLIER* |*PARTNUMBER* |*TAIL LENGTH(in)* |*OVERHANG(in)*
@@ -720,27 +359,26 @@ depth into the connector is sufficient
 ==== Main Expansion Headers-Stacking
 
 For stacking configuration, the two 46 pin expansion headers use the
-same connectors. *Figure 66* is a picture of the connector. These are
-dual row 23 position 2.54mm x 2.54mm connectors.
+same connectors. <<expansion-connector-figure>> is a picture of the 
+connector. These are dual row 23 position 2.54mm x 2.54mm connectors.
 
-image:media/image83.jpg[media/image83.jpg,title="media/image83.jpg",width=69,height=90]
-
-[[figure-66.-expansion-connector]]
-Figure 66. Expansion Connector
+[[expansion-connector-figure, Expansion connector figure]]
+image::images/ch08/expansion-connector.jpg[title="Expansion Connector"]
 
 The connector is mounted on the top side of the board with longer tails
-to allow insertion into the BeagleBone AI-64. *Figure 67* is the
+to allow insertion into BeagleBone AI-64. 
+<<stacked-cape-expansion-connector-figure>> is the
 connector configuration for the connector.
 
-image:media/image84.jpg[media/image84.jpg,title="media/image84.jpg",width=575,height=65]
+[[stacked-cape-expansion-connector-figure, Stacked cape expansion connector figure]]
+image::images/ch08/can-cape.jpg["Stacked cape expansion connector"]
 
-[[figure-67.-stacked-cape-expansion-connector]]
-Figure 67. Stacked Cape Expansion Connector
+
 
 For convenience listed in *Table 18* are some possible choices for part
 numbers on this connector. They have varying pin lengths and some may be
 more suitable than others for your use. It should be noted, that the
-longer the pin and the further it is inserted into the BeagleBone AI-64
+longer the pin and the further it is inserted into BeagleBone AI-64
 connector, the harder it will be to remove due to the tension on 92
 pins. This can be minimized by using shorter pins. There are most likely
 other suppliers out there that will work for this connector as well. If
@@ -748,13 +386,12 @@ anyone finds other suppliers of compatible connectors that work, let us
 know and they will be added to this document. The first item in**Table
 19** is on the edge and may not be the best solution. Overhang is the
 amount of the pin that goes past the contact point of the connector on
-the BeagleBone AI-64.
+BeagleBone AI-64.
 
-The third part listed in *Table 20* will have insertion force issues.
+The third part listed in <<stacked-cape-connectors-figure>> will have 
+insertion force issues.
 
-[[table-20.-stacked-cape-connectors]]
-Table 20. Stacked Cape Connectors
-
+[[stacked-cape-connectors-figure, Stacked cape connectors figure]]
 [cols=",,,",options="header",]
 |=======================================================================
 |*SUPPLIER* |*PARTNUMBER* |*TAIL LENGTH(in)* |*OVERHANG(in)*
@@ -779,27 +416,26 @@ one that has the correct mating depth.
 [[stacked-capes-wsignal-stealing]]
 ==== Stacked Capes w/Signal Stealing
 
-*Figure 68* is the connector configuration for stackable capes that does
+<<stacked-with-signal-stealing-expansion-connector-figure>> is the connector configuration for stackable capes that does
 not provide all of the signals upwards for use by other boards. This is
 useful if there is an expectation that other boards could interfere with
 the operation of your board by exposing those signals for expansion.
 This configuration consists of a combination of the stacking and
 nonstacking style connectors.
 
-image:media/image85.jpg[media/image85.jpg,title="media/image85.jpg",width=575,height=71]
+image::images/ch08/stealing-expansion-connector.jpg[title="Stacked with signal stealing expansion connector figure"]
 
-[[figure-68.-stacked-wsignal-stealing-expansion-connector]]
-Figure 68. Stacked w/Signal Stealing Expansion Connector
+[[stacked-with-signal-stealing-expansion-connector-figure, Stacked with signal stealing expansion connector figure]]
 
 [[retention-force]]
 ==== Retention Force
 
 The length of the pins on the expansion header has a direct relationship
-to the amount of force that is used to remove a cape from the BeagleBone
+to the amount of force that is used to remove a cape from BeagleBone
 AI-64. The longer the pins extend into the connector the harder it is to
 remove. There is no rule that says that if longer pins are used, that
 the connector pins have to extend all the way into the mating connector
-on the BeagleBone AI-64, but this is controlled by the user and
+on BeagleBone AI-64, but this is controlled by the user and
 therefore is hard to control. We have also found that if you use gold
 pins, while more expensive, it makes for a smoother finish which reduces
 the friction.
@@ -810,14 +446,12 @@ consider when selecting a connector and its pin length.
 [[beaglebone-ai-64-female-connectors]]
 ==== BeagleBone AI-64 Female Connectors
 
-*Figure 69* shows the key measurements used in calculating how much the
+<<connector-pin-insertion-depth>> shows the key measurements used in calculating how much the
 pin extends past the contact point on the connector, what we call
 overhang.
 
-image:media/image86.jpg[media/image86.jpg,title="media/image86.jpg",width=552,height=314]
-
-[[figure-69.-connector-pin-insertion-depth]]
-Figure 69. Connector Pin Insertion Depth
+[[connector-pin-insertion-depth, Connector pin insertion depth figure]]
+image::images/ch08/berg-stip-insertion.jpg[title="Connector Pin Insertion Depth"]
 
 To calculate the amount of the pin that extends past the Point of
 Contact, use the following formula:
@@ -863,34 +497,32 @@ This section describes the power rails for the capes and their usage.
 [[main-board-power]]
 ==== Main Board Power
 
-The *Table 1* describes the voltages from the main board that are
-available on the expansion connectors and their ratings. All voltages
-are supplied by connector**P9**. The current ratings listed are per pin.
+The <<expansion-header-voltages-table>> describes the voltages from the 
+main board that are available on the expansion connectors and their ratings. 
+All voltages are supplied by connector**P9**. The current ratings listed are per pin.
 
-[[table-21.-expansion-voltages]]
-Table 21. Expansion Voltages
-
+[[expansion-header-voltages-table, Expansion header voltages figure]]
 [cols=",,,,,",options="header",]
 |============================================
 |*Current* |*Name* |*P9* |*P9* |*Name* |*Current*
-|250mA |VDD_3V3B |3 |4 |VDD_3V3B |250mA
-|1000mA |VDD_5V |5 |6 |VDD_5V |1000mA
-|250mA |SYS_5V |7 |8 |SYS_5V |250mA
+|250mA |VSYS_IO_3V3 |3 |4 |VSYS_IO_3V3 |250mA
+|1000mA |DC_VDD_5V |5 |6 |DC_VDD_5V |1000mA
+|250mA |VSYS_5V0 |7 |8 |VSYS_5V0 |250mA
 |============================================
 
-The *VDD_3V3B* rail is supplied by the LDO on the BeagleBone AI-64 and
+The *VSYS_IO_3V3* rail is supplied by the LDO on BeagleBone AI-64 and
 is the primary power rail for expansion boards. If the power requirement
 for the capes exceeds the current rating, then locally generated voltage
 rail can be used. It is recommended that this rail be used to power any
 buffers or level translators that may be used.
 
-*VDD_5V* is the main power supply from the DC input jack. This voltage
+*DC_VDD_5V* is the main power supply from the DC input jack. This voltage
 is not present when the board is powered via USB. The amount of current
 supplied by this rail is dependent upon the amount of current available.
 Based on the board design, this rail is limited to 1A per pin from the
 main board.
 
-The *SYS_5V* rail is the main rail for the regulators on the main board.
+The *VSYS_5V0* rail is the main rail for the regulators on the main board.
 When powered from a DC supply or USB, this rail will be 5V. The
 available current from this rail depends on the current available from
 the USB and DC external supplies.
@@ -903,10 +535,10 @@ needed by that board. Care should be taken not to let this voltage be
 fed back into any of the expansion header pins.
 
 It is possible to provide 5V to the main board from an expansion board.
-By supplying a 5V signal into the *VDD_5V* rail, the main board can be
+By supplying a 5V signal into the *DC_VDD_5V* rail, the main board can be
 supplied. This voltage must not exceed 5V. You should not supply any
 voltage into any other pin of the expansion connectors. Based on the
-board design, this rail is limited to 1A per pin to the BeagleBone
+board design, this rail is limited to 1A per pin to BeagleBone
 AI-64.
 
 *There are several precautions that need to be taken when working with
@@ -915,11 +547,11 @@ the expansion headers to prevent damage to the board.*
 1.  *Do not apply any voltages to any I/O pins when the board is not
 powered on.*
 2.  *Do not drive any external signals into the I/O pins until after the
-VDD_3V3B rail is up.*
+VSYS_IO_3V3 rail is up.*
 3.  *Do not apply any voltages that are generated from external
 sources.*
-4.  *If voltages are generated from the VDD_5V signal, those supplies
-must not become active until after the VDD_3V3B rail is up.*
+4.  *If voltages are generated from the DC_VDD_5V signal, those supplies
+must not become active until after the VSYS_IO_3V3 rail is up.*
 5.  *If you are applying signals from other boards into the expansion
 headers, make sure you power the board up after you power up the
 BeagleBone AI-64 or make the connections after power is applied on both
@@ -928,69 +560,33 @@ boards.*
 *Powering the processor via its I/O pins can cause damage to the
 processor.*
 
-[[mechanical]]
-=== Mechanical
-
-This section provides the guidelines for the creation of expansion
-boards from a mechanical standpoint. Defined is a standard board size
-that is the same profile as the BeagleBone AI-64. It is expected that
-the majority of expansion boards created will be of standard size. It is
-possible to create boards of other sizes and in some cases this is
-required, as in the case of an LCD larger than the BeagleBone AI-64
-board.
+#TODO: Add BeagleBone AI-64 cape mechanical characteristics#
 
 [[standard-cape-size]]
 ==== Standard Cape Size
 
-*Figure 70* is the outline of the standard cape. The dimensions are in
-inches.
+<<cape-board-dimensions-figure>> shows the outline of the standard cape.
+The dimensions are in inches.
 
-image:media/image87.jpg[media/image87.jpg,title="media/image87.jpg",width=575,height=369]
+[[cape-board-dimensions-figure, Cape board dimensions figure]]
+image::images/ch08/cape-dimension.jpg[title="Cape board dimensions"]
 
-[[figure-70.-cape-board-dimensions]]
-Figure 70. Cape Board Dimensions
-
-A slot is provided for the Ethernet connector to stick up higher than
+A notch is provided for BeagleBone Ethernet connector to stick up higher than
 the cape when mounted. This also acts as a key function to ensure that
 the cape is oriented correctly. Space is also provided to allow access
-to the user LEDs and reset button on the main board.
-
-Some people have inquired as to the difference in the radius of the
-corners of the BeagleBone AI-64 and why they are different. This is a
-result of having the BeagleBone fit into the Altoids style tin.
-
-It is not required that the cape be exactly like the BeagleBone AI-64
-board in this respect.
+to the user LEDs and reset button on BeagleBone board. On BeagleBone AI-64 board
+align it with the notch on the board silkscreen.
 
 [[extended-cape-size]]
 ==== Extended Cape Size
 
 Capes larger than the standard board size are also allowed. A good
-example would be an LCD panel. There is no practical limit to the sizes
-of these types of boards. The notch for the key is also not required,
-but it is up to the supplier of these boards to ensure that the
-BeagleBone AI-64 is not plugged in incorrectly in such a manner that
-damage would be cause to the BeagleBone AI-64 or any other capes that
-may be installed. Any such damage will be the responsibility of the
-supplier of such a cape to repair.
+example would be the new BeagleBone AI-64 robotics cape. 
+There is no practical limit to the sizes of these types of boards.
+The notch is also optional, but it is up to the supplier to ensure that the
+cape is not plugged incorrectly on BeagleBone AI-64 such that damage would
+be cause to BeagleBone AI-64. Any such damage will be the responsibility of the
+supplier of such a cape to repair. As with all capes, the EEPROM is required and 
+compliance with the power requirements must be adhered to.
 
-As with all capes, the EEPROM is required and compliance with the power
-requirements must be adhered to.
 
-[[enclosures]]
-==== Enclosures
-
-There are numerous enclosures being created in all different sizes and
-styles. The mechanical design of these enclosures is not being defined
-by this specification.
-
-The ability of these designs to handle all shapes and sizes of capes,
-especially when you consider up to four can be mounted with all sorts of
-interface connectors, it is difficult to define a standard enclosure
-that will handle all capes already made and those yet to be defined.
-
-If cape designers want to work together and align with one enclosure and
-work around it that is certainly acceptable. But we will not pick
-winners and we will not do anything that impedes the openness of the
-platform and the ability of enclosure designers and cape designers to
-innovate and create new concepts.

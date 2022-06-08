@@ -19,12 +19,12 @@ ________________________________________________________________________________
 *Maintaining editor:* James Anderson _jim_255@yahoo.com_
 
 *Supply comments and errors via:*
-https://github.com/beagleboard/beaglebone-ai-64/issues
+https://git.beagleboard.org/beagleboard/beaglebone-ai-64/issues
 
 *All information in this document is subject to change without notice.*
 
 *For an up to date version of this document refer to:*
-https://github.com/beagleboard/beaglebone-ai-64/System-Reference-Manual
+https://git.beagleboard.org/beagleboard/beaglebone-ai-64/System-Reference-Manual
 ______________________________________________________________________________________________________________________________________________________
 
 == *BEAGLEBONE AI-64 DESIGN*
@@ -61,8 +61,8 @@ The user assumes all responsibility and liability for proper and safe
 handling of the goods. Further, the user indemnifies Supplier from all
 claims arising from the handling or use of the goods.
 
-Should the BeagleBone not meet the specifications indicated in the
-System Reference Manual, the BeagleBone may be returned within 90 days
+Should BeagleBone not meet the specifications indicated in the
+System Reference Manual, BeagleBone may be returned within 90 days
 from the date of delivery to the distributor of purchase for a full
 refund. THE FOREGOING LIMITED WARRANTY IS THE EXCLUSIVE WARRANTY MADE BY
 SELLER TO BUYER AND IS IN LIEU OF ALL OTHER WARRANTIES, EXPRESSED,
@@ -121,27 +121,27 @@ agree that:
 regulatory requirements (including but not limited to Food and Drug
 Administration regulations, if applicable) which relate to your products
 and which relate to your use (and/or that of your employees, affiliates,
-contractors or designees) of the BeagleBone for evaluation, testing and
+contractors or designees) of BeagleBone for evaluation, testing and
 other purposes.
 2.  You have full and exclusive responsibility to assure the safety and
 compliance of your products with all such laws and other applicable
 regulatory requirements, and also to assure the safety of any activities
 to be conducted by you and/or your employees, affiliates, contractors or
-designees, using the BeagleBone. Further, you are responsible to assure
+designees, using BeagleBone. Further, you are responsible to assure
 that any interfaces (electronic and/or mechanical) between the
 BeagleBone and any human body are designed with suitable isolation and
 means to safely limit accessible leakage currents to minimize the risk
 of electrical shock hazard.
-3.  Since the BeagleBone is not a completed product, it may not meet all
+3.  Since BeagleBone is not a completed product, it may not meet all
 applicable regulatory and safety compliance standards which may normally
 be associated with similar items. You assume full responsibility to
 determine and/or assure compliance with any such standards and related
 certifications as may be applicable. You will employ reasonable
-safeguards to ensure that your use of the BeagleBone will not result in
-any property damage, injury or death, even if the BeagleBone should fail
+safeguards to ensure that your use of BeagleBone will not result in
+any property damage, injury or death, even if BeagleBone should fail
 to perform as described or expected.
 
-*Certain Instructions*. It is important to operate the BeagleBone AI-64
+*Certain Instructions*. It is important to operate BeagleBone AI-64
 within Supplier’s _recommended specifications and environmental
 considerations per the user guidelines._ _Exceeding the specified
 BeagleBone ratings (including but not limited to input and output_
@@ -151,16 +151,16 @@ these ratings please contact the Supplier_ _representative prior to
 connecting interface electronics including input power and intended_
 _loads. Any loads applied outside of the specified output range may
 result in unintended_ _and/or inaccurate operation and/or possible
-permanent damage to the BeagleBone and/or_ _interface electronics.
+permanent damage to BeagleBone and/or_ _interface electronics.
 Please consult the System Reference Manual prior to connecting any_
-_load to the BeagleBone output. If there is uncertainty as to the load
+_load to BeagleBone output. If there is uncertainty as to the load
 specification, please_ _contact the Supplier representative. During
 normal operation, some circuit components_ _may have case temperatures
 greater than 60 C as long as the input and output are_ _maintained at a
 normal ambient operating temperature. These components include but are_
 _not limited to linear regulators, switching transistors, pass
 transistors, and current sense_ _resistors which can be identified using
-the BeagleBone schematic located at the link in the_ _BeagleBone System
+BeagleBone schematic located at the link in the_ _BeagleBone System
 Reference Manual. When placing measurement probes near these_ _devices
 during normal operation, please be aware that these devices may be very
 warm to_ _the touch. As with all electronic evaluation tools, only
@@ -172,10 +172,10 @@ BeagleBone._
 indemnify'' _and hold the Suppliers, its licensors and their
 representatives harmless from and against_ _any and all claims, damages,
 losses, expenses, costs and liabilities (collectively,_ _"Claims")
-arising out of or in connection with any use of the BeagleBone that is
+arising out of or in connection with any use of BeagleBone that is
 not in_ _accordance with the terms of the agreement. This obligation
 shall apply whether Claims_ _arise under law of tort or contract or any
-other legal theory, and even if the BeagleBone_ _fails to perform as
+other legal theory, and even if BeagleBone_ _fails to perform as
 described or expected._
 
 *Safety-Critical or Life-Critical Applications*. If you intend to
@@ -225,10 +225,10 @@ toc::[]
 [[introduction]]
 == 1.0 Introduction
 
-This document is the *System Reference Manual* for the BeagleBone AI-64
+This document is the *System Reference Manual* for BeagleBone AI-64
 and covers its use and design. The board will primarily be referred to
 in the remainder of this document simply as the board, although it may
-also be referred to as the BeagleBone AI-64 as a reminder. There are
+also be referred to as BeagleBone AI-64 as a reminder. There are
 also references to the original BeagleBone as well, and will be
 referenced as simply BeagleBone.
 
@@ -241,7 +241,7 @@ revision number.
 Make sure you check the support Wikis frequently for the most up to date
 information.
 
-https://github.com/beagleboard/beaglebone-ai-64/wiki
+https://git.beagleboard.org/beagleboard/beaglebone-ai-64/wiki
 
 [[change-history]]
 == 2.0 Change History
@@ -265,7 +265,7 @@ change will always result in a document change.
 [[board-changes]]
 === 2.2 Board Changes
 
-Full issue list at https://github.com/beagleboard/beaglebone-ai-64/issues
+Full issue list at https://git.beagleboard.org/beagleboard/beaglebone-ai-64/issues
 
 [[rev-A0]]
 ==== 2.2.1 Rev B0
@@ -336,7 +336,7 @@ Each of these configurations is discussed in general terms in the
 following sections.
 
 For an up-to-date list of confirmed working accessories please go to
-https://github.com/beagleboard/beaglebone-ai-64/wiki/Accessories[_https://github.com/beagleboard/beaglebone-ai-64/wiki/Accesories_]
+https://git.beagleboard.org/beagleboard/beaglebone-ai-64/wiki/Accessories[_https://git.beagleboard.org/beagleboard/beaglebone-ai-64/wiki/Accesories_]
 
 [[tethered-to-a-pc]]
 === 3.3 Tethered To A PC
@@ -429,7 +429,7 @@ has been tested and worked beautifully.)
 * (1) M.2 WiFi module (OPTIONAL). For wireless connections, a USB WiFi adapter or a recommended M.2 WiFi module can provide wireless networking.
 
 For an up-to-date list of confirmed working accessories please go to
-https://github.com/beagleboard/beaglebone-ai-64/wiki/Accessories.
+https://git.beagleboard.org/beagleboard/beaglebone-ai-64/wiki/Accessories.
 
 [[connecting-up-the-board]]
 ==== 3.4.2 Connecting Up the Board
@@ -535,7 +535,7 @@ image:media/image27.jpg[media/image27.jpg,title="media/image27.jpg",width=513,he
 [[beaglebone-ai-64-overview]]
 == 4.0 BeagleBone AI-64 Overview
 
-The BeagleBone AI-64 is the latest addition to the BeagleBoard.org
+The BeagleBone AI-64 is the latest addition to BeagleBoard.org
 family and like its predecessors, is designed to address the Open Source
 Community, early adopters, and anyone interested in a low cost ARM
 Cortex-A8 based processor.
@@ -543,7 +543,7 @@ Cortex-A8 based processor.
 It has been equipped with a minimum set of features to allow the user to
 experience the power of the processor and is not intended as a full
 development platform as many of the features and interfaces supplied by
-the processor are not accessible from the BeagleBone AI-64 via onboard
+the processor are not accessible from BeagleBone AI-64 via onboard
 support of some interfaces. It is not a complete product designed to do
 any particular function. It is a foundation for experimentation and
 learning how to program the processor and to access the peripherals by
@@ -562,7 +562,7 @@ Jason Kridner of Texas Instruments handles the community promotions and
 is the spokesman for BeagleBoard.org.
 
 The board is designed by Gerald Coley of EmProDesign, a charter member
-of the BeagleBoard.org community.
+of BeagleBoard.org community.
 
 The PCB layout up through PCB revision B was done by Circuitco and
 Circuitco is the sole funder of its development and transition to
@@ -792,13 +792,13 @@ adapter.
 [[beaglebone-ai-64-high-level-specification]]
 == 5.0 BeagleBone AI-64 High Level Specification
 
-This section provides the high level specification of the BeagleBone
+This section provides the high level specification of BeagleBone
 AI-64.
 
 [[block-diagram]]
 === 5.1 Block Diagram
 
-<<figure-19>> below is the high level block diagram of the BeagleBone
+<<figure-19>> below is the high level block diagram of BeagleBone
 AI-64.
 
 [[figure-19,Figure 19]]
@@ -971,7 +971,7 @@ from power derived on a cape. The DC supply should be well regulated and
 === 5.9 Reset Button
 
 When pressed and released, causes a reset of the board. The reset button
-used on the BeagleBone AI-64 is a little larger than the one used on the
+used on BeagleBone AI-64 is a little larger than the one used on the
 original BeagleBone. It has also been moved out to the edge of the board
 so that it is more accessible.
 
@@ -1032,16 +1032,16 @@ Ethernet connector on the main board. This notch acts as a key to ensure
 proper orientation of the cape.
 
 The majority of capes designed for the original BeagleBone will work on
-the BeagleBone AI-64. The two main expansion headers will be populated
+BeagleBone AI-64. The two main expansion headers will be populated
 on the board. There are a few exceptions where certain capabilities may
-not be present or are limited to the BeagleBone AI-64. These include:
+not be present or are limited to BeagleBone AI-64. These include:
 
 * GPMC bus may NOT be available due to the use of those signals by the
 eMMC. If the eMMC is used for booting only and the file system is on the
 microSD card, then these signals could be used.
 * Another option is to use the microSD or serial boot modes and not use
 the eMMC.
-* The power expansion header is not on the BeagleBone AI-64 so those
+* The power expansion header is not on BeagleBone AI-64 so those
 functions are not supported.
 
 For more information on cape support refer to <<section-9>>.
@@ -1846,7 +1846,7 @@ information to determine how to set up the board.
 === 6.5 Micro Secure Digital
 
 The microSD connector on the board will support a microSD card that can
-be used for booting or file storage on the BeagleBone AI-64.
+be used for booting or file storage on BeagleBone AI-64.
 
 [[microsd-design]]
 ==== 6.5.1 microSD Design
@@ -1867,7 +1867,7 @@ sent.
 
 There is no separate card detect pin in the microSD specification. It
 uses *MMCO_DAT3* for that function. However, most microSD connectors
-still supply a CD function on the connectors. In the BeagleBone AI-64
+still supply a CD function on the connectors. In BeagleBone AI-64
 design, this pin is connected to the**MMC0_SDCD** pin for use by the
 processor. You can also change the pin to *GPIO0_6*, which is able to
 wake up the processor from a sleep mode when an microSD card is inserted
@@ -1882,7 +1882,7 @@ provided for filtering.
 [[user-leds]]
 === 6.6 User LEDs
 
-There are four user LEDs on the BeagleBone AI-64. These are connected to
+There are four user LEDs on BeagleBone AI-64. These are connected to
 GPIO pins on the processor. *Figure 37* shows the interfaces for the
 user LEDs.
 
@@ -1927,7 +1927,7 @@ primary boot code in the processor ROM passes control, a secondary stage
 initializes only the required devices to continue the boot process, and
 then control is transferred to the third stage "U-boot". Based on the
 settings of the boot pins, the ROM knows where to go and get the SPL and
-UBoot code. In the case of the BeagleBone AI-64, that is either eMMC or
+UBoot code. In the case of BeagleBone AI-64, that is either eMMC or
 microSD based on the position of the boot switch.
 
 [[boot-configuration-design]]
@@ -1988,7 +1988,7 @@ interface is in the MII mode of operation.
 .Figure 40. Ethernet Processor Interface
 image:media/image55.png[media/image55.png,title="media/image55.png",width=448,height=312,align="center"]
 
-This is the same interface as is used on the BeagleBone. No changes were
+This is the same interface as is used on BeagleBone. No changes were
 made in this design for the board.
 
 [[ethernet-connector-interface]]
@@ -2001,7 +2001,7 @@ below.
 .Figure 41. Ethernet Connector Interface
 image:media/image56.png[media/image56.png,title="media/image56.png",width=570,height=347,align="center"]
 
-This is the same interface as is used on the BeagleBone. No changes were
+This is the same interface as is used on BeagleBone. No changes were
 made in this design for the board.
 
 [[ethernet-phy-power-reset-and-clocks]]
@@ -2078,7 +2078,7 @@ interface.
 [[supported-resolutions]]
 ==== 6.10.1 Supported Resolutions
 
-The maximum resolution supported by the BeagleBone AI-64 is 1280x1024 @
+The maximum resolution supported by BeagleBone AI-64 is 1280x1024 @
 60Hz. *Table 9* below shows the supported resolutions. Not all
 resolutions may work on all monitors, but these have been tested and
 shown to work on at least one monitor. EDID is supported on the
@@ -2190,7 +2190,7 @@ other functions on the board. Access is not provided to all of the
 available pins.
 
 All documentation is located at
-http://github.com/beagleboard/am335x_pru_package[_http://github.com/beagleboard/am335x_pru_package_.]
+http://git.beagleboard.org/beagleboard/am335x_pru_package[_http://git.beagleboard.org/beagleboard/am335x_pru_package_.]
 This feature is not supported by Texas Instruments.
 
 [[pru-icss-features]]
@@ -2211,7 +2211,7 @@ Two independent programmable real-time (PRU) cores:
 * Fast I/O interface
 
 – 16 input pins and 16 output pins per PRU core. (Not all of these are
-accessible on the BeagleBone AI-64).
+accessible on BeagleBone AI-64).
 
 [[pru-icss-block-diagram]]
 ==== 6.12.2 PRU-ICSS Block Diagram
@@ -2634,7 +2634,7 @@ Ethernet connector on the main board. This notch acts as a key to ensure
 proper orientation of the cape.
 
 This section describes the rules for creating capes to ensure proper
-operation with the BeagleBone AI-64 and proper interoperability with
+operation with BeagleBone AI-64 and proper interoperability with
 other capes that are intended to coexist with each other. Co-existence
 is not a requirement and is in itself, something that is impossible to
 control or administer. But, people will be able to create capes that
@@ -2645,7 +2645,7 @@ This information will be able to be read from the EEPROM on each cape.
 This section is intended as a guideline for those wanting to create
 their own capes. Its intent is not to put limits on the creation of
 capes and what they can do, but to set a few basic rules that will allow
-the SW to administer their operation with the BeagleBone AI-64. For this
+the SW to administer their operation with BeagleBone AI-64. For this
 reason there is a lot of flexibility in the specification that we hope
 most people will find liberating and in the spirit of Open Source
 Hardware. I am sure there are others that would like to see tighter
@@ -2666,12 +2666,12 @@ VOID THE WARRANTY.*
 [[beaglebone-ai-64-cape-compatibility]]
 === 8.1 BeagleBone AI-64 Cape Compatibility
 
-The main expansion headers are the same between the BeagleBone and
+The main expansion headers are the same between BeagleBone and
 BeagleBone AI-64. While the pins are the same, some of these pins are
-now used on the BeagleBone AI-64. The following sections discuss these
+now used on BeagleBone AI-64. The following sections discuss these
 pins.
 
-The Power Expansion header was removed from the BeagleBone AI-64 and is
+The Power Expansion header was removed from BeagleBone AI-64 and is
 not available.
 
 _***PAY VERY CLOSE ATTENTION TO THIS SECTION AND READ CAREFULLY!!***_
@@ -2679,7 +2679,7 @@ _***PAY VERY CLOSE ATTENTION TO THIS SECTION AND READ CAREFULLY!!***_
 [[lcd-pins]]
 ==== 8.1.1 LCD Pins
 
-The LCD pins are used on the BeagleBone AI-64 to drive the HDMI framer.
+The LCD pins are used on BeagleBone AI-64 to drive the HDMI framer.
 These signals are listed in *Table 15* below.
 
 [[table-15.-p8-lcd-conflict-pins]]
@@ -2809,13 +2809,13 @@ allow the SW to identify the board and to configure the expansion
 headers pins as needed. The one exception is proto boards intended for
 prototyping. They may or may not have an EEPROM on them. An EEPROM is
 required for all capes sold in order for them operate correctly when
-plugged into the BeagleBone AI-64.
+plugged into BeagleBone AI-64.
 
 The address of the EEPROM will be set via either jumpers or a dipswitch
 on each expansion board. *Figure 61* below is the design of the EEPROM
 circuit.
 
-The EEPROM used is the same one as is used on the BeagleBone and the
+The EEPROM used is the same one as is used on BeagleBone and the
 BeagleBone AI-64, a CAT24C256. The CAT24C256 is a 256 kb Serial CMOS
 EEPROM, internally organized as 32,768 words of 8 bits each. It features
 a 64-byte page write buffer and supports the Standard (100 kHz), Fast
@@ -3249,7 +3249,7 @@ on the expansion headers.
 
 There are 16 pins that control the boot mode of the processor that are
 exposed on the expansion headers. *Figure 63* below shows those signals
-as they appear on the BeagleBone AI-64.:
+as they appear on BeagleBone AI-64.:
 
 image:media/image80.png[media/image80.png,title="media/image80.png",width=530,height=468]
 
@@ -3322,13 +3322,13 @@ decision is up to the cape designer.
 For convenience listed in *Table 19* are some possible choices for part
 numbers on this connector. They have varying pin lengths and some may be
 more suitable than others for your use. It should be noted, that the
-longer the pin and the further it is inserted into the BeagleBone AI-64
+longer the pin and the further it is inserted into BeagleBone AI-64
 connector, the harder it will be to remove due to the tension on 92
 pins. This can be minimized by using shorter pins or removing those pins
 that are not used by your particular design. The first item in**Table
 18** is on the edge and may not be the best solution. Overhang is the
 amount of the pin that goes past the contact point of the connector on
-the BeagleBone AI-64
+BeagleBone AI-64
 
 .
 
@@ -3367,7 +3367,7 @@ image:media/image83.jpg[media/image83.jpg,title="media/image83.jpg",width=69,hei
 Figure 66. Expansion Connector
 
 The connector is mounted on the top side of the board with longer tails
-to allow insertion into the BeagleBone AI-64. *Figure 67* is the
+to allow insertion into BeagleBone AI-64. *Figure 67* is the
 connector configuration for the connector.
 
 image:media/image84.jpg[media/image84.jpg,title="media/image84.jpg",width=575,height=65]
@@ -3378,7 +3378,7 @@ Figure 67. Stacked Cape Expansion Connector
 For convenience listed in *Table 18* are some possible choices for part
 numbers on this connector. They have varying pin lengths and some may be
 more suitable than others for your use. It should be noted, that the
-longer the pin and the further it is inserted into the BeagleBone AI-64
+longer the pin and the further it is inserted into BeagleBone AI-64
 connector, the harder it will be to remove due to the tension on 92
 pins. This can be minimized by using shorter pins. There are most likely
 other suppliers out there that will work for this connector as well. If
@@ -3386,7 +3386,7 @@ anyone finds other suppliers of compatible connectors that work, let us
 know and they will be added to this document. The first item in**Table
 19** is on the edge and may not be the best solution. Overhang is the
 amount of the pin that goes past the contact point of the connector on
-the BeagleBone AI-64.
+BeagleBone AI-64.
 
 The third part listed in *Table 20* will have insertion force issues.
 
@@ -3435,11 +3435,11 @@ Figure 68. Stacked w/Signal Stealing Expansion Connector
 +++++++++++++++++++++
 
 The length of the pins on the expansion header has a direct relationship
-to the amount of force that is used to remove a cape from the BeagleBone
+to the amount of force that is used to remove a cape from BeagleBone
 AI-64. The longer the pins extend into the connector the harder it is to
 remove. There is no rule that says that if longer pins are used, that
 the connector pins have to extend all the way into the mating connector
-on the BeagleBone AI-64, but this is controlled by the user and
+on BeagleBone AI-64, but this is controlled by the user and
 therefore is hard to control. We have also found that if you use gold
 pins, while more expensive, it makes for a smoother finish which reduces
 the friction.
@@ -3522,7 +3522,7 @@ Table 21. Expansion Voltages
 |250mA |SYS_5V |7 |8 |SYS_5V |250mA
 |============================================
 
-The *VDD_3V3B* rail is supplied by the LDO on the BeagleBone AI-64 and
+The *VDD_3V3B* rail is supplied by the LDO on BeagleBone AI-64 and
 is the primary power rail for expansion boards. If the power requirement
 for the capes exceeds the current rating, then locally generated voltage
 rail can be used. It is recommended that this rail be used to power any
@@ -3551,7 +3551,7 @@ It is possible to provide 5V to the main board from an expansion board.
 By supplying a 5V signal into the *VDD_5V* rail, the main board can be
 supplied. This voltage must not exceed 5V. You should not supply any
 voltage into any other pin of the expansion connectors. Based on the
-board design, this rail is limited to 1A per pin to the BeagleBone
+board design, this rail is limited to 1A per pin to BeagleBone
 AI-64.
 
 *There are several precautions that need to be taken when working with
@@ -3579,10 +3579,10 @@ processor.*
 
 This section provides the guidelines for the creation of expansion
 boards from a mechanical standpoint. Defined is a standard board size
-that is the same profile as the BeagleBone AI-64. It is expected that
+that is the same profile as BeagleBone AI-64. It is expected that
 the majority of expansion boards created will be of standard size. It is
 possible to create boards of other sizes and in some cases this is
-required, as in the case of an LCD larger than the BeagleBone AI-64
+required, as in the case of an LCD larger than BeagleBone AI-64
 board.
 
 [[standard-cape-size]]
@@ -3603,10 +3603,10 @@ the cape is oriented correctly. Space is also provided to allow access
 to the user LEDs and reset button on the main board.
 
 Some people have inquired as to the difference in the radius of the
-corners of the BeagleBone AI-64 and why they are different. This is a
-result of having the BeagleBone fit into the Altoids style tin.
+corners of BeagleBone AI-64 and why they are different. This is a
+result of having BeagleBone fit into the Altoids style tin.
 
-It is not required that the cape be exactly like the BeagleBone AI-64
+It is not required that the cape be exactly like BeagleBone AI-64
 board in this respect.
 
 [[extended-cape-size]]
@@ -3618,7 +3618,7 @@ example would be an LCD panel. There is no practical limit to the sizes
 of these types of boards. The notch for the key is also not required,
 but it is up to the supplier of these boards to ensure that the
 BeagleBone AI-64 is not plugged in incorrectly in such a manner that
-damage would be cause to the BeagleBone AI-64 or any other capes that
+damage would be cause to BeagleBone AI-64 or any other capes that
 may be installed. Any such damage will be the responsibility of the
 supplier of such a cape to repair.
 
@@ -3695,7 +3695,7 @@ image:media/image92.jpg[media/image92.jpg,title="media/image92.jpg",width=486,he
 [[support-information]]
 == 11.0 Support Information
 
-All support for this design is through the BeagleBoard.org community at:
+All support for this design is through BeagleBoard.org community at:
 
 _beagleboard@googlegroups.com_ or
 

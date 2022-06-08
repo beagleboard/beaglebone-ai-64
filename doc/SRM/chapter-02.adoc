@@ -8,8 +8,10 @@ change will always result in a document change.
 [[document-change-history]]
 === Document Change History
 
-[[table-1]]
-.Table 1. Change History
+#Update table#
+
+.Change History
+[[change-history-table, Change History]]
 [cols="1,7,2,1",options="header",]
 |=======================================================================
 |*Rev* |*Changes* |*Date* |*By*
@@ -20,8 +22,9 @@ change will always result in a document change.
 [[board-changes]]
 === Board Changes
 
-Full issue list at
-https://github.com/beagleboard/beaglebone-ai-64/issues
+Check the revision history in the BeagleBone Ai-64  
+https://git.beagleboard.org/beagleboard/beaglebone-ai-64/-/blob/master/BeagleBone%20AI%20-64_SCH_V1.02_211119.pdf[schematic file].
+Also check the https://git.beagleboard.org/beagleboard/beaglebone-ai-64/-/issues[issues] list in the BeagleBone AI-64 git repository.
 
 [[rev-A0]]
 ==== Rev B0

@@ -1,10 +1,13 @@
 [bibliography]
 == Bibliography
 
-#TODO#
 [bibliography]
-.Articles
-- A
+.Datasheets
+- https://www.ti.com/lit/ds/symlink/tda4vm.pdf?ts=1654581400918&ref_url=https%253A%252F%252Fwww.google.com%252F[
+TDA4VM Jacinto™ Processors for ADAS and Autonomous Vehicles]
 
 .Books
-- B
+
+- https://beagleboard.org/cookbook[BeagleBone CookBook]
+- https://beagleboard.org/bad-to-the-bone[Bad to the bone]
+- http://derekmolloy.ie/exploring-beaglebone-tools-and-techniques-for-building-with-embedded-linux/[Exploring BeagleBone]

@@ -4,31 +4,23 @@
 [[dimensions-and-weight]]
 === Dimensions and Weight
 
-Size: 3.5” x 2.15” (86.36mm x 53.34mm)
+Size: 102.5 x 80 (4" x 3.15")
 
-Max height: .187” (4.76mm)
+Max height: #TODO#
 
-PCB Layers: 6
+PCB Layers: #TODO#
 
-PCB thickness: .062”
+PCB thickness: 2mm (0.08")
 
 RoHS Compliant: Yes
 
-Weight: 1.4 oz
+Weight: 192gm
 
 [[silkscreen-and-component-locations]]
 === Silkscreen and Component Locations
 
-image:media/image88.jpg[media/image88.jpg,title="media/image88.jpg",width=530,height=782]
+image::images/ch09/board-dimensions.jpg[title="Board Dimensions"]
 
-[[figure-71.-board-dimensions]]
-Figure 71. Board Dimensions
+image::images/ch09/top-silkscreen.png[title="Top silkscreen"]
 
-image:media/image89.jpg[media/image89.jpg,title="media/image89.jpg",width=493,height=818]
-
-[[figure-72.-component-side-silkscreen]]
-Figure 72. Component Side Silkscreen
-
-image:media/image90.jpg[media/image90.jpg,title="media/image90.jpg",width=501,height=772]
-
-*Figure 73. Circuit Side Silkscreen*
+image::images/ch09/bottom-silkscreen.png[title="Bottom silkscreen"]

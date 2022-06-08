@@ -84,12 +84,12 @@ The compatibility layer comes with simple reference nodes for attaching LEDs to 
 ! Header !! Pin !! Overlay
 |- 
 | P8 || 03
-| [https://github.com/beagleboard/BeagleBoard-DeviceTrees/blob/v4.19.x-ti-overlays/src/arm/overlays/BONE-LED_P8_03.dts BONE-LED_P8_03.dts]
+| [https://git.beagleboard.org/beagleboard/BeagleBoard-DeviceTrees/blob/v4.19.x-ti-overlays/src/arm/overlays/BONE-LED_P8_03.dts BONE-LED_P8_03.dts]
 |-
 
 |- 
 | P9 || 11
-| [https://github.com/beagleboard/BeagleBoard-DeviceTrees/blob/v4.19.x-ti-overlays/src/arm/overlays/BONE-LED_P9_11.dts BONE-LED_P9_11.dts]
+| [https://git.beagleboard.org/beagleboard/BeagleBoard-DeviceTrees/blob/v4.19.x-ti-overlays/src/arm/overlays/BONE-LED_P9_11.dts BONE-LED_P9_11.dts]
 |-
 
 |}
@@ -388,7 +388,7 @@ SPI bone bus nodes allow creating compatible overlays for BBBWl, BBB, & BBAI. Fo
 * P9.23 (CS1 - BBAI and BBAI64 only)
 | 
 * [https://github.com/lorforlinux/bb.org-overlays/blob/bone_spi/src/arm/BONE-SPI0_0.dts BONE-SPI0_0.dts]
-* [https://github.com/beagleboard/BeagleBoard-DeviceTrees/blob/v4.19.x-ti-overlays/src/arm/overlays/BBAI-SPI0_1.dts BBAI-SPI0_1.dts]
+* [https://git.beagleboard.org/beagleboard/BeagleBoard-DeviceTrees/blob/v4.19.x-ti-overlays/src/arm/overlays/BBAI-SPI0_1.dts BBAI-SPI0_1.dts]
 |-
 |-
 !/dev/bone/spi/1.''x''
@@ -495,14 +495,14 @@ CAN bone bus nodes allow creating compatible overlays for BBBWl, BBB, & BBAI. Fo
 
 <!--
 === /dev/bone/can/0 ===
-https://github.com/beagleboard/bb.org-overlays/blob/master/src/arm/BB-CAN0-00A0.dts <br>
+https://git.beagleboard.org/beagleboard/bb.org-overlays/blob/master/src/arm/BB-CAN0-00A0.dts <br>
 AM3358 CAN0<br>
 AM5729 ''N/A''
 * P9.19 - RX
 * P9.20 - TX
 
 === /dev/bone/can/1 ===
-https://github.com/beagleboard/bb.org-overlays/blob/master/src/arm/BB-CAN1-00A0.dts <br>
+https://git.beagleboard.org/beagleboard/bb.org-overlays/blob/master/src/arm/BB-CAN1-00A0.dts <br>
 AM3358 CAN1<br>
 AM5729 CAN2
 * P9.24 - RX
@@ -523,7 +523,7 @@ AM5729 CAN1 (AI rev A2 and later)
 ! BBBWL/BBB !! BBAI !! overlay
 |-
 | Internal || External (STMPE811)
-| [https://github.com/beagleboard/BeagleBoard-DeviceTrees/blob/v4.19.x-ti-overlays/src/arm/overlays/BONE-ADC.dts BONE-ADC.dts]
+| [https://git.beagleboard.org/beagleboard/BeagleBoard-DeviceTrees/blob/v4.19.x-ti-overlays/src/arm/overlays/BONE-ADC.dts BONE-ADC.dts]
 |}
 
 {| class="wikitable" style="text-align: center;"
@@ -557,7 +557,7 @@ AM5729 CAN1 (AI rev A2 and later)
 Work needs to be done to create these symlinks as well as handle major differences in the driver used for the ADC. Maybe just have the "okay" in here and more in the base tree?
 
 === /dev/bone/adc/''n'' ===
-https://github.com/beagleboard/bb.org-overlays/blob/master/src/arm/BB-ADC-00A0.dts <br>
+https://git.beagleboard.org/beagleboard/bb.org-overlays/blob/master/src/arm/BB-ADC-00A0.dts <br>
 * 0 - AM3358 in_voltage0_raw, AM5729 in_voltage0_raw
 * 1 - AM3358 in_voltage1_raw, AM5729 in_voltage1_raw
 * 2 - AM3358 in_voltage2_raw, AM5729 in_voltage3_raw
@@ -636,11 +636,11 @@ TIMER PWM bone bus uses ti,omap-dmtimer-pwm driver, and timer nodes that allow c
 |-
 ! /sys/bus/platform/drivers/ecap/48302100.ecap
 | P9.42 || eCAP0_in_PWM0_out
-| [https://github.com/beagleboard/BeagleBoard-DeviceTrees/blob/v4.19.x-ti-overlays/src/arm/overlays/BBB-ECAP0.dts BBB-ECAP0.dts]
+| [https://git.beagleboard.org/beagleboard/BeagleBoard-DeviceTrees/blob/v4.19.x-ti-overlays/src/arm/overlays/BBB-ECAP0.dts BBB-ECAP0.dts]
 |-
 ! /sys/bus/platform/drivers/ecap/48304100.ecap
 | P9.28 || eCAP2_in_PWM2_out
-| [https://github.com/beagleboard/BeagleBoard-DeviceTrees/blob/v4.19.x-ti-overlays/src/arm/overlays/BBB-ECAP2.dts BBB-ECAP2.dts]
+| [https://git.beagleboard.org/beagleboard/BeagleBoard-DeviceTrees/blob/v4.19.x-ti-overlays/src/arm/overlays/BBB-ECAP2.dts BBB-ECAP2.dts]
 |-
 |}
 
@@ -651,43 +651,43 @@ TIMER PWM bone bus uses ti,omap-dmtimer-pwm driver, and timer nodes that allow c
 |-
 ! /sys/bus/platform/drivers/ecap/4843e100.ecap
 | P8.15 || eCAP1_in_PWM1_out
-| [https://github.com/beagleboard/BeagleBoard-DeviceTrees/blob/v4.19.x-ti-overlays/src/arm/overlays/BBAI-ECAP1.dts BBAI-ECAP1.dts]
+| [https://git.beagleboard.org/beagleboard/BeagleBoard-DeviceTrees/blob/v4.19.x-ti-overlays/src/arm/overlays/BBAI-ECAP1.dts BBAI-ECAP1.dts]
 |-
 ! /sys/bus/platform/drivers/ecap/48440100.ecap
 | P8.14 || eCAP2_in_PWM2_out
-| [https://github.com/beagleboard/BeagleBoard-DeviceTrees/blob/v4.19.x-ti-overlays/src/arm/overlays/BBAI-ECAP2.dts BBAI-ECAP2.dts]
+| [https://git.beagleboard.org/beagleboard/BeagleBoard-DeviceTrees/blob/v4.19.x-ti-overlays/src/arm/overlays/BBAI-ECAP2.dts BBAI-ECAP2.dts]
 |-
 ! /sys/bus/platform/drivers/ecap/48440100.ecap
 | P8.20 || eCAP2_in_PWM2_out
-| [https://github.com/beagleboard/BeagleBoard-DeviceTrees/blob/v4.19.x-ti-overlays/src/arm/overlays/BBAI-ECAP2A.dts BBAI-ECAP2A.dts]
+| [https://git.beagleboard.org/beagleboard/BeagleBoard-DeviceTrees/blob/v4.19.x-ti-overlays/src/arm/overlays/BBAI-ECAP2A.dts BBAI-ECAP2A.dts]
 |-
 ! /sys/bus/platform/drivers/ecap/48442100.ecap
 | P8.04 || eCAP3_in_PWM3_out
-| [https://github.com/beagleboard/BeagleBoard-DeviceTrees/blob/v4.19.x-ti-overlays/src/arm/overlays/BBAI-ECAP3.dts BBAI-ECAP3.dts]
+| [https://git.beagleboard.org/beagleboard/BeagleBoard-DeviceTrees/blob/v4.19.x-ti-overlays/src/arm/overlays/BBAI-ECAP3.dts BBAI-ECAP3.dts]
 |-
 ! /sys/bus/platform/drivers/ecap/48442100.ecap
 | P8.26 || eCAP3_in_PWM3_out
-| [https://github.com/beagleboard/BeagleBoard-DeviceTrees/blob/v4.19.x-ti-overlays/src/arm/overlays/BBAI-ECAP3A.dts BBAI-ECAP3A.dts]
+| [https://git.beagleboard.org/beagleboard/BeagleBoard-DeviceTrees/blob/v4.19.x-ti-overlays/src/arm/overlays/BBAI-ECAP3A.dts BBAI-ECAP3A.dts]
 |-
 |}
 
 <!--
 === /dev/bone/pwm/0 ===
-https://github.com/beagleboard/bb.org-overlays/blob/master/src/arm/BB-PWM0-00A0.dts <br>
+https://git.beagleboard.org/beagleboard/bb.org-overlays/blob/master/src/arm/BB-PWM0-00A0.dts <br>
 AM3358 PWM0<br>
 AM5729 TIMER13/TIMER15
 * P9.22 - A
 * P9.21 - B
 
 === /dev/bone/pwm/1 ===
-https://github.com/beagleboard/bb.org-overlays/blob/master/src/arm/BB-PWM1-00A0.dts <br>
+https://git.beagleboard.org/beagleboard/bb.org-overlays/blob/master/src/arm/BB-PWM1-00A0.dts <br>
 AM3358 PWM1<br>
 AM5279 PWM3
 * P9.14 - A
 * P9.16 - B
 
 === /dev/bone/pwm/2 ===
-https://github.com/beagleboard/bb.org-overlays/blob/master/src/arm/BB-PWM2-00A0.dts <br>
+https://git.beagleboard.org/beagleboard/bb.org-overlays/blob/master/src/arm/BB-PWM2-00A0.dts <br>
 AM3358 PWM2<br>
 AM5729 PWM2
 * P8.19 - A
@@ -695,25 +695,25 @@ AM5729 PWM2
 
 
 === /dev/bone/timer/4 ===
-https://github.com/beagleboard/bb.org-overlays/blob/master/src/arm/BB-PWM-TIMER-P8.07.dts <br>
+https://git.beagleboard.org/beagleboard/bb.org-overlays/blob/master/src/arm/BB-PWM-TIMER-P8.07.dts <br>
 AM3358 TIMER4<br>
 AM5729 TIMER11
 * P8.7
 
 === /dev/bone/timer/5 ===
-https://github.com/beagleboard/bb.org-overlays/blob/master/src/arm/BB-PWM-TIMER-P8.09.dts <br>
+https://git.beagleboard.org/beagleboard/bb.org-overlays/blob/master/src/arm/BB-PWM-TIMER-P8.09.dts <br>
 AM3358 TIMER5<br>
 AM5729 TIMER14
 * P8.9
 
 === /dev/bone/timer/6 ===
-https://github.com/beagleboard/bb.org-overlays/blob/master/src/arm/BB-PWM-TIMER-P8.10.dts <br>
+https://git.beagleboard.org/beagleboard/bb.org-overlays/blob/master/src/arm/BB-PWM-TIMER-P8.10.dts <br>
 AM3358 TIMER6<br>
 AM5729 TIMER10
 * P8.10
 
 === /dev/bone/timer/7 ===
-https://github.com/beagleboard/bb.org-overlays/blob/master/src/arm/BB-PWM-TIMER-P8.08.dts <br>
+https://git.beagleboard.org/beagleboard/bb.org-overlays/blob/master/src/arm/BB-PWM-TIMER-P8.08.dts <br>
 AM3358 TIMER7<br>
 AM5729 TIMER12
 * P8.8
@@ -745,7 +745,7 @@ AM5729 eCAP3_in_PWM3_out
 |-
 ! BBBWL/BBB !! BBAI !! overlay
 |-
-| MMC2 || MMC3 || [https://github.com/beagleboard/BeagleBoard-DeviceTrees/blob/v4.19.x-ti-overlays/src/arm/overlays/BONE-eMMC.dts BONE-eMMC.dts]
+| MMC2 || MMC3 || [https://git.beagleboard.org/beagleboard/BeagleBoard-DeviceTrees/blob/v4.19.x-ti-overlays/src/arm/overlays/BONE-eMMC.dts BONE-eMMC.dts]
 |}
 
 {| class="wikitable" style="text-align: center;"
@@ -896,7 +896,7 @@ AM5729 MMC3
 
 <!--
 === /dev/bone/eqep/0 ===
-https://github.com/beagleboard/bb.org-overlays/blob/master/src/arm/bone_eqep0-00A0.dts <br>
+https://git.beagleboard.org/beagleboard/bb.org-overlays/blob/master/src/arm/bone_eqep0-00A0.dts <br>
 AM3358 eQEP0<br>
 AM5729 eQEP3
 * P9.42 - A
@@ -907,7 +907,7 @@ AM5729 eQEP3
 * P8.5 - INDEX (''N/A'' on AM3358)
 
 === /dev/bone/eqep/1 ===
-https://github.com/beagleboard/bb.org-overlays/blob/master/src/arm/bone_eqep1-00A0.dts <br>
+https://git.beagleboard.org/beagleboard/bb.org-overlays/blob/master/src/arm/bone_eqep1-00A0.dts <br>
 AM3358 eQEP1<br>
 AM5729 eQEP1
 * P8.34 - A
@@ -915,7 +915,7 @@ AM5729 eQEP1
 * P9.21 - STROBE (''N/A'' on AM3358)
 
 === /dev/bone/eqep/2 ===
-https://github.com/beagleboard/bb.org-overlays/blob/master/src/arm/bone_eqep2b-00A0.dts <br>
+https://git.beagleboard.org/beagleboard/bb.org-overlays/blob/master/src/arm/bone_eqep2b-00A0.dts <br>
 AM3358 eQEP2<br>
 AM5729 eQEP2
 * P8.12 - A
@@ -926,7 +926,7 @@ AM5729 eQEP2
 * P9.15 - INDEX on AM5729 only
 
 === /dev/bone/eqep/2a ===
-https://github.com/beagleboard/bb.org-overlays/blob/master/src/arm/bone_eqep2-00A0.dts <br>
+https://git.beagleboard.org/beagleboard/bb.org-overlays/blob/master/src/arm/bone_eqep2-00A0.dts <br>
 AM3358 eQEP2<br>
 AM5729 ''N/A'
 * P8.41 - A
@@ -1235,7 +1235,7 @@ The methodology for applied in the kernel and software images to expose the soft
 
 == Device Trees ==
 
-== udev rules <ref>[https://github.com/beagleboard/customizations/tree/master/etc/udev/rules.d BeagleBoard customizations udev rules]</ref>==
+== udev rules <ref>[https://git.beagleboard.org/beagleboard/customizations/tree/master/etc/udev/rules.d BeagleBoard customizations udev rules]</ref>==
 
 ===10-of-symlink.rules<ref>[https://github.com/rcn-ee/repos/blob/master/bb-customizations/suite/stretch/debian/10-of-symlink.rules 10-of-symlink.rules]</ref>===
 <pre>
