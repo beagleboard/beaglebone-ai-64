@@ -3,11 +3,11 @@
 
 [bibliography]
 .Datasheets
-- https://www.ti.com/lit/ds/symlink/tda4vm.pdf?ts=1654581400918&ref_url=https%253A%252F%252Fwww.google.com%252F[
-TDA4VM Jacinto™ Processors for ADAS and Autonomous Vehicles]
+- https://www.ti.com/lit/ds/symlink/tda4vm.pdf[TDA4VM Jacinto™ Processors for ADAS and Autonomous Vehicles Silicon Revisions 1.0 and 1.1 datasheet (Rev. J)]
+- https://www.ti.com/lit/zip/spruil1[DRA829/TDA4VM Technical Reference Manual (Rev. C)]
 
 .Books
 
-- https://beagleboard.org/cookbook[BeagleBone CookBook]
-- https://beagleboard.org/bad-to-the-bone[Bad to the bone]
+- https://beagleboard.org/cookbook[BeagleBone Cookbook]
+- https://beagleboard.org/bad-to-the-bone[Bad to the Bone]
 - http://derekmolloy.ie/exploring-beaglebone-tools-and-techniques-for-building-with-embedded-linux/[Exploring BeagleBone]

@@ -87,7 +87,7 @@ services described herein.
 
 == *UNITED STATES FCC AND CANADA IC REGULATORY COMPLIANCE INFORMATION*
 
-*The BeagleBone is annotated to comply with Part 15 of the FCC Rules*.
+*BeagleBone is annotated to comply with Part 15 of the FCC Rules*.
 Operation is subject to the following two conditions: (1) This device
 may not cause harmful interference, and (2) this device must accept any
 interference received, including interference that may cause undesired
@@ -194,7 +194,7 @@ BeagleBoard.org Foundation +
 4467 Ascot Ct +
 Oakland Twp, MI 48306 U.S.A.
 
-*WARRANTY:* _The BeagleBone AI-64 Assembly as purchased is warranted
+*WARRANTY:* _BeagleBone AI-64 Assembly as purchased is warranted
 against defects in materials and workmanship for a period of 90 days
 from purchase. This warranty does not cover any problems occurring as a
 result of improper use, modifications, exposure to water, excessive
@@ -535,7 +535,7 @@ image:media/image27.jpg[media/image27.jpg,title="media/image27.jpg",width=513,he
 [[beaglebone-ai-64-overview]]
 == 4.0 BeagleBone AI-64 Overview
 
-The BeagleBone AI-64 is the latest addition to BeagleBoard.org
+BeagleBone AI-64 is the latest addition to BeagleBoard.org
 family and like its predecessors, is designed to address the Open Source
 Community, early adopters, and anyone interested in a low cost ARM
 Cortex-A8 based processor.
@@ -1025,7 +1025,7 @@ processor.
 [[cape-board-support]]
 === 5.14 Cape Board Support
 
-The BeagleBone AI-64 has the ability to accept up to four expansion
+BeagleBone AI-64 has the ability to accept up to four expansion
 boards or capes that can be stacked onto the expansion headers. The word
 cape comes from the shape of the board as it is fitted around the
 Ethernet connector on the main board. This notch acts as a key to ensure
@@ -1604,7 +1604,7 @@ This change is also in all revisions after A5D.
 
 LPDDR4 Memory
 
-The BeagleBone AI-64 uses a single MT41K256M16HA-125 512MB LPDDR4 device
+BeagleBone AI-64 uses a single MT41K256M16HA-125 512MB LPDDR4 device
 from Micron that interfaces to the processor over 16 data lines, 16
 address lines, and 14 control lines. On rev C we added the Kingston
 *KE4CN2H5A-A58* device as a source for the LPDDR4 device**.**
@@ -1789,7 +1789,7 @@ eMMC interface.
 [[board-id-eeprom]]
 === 6.4 Board ID EEPROM
 
-The BeagleBone is equipped with a single 32Kbit(4KB) 24LC32AT-I/OT
+BeagleBone is equipped with a single 32Kbit(4KB) 24LC32AT-I/OT
 EEPROM to allow the SW to identify the board. *Table 7* below defined
 the contents of the EEPROM.
 
@@ -1974,7 +1974,7 @@ could be used as the board source.
 [[ethernet]]
 === 6.9 10/100 Ethernet
 
-The BeagleBone AI-64 is equipped with a 10/100 Ethernet interface. It
+BeagleBone AI-64 is equipped with a 10/100 Ethernet interface. It
 uses the same PHY as is used on the original BeagleBone. The design is
 described in the following sections.
 
@@ -2068,7 +2068,7 @@ auto-negotiation.
 [[hdmi-interface-1]]
 === 6.10 Display Port Interface
 
-The BeagleBone AI-64 has an onboard Display Port framer that converts the LCD
+BeagleBone AI-64 has an onboard Display Port framer that converts the LCD
 signals and audio signals to drive a Display Port monitor. The design uses the on chip
 internal Display Port Framer.
 
@@ -2627,7 +2627,7 @@ http://www.digikey.com/[_www.digikey.com_.]
 *8.0 Cape Board Support*
 ------------------------
 
-The BeagleBone AI-64 has the ability to accept up to four expansion
+BeagleBone AI-64 has the ability to accept up to four expansion
 boards or capes that can be stacked onto the expansion headers. The word
 cape comes from the shape of the board as it is fitted around the
 Ethernet connector on the main board. This notch acts as a key to ensure
@@ -2735,7 +2735,7 @@ interface.
 8.1.2 eMMC Pins
 +++++++++++++++
 
-The BeagleBone AI-64 uses 10 pins to connect to the processor that also
+BeagleBone AI-64 uses 10 pins to connect to the processor that also
 connect to the
 
 P8 expansion connector. These signals are listed below in *Table 16*.

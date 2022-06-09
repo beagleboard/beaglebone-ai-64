@@ -190,10 +190,7 @@ used is is:
 
 A single 4Kb EEPROM (24FC04HT-I/OT) is provided on I2C0 that holds the board
 information. This information includes board name, serial number, and
-revision information. This is the not the same as the one used on the
-original BeagleBone. The device was changed for cost reduction reasons.
-It has a test point to allow the device to be programmed and otherwise
-to provide write protection when not grounded.
+revision information.
 
 [[gb-embedded-mmc]]
 ==== 16GB Embedded MMC
@@ -265,13 +262,6 @@ for the proper voltages required for the LPDDR4. This is the same device
 as used on the original BeagleBone with the exception of the power rail
 configuration settings which will be changed in the internal EEPROM to
 the *TPS65941213 and TPS65941111* to support the new voltages.
-
-LPDDR4 requires 1.5V instead of 1.8V on the DDR2 as is the case on the
-original BeagleBone. The 1.8V regulator setting has been changed to 1.5V
-for the LPDDR4. The LDO3 3.3V rail has been changed to 1.8V to support
-those rails on the processor. LDO4 is still 3.3V for the 3.3V rails on
-the processor. An external *LDOTLV70233* provides the 3.3V rail for the
-rest of the board.
 
 [[pc-usb-interface]]
 === PC USB Interface

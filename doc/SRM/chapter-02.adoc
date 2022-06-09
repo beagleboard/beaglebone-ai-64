@@ -22,9 +22,9 @@ change will always result in a document change.
 [[board-changes]]
 === Board Changes
 
-Check the revision history in the BeagleBone Ai-64  
+Check the revision history in BeagleBone Ai-64  
 https://git.beagleboard.org/beagleboard/beaglebone-ai-64/-/blob/master/BeagleBone%20AI%20-64_SCH_V1.02_211119.pdf[schematic file].
-Also check the https://git.beagleboard.org/beagleboard/beaglebone-ai-64/-/issues[issues] list in the BeagleBone AI-64 git repository.
+Also check the https://git.beagleboard.org/beagleboard/beaglebone-ai-64/-/issues[issues] list in BeagleBone AI-64 git repository.
 
 [[rev-A0]]
 ==== Rev B0

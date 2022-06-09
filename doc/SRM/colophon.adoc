@@ -1,7 +1,7 @@
 [colophon]
-== *Revision 0.0.3-beta1*
+== *Revision 0.0.3-beta2*
 
-*Last PDF conversion: June 8^th^, 2022*
+*Last PDF conversion: June 9^th^, 2022*
 
 
 *Maintaining editor:* mailto:lorforlinux@beagleboard.org[Deepak Khatri]
@@ -15,3 +15,8 @@ https://git.beagleboard.org/beagleboard/beaglebone-ai-64/-/issues
 *For an up to date version of this document refer to:*
 
 https://git.beagleboard.org/beagleboard/beaglebone-ai-64/-/tree/master/doc/SRM
+
+*For all the graphics from this document refer to:*
+
+1. https://www.canva.com/design/DAFBB_G9tF8/LhD-uL0-aJAEH2MPMdyLkg/edit?utm_content=DAFBB_G9tF8&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton[SRM images].
+2. https://www.canva.com/design/DAFCvXa2NAQ/raxKIYZjrd0DqYF9IFMbjw/edit?utm_content=DAFCvXa2NAQ&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton[SRM cover page].
