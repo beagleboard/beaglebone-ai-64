@@ -5,7 +5,7 @@ This document is the *System Reference Manual* for BeagleBone AI-64
 and covers its use and design. The board will primarily be referred to
 in the remainder of this document simply as the board, although it may
 also be referred to as AI-64 / BeagleBone AI-64 as a reminder. There are
-also references to the original BeagleBone as well, and will be
+also references to the BeagleBone Black as well, and it will be
 referenced as simply BeagleBone.
 
 This design is subject to change without notice as we will work to keep

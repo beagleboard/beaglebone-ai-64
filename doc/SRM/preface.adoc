@@ -62,7 +62,7 @@ services described herein.
 
 *UNITED STATES FCC AND CANADA IC REGULATORY COMPLIANCE INFORMATION*
 
-*The BeagleBone is annotated to comply with Part 15 of the FCC Rules*.
+*BeagleBone is annotated to comply with Part 15 of the FCC Rules*.
 Operation is subject to the following two conditions: (1) This device
 may not cause harmful interference, and (2) this device must accept any
 interference received, including interference that may cause undesired
@@ -165,7 +165,7 @@ BeagleBoard.org Foundation +
 4467 Ascot Ct +
 Oakland Twp, MI 48306 U.S.A.
 
-*WARRANTY:* _The BeagleBone AI-64 Assembly as purchased is warranted
+*WARRANTY:* _BeagleBone AI-64 Assembly as purchased is warranted
 against defects in materials and workmanship for a period of 90 days
 from purchase. This warranty does not cover any problems occurring as a
 result of improper use, modifications, exposure to water, excessive

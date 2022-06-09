@@ -557,7 +557,7 @@ This change is also in all revisions after A5D.
 
 LPDDR4 Memory
 
-The BeagleBone AI-64 uses a single MT41K256M16HA-125 512MB LPDDR4 device
+BeagleBone AI-64 uses a single MT41K256M16HA-125 512MB LPDDR4 device
 from Micron that interfaces to the processor over 16 data lines, 16
 address lines, and 14 control lines. On rev C we added the Kingston
 *KE4CN2H5A-A58* device as a source for the LPDDR4 device**.**
@@ -742,7 +742,7 @@ eMMC interface.
 [[board-id-eeprom]]
 === Board ID EEPROM
 
-The BeagleBone is equipped with a single 32Kbit(4KB) 24LC32AT-I/OT
+BeagleBone is equipped with a single 32Kbit(4KB) 24LC32AT-I/OT
 EEPROM to allow the SW to identify the board. *Table 7* below defined
 the contents of the EEPROM.
 
@@ -927,7 +927,7 @@ could be used as the board source.
 [[ethernet]]
 === 10/100 Ethernet
 
-The BeagleBone AI-64 is equipped with a 10/100 Ethernet interface. It
+BeagleBone AI-64 is equipped with a 10/100 Ethernet interface. It
 uses the same PHY as is used on the original BeagleBone. The design is
 described in the following sections.
 
@@ -1021,7 +1021,7 @@ auto-negotiation.
 [[hdmi-interface-1]]
 === Display Port Interface
 
-The BeagleBone AI-64 has an onboard Display Port framer that converts the LCD
+BeagleBone AI-64 has an onboard Display Port framer that converts the LCD
 signals and audio signals to drive a Display Port monitor. The design uses the on chip
 internal Display Port Framer.
 

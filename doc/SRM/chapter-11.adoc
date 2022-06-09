@@ -40,7 +40,7 @@ number.
 
 [WARNING]
 ====
-Only use active miniDP-HDMI or miniDP-DP adaptor 
+Only use miniDP-DP or active miniDP-HDMI adaptor
 with BeagleBone AI-64 miniDP output port 
 as shown in <<display-adaptors-figure>>.
 ====

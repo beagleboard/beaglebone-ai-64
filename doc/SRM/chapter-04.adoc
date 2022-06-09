@@ -33,14 +33,13 @@ independent contractor and architect for new Beagle designs.
 
 See bbb.io/about
 
-The BeagleBone AI-64 board is designed designed 
+BeagleBone AI-64 board is designed designed 
 by Seeed Studio (Seeed Development Limited) 
 under guidance from BeagleBoard.org Foundation.
 
 [[beaglebone-compatibility]]
 === BeagleBone Compatibility
-The board is intended to be compatible with the original BeagleBone as
-much as possible. There are several areas where there are differences
+The board is intended to be compatible with BeagleBone black expansion header as much as possible. There are several areas where there are differences
 between the two designs. These differences are listed below, along with
 the reasons for the differences.
 
@@ -50,7 +49,7 @@ the reasons for the differences.
 * EEPROM Reduced from 4KB to 1KB
 * Onboard Managed NAND (16GB eMMC)
 * There may be 10 less GPIO pins available
-* Mini Display Port (iniDP) interface onboard
+* Mini Display Port (miniDP) interface onboard
 * Dual USB-3 ports.
 
 [[beaglebone-ai-64-features-and-specification]]
@@ -60,10 +59,7 @@ This section covers the specifications and features of the board and
 provides a high level description of the major components and interfaces
 that make up the board.
 
-<<table-2>> provides a list of the features.
-
-[[table-2,Table 2]]
-.Table 2. BeagleBone AI-64 Features
+[[ai64-features,BeagleBone AI-64 features table]]
 [cols="1h,3",options="header",]
 |=======================================================================
 | |*Feature*

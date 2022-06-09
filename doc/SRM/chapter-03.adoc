@@ -27,8 +27,8 @@ image::images/ch03/ports.jpg[title="BeagleBone AI-64 conections ports."]
 
 In the box you will find three main items as shown in <<bbai-64-pacakage>>.
 
-* BeagleBone AI-64
-* Instruction card with link to the support WIKI address.
+* BeagleBone AI-64.
+* Instruction card.
 
 Get yourself a USB-A to USB-C and you have a setup for 
 the tethered scenario and creates an out of box
@@ -145,8 +145,8 @@ following accessories:
 
 * 5VDC ≥ 3A power supply.
 * Display Port or HDMI monitor.
-* miniDP-DP or miniDP-HDMI cable 
-(or a recommended *active miniDP-HDMI or miniDP-DP adapter* 
+* miniDP-DP or active miniDP-HDMI cable 
+(or a recommended *miniDP-DP or active miniDP-HDMI adapter* 
 https://www.amazon.com/dp/B089GF8M87 
 has been tested and worked beautifully.).
 * USB wired/wireless keyboard and mouse.
@@ -156,10 +156,10 @@ has been tested and worked beautifully.).
 [[connecting-up-the-board]]
 ==== Connecting Up the Board
 
-1. Connect the miniDP to HDMI or miniDP to DP cable from your BeagleBone AI-64 to your monitor.
+1. Connect the miniDP to DP or active miniDP to HDMI cable from your BeagleBone AI-64 to your monitor.
 +
-[[display-cable-figure,miniDP-HDMI or miniDP-DP cable connection figure]]
-image::images/ch03/monitor-cable.jpg[title="Connect miniDP/HDMI cable to BeagleBone AI-64"]
+[[display-cable-figure,miniDP-DP or active miniDP-HDMI cable connection figure]]
+image::images/ch03/monitor-cable.jpg[title="Connect miniDP-DP or active miniDP-HDMI cable to BeagleBone AI-64"]
 
 2. If you have an Display Port or HDMI monitor with HDMI-HDMI or DP-DP cable you can use adapters as shown in. <<display-adaptors-figure>>.
 +
@@ -190,13 +190,13 @@ shown in <<barrel-jack-figure>> below.
 [[barrel-jack-figure,External DC Power figure]]
 image::images/ch03/barrel-jack.jpg[title="External DC Power"]
 
-6. The cable needed to connect to your display is a miniDP to HDMI/DP.
+6. The cable needed to connect to your display is a miniDP-DP or active miniDP-HDMI.
 Connect the miniDP connector end to the board at this time. The
 connector is on the top side of the board as shown in <<miniDP-figure>>
 below.
 +
-[[miniDP-figure,miniDP to HDMI/DP connection figure]]
-image::images/ch03/miniDP-connector.jpg[title="Connect miniDP Cable to the Board"]
+[[miniDP-figure,miniDP to DP or active miniDP to HDMI connection figure]]
+image::images/ch03/miniDP-connector.jpg[title="Connect miniDP to DP or active miniDP to HDMI Cable to the Board"]
 +
 The connector is fairly robust, but we suggest that you not use the
 cable as a leash for your Beagle. Take proper care not to put too much
