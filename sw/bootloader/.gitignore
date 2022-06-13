@@ -1,0 +1,10 @@
+arm-trusted-firmware/
+k3-image-gen/
+optee_os/
+u-boot/
+deploy/bl31.bin
+deploy/sysfw.itb
+deploy/tee-pager_v2.bin
+deploy/tiboot3.bin
+deploy/tispl.bin
+deploy/u-boot.img
