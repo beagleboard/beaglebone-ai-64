@@ -1,0 +1,49 @@
+= BeagleBone AI-64 System Reference Manual
+:xrefstyle: full
+:doctype: book
+:encoding: utf-8
+:lang: en
+:icons: font
+:table-caption!:
+:toc: left
+:toclevels: 3
+:toc-placement!:
+:autofit-option: 
+:base_font_size_min: 0
+:table_cell_padding: 0
+:stylesheet: asciidoctor.css
+:numbered:
+
+include::colophon.adoc[]
+
+include::preface.adoc[]
+
+include::dedication.adoc[]
+
+include::glossary.adoc[]
+
+include::chapter-01.adoc[]
+
+include::chapter-02.adoc[]
+
+include::chapter-03.adoc[]
+
+include::chapter-04.adoc[]
+
+include::chapter-05.adoc[]
+
+// include::chapter-06.adoc[]
+
+// include::chapter-07.adoc[]
+
+// include::chapter-08.adoc[]
+
+include::chapter-09.adoc[]
+
+include::chapter-10.adoc[]
+
+include::chapter-11.adoc[]
+
+include::bibliography.adoc[]
+
+include::index.adoc[]

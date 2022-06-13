@@ -1,0 +1,2591 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg xmlns:v="http://schemas.microsoft.com/visio/2003/SVGExtensions/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:svg="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" sodipodi:docname="TPS6594_Key_Diagram.svg" id="svg3362" version="1.1" class="st53" color-interpolation-filters="sRGB" xml:space="preserve" viewBox="0 0 566.81952 602.65922" height="8.3702669in" width="7.8724933in"><metadata id="metadata3366"><rdf:RDF><cc:Work rdf:about=""><dc:format>image/svg+xml</dc:format><dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/></cc:Work></rdf:RDF></metadata><sodipodi:namedview id="namedview3364" inkscape:window-height="480" inkscape:window-width="640" inkscape:pageshadow="2" inkscape:pageopacity="0" guidetolerance="10" gridtolerance="10" objecttolerance="10" borderopacity="1" bordercolor="#666666" pagecolor="#ffffff"/>
+	<v:documentProperties v:viewMarkup="false" v:langID="1033">
+		<v:userDefs>
+			<v:ud v:val="VT0(1):26" v:nameU="msvNoAutoConnect"/>
+			<v:ud v:nameU="msvConvertTheme"/>
+		</v:userDefs>
+	</v:documentProperties>
+
+	<style id="style2" type="text/css">
+	<![CDATA[
+		.st1 {fill:#ffffff;stroke:#000000;stroke-linecap:round;stroke-linejoin:round;stroke-width:1}
+		.st2 {stroke:#2a5c75;stroke-linecap:round;stroke-linejoin:round;stroke-width:1}
+		.st3 {stroke:#ababab;stroke-linecap:round;stroke-linejoin:round;stroke-width:0.5}
+		.st4 {marker-start:url(#mrkr4-14);stroke:#ababab;stroke-linecap:round;stroke-linejoin:round;stroke-width:0.5}
+		.st5 {fill:#ababab;fill-opacity:1;stroke:#ababab;stroke-opacity:1;stroke-width:0.21739130434783}
+		.st6 {marker-end:url(#mrkr4-20);stroke:#2a5c75;stroke-linecap:round;stroke-linejoin:round;stroke-width:0.5}
+		.st7 {fill:#2a5c75;fill-opacity:1;stroke:#2a5c75;stroke-opacity:1;stroke-width:0.21739130434783}
+		.st8 {marker-end:url(#mrkr4-26);stroke:#000000;stroke-linecap:round;stroke-linejoin:round;stroke-width:0.5}
+		.st9 {fill:#000000;fill-opacity:1;stroke:#000000;stroke-opacity:1;stroke-width:0.21739130434783}
+		.st10 {fill:none;stroke:#000000;stroke-linecap:round;stroke-linejoin:round;stroke-width:0.5}
+		.st11 {stroke:#2a5c75;stroke-linecap:round;stroke-linejoin:round;stroke-width:0.5}
+		.st12 {marker-end:url(#mrkr4-37);stroke:#ababab;stroke-linecap:round;stroke-linejoin:round;stroke-width:0.5}
+		.st13 {marker-start:url(#mrkr4-43);stroke:#000000;stroke-linecap:round;stroke-linejoin:round;stroke-width:0.5}
+		.st14 {stroke:#68275f;stroke-linecap:round;stroke-linejoin:round;stroke-width:0.5}
+		.st15 {fill:none;stroke:none;stroke-linecap:round;stroke-linejoin:round;stroke-width:0.5}
+		.st16 {fill:#000000;font-family:Arial;font-size:0.499992em}
+		.st17 {font-size:1em}
+		.st18 {stroke:#ef9e67;stroke-linecap:round;stroke-linejoin:round;stroke-width:0.5}
+		.st19 {fill:#ffffff;stroke:#000000;stroke-linecap:round;stroke-linejoin:round;stroke-width:0.5}
+		.st20 {fill:#f2f2f2;stroke:#000000;stroke-linecap:round;stroke-linejoin:round;stroke-width:1}
+		.st21 {fill:#000000;font-family:Arial;font-size:0.583328em}
+		.st22 {fill:#bfbfbf;stroke:#000000;stroke-linecap:round;stroke-linejoin:round;stroke-width:1}
+		.st23 {baseline-shift:32.4943%;font-size:0.649886em}
+		.st24 {fill:none;stroke:#000000;stroke-linecap:round;stroke-linejoin:round;stroke-width:1}
+		.st25 {stroke:#b2af67;stroke-linecap:round;stroke-linejoin:round;stroke-width:0.5}
+		.st26 {fill:#a5a5a5;stroke:#000000;stroke-linecap:round;stroke-linejoin:round;stroke-width:1}
+		.st27 {stroke:#286b49;stroke-linecap:round;stroke-linejoin:round;stroke-width:0.5}
+		.st28 {stroke:#9e3a3a;stroke-linecap:round;stroke-linejoin:round;stroke-width:0.5}
+		.st29 {stroke:#af80b2;stroke-linecap:round;stroke-linejoin:round;stroke-width:0.5}
+		.st30 {marker-end:url(#mrkr4-192);stroke:#000000;stroke-linecap:round;stroke-linejoin:round;stroke-width:0.5}
+		.st31 {fill:#000000;fill-opacity:1;stroke:#000000;stroke-opacity:1;stroke-width:0.25773195876289}
+		.st32 {marker-end:url(#mrkr4-192);marker-start:url(#mrkr4-199);stroke:#000000;stroke-linecap:round;stroke-linejoin:round;stroke-width:0.5}
+		.st33 {marker-start:url(#mrkr4-199);stroke:#000000;stroke-linecap:round;stroke-linejoin:round;stroke-width:0.5}
+		.st34 {stroke:#000000;stroke-linecap:round;stroke-linejoin:round;stroke-width:0.5}
+		.st35 {stroke:#0292c0;stroke-linecap:round;stroke-linejoin:round;stroke-width:1}
+		.st36 {marker-end:url(#mrkr4-20);marker-start:url(#mrkr4-698);stroke:#2a5c75;stroke-linecap:round;stroke-linejoin:round;stroke-width:0.5}
+		.st37 {marker-end:url(#mrkr4-720);stroke:#2a5c75;stroke-linecap:round;stroke-linejoin:round;stroke-width:1}
+		.st38 {fill:#2a5c75;fill-opacity:1;stroke:#2a5c75;stroke-opacity:1;stroke-width:0.35714285714286}
+		.st39 {marker-end:url(#mrkr4-728);stroke:#2a5c75;stroke-linecap:round;stroke-linejoin:round;stroke-width:1}
+		.st40 {fill:#2a5c75;fill-opacity:1;stroke:#2a5c75;stroke-opacity:1;stroke-width:0.40983606557377}
+		.st41 {fill:#65c192;stroke:#000000;stroke-linecap:round;stroke-linejoin:round;stroke-width:1}
+		.st42 {fill:none;stroke:none;stroke-linecap:round;stroke-linejoin:round;stroke-width:0.75}
+		.st43 {marker-end:url(#mrkr4-985);stroke:#0292c0;stroke-linecap:round;stroke-linejoin:round;stroke-width:0.5}
+		.st44 {fill:#0292c0;fill-opacity:1;stroke:#0292c0;stroke-opacity:1;stroke-width:0.21739130434783}
+		.st45 {fill:#65c192;stroke:#286b49;stroke-linecap:round;stroke-linejoin:round;stroke-width:1}
+		.st46 {marker-start:url(#mrkr10-1144);stroke:#000000;stroke-linecap:round;stroke-linejoin:round;stroke-width:0.5}
+		.st47 {marker-start:url(#mrkr4-698);stroke:#2a5c75;stroke-linecap:round;stroke-linejoin:round;stroke-width:0.5}
+		.st48 {stroke:#5880b3;stroke-linecap:round;stroke-linejoin:round;stroke-width:0.5}
+		.st49 {marker-end:url(#mrkr4-1575);stroke:#7030a0;stroke-linecap:round;stroke-linejoin:round;stroke-width:0.5}
+		.st50 {fill:#7030a0;fill-opacity:1;stroke:#7030a0;stroke-opacity:1;stroke-width:0.21739130434783}
+		.st51 {marker-start:url(#mrkr4-1581);stroke:#7030a0;stroke-linecap:round;stroke-linejoin:round;stroke-width:0.5}
+		.st52 {fill:#000000;font-family:Arial;font-size:0.666664em}
+		.st53 {fill:none;fill-rule:evenodd;font-size:12px;overflow:visible;stroke-linecap:square;stroke-miterlimit:3}
+	]]>
+	</style>
+
+	<defs id="Markers">
+		<g id="lend4">
+			<path inkscape:connector-curvature="0" id="path4" style="stroke:none" d="M 2,1 0,0 2,-1 v 2"/>
+		</g>
+		<marker overflow="visible" markerUnits="strokeWidth" orient="auto" refX="8.4799995" v:setback="8.48" v:arrowSize="1" v:arrowType="4" class="st5" id="mrkr4-14">
+			<use height="100%" width="100%" y="0" x="0" id="use7" transform="scale(4.6)" xlink:href="#lend4"/>
+		</marker>
+		<marker overflow="visible" markerUnits="strokeWidth" orient="auto" refX="-9.1999998" v:setback="9.2" v:arrowSize="1" v:arrowType="4" class="st7" id="mrkr4-20">
+			<use height="100%" width="100%" y="0" x="0" id="use10" transform="scale(-4.6)" xlink:href="#lend4"/>
+		</marker>
+		<marker overflow="visible" markerUnits="strokeWidth" orient="auto" refX="-9.1999998" v:setback="9.2" v:arrowSize="1" v:arrowType="4" class="st9" id="mrkr4-26">
+			<use height="100%" width="100%" y="0" x="0" id="use13" transform="scale(-4.6)" xlink:href="#lend4"/>
+		</marker>
+		<marker overflow="visible" markerUnits="strokeWidth" orient="auto" refX="-9.1999998" v:setback="9.2" v:arrowSize="1" v:arrowType="4" class="st5" id="mrkr4-37">
+			<use height="100%" width="100%" y="0" x="0" id="use16" transform="scale(-4.6)" xlink:href="#lend4"/>
+		</marker>
+		<marker overflow="visible" markerUnits="strokeWidth" orient="auto" refX="8.4799995" v:setback="8.48" v:arrowSize="1" v:arrowType="4" class="st9" id="mrkr4-43">
+			<use height="100%" width="100%" y="0" x="0" id="use19" transform="scale(4.6)" xlink:href="#lend4"/>
+		</marker>
+		<marker overflow="visible" markerUnits="strokeWidth" orient="auto" refX="-7.7600002" v:setback="7.76" v:arrowSize="0" v:arrowType="4" class="st31" id="mrkr4-192">
+			<use height="100%" width="100%" y="0" x="0" id="use22" transform="scale(-3.88)" xlink:href="#lend4"/>
+		</marker>
+		<marker overflow="visible" markerUnits="strokeWidth" orient="auto" refX="7.04" v:setback="7.04" v:arrowSize="0" v:arrowType="4" class="st31" id="mrkr4-199">
+			<use height="100%" width="100%" y="0" x="0" id="use25" transform="scale(3.88)" xlink:href="#lend4"/>
+		</marker>
+		<marker overflow="visible" markerUnits="strokeWidth" orient="auto" refX="8.4799995" v:setback="8.48" v:arrowSize="1" v:arrowType="4" class="st7" id="mrkr4-698">
+			<use height="100%" width="100%" y="0" x="0" id="use28" transform="scale(4.6)" xlink:href="#lend4"/>
+		</marker>
+		<marker overflow="visible" markerUnits="strokeWidth" orient="auto" refX="-5.5999999" v:setback="5.6" v:arrowSize="1" v:arrowType="4" class="st38" id="mrkr4-720">
+			<use height="100%" width="100%" y="0" x="0" id="use31" transform="scale(-2.8)" xlink:href="#lend4"/>
+		</marker>
+		<marker overflow="visible" markerUnits="strokeWidth" orient="auto" refX="-4.8800001" v:setback="4.88" v:arrowSize="0" v:arrowType="4" class="st40" id="mrkr4-728">
+			<use height="100%" width="100%" y="0" x="0" id="use34" transform="scale(-2.44)" xlink:href="#lend4"/>
+		</marker>
+		<marker overflow="visible" markerUnits="strokeWidth" orient="auto" refX="-9.1999998" v:setback="9.2" v:arrowSize="1" v:arrowType="4" class="st44" id="mrkr4-985">
+			<use height="100%" width="100%" y="0" x="0" id="use37" transform="scale(-4.6)" xlink:href="#lend4"/>
+		</marker>
+		<g id="lend10">
+			<path inkscape:connector-curvature="0" id="path40" style="stroke:none" d="M 0,0.75 C -0.414214,0.75 -0.75,0.414214 -0.75,0 -0.75,-0.414214 -0.414214,-0.75 0,-0.75 0.414214,-0.75 0.75,-0.414214 0.75,0 0.75,0.414214 0.414214,0.75 0,0.75 Z"/>
+		</g>
+		<marker overflow="visible" markerUnits="strokeWidth" orient="auto" refX="2.1900001" v:setback="2.19" v:arrowSize="0" v:arrowType="10" class="st31" id="mrkr10-1144">
+			<use height="100%" width="100%" y="0" x="0" id="use43" transform="scale(3.88)" xlink:href="#lend10"/>
+		</marker>
+		<marker overflow="visible" markerUnits="strokeWidth" orient="auto" refX="-9.1999998" v:setback="9.2" v:arrowSize="1" v:arrowType="4" class="st50" id="mrkr4-1575">
+			<use height="100%" width="100%" y="0" x="0" id="use46" transform="scale(-4.6)" xlink:href="#lend4"/>
+		</marker>
+		<marker overflow="visible" markerUnits="strokeWidth" orient="auto" refX="8.4799995" v:setback="8.48" v:arrowSize="1" v:arrowType="4" class="st50" id="mrkr4-1581">
+			<use height="100%" width="100%" y="0" x="0" id="use49" transform="scale(4.6)" xlink:href="#lend4"/>
+		</marker>
+	</defs>
+	<g transform="translate(-27.4305,-121.4203)" id="g3360" v:groupContext="foregroundPage" v:index="1" v:mID="15">
+		<title id="title53">TPS6594_Key_Diagram</title>
+		<v:pageProperties v:shadowOffsetY="-9" v:shadowOffsetX="9" v:drawingUnits="19" v:pageScale="1" v:drawingScale="1"/>
+		<v:layer v:index="0" v:name="Digital IO"/>
+		<v:layer v:index="1" v:name="Fsw Clock"/>
+		<v:layer v:index="2" v:name="VCC_SENSE_Net"/>
+		<v:layer v:index="3" v:name="VIO_Net"/>
+		<v:layer v:index="4" v:name="VCCA_Net"/>
+		<g transform="translate(34.6275,-83.3947)" v:groupContext="shape" v:mID="1" id="shape1-1">
+			<title id="title55">Sheet.1</title>
+			<rect id="rect57" class="st1" height="586.685" width="556.10602" y="205.315" x="0"/>
+		</g>
+		<g transform="rotate(90,272.338,707.799)" v:layerMember="0" v:groupContext="shape" v:mID="3" id="shape3-3">
+			<title id="title60">Sheet.3</title>
+			<path inkscape:connector-curvature="0" id="path62" class="st2" d="M 0,792 H 129.93"/>
+		</g>
+		<g transform="rotate(90,500.977,705.023)" v:layerMember="1" v:groupContext="shape" v:mID="4" id="shape4-6">
+			<title id="title65">Sheet.4</title>
+			<path inkscape:connector-curvature="0" id="path67" class="st3" d="M 0,792 H 395.49"/>
+		</g>
+		<g transform="translate(414.692,-521.579)" v:layerMember="1" v:groupContext="shape" v:mID="5" id="shape5-9">
+			<title id="title70">Sheet.5</title>
+			<path inkscape:connector-curvature="0" id="path72" class="st4" d="M 4.24,792 H 4.6 35.24"/>
+		</g>
+		<g transform="rotate(180,224.715,483.978)" v:groupContext="shape" v:mID="6" id="shape6-15">
+			<title id="title75">Sheet.6</title>
+			<path inkscape:connector-curvature="0" id="path77" class="st6" d="M 0,792 H 11.07"/>
+		</g>
+		<g transform="rotate(180,293.262,534.585)" v:groupContext="shape" v:mID="7" id="shape7-21">
+			<title id="title80">Sheet.7</title>
+			<path inkscape:connector-curvature="0" id="path82" class="st8" d="M 0,792 H 35.24"/>
+		</g>
+		<g transform="rotate(90,516.7195,701.6405)" v:groupContext="shape" v:mID="8" id="shape8-27">
+			<title id="title85">Sheet.8</title>
+			<path inkscape:connector-curvature="0" id="path87" class="st10" d="m 0,792 h 27.45 l -5.49,-7.2 H 5.49 Z"/>
+		</g>
+		<g transform="rotate(90,513.8795,689.8005)" v:groupContext="shape" v:mID="9" id="shape9-29">
+			<title id="title90">Sheet.9</title>
+			<path inkscape:connector-curvature="0" id="path92" class="st11" d="M 0,792 H 18"/>
+		</g>
+		<g transform="translate(414,-588.329)" v:layerMember="1" v:groupContext="shape" v:mID="10" id="shape10-32">
+			<title id="title95">Sheet.10</title>
+			<path inkscape:connector-curvature="0" id="path97" class="st12" d="M 0,792 H 7.7"/>
+		</g>
+		<g transform="rotate(180,283.303,495.6855)" v:groupContext="shape" v:mID="11" id="shape11-38">
+			<title id="title100">Sheet.11</title>
+			<path inkscape:connector-curvature="0" id="path102" class="st13" d="M 4.24,792 H 4.6 132.86"/>
+		</g>
+		<g transform="matrix(1,0,0,-1,37.8992,927.636)" v:layerMember="2" v:groupContext="shape" v:mID="12" id="shape12-44">
+			<title id="title105">Sheet.12</title>
+			<path inkscape:connector-curvature="0" id="path107" class="st14" d="M 0,792 H 61.59"/>
+		</g>
+		<g transform="matrix(-1,0,0,1,101.18,-624.329)" v:groupContext="shape" v:mID="13" id="shape13-47">
+			<title id="title110">Sheet.13</title>
+			<desc id="desc112">nPWRON/ENABLE</desc>
+			<v:textBlock v:margins="rect(2,2,2,2)"/>
+			<v:textRect height="12" width="63.85" cy="786" cx="31.9219"/>
+			<rect id="rect114" class="st15" height="12" width="63.8438" y="780" x="0"/>
+			<text id="text116" v:langID="1033" class="st16" transform="scale(-1,1)" y="787.79999" x="-61.84"><v:paragraph/><v:tabList/>nPWRON/ENABLE</text>		</g>
+		<g transform="matrix(-1,0,0,1,82.3872,-595.406)" v:groupContext="shape" v:mID="14" id="shape14-50">
+			<title id="title119">Sheet.14</title>
+			<desc id="desc121">VCCA</desc>
+			<v:textBlock v:margins="rect(2,2,2,2)"/>
+			<v:textRect height="12" width="45" cy="786" cx="22.5"/>
+			<rect id="rect123" class="st15" height="12" width="45" y="780" x="0"/>
+			<text id="text125" v:langID="1033" class="st16" transform="scale(-1,1)" y="787.79999" x="-43"><v:paragraph/><v:tabList/>VCCA</text>		</g>
+		<g transform="matrix(-1,0,0,1,89.9305,-653.795)" v:groupContext="shape" v:mID="15" id="shape15-53">
+			<title id="title128">Sheet.15</title>
+			<desc id="desc130">OVPGDRV</desc>
+			<v:textBlock v:margins="rect(2,2,2,2)"/>
+			<v:textRect height="12" width="52.6" cy="786" cx="26.2969"/>
+			<rect id="rect132" class="st15" height="12" width="52.5938" y="780" x="0"/>
+			<text id="text134" v:langID="1033" class="st16" transform="scale(-1,1)" y="787.79999" x="-50.59"><v:paragraph/><v:tabList/>OVPGDRV</text>		</g>
+		<g transform="rotate(180,46.09025,719.955)" v:groupContext="shape" v:mID="16" id="shape16-56">
+			<title id="title137">Sheet.16</title>
+			<desc id="desc139">VIO_IN</desc>
+			<v:textBlock v:margins="rect(2,2,2,2)"/>
+			<v:textRect transform="rotate(180)" height="12" width="54" cy="786" cx="27"/>
+			<rect id="rect141" class="st15" height="12" width="54" y="780" x="0"/>
+			<text id="text143" v:langID="1033" class="st16" transform="scale(-1)" y="-784.20001" x="-52"><v:paragraph/><v:tabList/>VIO_IN</text>		</g>
+		<g transform="matrix(-1,0,0,1,91.3872,-571.304)" v:groupContext="shape" v:mID="17" id="shape17-59">
+			<title id="title146">Sheet.17</title>
+			<desc id="desc148">VOUT_LDOVRTC</desc>
+			<v:textBlock v:margins="rect(2,2,2,2)"/>
+			<v:textRect height="12" width="54" cy="786" cx="27"/>
+			<rect id="rect150" class="st15" height="12" width="54" y="780" x="0"/>
+			<text id="text152" v:langID="1033" class="st16" transform="scale(-1,1)" y="787.79999" x="-52"><v:paragraph/><v:tabList/>VOUT_LDOVRTC</text>		</g>
+		<g transform="translate(551.18,-516.329)" v:groupContext="shape" v:mID="18" id="shape18-62">
+			<title id="title155">Sheet.18</title>
+			<desc id="desc157">SYNCCLKIN (GPIO10)</desc>
+			<v:textBlock v:margins="rect(2,2,2,2)"/>
+			<v:textRect height="15" width="40.55" cy="784.5" cx="20.2701"/>
+			<rect id="rect159" class="st15" height="15" width="40.5401" y="777" x="0"/>
+			<text id="text163" v:langID="1033" class="st16" y="782.70001" x="2"><v:paragraph/><v:tabList/>SYNCCLKIN <tspan id="tspan161" class="st17" dy="1.2em" x="2">(GPIO10)</tspan></text>		</g>
+		<g transform="translate(482.555,-590.579)" v:groupContext="shape" v:mID="19" id="shape19-66">
+			<title id="title166">Sheet.19</title>
+			<desc id="desc168">SYNCCLKOUT/CLK32KOUT</desc>
+			<v:textBlock v:margins="rect(2,2,2,2)"/>
+			<v:textRect height="12" width="82.13" cy="786" cx="41.0625"/>
+			<rect id="rect170" class="st15" height="12" width="82.125" y="780" x="0"/>
+			<text id="text172" v:langID="1033" class="st16" y="787.79999" x="2.4400001"><v:paragraph v:horizAlign="2"/><v:tabList/>SYNCCLKOUT/CLK32KOUT</text>		</g>
+		<g transform="matrix(1,0,0,-1,37.8934,1010.88)" v:groupContext="shape" v:mID="20" id="shape20-69">
+			<title id="title175">Sheet.20</title>
+			<path inkscape:connector-curvature="0" id="path177" class="st18" d="M 0,792 H 58.04"/>
+		</g>
+		<g transform="matrix(-1,0,0,1,37.7881,-596.003)" v:groupContext="shape" v:mID="21" id="shape21-72">
+			<title id="title180">Sheet.21</title>
+			<rect id="rect182" class="st19" height="6.3072" width="6.3072" y="785.69299" x="0"/>
+		</g>
+		<g transform="rotate(89.9845,450.68855,768.3534)" v:layerMember="0" v:groupContext="shape" v:mID="22" id="shape22-74">
+			<title id="title185">Sheet.22</title>
+			<path inkscape:connector-curvature="0" id="path187" class="st2" d="M 0,792 H 297.39"/>
+		</g>
+		<g transform="translate(449.981,-219.238)" v:groupContext="shape" v:mID="23" id="shape23-77">
+			<title id="title190">Sheet.23</title>
+			<desc id="desc192">Single or Multiphase</desc>
+			<v:textBlock v:verticalAlign="0" v:margins="rect(2,2,2,2)"/>
+			<v:textRect height="284.625" width="96.75" cy="649.688" cx="48.375"/>
+			<rect id="rect194" class="st20" height="284.625" width="96.75" y="507.375" x="0"/>
+			<text id="text196" v:langID="1033" class="st21" y="515.66998" x="16.66"><v:paragraph v:horizAlign="1"/><v:tabList/>Single or Multiphase</text>		</g>
+		<g transform="translate(215.93,-264.238)" v:groupContext="shape" v:mID="24" id="shape24-80">
+			<title id="title199">Sheet.24</title>
+			<rect id="rect201" class="st22" height="396.841" width="186.82001" y="395.159" x="0"/>
+		</g>
+		<g transform="translate(309.305,-276.473)" v:groupContext="shape" v:mID="25" id="shape25-82">
+			<title id="title204">Sheet.25</title>
+			<desc id="desc206">I2C and SPI</desc>
+			<v:textBlock v:verticalAlign="0" v:margins="rect(2,2,2,2)"/>
+			<v:textRect height="56.1062" width="85.79" cy="763.947" cx="42.8906"/>
+			<rect id="rect208" class="st1" height="56.106201" width="85.781197" y="735.89398" x="0"/>
+			<text id="text214" v:langID="1033" class="st21" y="744.19" x="24.700001"><v:paragraph v:horizAlign="1"/><v:tabList/>I<tspan id="tspan210" v:baseFontSize="7" class="st23" dy="-0.235em">2</tspan><tspan id="tspan212" class="st17" dy="0.153em">C and SPI</tspan></text>		</g>
+		<g transform="translate(319.5,-610.474)" v:groupContext="shape" v:mID="26" id="shape26-87">
+			<title id="title217">Sheet.26</title>
+			<desc id="desc219">Interrupt Handler</desc>
+			<v:textBlock v:margins="rect(2,2,2,2)"/>
+			<v:textRect height="30.776" width="72.67" cy="776.612" cx="36.3322"/>
+			<rect id="rect221" class="st1" height="30.7759" width="72.664398" y="761.224" x="0"/>
+			<text id="text223" v:langID="1033" class="st21" y="778.71002" x="10.07"><v:paragraph v:horizAlign="1"/><v:tabList/>Interrupt Handler</text>		</g>
+		<g transform="translate(283.43,-648.464)" v:groupContext="shape" v:mID="27" id="shape27-90">
+			<title id="title226">Sheet.27</title>
+			<desc id="desc228">I2C and SPI</desc>
+			<v:textBlock v:tabSpace="42.5197" v:margins="rect(4,4,4,4)"/>
+			<v:textRect height="7.23024" width="45" cy="788.385" cx="22.5"/>
+			<rect id="rect230" class="st15" height="7.2302399" width="45" y="784.77002" x="0"/>
+			<text id="text240" v:langID="1041" class="st21" y="790.47998" x="4.3099999"><v:paragraph v:horizAlign="1"/><v:tabList/>I<tspan id="tspan232" v:baseFontSize="7" class="st23" dy="-0.235em">2</tspan><tspan id="tspan234" class="st17" dy="0.153em">C</tspan><tspan id="tspan236" v:langID="1033" class="st17"> </tspan><tspan id="tspan238" v:langID="1033" class="st17">and </tspan>SPI</text>		</g>
+		<g transform="translate(320.114,-519.466)" v:groupContext="shape" v:mID="28" id="shape28-97">
+			<title id="title243">Sheet.28</title>
+			<desc id="desc245">Trigger Mode or Question and Answer (Q&amp;A) Watchdog</desc>
+			<v:textBlock v:margins="rect(2,2,2,2)"/>
+			<v:textRect height="31.784" width="72.06" cy="776.108" cx="36.0252"/>
+			<rect id="rect247" class="st1" height="31.784" width="72.050499" y="760.216" x="0"/>
+			<text id="text253" v:langID="1033" class="st21" y="769.81" x="11.13"><v:paragraph v:horizAlign="1"/><v:tabList/>Trigger Mode or <tspan id="tspan249" class="st17" dy="1.2em" x="2.5599999">Question and Answer </tspan><tspan id="tspan251" class="st17" dy="1.2em" x="9.5699997">(Q&amp;A) Watchdog</tspan></text>		</g>
+		<g transform="translate(260.93,-376.99)" v:groupContext="shape" v:mID="29" id="shape29-102">
+			<title id="title256">Sheet.29</title>
+			<desc id="desc258">I2C/SPI/GPIO/SPMI</desc>
+			<v:textBlock v:tabSpace="42.5197" v:margins="rect(4,4,4,4)"/>
+			<v:textRect height="19.2836" width="36" cy="782.358" cx="18"/>
+			<rect id="rect260" class="st15" height="19.2836" width="36" y="772.716" x="0"/>
+			<text id="text266" v:langID="1033" class="st21" y="776.06" x="4.9699998"><v:paragraph v:horizAlign="1"/><v:tabList/>I2C/SPI/<tspan id="tspan262" class="st17" dy="1.2em" x="8.2799997">GPIO/</tspan><tspan id="tspan264" class="st17" dy="1.2em" x="9.4399996">SPMI</tspan></text>		</g>
+		<g transform="translate(200.743,-611.579)" v:layerMember="0" v:groupContext="shape" v:mID="30" id="shape30-107">
+			<title id="title269">Sheet.30</title>
+			<path inkscape:connector-curvature="0" id="path271" class="st6" d="M 0,792 H 22.4"/>
+		</g>
+		<g transform="translate(312.768,-280.829)" v:groupContext="shape" v:mID="31" id="shape31-112">
+			<title id="title274">Sheet.31</title>
+			<desc id="desc276">I2C1</desc>
+			<v:textBlock v:margins="rect(2,2,2,2)"/>
+			<v:textRect height="18" width="20.26" cy="783" cx="10.1279"/>
+			<rect id="rect278" class="st24" height="18" width="20.2558" y="774" x="0"/>
+			<text id="text280" v:langID="1035" class="st21" y="785.09998" x="2.73"><v:paragraph v:horizAlign="1"/><v:tabList/>I2C1</text>		</g>
+		<g transform="translate(224.93,-276.473)" v:groupContext="shape" v:mID="32" id="shape32-115">
+			<title id="title283">Sheet.32</title>
+			<desc id="desc285">SPMI</desc>
+			<v:textBlock v:verticalAlign="0" v:margins="rect(2,2,2,2)"/>
+			<v:textRect height="56.1062" width="72.07" cy="763.947" cx="36.0348"/>
+			<rect id="rect287" class="st1" height="56.106201" width="72.069504" y="735.89398" x="0"/>
+			<text id="text289" v:langID="1035" class="st21" y="744.19" x="27.48"><v:paragraph v:horizAlign="1"/><v:tabList/>SPMI</text>		</g>
+		<g transform="translate(214.856,-349.014)" v:groupContext="shape" v:mID="33" id="shape33-118">
+			<title id="title292">Sheet.33</title>
+			<rect id="rect294" class="st15" height="68.625" width="4.5" y="723.375" x="0"/>
+		</g>
+		<g transform="matrix(0,1,1,0,-411.82,635.483)" v:groupContext="shape" v:mID="34" id="shape34-120">
+			<title id="title297">Sheet.34</title>
+			<desc id="desc299">SDA_I2C1/SDI_SPI</desc>
+			<v:textBlock v:margins="rect(2,2,2,2)"/>
+			<v:textRect height="12" width="71.44" cy="786" cx="35.7187"/>
+			<rect id="rect301" class="st15" height="12" width="71.4375" y="780" x="0"/>
+			<text id="text303" v:langID="1033" class="st16" transform="scale(-1,1)" y="787.79999" x="-69.440002"><v:paragraph/><v:tabList/>SDA_I2C1/SDI_SPI</text>		</g>
+		<g transform="translate(38.0867,-132.558)" v:layerMember="3" v:groupContext="shape" v:mID="35" id="shape35-123">
+			<title id="title306">Sheet.35</title>
+			<path inkscape:connector-curvature="0" id="path308" class="st25" d="M 0,792 H 330.72"/>
+		</g>
+		<g transform="translate(98.2778,-154.829)" v:groupContext="shape" v:mID="36" id="shape36-126">
+			<title id="title311">Sheet.36</title>
+			<desc id="desc313">GPIO Control</desc>
+			<v:textBlock v:verticalAlign="0" v:margins="rect(2,2,2,2)"/>
+			<v:textRect height="36.6849" width="302.72" cy="773.658" cx="151.358"/>
+			<rect id="rect315" class="st26" height="36.684898" width="302.715" y="755.315" x="0"/>
+			<text id="text321" v:langID="1033" class="st21" y="763.60999" x="130.35001"><v:paragraph v:horizAlign="1"/><v:tabList/>GPIO<tspan id="tspan317" v:langID="1035" class="st17"> </tspan><tspan id="tspan319" v:langID="1035" class="st17">Control</tspan></text>		</g>
+		<g transform="translate(96.6805,-454.079)" v:groupContext="shape" v:mID="37" id="shape37-131">
+			<title id="title324">Sheet.37</title>
+			<desc id="desc326">Power-Good Monitor for Buck and LDO Regulators</desc>
+			<v:textBlock v:margins="rect(2,2,2,2)"/>
+			<v:textRect height="28.849" width="85.5" cy="777.575" cx="42.75"/>
+			<rect id="rect328" class="st1" height="28.8491" width="85.5" y="763.151" x="0"/>
+			<text id="text336" v:langID="1033" class="st21" y="771.28003" x="10.46"><v:paragraph v:horizAlign="1"/><v:tabList/>Power-Good Monitor<v:newlineChar/><tspan id="tspan330" class="st17" dy="1.2em" x="14.93">for </tspan><tspan id="tspan332" v:langID="1035" class="st17">B</tspan>uck and LDO <tspan id="tspan334" v:langID="1035" class="st17" dy="1.2em" x="25.82">R</tspan>egulators</text>		</g>
+		<g transform="translate(188.137,-256.079)" v:layerMember="0" v:groupContext="shape" v:mID="38" id="shape38-137">
+			<title id="title339">Sheet.38</title>
+			<path inkscape:connector-curvature="0" id="path341" class="st2" d="M 0,792 H 238.38"/>
+		</g>
+		<g transform="translate(388.176,-474.329)" v:layerMember="0" v:groupContext="shape" v:mID="39" id="shape39-140">
+			<title id="title344">Sheet.39</title>
+			<path inkscape:connector-curvature="0" id="path346" class="st2" d="M 0,792 H 38.74"/>
+		</g>
+		<g transform="rotate(-90,53.6615,541.9815)" v:groupContext="shape" v:mID="40" id="shape40-143">
+			<title id="title349">Sheet.40</title>
+			<desc id="desc351">PGOOD (GPIO9)</desc>
+			<v:textBlock v:tabSpace="42.5197" v:margins="rect(4,4,4,4)"/>
+			<v:textRect height="10.9434" width="59.58" cy="786.528" cx="29.7873"/>
+			<rect id="rect353" class="st15" height="10.9434" width="59.574501" y="781.05701" x="0"/>
+			<text id="text355" v:langID="1033" class="st16" y="788.33002" x="4"><v:paragraph/><v:tabList/>PGOOD (GPIO9)</text>		</g>
+		<g transform="matrix(-1,0,0,1,37.7377,-653.27)" v:groupContext="shape" v:mID="41" id="shape41-146">
+			<title id="title358">Sheet.41</title>
+			<rect id="rect360" class="st19" height="6.3072" width="6.3072" y="785.69299" x="0"/>
+		</g>
+		<g transform="matrix(-1,0,0,1,37.7377,-623.906)" v:groupContext="shape" v:mID="42" id="shape42-148">
+			<title id="title363">Sheet.42</title>
+			<rect id="rect365" class="st19" height="6.3072" width="6.3072" y="785.69299" x="0"/>
+		</g>
+		<g transform="matrix(-1,0,0,1,37.7881,-569.906)" v:groupContext="shape" v:mID="43" id="shape43-150">
+			<title id="title368">Sheet.43</title>
+			<rect id="rect370" class="st19" height="6.3072" width="6.3072" y="785.69299" x="0"/>
+		</g>
+		<g transform="rotate(180,18.92155,724.115)" v:groupContext="shape" v:mID="44" id="shape44-152">
+			<title id="title373">Sheet.44</title>
+			<rect id="rect375" class="st19" height="6.3072" width="6.3072" y="785.69299" x="0"/>
+		</g>
+		<g transform="matrix(1,0,0,-1,37.8992,940.532)" v:layerMember="2" v:groupContext="shape" v:mID="45" id="shape45-154">
+			<title id="title378">Sheet.45</title>
+			<path inkscape:connector-curvature="0" id="path380" class="st14" d="M 0,792 H 63.84"/>
+		</g>
+		<g transform="matrix(-1,0,0,1,89.9305,-641.045)" v:groupContext="shape" v:mID="46" id="shape46-157">
+			<title id="title383">Sheet.46</title>
+			<desc id="desc385">VSYS_SENSE</desc>
+			<v:textBlock v:margins="rect(2,2,2,2)"/>
+			<v:textRect height="12" width="52.6" cy="786" cx="26.2969"/>
+			<rect id="rect387" class="st15" height="12" width="52.5938" y="780" x="0"/>
+			<text id="text389" v:langID="1033" class="st16" transform="scale(-1,1)" y="787.79999" x="-50.59"><v:paragraph/><v:tabList/>VSYS_SENSE</text>		</g>
+		<g transform="matrix(-1,0,0,1,37.7377,-640.375)" v:groupContext="shape" v:mID="47" id="shape47-160">
+			<title id="title392">Sheet.47</title>
+			<rect id="rect394" class="st19" height="6.3072" width="6.3072" y="785.69299" x="0"/>
+		</g>
+		<g transform="matrix(1,0,0,-1,37.9497,971.981)" v:layerMember="2" v:groupContext="shape" v:mID="48" id="shape48-162">
+			<title id="title397">Sheet.48</title>
+			<path inkscape:connector-curvature="0" id="path399" class="st27" d="M 0,792 H 62.11"/>
+		</g>
+		<g transform="matrix(-1,0,0,1,89.9809,-608.726)" v:groupContext="shape" v:mID="49" id="shape49-165">
+			<title id="title402">Sheet.49</title>
+			<desc id="desc404">VBACKUP</desc>
+			<v:textBlock v:margins="rect(2,2,2,2)"/>
+			<v:textRect height="12" width="52.6" cy="786" cx="26.2969"/>
+			<rect id="rect406" class="st15" height="12" width="52.5938" y="780" x="0"/>
+			<text id="text408" v:langID="1033" class="st16" transform="scale(-1,1)" y="787.79999" x="-50.59"><v:paragraph/><v:tabList/>VBACKUP</text>		</g>
+		<g transform="matrix(-1,0,0,1,37.7881,-608.925)" v:groupContext="shape" v:mID="50" id="shape50-168">
+			<title id="title411">Sheet.50</title>
+			<rect id="rect413" class="st19" height="6.3072" width="6.3072" y="785.69299" x="0"/>
+		</g>
+		<g transform="rotate(-90,-168.7995,535.5205)" v:layerMember="4" v:groupContext="shape" v:mID="51" id="shape51-170">
+			<title id="title416">Sheet.51</title>
+			<path inkscape:connector-curvature="0" id="path418" class="st28" d="M 0,792 H 173.21"/>
+		</g>
+		<g transform="translate(38.1805,-598.519)" v:layerMember="4" v:groupContext="shape" v:mID="52" id="shape52-173">
+			<title id="title421">Sheet.52</title>
+			<path inkscape:connector-curvature="0" id="path423" class="st28" d="M 0,792 H 63.37"/>
+		</g>
+		<g transform="matrix(1,0,0,-1,37.8934,1042.38)" v:groupContext="shape" v:mID="53" id="shape53-176">
+			<title id="title426">Sheet.53</title>
+			<path inkscape:connector-curvature="0" id="path428" class="st29" d="M 0,792 H 58.79"/>
+		</g>
+		<g transform="matrix(-1,0,0,1,37.7881,-538.406)" v:groupContext="shape" v:mID="54" id="shape54-179">
+			<title id="title431">Sheet.54</title>
+			<rect id="rect433" class="st19" height="6.3072" width="6.3072" y="785.69299" x="0"/>
+		</g>
+		<g transform="matrix(0,1,1,0,-708.82,219.046)" v:groupContext="shape" v:mID="55" id="shape55-181">
+			<title id="title436">Sheet.55</title>
+			<path inkscape:connector-curvature="0" id="path438" class="st18" d="M 0,792 H 444"/>
+		</g>
+		<g transform="matrix(0,1,1,0,-713.32,250.733)" v:groupContext="shape" v:mID="56" id="shape56-184">
+			<title id="title441">Sheet.56</title>
+			<path inkscape:connector-curvature="0" id="path443" class="st29" d="M 0,792 H 405"/>
+		</g>
+		<g transform="rotate(-90,87.9245,544.1565)" v:groupContext="shape" v:mID="57" id="shape57-187">
+			<title id="title446">Sheet.57</title>
+			<path inkscape:connector-curvature="0" id="path448" class="st30" d="M 0,792 H 13.59"/>
+		</g>
+		<g transform="rotate(-90,85.569,546.512)" v:groupContext="shape" v:mID="58" id="shape58-193">
+			<title id="title451">Sheet.58</title>
+			<path inkscape:connector-curvature="0" id="path453" class="st32" d="m 3.52,792 h 0.36 9.71"/>
+		</g>
+		<g transform="rotate(-90,90.28,541.801)" v:groupContext="shape" v:mID="59" id="shape59-201">
+			<title id="title456">Sheet.59</title>
+			<path inkscape:connector-curvature="0" id="path458" class="st33" d="M 3.52,792 H 3.88 17.47"/>
+		</g>
+		<g transform="translate(326.085,-156.069)" v:groupContext="shape" v:mID="60" id="shape60-206">
+			<title id="title461">Sheet.60</title>
+			<path inkscape:connector-curvature="0" id="path463" class="st19" d="M 19.32,787.5 H 0 L 2.41,792 H 16.9 Z"/>
+		</g>
+		<g transform="rotate(-90,123.3195,584.2335)" v:groupContext="shape" v:mID="61" id="shape61-208">
+			<title id="title466">Sheet.61</title>
+			<desc id="desc468">GPIO11</desc>
+			<v:textBlock v:margins="rect(2,2,2,2)"/>
+			<v:textRect height="5.70459" width="31.74" cy="789.148" cx="15.8698"/>
+			<rect id="rect470" class="st15" height="5.7045898" width="31.7395" y="786.29498" x="0"/>
+			<text id="text472" v:langID="1033" class="st16" y="790.95001" x="2"><v:paragraph/><v:tabList/>GPIO11</text>		</g>
+		<g transform="rotate(-90.027,124.29226,583.27889)" v:groupContext="shape" v:mID="62" id="shape62-211">
+			<title id="title475">Sheet.62</title>
+			<path inkscape:connector-curvature="0" id="path477" class="st34" d="M 0,792 H 54.55"/>
+		</g>
+		<g transform="matrix(0,1,1,0,-458.953,636.042)" v:groupContext="shape" v:mID="63" id="shape63-214">
+			<title id="title480">Sheet.63</title>
+			<path inkscape:connector-curvature="0" id="path482" class="st34" d="M 0,792 H 19.27"/>
+		</g>
+		<g transform="matrix(0,1,1,0,-454.402,636.042)" v:groupContext="shape" v:mID="64" id="shape64-217">
+			<title id="title485">Sheet.64</title>
+			<path inkscape:connector-curvature="0" id="path487" class="st34" d="M 15.42,787.45 V 792 H 0"/>
+		</g>
+		<g transform="matrix(0,1,1,0,-455.919,639.896)" v:groupContext="shape" v:mID="65" id="shape65-220">
+			<title id="title490">Sheet.65</title>
+			<path inkscape:connector-curvature="0" id="path492" class="st19" d="M 0,785.93 V 792 l 7.71,-3.03 z"/>
+		</g>
+		<g transform="rotate(-90,98.1185,549.4865)" v:groupContext="shape" v:mID="66" id="shape66-222">
+			<title id="title495">Sheet.66</title>
+			<path inkscape:connector-curvature="0" id="path497" class="st19" d="M 0,785.93 V 792 l 7.71,-3.03 z"/>
+		</g>
+		<g transform="matrix(-1,0,0,1,336.241,-80.2973)" v:groupContext="shape" v:mID="67" id="shape67-224">
+			<title id="title500">Sheet.67</title>
+			<rect id="rect502" class="st19" height="6.3072" width="6.3072" y="785.69299" x="0"/>
+		</g>
+		<g transform="rotate(180,165.6845,717.67)" v:layerMember="3" v:groupContext="shape" v:mID="68" id="shape68-226">
+			<title id="title505">Sheet.68</title>
+			<path inkscape:connector-curvature="0" id="path507" class="st25" d="M 0,792 H 4.84"/>
+		</g>
+		<g transform="rotate(-90,96.952,562.42)" v:layerMember="3" v:groupContext="shape" v:mID="69" id="shape69-229">
+			<title id="title510">Sheet.69</title>
+			<path inkscape:connector-curvature="0" id="path512" class="st25" d="M 0,792 H 16.03"/>
+		</g>
+		<g transform="rotate(-90,76.745,555.336)" v:groupContext="shape" v:mID="70" id="shape70-232">
+			<title id="title515">Sheet.70</title>
+			<path inkscape:connector-curvature="0" id="path517" class="st30" d="M 0,792 H 13.59"/>
+		</g>
+		<g transform="rotate(-90,74.3895,557.6915)" v:groupContext="shape" v:mID="71" id="shape71-237">
+			<title id="title520">Sheet.71</title>
+			<path inkscape:connector-curvature="0" id="path522" class="st32" d="m 3.52,792 h 0.36 9.71"/>
+		</g>
+		<g transform="rotate(-90,79.1005,552.9805)" v:groupContext="shape" v:mID="72" id="shape72-244">
+			<title id="title525">Sheet.72</title>
+			<path inkscape:connector-curvature="0" id="path527" class="st33" d="M 3.52,792 H 3.88 17.47"/>
+		</g>
+		<g transform="translate(303.725,-156.069)" v:groupContext="shape" v:mID="73" id="shape73-249">
+			<title id="title530">Sheet.73</title>
+			<path inkscape:connector-curvature="0" id="path532" class="st19" d="M 19.32,787.5 H 0 L 2.41,792 H 16.9 Z"/>
+		</g>
+		<g transform="rotate(-90,112.14,595.413)" v:groupContext="shape" v:mID="74" id="shape74-251">
+			<title id="title535">Sheet.74</title>
+			<desc id="desc537">GPIO10</desc>
+			<v:textBlock v:margins="rect(2,2,2,2)"/>
+			<v:textRect height="5.70459" width="31.74" cy="789.148" cx="15.8698"/>
+			<rect id="rect539" class="st15" height="5.7045898" width="31.7395" y="786.29498" x="0"/>
+			<text id="text541" v:langID="1033" class="st16" y="790.95001" x="2"><v:paragraph/><v:tabList/>GPIO10</text>		</g>
+		<g transform="rotate(-90.027,113.11276,594.45313)" v:groupContext="shape" v:mID="75" id="shape75-254">
+			<title id="title544">Sheet.75</title>
+			<path inkscape:connector-curvature="0" id="path546" class="st34" d="M 0,792 H 54.55"/>
+		</g>
+		<g transform="matrix(0,1,1,0,-481.313,636.042)" v:groupContext="shape" v:mID="76" id="shape76-257">
+			<title id="title549">Sheet.76</title>
+			<path inkscape:connector-curvature="0" id="path551" class="st34" d="M 0,792 H 19.27"/>
+		</g>
+		<g transform="matrix(0,1,1,0,-476.761,636.042)" v:groupContext="shape" v:mID="77" id="shape77-260">
+			<title id="title554">Sheet.77</title>
+			<path inkscape:connector-curvature="0" id="path556" class="st34" d="M 15.42,787.45 V 792 H 0"/>
+		</g>
+		<g transform="matrix(0,1,1,0,-478.279,639.896)" v:groupContext="shape" v:mID="78" id="shape78-263">
+			<title id="title559">Sheet.78</title>
+			<path inkscape:connector-curvature="0" id="path561" class="st19" d="M 0,785.93 V 792 l 7.71,-3.03 z"/>
+		</g>
+		<g transform="rotate(-90,86.939,560.666)" v:groupContext="shape" v:mID="79" id="shape79-265">
+			<title id="title564">Sheet.79</title>
+			<path inkscape:connector-curvature="0" id="path566" class="st19" d="M 0,785.93 V 792 l 7.71,-3.03 z"/>
+		</g>
+		<g transform="matrix(-1,0,0,1,313.881,-80.2973)" v:groupContext="shape" v:mID="80" id="shape80-267">
+			<title id="title569">Sheet.80</title>
+			<rect id="rect571" class="st19" height="6.3072" width="6.3072" y="785.69299" x="0"/>
+		</g>
+		<g transform="rotate(180,154.505,717.67)" v:layerMember="3" v:groupContext="shape" v:mID="81" id="shape81-269">
+			<title id="title574">Sheet.81</title>
+			<path inkscape:connector-curvature="0" id="path576" class="st25" d="M 0,792 H 4.84"/>
+		</g>
+		<g transform="rotate(-90,85.7365,573.5645)" v:layerMember="3" v:groupContext="shape" v:mID="82" id="shape82-272">
+			<title id="title579">Sheet.82</title>
+			<path inkscape:connector-curvature="0" id="path581" class="st25" d="M 0,792 H 15.96"/>
+		</g>
+		<g transform="rotate(-90,65.565,566.516)" v:groupContext="shape" v:mID="83" id="shape83-275">
+			<title id="title584">Sheet.83</title>
+			<path inkscape:connector-curvature="0" id="path586" class="st30" d="M 0,792 H 13.59"/>
+		</g>
+		<g transform="rotate(-90,63.21,568.871)" v:groupContext="shape" v:mID="84" id="shape84-280">
+			<title id="title589">Sheet.84</title>
+			<path inkscape:connector-curvature="0" id="path591" class="st32" d="m 3.52,792 h 0.36 9.71"/>
+		</g>
+		<g transform="rotate(-90,67.9205,564.1605)" v:groupContext="shape" v:mID="85" id="shape85-287">
+			<title id="title594">Sheet.85</title>
+			<path inkscape:connector-curvature="0" id="path596" class="st33" d="M 3.52,792 H 3.88 17.47"/>
+		</g>
+		<g transform="translate(281.366,-156.069)" v:groupContext="shape" v:mID="86" id="shape86-292">
+			<title id="title599">Sheet.86</title>
+			<path inkscape:connector-curvature="0" id="path601" class="st19" d="M 19.32,787.5 H 0 L 2.41,792 H 16.9 Z"/>
+		</g>
+		<g transform="rotate(-90,100.9605,606.5925)" v:groupContext="shape" v:mID="87" id="shape87-294">
+			<title id="title604">Sheet.87</title>
+			<desc id="desc606">GPIO9</desc>
+			<v:textBlock v:margins="rect(2,2,2,2)"/>
+			<v:textRect height="5.70459" width="31.74" cy="789.148" cx="15.8698"/>
+			<rect id="rect608" class="st15" height="5.7045898" width="31.7395" y="786.29498" x="0"/>
+			<text id="text610" v:langID="1033" class="st16" y="790.95001" x="2"><v:paragraph/><v:tabList/>GPIO9</text>		</g>
+		<g transform="rotate(-90.027,101.93326,605.62736)" v:groupContext="shape" v:mID="88" id="shape88-297">
+			<title id="title613">Sheet.88</title>
+			<path inkscape:connector-curvature="0" id="path615" class="st34" d="M 0,792 H 54.55"/>
+		</g>
+		<g transform="matrix(0,1,1,0,-503.672,636.042)" v:groupContext="shape" v:mID="89" id="shape89-300">
+			<title id="title618">Sheet.89</title>
+			<path inkscape:connector-curvature="0" id="path620" class="st34" d="M 0,792 H 19.27"/>
+		</g>
+		<g transform="matrix(0,1,1,0,-499.121,636.042)" v:groupContext="shape" v:mID="90" id="shape90-303">
+			<title id="title623">Sheet.90</title>
+			<path inkscape:connector-curvature="0" id="path625" class="st34" d="M 15.42,787.45 V 792 H 0"/>
+		</g>
+		<g transform="matrix(0,1,1,0,-500.638,639.896)" v:groupContext="shape" v:mID="91" id="shape91-306">
+			<title id="title628">Sheet.91</title>
+			<path inkscape:connector-curvature="0" id="path630" class="st19" d="M 0,785.93 V 792 l 7.71,-3.03 z"/>
+		</g>
+		<g transform="rotate(-90,75.7595,571.8455)" v:groupContext="shape" v:mID="92" id="shape92-308">
+			<title id="title633">Sheet.92</title>
+			<path inkscape:connector-curvature="0" id="path635" class="st19" d="M 0,785.93 V 792 l 7.71,-3.03 z"/>
+		</g>
+		<g transform="matrix(-1,0,0,1,291.522,-80.2973)" v:groupContext="shape" v:mID="93" id="shape93-310">
+			<title id="title638">Sheet.93</title>
+			<rect id="rect640" class="st19" height="6.3072" width="6.3072" y="785.69299" x="0"/>
+		</g>
+		<g transform="rotate(180,143.325,717.67)" v:layerMember="3" v:groupContext="shape" v:mID="94" id="shape94-312">
+			<title id="title643">Sheet.94</title>
+			<path inkscape:connector-curvature="0" id="path645" class="st25" d="M 0,792 H 4.84"/>
+		</g>
+		<g transform="rotate(-90,74.487,584.674)" v:layerMember="3" v:groupContext="shape" v:mID="95" id="shape95-315">
+			<title id="title648">Sheet.95</title>
+			<path inkscape:connector-curvature="0" id="path650" class="st25" d="M 0,792 H 15.82"/>
+		</g>
+		<g transform="rotate(-90,54.3855,577.6955)" v:groupContext="shape" v:mID="96" id="shape96-318">
+			<title id="title653">Sheet.96</title>
+			<path inkscape:connector-curvature="0" id="path655" class="st30" d="M 0,792 H 13.59"/>
+		</g>
+		<g transform="rotate(-90,52.03,580.051)" v:groupContext="shape" v:mID="97" id="shape97-323">
+			<title id="title658">Sheet.97</title>
+			<path inkscape:connector-curvature="0" id="path660" class="st32" d="m 3.52,792 h 0.36 9.71"/>
+		</g>
+		<g transform="rotate(-90,56.741,575.34)" v:groupContext="shape" v:mID="98" id="shape98-330">
+			<title id="title663">Sheet.98</title>
+			<path inkscape:connector-curvature="0" id="path665" class="st33" d="M 3.52,792 H 3.88 17.47"/>
+		</g>
+		<g transform="translate(259.007,-156.069)" v:groupContext="shape" v:mID="99" id="shape99-335">
+			<title id="title668">Sheet.99</title>
+			<path inkscape:connector-curvature="0" id="path670" class="st19" d="M 19.32,787.5 H 0 L 2.41,792 H 16.9 Z"/>
+		</g>
+		<g transform="rotate(-90,89.7805,617.7725)" v:groupContext="shape" v:mID="100" id="shape100-337">
+			<title id="title673">Sheet.100</title>
+			<desc id="desc675">GPIO8</desc>
+			<v:textBlock v:margins="rect(2,2,2,2)"/>
+			<v:textRect height="5.70459" width="31.74" cy="789.148" cx="15.8698"/>
+			<rect id="rect677" class="st15" height="5.7045898" width="31.7395" y="786.29498" x="0"/>
+			<text id="text679" v:langID="1033" class="st16" y="790.95001" x="2"><v:paragraph/><v:tabList/>GPIO8</text>		</g>
+		<g transform="rotate(-90.027,90.753257,616.80209)" v:groupContext="shape" v:mID="101" id="shape101-340">
+			<title id="title682">Sheet.101</title>
+			<path inkscape:connector-curvature="0" id="path684" class="st34" d="M 0,792 H 54.55"/>
+		</g>
+		<g transform="matrix(0,1,1,0,-526.032,636.042)" v:groupContext="shape" v:mID="102" id="shape102-343">
+			<title id="title687">Sheet.102</title>
+			<path inkscape:connector-curvature="0" id="path689" class="st34" d="M 0,792 H 19.27"/>
+		</g>
+		<g transform="matrix(0,1,1,0,-521.48,636.042)" v:groupContext="shape" v:mID="103" id="shape103-346">
+			<title id="title692">Sheet.103</title>
+			<path inkscape:connector-curvature="0" id="path694" class="st34" d="M 15.42,787.45 V 792 H 0"/>
+		</g>
+		<g transform="matrix(0,1,1,0,-522.997,639.896)" v:groupContext="shape" v:mID="104" id="shape104-349">
+			<title id="title697">Sheet.104</title>
+			<path inkscape:connector-curvature="0" id="path699" class="st19" d="M 0,785.93 V 792 l 7.71,-3.03 z"/>
+		</g>
+		<g transform="rotate(-90,64.5795,583.0255)" v:groupContext="shape" v:mID="105" id="shape105-351">
+			<title id="title702">Sheet.105</title>
+			<path inkscape:connector-curvature="0" id="path704" class="st19" d="M 0,785.93 V 792 l 7.71,-3.03 z"/>
+		</g>
+		<g transform="matrix(-1,0,0,1,269.163,-80.2973)" v:groupContext="shape" v:mID="106" id="shape106-353">
+			<title id="title707">Sheet.106</title>
+			<rect id="rect709" class="st19" height="6.3072" width="6.3072" y="785.69299" x="0"/>
+		</g>
+		<g transform="rotate(180,132.1455,717.67)" v:layerMember="3" v:groupContext="shape" v:mID="107" id="shape107-355">
+			<title id="title712">Sheet.107</title>
+			<path inkscape:connector-curvature="0" id="path714" class="st25" d="M 0,792 H 4.84"/>
+		</g>
+		<g transform="rotate(-90,63.395,595.941)" v:layerMember="3" v:groupContext="shape" v:mID="108" id="shape108-358">
+			<title id="title717">Sheet.108</title>
+			<path inkscape:connector-curvature="0" id="path719" class="st25" d="M 0,792 H 15.99"/>
+		</g>
+		<g transform="rotate(-90,43.206,588.875)" v:groupContext="shape" v:mID="109" id="shape109-361">
+			<title id="title722">Sheet.109</title>
+			<path inkscape:connector-curvature="0" id="path724" class="st30" d="M 0,792 H 13.59"/>
+		</g>
+		<g transform="rotate(-90,40.8505,591.2305)" v:groupContext="shape" v:mID="110" id="shape110-366">
+			<title id="title727">Sheet.110</title>
+			<path inkscape:connector-curvature="0" id="path729" class="st32" d="m 3.52,792 h 0.36 9.71"/>
+		</g>
+		<g transform="translate(236.647,-156.069)" v:groupContext="shape" v:mID="111" id="shape111-373">
+			<title id="title732">Sheet.111</title>
+			<path inkscape:connector-curvature="0" id="path734" class="st19" d="M 19.32,787.5 H 0 L 2.41,792 H 16.9 Z"/>
+		</g>
+		<g transform="rotate(-90,78.601,628.952)" v:groupContext="shape" v:mID="112" id="shape112-375">
+			<title id="title737">Sheet.112</title>
+			<desc id="desc739">GPIO7</desc>
+			<v:textBlock v:margins="rect(2,2,2,2)"/>
+			<v:textRect height="5.70459" width="31.74" cy="789.148" cx="15.8698"/>
+			<rect id="rect741" class="st15" height="5.7045898" width="31.7395" y="786.29498" x="0"/>
+			<text id="text743" v:langID="1033" class="st16" y="790.95001" x="2"><v:paragraph/><v:tabList/>GPIO7</text>		</g>
+		<g transform="rotate(-90.027,79.573757,627.97632)" v:groupContext="shape" v:mID="113" id="shape113-378">
+			<title id="title746">Sheet.113</title>
+			<path inkscape:connector-curvature="0" id="path748" class="st34" d="M 0,792 H 54.55"/>
+		</g>
+		<g transform="matrix(0,1,1,0,-548.391,636.042)" v:groupContext="shape" v:mID="114" id="shape114-381">
+			<title id="title751">Sheet.114</title>
+			<path inkscape:connector-curvature="0" id="path753" class="st34" d="M 0,792 H 19.27"/>
+		</g>
+		<g transform="matrix(0,1,1,0,-543.84,636.042)" v:groupContext="shape" v:mID="115" id="shape115-384">
+			<title id="title756">Sheet.115</title>
+			<path inkscape:connector-curvature="0" id="path758" class="st34" d="M 15.42,787.45 V 792 H 0"/>
+		</g>
+		<g transform="matrix(0,1,1,0,-545.357,639.896)" v:groupContext="shape" v:mID="116" id="shape116-387">
+			<title id="title761">Sheet.116</title>
+			<path inkscape:connector-curvature="0" id="path763" class="st19" d="M 0,785.93 V 792 l 7.71,-3.03 z"/>
+		</g>
+		<g transform="rotate(-90,53.4,594.205)" v:groupContext="shape" v:mID="117" id="shape117-389">
+			<title id="title766">Sheet.117</title>
+			<path inkscape:connector-curvature="0" id="path768" class="st19" d="M 0,785.93 V 792 l 7.71,-3.03 z"/>
+		</g>
+		<g transform="matrix(-1,0,0,1,246.803,-80.2973)" v:groupContext="shape" v:mID="118" id="shape118-391">
+			<title id="title771">Sheet.118</title>
+			<rect id="rect773" class="st19" height="6.3072" width="6.3072" y="785.69299" x="0"/>
+		</g>
+		<g transform="rotate(180,120.9655,717.67)" v:layerMember="3" v:groupContext="shape" v:mID="119" id="shape119-393">
+			<title id="title776">Sheet.119</title>
+			<path inkscape:connector-curvature="0" id="path778" class="st25" d="M 0,792 H 4.84"/>
+		</g>
+		<g transform="rotate(-90,52.221,607.127)" v:layerMember="3" v:groupContext="shape" v:mID="120" id="shape120-396">
+			<title id="title781">Sheet.120</title>
+			<path inkscape:connector-curvature="0" id="path783" class="st25" d="M 0,792 H 16.01"/>
+		</g>
+		<g transform="rotate(-90,32.026,600.055)" v:groupContext="shape" v:mID="121" id="shape121-399">
+			<title id="title786">Sheet.121</title>
+			<path inkscape:connector-curvature="0" id="path788" class="st30" d="M 0,792 H 13.59"/>
+		</g>
+		<g transform="rotate(-90,29.6705,602.4105)" v:groupContext="shape" v:mID="122" id="shape122-404">
+			<title id="title791">Sheet.122</title>
+			<path inkscape:connector-curvature="0" id="path793" class="st32" d="m 3.52,792 h 0.36 9.71"/>
+		</g>
+		<g transform="translate(214.288,-156.069)" v:groupContext="shape" v:mID="123" id="shape123-411">
+			<title id="title796">Sheet.123</title>
+			<path inkscape:connector-curvature="0" id="path798" class="st19" d="M 19.32,787.5 H 0 L 2.41,792 H 16.9 Z"/>
+		</g>
+		<g transform="rotate(-90,67.421,640.132)" v:groupContext="shape" v:mID="124" id="shape124-413">
+			<title id="title801">Sheet.124</title>
+			<desc id="desc803">GPIO6</desc>
+			<v:textBlock v:margins="rect(2,2,2,2)"/>
+			<v:textRect height="5.70459" width="31.74" cy="789.148" cx="15.8698"/>
+			<rect id="rect805" class="st15" height="5.7045898" width="31.7395" y="786.29498" x="0"/>
+			<text id="text807" v:langID="1033" class="st16" y="790.95001" x="2"><v:paragraph/><v:tabList/>GPIO6</text>		</g>
+		<g transform="rotate(-90.027,68.393757,639.15106)" v:groupContext="shape" v:mID="125" id="shape125-416">
+			<title id="title810">Sheet.125</title>
+			<path inkscape:connector-curvature="0" id="path812" class="st34" d="M 0,792 H 54.55"/>
+		</g>
+		<g transform="matrix(0,1,1,0,-570.75,636.042)" v:groupContext="shape" v:mID="126" id="shape126-419">
+			<title id="title815">Sheet.126</title>
+			<path inkscape:connector-curvature="0" id="path817" class="st34" d="M 0,792 H 19.27"/>
+		</g>
+		<g transform="matrix(0,1,1,0,-566.199,636.042)" v:groupContext="shape" v:mID="127" id="shape127-422">
+			<title id="title820">Sheet.127</title>
+			<path inkscape:connector-curvature="0" id="path822" class="st34" d="M 15.42,787.45 V 792 H 0"/>
+		</g>
+		<g transform="matrix(0,1,1,0,-567.716,639.896)" v:groupContext="shape" v:mID="128" id="shape128-425">
+			<title id="title825">Sheet.128</title>
+			<path inkscape:connector-curvature="0" id="path827" class="st19" d="M 0,785.93 V 792 l 7.71,-3.03 z"/>
+		</g>
+		<g transform="matrix(-1,0,0,1,224.444,-80.2973)" v:groupContext="shape" v:mID="129" id="shape129-427">
+			<title id="title830">Sheet.129</title>
+			<rect id="rect832" class="st19" height="6.3072" width="6.3072" y="785.69299" x="0"/>
+		</g>
+		<g transform="rotate(-90,20.8465,611.2345)" v:groupContext="shape" v:mID="130" id="shape130-429">
+			<title id="title835">Sheet.130</title>
+			<path inkscape:connector-curvature="0" id="path837" class="st30" d="M 0,792 H 13.59"/>
+		</g>
+		<g transform="rotate(-90,18.491,613.59)" v:groupContext="shape" v:mID="131" id="shape131-434">
+			<title id="title840">Sheet.131</title>
+			<path inkscape:connector-curvature="0" id="path842" class="st32" d="m 3.52,792 h 0.36 9.71"/>
+		</g>
+		<g transform="rotate(-90,23.202,608.879)" v:groupContext="shape" v:mID="132" id="shape132-441">
+			<title id="title845">Sheet.132</title>
+			<path inkscape:connector-curvature="0" id="path847" class="st33" d="M 3.52,792 H 3.88 17.47"/>
+		</g>
+		<g transform="translate(191.929,-156.069)" v:groupContext="shape" v:mID="133" id="shape133-446">
+			<title id="title850">Sheet.133</title>
+			<path inkscape:connector-curvature="0" id="path852" class="st19" d="M 19.32,787.5 H 0 L 2.41,792 H 16.9 Z"/>
+		</g>
+		<g transform="rotate(-90,56.2415,651.3115)" v:groupContext="shape" v:mID="134" id="shape134-448">
+			<title id="title855">Sheet.134</title>
+			<desc id="desc857">GPIO5</desc>
+			<v:textBlock v:margins="rect(2,2,2,2)"/>
+			<v:textRect height="5.70459" width="31.74" cy="789.148" cx="15.8698"/>
+			<rect id="rect859" class="st15" height="5.7045898" width="31.7395" y="786.29498" x="0"/>
+			<text id="text861" v:langID="1033" class="st16" y="790.95001" x="2"><v:paragraph/><v:tabList/>GPIO5</text>		</g>
+		<g transform="rotate(-90.027,57.214257,650.32529)" v:groupContext="shape" v:mID="135" id="shape135-451">
+			<title id="title864">Sheet.135</title>
+			<path inkscape:connector-curvature="0" id="path866" class="st34" d="M 0,792 H 54.55"/>
+		</g>
+		<g transform="matrix(0,1,1,0,-593.11,636.042)" v:groupContext="shape" v:mID="136" id="shape136-454">
+			<title id="title869">Sheet.136</title>
+			<path inkscape:connector-curvature="0" id="path871" class="st34" d="M 0,792 H 19.27"/>
+		</g>
+		<g transform="matrix(0,1,1,0,-588.558,636.042)" v:groupContext="shape" v:mID="137" id="shape137-457">
+			<title id="title874">Sheet.137</title>
+			<path inkscape:connector-curvature="0" id="path876" class="st34" d="M 15.42,787.45 V 792 H 0"/>
+		</g>
+		<g transform="matrix(0,1,1,0,-590.075,639.896)" v:groupContext="shape" v:mID="138" id="shape138-460">
+			<title id="title879">Sheet.138</title>
+			<path inkscape:connector-curvature="0" id="path881" class="st19" d="M 0,785.93 V 792 l 7.71,-3.03 z"/>
+		</g>
+		<g transform="matrix(-1,0,0,1,202.085,-80.2973)" v:groupContext="shape" v:mID="139" id="shape139-462">
+			<title id="title884">Sheet.139</title>
+			<rect id="rect886" class="st19" height="6.3072" width="6.3072" y="785.69299" x="0"/>
+		</g>
+		<g transform="rotate(-90,9.667,622.414)" v:groupContext="shape" v:mID="140" id="shape140-464">
+			<title id="title889">Sheet.140</title>
+			<path inkscape:connector-curvature="0" id="path891" class="st30" d="M 0,792 H 13.59"/>
+		</g>
+		<g transform="rotate(-90,7.3115,624.7695)" v:groupContext="shape" v:mID="141" id="shape141-469">
+			<title id="title894">Sheet.141</title>
+			<path inkscape:connector-curvature="0" id="path896" class="st32" d="m 3.52,792 h 0.36 9.71"/>
+		</g>
+		<g transform="rotate(-90,12.0225,620.0585)" v:groupContext="shape" v:mID="142" id="shape142-476">
+			<title id="title899">Sheet.142</title>
+			<path inkscape:connector-curvature="0" id="path901" class="st33" d="M 3.52,792 H 3.88 17.47"/>
+		</g>
+		<g transform="translate(169.569,-156.069)" v:groupContext="shape" v:mID="143" id="shape143-481">
+			<title id="title904">Sheet.143</title>
+			<path inkscape:connector-curvature="0" id="path906" class="st19" d="M 19.32,787.5 H 0 L 2.41,792 H 16.9 Z"/>
+		</g>
+		<g transform="rotate(-90,45.062,662.491)" v:groupContext="shape" v:mID="144" id="shape144-483">
+			<title id="title909">Sheet.144</title>
+			<desc id="desc911">GPIO4</desc>
+			<v:textBlock v:margins="rect(2,2,2,2)"/>
+			<v:textRect height="5.70459" width="31.74" cy="789.148" cx="15.8698"/>
+			<rect id="rect913" class="st15" height="5.7045898" width="31.7395" y="786.29498" x="0"/>
+			<text id="text915" v:langID="1033" class="st16" y="790.95001" x="2"><v:paragraph/><v:tabList/>GPIO4</text>		</g>
+		<g transform="rotate(-90.027,46.034757,661.49952)" v:groupContext="shape" v:mID="145" id="shape145-486">
+			<title id="title918">Sheet.145</title>
+			<path inkscape:connector-curvature="0" id="path920" class="st34" d="M 0,792 H 54.55"/>
+		</g>
+		<g transform="matrix(0,1,1,0,-615.469,636.042)" v:groupContext="shape" v:mID="146" id="shape146-489">
+			<title id="title923">Sheet.146</title>
+			<path inkscape:connector-curvature="0" id="path925" class="st34" d="M 0,792 H 19.27"/>
+		</g>
+		<g transform="matrix(0,1,1,0,-610.918,636.042)" v:groupContext="shape" v:mID="147" id="shape147-492">
+			<title id="title928">Sheet.147</title>
+			<path inkscape:connector-curvature="0" id="path930" class="st34" d="M 15.42,787.45 V 792 H 0"/>
+		</g>
+		<g transform="matrix(0,1,1,0,-612.07,639.896)" v:groupContext="shape" v:mID="148" id="shape148-495">
+			<title id="title933">Sheet.148</title>
+			<path inkscape:connector-curvature="0" id="path935" class="st19" d="M 0,785.93 V 792 l 7.71,-3.03 z"/>
+		</g>
+		<g transform="rotate(-90,19.861,627.744)" v:groupContext="shape" v:mID="149" id="shape149-497">
+			<title id="title938">Sheet.149</title>
+			<path inkscape:connector-curvature="0" id="path940" class="st19" d="M 0,785.93 V 792 l 7.71,-3.03 z"/>
+		</g>
+		<g transform="matrix(-1,0,0,1,179.725,-80.2973)" v:groupContext="shape" v:mID="150" id="shape150-499">
+			<title id="title943">Sheet.150</title>
+			<rect id="rect945" class="st19" height="6.3072" width="6.3072" y="785.69299" x="0"/>
+		</g>
+		<g transform="rotate(-90,-1.513,633.594)" v:groupContext="shape" v:mID="151" id="shape151-501">
+			<title id="title948">Sheet.151</title>
+			<path inkscape:connector-curvature="0" id="path950" class="st30" d="M 0,792 H 13.59"/>
+		</g>
+		<g transform="rotate(-90,-3.8685,635.9495)" v:groupContext="shape" v:mID="152" id="shape152-506">
+			<title id="title953">Sheet.152</title>
+			<path inkscape:connector-curvature="0" id="path955" class="st32" d="m 3.52,792 h 0.36 9.71"/>
+		</g>
+		<g transform="rotate(-90,0.8425,631.2385)" v:groupContext="shape" v:mID="153" id="shape153-513">
+			<title id="title958">Sheet.153</title>
+			<path inkscape:connector-curvature="0" id="path960" class="st33" d="M 3.52,792 H 3.88 17.47"/>
+		</g>
+		<g transform="translate(147.21,-156.069)" v:groupContext="shape" v:mID="154" id="shape154-518">
+			<title id="title963">Sheet.154</title>
+			<path inkscape:connector-curvature="0" id="path965" class="st19" d="M 19.32,787.5 H 0 L 2.41,792 H 16.9 Z"/>
+		</g>
+		<g transform="rotate(-90,33.882,673.671)" v:groupContext="shape" v:mID="155" id="shape155-520">
+			<title id="title968">Sheet.155</title>
+			<desc id="desc970">GPIO3</desc>
+			<v:textBlock v:margins="rect(2,2,2,2)"/>
+			<v:textRect height="5.70459" width="31.74" cy="789.148" cx="15.8698"/>
+			<rect id="rect972" class="st15" height="5.7045898" width="31.7395" y="786.29498" x="0"/>
+			<text id="text974" v:langID="1033" class="st16" y="790.95001" x="2"><v:paragraph/><v:tabList/>GPIO3</text>		</g>
+		<g transform="rotate(-90.027,34.854757,672.67426)" v:groupContext="shape" v:mID="156" id="shape156-523">
+			<title id="title977">Sheet.156</title>
+			<path inkscape:connector-curvature="0" id="path979" class="st34" d="M 0,792 H 54.55"/>
+		</g>
+		<g transform="matrix(0,1,1,0,-637.828,636.042)" v:groupContext="shape" v:mID="157" id="shape157-526">
+			<title id="title982">Sheet.157</title>
+			<path inkscape:connector-curvature="0" id="path984" class="st34" d="M 0,792 H 19.27"/>
+		</g>
+		<g transform="matrix(0,1,1,0,-633.277,636.042)" v:groupContext="shape" v:mID="158" id="shape158-529">
+			<title id="title987">Sheet.158</title>
+			<path inkscape:connector-curvature="0" id="path989" class="st34" d="M 15.42,787.45 V 792 H 0"/>
+		</g>
+		<g transform="matrix(0,1,1,0,-634.794,639.896)" v:groupContext="shape" v:mID="159" id="shape159-532">
+			<title id="title992">Sheet.159</title>
+			<path inkscape:connector-curvature="0" id="path994" class="st19" d="M 0,785.93 V 792 l 7.71,-3.03 z"/>
+		</g>
+		<g transform="rotate(-90,8.681,638.924)" v:groupContext="shape" v:mID="160" id="shape160-534">
+			<title id="title997">Sheet.160</title>
+			<path inkscape:connector-curvature="0" id="path999" class="st19" d="M 0,785.93 V 792 l 7.71,-3.03 z"/>
+		</g>
+		<g transform="matrix(-1,0,0,1,157.366,-80.2973)" v:groupContext="shape" v:mID="161" id="shape161-536">
+			<title id="title1002">Sheet.161</title>
+			<rect id="rect1004" class="st19" height="6.3072" width="6.3072" y="785.69299" x="0"/>
+		</g>
+		<g transform="rotate(-90,-12.6925,644.7735)" v:groupContext="shape" v:mID="162" id="shape162-538">
+			<title id="title1007">Sheet.162</title>
+			<path inkscape:connector-curvature="0" id="path1009" class="st30" d="M 0,792 H 13.59"/>
+		</g>
+		<g transform="rotate(-90,-15.048,647.129)" v:groupContext="shape" v:mID="163" id="shape163-543">
+			<title id="title1012">Sheet.163</title>
+			<path inkscape:connector-curvature="0" id="path1014" class="st32" d="m 3.52,792 h 0.36 9.71"/>
+		</g>
+		<g transform="translate(124.85,-156.069)" v:groupContext="shape" v:mID="164" id="shape164-550">
+			<title id="title1017">Sheet.164</title>
+			<path inkscape:connector-curvature="0" id="path1019" class="st19" d="M 19.32,787.5 H 0 L 2.41,792 H 16.9 Z"/>
+		</g>
+		<g transform="rotate(-90,22.7025,684.8505)" v:groupContext="shape" v:mID="165" id="shape165-552">
+			<title id="title1022">Sheet.165</title>
+			<desc id="desc1024">GPIO2</desc>
+			<v:textBlock v:margins="rect(2,2,2,2)"/>
+			<v:textRect height="5.70459" width="31.74" cy="789.148" cx="15.8698"/>
+			<rect id="rect1026" class="st15" height="5.7045898" width="31.7395" y="786.29498" x="0"/>
+			<text id="text1028" v:langID="1033" class="st16" y="790.95001" x="2"><v:paragraph/><v:tabList/>GPIO2</text>		</g>
+		<g transform="rotate(-90.027,23.675257,683.84849)" v:groupContext="shape" v:mID="166" id="shape166-555">
+			<title id="title1031">Sheet.166</title>
+			<path inkscape:connector-curvature="0" id="path1033" class="st34" d="M 0,792 H 54.55"/>
+		</g>
+		<g transform="matrix(0,1,1,0,-660.188,636.042)" v:groupContext="shape" v:mID="167" id="shape167-558">
+			<title id="title1036">Sheet.167</title>
+			<path inkscape:connector-curvature="0" id="path1038" class="st34" d="M 0,792 H 19.27"/>
+		</g>
+		<g transform="matrix(0,1,1,0,-655.636,636.042)" v:groupContext="shape" v:mID="168" id="shape168-561">
+			<title id="title1041">Sheet.168</title>
+			<path inkscape:connector-curvature="0" id="path1043" class="st34" d="M 15.42,787.45 V 792 H 0"/>
+		</g>
+		<g transform="rotate(-90,-2.4985,650.1035)" v:groupContext="shape" v:mID="169" id="shape169-564">
+			<title id="title1046">Sheet.169</title>
+			<path inkscape:connector-curvature="0" id="path1048" class="st19" d="M 0,785.93 V 792 l 7.71,-3.03 z"/>
+		</g>
+		<g transform="matrix(-1,0,0,1,135.006,-80.2973)" v:groupContext="shape" v:mID="170" id="shape170-566">
+			<title id="title1051">Sheet.170</title>
+			<rect id="rect1053" class="st19" height="6.3072" width="6.3072" y="785.69299" x="0"/>
+		</g>
+		<g transform="rotate(180,67.478,717.67)" v:layerMember="3" v:groupContext="shape" v:mID="171" id="shape171-568">
+			<title id="title1056">Sheet.171</title>
+			<path inkscape:connector-curvature="0" id="path1058" class="st25" d="M 0,792 H 9.66"/>
+		</g>
+		<g transform="rotate(-90,-3.6585,663.0445)" v:layerMember="3" v:groupContext="shape" v:mID="172" id="shape172-571">
+			<title id="title1061">Sheet.172</title>
+			<path inkscape:connector-curvature="0" id="path1063" class="st25" d="M 0,792 H 16.04"/>
+		</g>
+		<g transform="rotate(-90,-23.8725,655.9535)" v:groupContext="shape" v:mID="173" id="shape173-574">
+			<title id="title1066">Sheet.173</title>
+			<path inkscape:connector-curvature="0" id="path1068" class="st30" d="M 0,792 H 13.59"/>
+		</g>
+		<g transform="rotate(-90,-26.2275,658.3085)" v:groupContext="shape" v:mID="174" id="shape174-579">
+			<title id="title1071">Sheet.174</title>
+			<path inkscape:connector-curvature="0" id="path1073" class="st32" d="m 3.52,792 h 0.36 9.71"/>
+		</g>
+		<g transform="rotate(-90,-21.517,653.598)" v:groupContext="shape" v:mID="175" id="shape175-586">
+			<title id="title1076">Sheet.175</title>
+			<path inkscape:connector-curvature="0" id="path1078" class="st33" d="M 3.52,792 H 3.88 17.47"/>
+		</g>
+		<g transform="translate(102.491,-156.069)" v:groupContext="shape" v:mID="176" id="shape176-591">
+			<title id="title1081">Sheet.176</title>
+			<path inkscape:connector-curvature="0" id="path1083" class="st19" d="M 19.32,787.5 H 0 L 2.41,792 H 16.9 Z"/>
+		</g>
+		<g transform="rotate(-90,11.523,696.03)" v:groupContext="shape" v:mID="177" id="shape177-593">
+			<title id="title1086">Sheet.177</title>
+			<desc id="desc1088">GPIO1</desc>
+			<v:textBlock v:margins="rect(2,2,2,2)"/>
+			<v:textRect height="5.70459" width="31.74" cy="789.148" cx="15.8698"/>
+			<rect id="rect1090" class="st15" height="5.7045898" width="31.7395" y="786.29498" x="0"/>
+			<text id="text1092" v:langID="1033" class="st16" y="790.95001" x="2"><v:paragraph/><v:tabList/>GPIO1</text>		</g>
+		<g transform="rotate(-90.027,12.495757,695.02272)" v:groupContext="shape" v:mID="178" id="shape178-596">
+			<title id="title1095">Sheet.178</title>
+			<path inkscape:connector-curvature="0" id="path1097" class="st34" d="M 0,792 H 54.55"/>
+		</g>
+		<g transform="matrix(0,1,1,0,-682.547,636.042)" v:groupContext="shape" v:mID="179" id="shape179-599">
+			<title id="title1100">Sheet.179</title>
+			<path inkscape:connector-curvature="0" id="path1102" class="st34" d="M 0,792 H 19.27"/>
+		</g>
+		<g transform="matrix(0,1,1,0,-677.996,636.042)" v:groupContext="shape" v:mID="180" id="shape180-602">
+			<title id="title1105">Sheet.180</title>
+			<path inkscape:connector-curvature="0" id="path1107" class="st34" d="M 15.42,787.45 V 792 H 0"/>
+		</g>
+		<g transform="rotate(-90,-13.678,661.283)" v:groupContext="shape" v:mID="181" id="shape181-605">
+			<title id="title1110">Sheet.181</title>
+			<path inkscape:connector-curvature="0" id="path1112" class="st19" d="M 0,785.93 V 792 l 7.71,-3.03 z"/>
+		</g>
+		<g transform="matrix(-1,0,0,1,112.647,-80.2973)" v:groupContext="shape" v:mID="182" id="shape182-607">
+			<title id="title1115">Sheet.182</title>
+			<rect id="rect1117" class="st19" height="6.3072" width="6.3072" y="785.69299" x="0"/>
+		</g>
+		<g transform="rotate(180,56.263,717.67)" v:layerMember="3" v:groupContext="shape" v:mID="183" id="shape183-609">
+			<title id="title1120">Sheet.183</title>
+			<path inkscape:connector-curvature="0" id="path1122" class="st25" d="M 0,792 H 9.59"/>
+		</g>
+		<g transform="rotate(-90,-14.838,674.224)" v:layerMember="3" v:groupContext="shape" v:mID="184" id="shape184-612">
+			<title id="title1125">Sheet.184</title>
+			<path inkscape:connector-curvature="0" id="path1127" class="st25" d="M 0,792 H 16.04"/>
+		</g>
+		<g transform="matrix(-1,0,0,1,210.176,-135.984)" v:groupContext="shape" v:mID="185" id="shape185-615">
+			<title id="title1130">Sheet.185</title>
+			<path inkscape:connector-curvature="0" id="path1132" class="st29" d="M 0,792 H 131.5"/>
+		</g>
+		<g transform="matrix(-1,0,0,1,344.18,-135.933)" v:groupContext="shape" v:mID="186" id="shape186-618">
+			<title id="title1135">Sheet.186</title>
+			<path inkscape:connector-curvature="0" id="path1137" class="st29" d="M 0,792 H 133.98"/>
+		</g>
+		<g transform="matrix(-1,0,0,1,187.43,-128.733)" v:groupContext="shape" v:mID="187" id="shape187-621">
+			<title id="title1140">Sheet.187</title>
+			<path inkscape:connector-curvature="0" id="path1142" class="st18" d="M 0,792 H 104.25"/>
+		</g>
+		<g transform="matrix(0,1,1,0,-657.154,639.896)" v:groupContext="shape" v:mID="188" id="shape188-624">
+			<title id="title1145">Sheet.188</title>
+			<path inkscape:connector-curvature="0" id="path1147" class="st19" d="M 0,785.93 V 792 l 7.71,-3.03 z"/>
+		</g>
+		<g transform="matrix(0,1,1,0,-679.513,639.896)" v:groupContext="shape" v:mID="189" id="shape189-626">
+			<title id="title1150">Sheet.189</title>
+			<path inkscape:connector-curvature="0" id="path1152" class="st19" d="M 0,785.93 V 792 l 7.71,-3.03 z"/>
+		</g>
+		<g transform="matrix(1,0,0,-1,294.495,1435.97)" v:layerMember="3" v:groupContext="shape" v:mID="190" id="shape190-628">
+			<title id="title1155">Sheet.190</title>
+			<path inkscape:connector-curvature="0" id="path1157" class="st29" d="M 0,792 H 4.84"/>
+		</g>
+		<g transform="matrix(0,-1,-1,0,1091.33,655.786)" v:layerMember="3" v:groupContext="shape" v:mID="191" id="shape191-631">
+			<title id="title1160">Sheet.191</title>
+			<path inkscape:connector-curvature="0" id="path1162" class="st29" d="M 0,792 H 11.81"/>
+		</g>
+		<g transform="matrix(1,0,0,-1,160.339,1435.96)" v:layerMember="3" v:groupContext="shape" v:mID="192" id="shape192-634">
+			<title id="title1165">Sheet.192</title>
+			<path inkscape:connector-curvature="0" id="path1167" class="st18" d="M 0,792 H 4.84"/>
+		</g>
+		<g transform="matrix(0,-1,-1,0,957.176,663.145)" v:layerMember="3" v:groupContext="shape" v:mID="193" id="shape193-637">
+			<title id="title1170">Sheet.193</title>
+			<path inkscape:connector-curvature="0" id="path1172" class="st18" d="M 0,792 H 19.18"/>
+		</g>
+		<g transform="matrix(1,0,0,-1,182.839,1435.91)" v:layerMember="3" v:groupContext="shape" v:mID="194" id="shape194-640">
+			<title id="title1175">Sheet.194</title>
+			<path inkscape:connector-curvature="0" id="path1177" class="st18" d="M 0,792 H 4.84"/>
+		</g>
+		<g transform="matrix(0,-1,-1,0,979.676,663.098)" v:layerMember="3" v:groupContext="shape" v:mID="195" id="shape195-643">
+			<title id="title1180">Sheet.195</title>
+			<path inkscape:connector-curvature="0" id="path1182" class="st18" d="M 0,792 H 19.18"/>
+		</g>
+		<g transform="matrix(1,0,0,-1,200.464,1435.97)" v:layerMember="3" v:groupContext="shape" v:mID="196" id="shape196-646">
+			<title id="title1185">Sheet.196</title>
+			<path inkscape:connector-curvature="0" id="path1187" class="st29" d="M 0,792 H 9.71"/>
+		</g>
+		<g transform="matrix(0,-1,-1,0,1002.18,656.016)" v:layerMember="3" v:groupContext="shape" v:mID="197" id="shape197-649">
+			<title id="title1190">Sheet.197</title>
+			<path inkscape:connector-curvature="0" id="path1192" class="st29" d="M 0,792 H 12.04"/>
+		</g>
+		<g transform="matrix(1,0,0,-1,222.682,1435.97)" v:layerMember="3" v:groupContext="shape" v:mID="198" id="shape198-652">
+			<title id="title1195">Sheet.198</title>
+			<path inkscape:connector-curvature="0" id="path1197" class="st29" d="M 0,792 H 9.71"/>
+		</g>
+		<g transform="matrix(0,-1,-1,0,1024.39,655.786)" v:layerMember="3" v:groupContext="shape" v:mID="199" id="shape199-655">
+			<title id="title1200">Sheet.199</title>
+			<path inkscape:connector-curvature="0" id="path1202" class="st29" d="M 0,792 H 11.81"/>
+		</g>
+		<g transform="matrix(1,0,0,-1,249.889,1435.97)" v:layerMember="3" v:groupContext="shape" v:mID="200" id="shape200-658">
+			<title id="title1205">Sheet.200</title>
+			<path inkscape:connector-curvature="0" id="path1207" class="st29" d="M 0,792 H 4.84"/>
+		</g>
+		<g transform="matrix(0,-1,-1,0,1046.73,655.786)" v:layerMember="3" v:groupContext="shape" v:mID="201" id="shape201-661">
+			<title id="title1210">Sheet.201</title>
+			<path inkscape:connector-curvature="0" id="path1212" class="st29" d="M 0,792 H 11.81"/>
+		</g>
+		<g transform="rotate(-90,31.0405,616.5645)" v:groupContext="shape" v:mID="202" id="shape202-664">
+			<title id="title1215">Sheet.202</title>
+			<path inkscape:connector-curvature="0" id="path1217" class="st19" d="M 0,785.93 V 792 l 7.71,-3.03 z"/>
+		</g>
+		<g transform="rotate(-90,42.22,605.385)" v:groupContext="shape" v:mID="203" id="shape203-666">
+			<title id="title1220">Sheet.203</title>
+			<path inkscape:connector-curvature="0" id="path1222" class="st19" d="M 0,785.93 V 792 l 7.71,-3.03 z"/>
+		</g>
+		<g transform="matrix(1,0,0,-1,272.22,1435.97)" v:layerMember="3" v:groupContext="shape" v:mID="204" id="shape204-668">
+			<title id="title1225">Sheet.204</title>
+			<path inkscape:connector-curvature="0" id="path1227" class="st29" d="M 0,792 H 4.84"/>
+		</g>
+		<g transform="matrix(0,-1,-1,0,1069.06,655.786)" v:layerMember="3" v:groupContext="shape" v:mID="205" id="shape205-671">
+			<title id="title1230">Sheet.205</title>
+			<path inkscape:connector-curvature="0" id="path1232" class="st29" d="M 0,792 H 11.81"/>
+		</g>
+		<g transform="matrix(1,0,0,-1,339.214,1435.97)" v:layerMember="3" v:groupContext="shape" v:mID="206" id="shape206-674">
+			<title id="title1235">Sheet.206</title>
+			<path inkscape:connector-curvature="0" id="path1237" class="st29" d="M 0,792 H 4.84"/>
+		</g>
+		<g transform="matrix(0,-1,-1,0,1136.05,655.786)" v:layerMember="3" v:groupContext="shape" v:mID="207" id="shape207-677">
+			<title id="title1240">Sheet.207</title>
+			<path inkscape:connector-curvature="0" id="path1242" class="st29" d="M 0,792 H 11.81"/>
+		</g>
+		<g transform="matrix(1,0,0,-1,316.939,1435.97)" v:layerMember="3" v:groupContext="shape" v:mID="208" id="shape208-680">
+			<title id="title1245">Sheet.208</title>
+			<path inkscape:connector-curvature="0" id="path1247" class="st29" d="M 0,792 H 4.84"/>
+		</g>
+		<g transform="matrix(0,-1,-1,0,1113.78,655.786)" v:layerMember="3" v:groupContext="shape" v:mID="209" id="shape209-683">
+			<title id="title1250">Sheet.209</title>
+			<path inkscape:connector-curvature="0" id="path1252" class="st29" d="M 0,792 H 11.81"/>
+		</g>
+		<g transform="translate(275.013,-427.642)" v:layerMember="1" v:groupContext="shape" v:mID="210" id="shape210-686">
+			<title id="title1255">Sheet.210</title>
+			<path inkscape:connector-curvature="0" id="path1257" class="st35" d="M 0,792 H 134.14"/>
+		</g>
+		<g transform="rotate(90,418.2895,783.2105)" v:layerMember="1" v:groupContext="shape" v:mID="211" id="shape211-689">
+			<title id="title1260">Sheet.211</title>
+			<path inkscape:connector-curvature="0" id="path1262" class="st35" d="M 0,792 H 330.35"/>
+		</g>
+		<g transform="rotate(90,342.8795,721.3005)" v:layerMember="0" v:groupContext="shape" v:mID="212" id="shape212-692">
+			<title id="title1265">Sheet.212</title>
+			<path inkscape:connector-curvature="0" id="path1267" class="st36" d="M 4.24,792 H 4.6 9.86"/>
+		</g>
+		<g transform="rotate(0.0468368,802994.29,487020.18)" v:layerMember="0" v:groupContext="shape" v:mID="213" id="shape213-700">
+			<title id="title1270">Sheet.213</title>
+			<path inkscape:connector-curvature="0" id="path1272" class="st6" d="M 0,792 H 184.89"/>
+		</g>
+		<g transform="translate(320.114,-585)" v:groupContext="shape" v:mID="214" id="shape214-705">
+			<title id="title1275">Sheet.214</title>
+			<desc id="desc1277">Real-Time Clock (RTC) With Calendar</desc>
+			<v:textBlock v:margins="rect(2,2,2,2)"/>
+			<v:textRect height="19.888" width="72.06" cy="782.056" cx="36.0252"/>
+			<rect id="rect1279" class="st1" height="19.888" width="72.050499" y="772.112" x="0"/>
+			<text id="text1283" v:langID="1033" class="st21" y="779.96002" x="10.16"><v:paragraph v:horizAlign="1"/><v:tabList/>Real-Time Clock<v:newlineChar/><tspan id="tspan1281" class="st17" dy="1.2em" x="3.3499999">(RTC) With Calendar</tspan></text>		</g>
+		<g v:groupContext="group" v:mID="215" transform="translate(411.964,-327.503)" id="group215-709">
+			<title id="title1286">Sheet.215</title>
+			<g transform="translate(2.0364,-15.5666)" v:layerMember="1" v:groupContext="shape" v:mID="216" id="shape216-710">
+				<title id="title1288">Sheet.216</title>
+				<path inkscape:connector-curvature="0" id="path1290" class="st12" d="M 0,792 H 39.61"/>
+			</g>
+			<g transform="translate(15.1424)" v:layerMember="0" v:groupContext="shape" v:mID="217" id="shape217-715">
+				<title id="title1293">Sheet.217</title>
+				<path inkscape:connector-curvature="0" id="path1295" class="st37" d="M 0,792 H 25.5"/>
+			</g>
+		</g>
+		<g v:groupContext="group" v:mID="218" transform="translate(411.956,-154.335)" id="group218-721">
+			<title id="title1299">Sheet.218</title>
+			<g v:groupContext="group" v:mID="219" transform="translate(0,-22.4186)" id="group219-722">
+				<title id="title1301">Sheet.219</title>
+				<g transform="translate(15.2437)" v:layerMember="0" v:groupContext="shape" v:mID="220" id="shape220-723">
+					<title id="title1303">Sheet.220</title>
+					<path inkscape:connector-curvature="0" id="path1305" class="st39" d="M 0,792 H 26.13"/>
+				</g>
+				<g transform="translate(2.39019,-15.5666)" v:layerMember="1" v:groupContext="shape" v:mID="221" id="shape221-729">
+					<title id="title1308">Sheet.221</title>
+					<path inkscape:connector-curvature="0" id="path1310" class="st12" d="M 0,792 H 39.26"/>
+				</g>
+			</g>
+			<g v:groupContext="group" v:mID="222" transform="translate(46.2531)" id="group222-734">
+				<title id="title1314">Sheet.222</title>
+				<g v:groupContext="shape" v:mID="223" id="shape223-735">
+					<title id="title1316">Sheet.223</title>
+					<desc id="desc1318">BUCK5 2 A Over-Current Monitor, Short Circuit Monitor, SW Sho...</desc>
+					<v:textBlock v:margins="rect(2,2,2,2)"/>
+					<v:textRect height="60.4038" width="80.65" cy="761.798" cx="40.3234"/>
+					<rect id="rect1320" class="st41" height="60.403801" width="80.646896" y="731.59601" x="0"/>
+					<text id="text1334" v:langID="1033" class="st21" y="742.90002" x="28.65"><v:paragraph v:horizAlign="1"/><v:tabList/>BUCK5<v:newlineChar/><v:newlineChar/><tspan id="tspan1322" class="st17" dy="2.4000001em" x="35.07">2 A<v:newlineChar/></tspan><tspan id="tspan1324" class="st17" dy="1.2em" x="6.29">Over</tspan>-Current Monitor<tspan id="tspan1326" v:langID="1035" class="st17">,<v:newlineChar/></tspan><tspan id="tspan1328" class="st17" dy="1.2em" x="7.4499998">Short Circuit Monitor</tspan><tspan id="tspan1330" v:langID="1035" class="st17">,<v:newlineChar/></tspan><tspan id="tspan1332" v:langID="1035" class="st17" dy="1.2em" x="12.7">SW Short Monitor</tspan></text>				</g>
+				<g v:groupContext="group" v:mID="224" transform="translate(77.2317,-5.57365)" id="group224-744">
+					<title id="title1337">Sheet.224</title>
+					<g v:groupContext="group" v:mID="225" id="group225-745">
+						<title id="title1339">Sheet.225</title>
+						<g transform="rotate(180,26.834,790.425)" v:groupContext="shape" v:mID="226" id="shape226-746">
+							<title id="title1341">Sheet.226</title>
+							<path inkscape:connector-curvature="0" id="path1343" class="st34" d="M 0,792 H 49.99"/>
+						</g>
+						<g transform="translate(0,-3.1536)" v:groupContext="shape" v:mID="227" id="shape227-749">
+							<title id="title1346">Sheet.227</title>
+							<desc id="desc1348">FB_B5</desc>
+							<v:textBlock v:margins="rect(2,2,2,2)"/>
+							<v:textRect height="10.5059" width="53" cy="786.747" cx="26.5"/>
+							<rect id="rect1350" class="st15" height="10.5059" width="53" y="781.49402" x="0"/>
+							<text id="text1352" v:langID="1033" class="st16" y="788.54999" x="32.66"><v:paragraph v:horizAlign="2"/><v:tabList/>FB_B5</text>						</g>
+						<g transform="matrix(-1,0,0,1,58.3589,0)" v:groupContext="shape" v:mID="228" id="shape228-752">
+							<title id="title1355">Sheet.228</title>
+							<rect id="rect1357" class="st19" height="6.3072" width="6.3072" y="785.69299" x="0"/>
+						</g>
+					</g>
+					<g v:groupContext="group" v:mID="229" transform="translate(0,-17.7985)" id="group229-754">
+						<title id="title1361">Sheet.229</title>
+						<g transform="rotate(180,26.834,790.425)" v:groupContext="shape" v:mID="230" id="shape230-755">
+							<title id="title1363">Sheet.230</title>
+							<path inkscape:connector-curvature="0" id="path1365" class="st34" d="M 0,792 H 49.99"/>
+						</g>
+						<g transform="translate(0,-3.1536)" v:groupContext="shape" v:mID="231" id="shape231-758">
+							<title id="title1368">Sheet.231</title>
+							<desc id="desc1370">SW_B5</desc>
+							<v:textBlock v:margins="rect(2,2,2,2)"/>
+							<v:textRect height="10.5059" width="53" cy="786.747" cx="26.5"/>
+							<rect id="rect1372" class="st15" height="10.5059" width="53" y="781.49402" x="0"/>
+							<text id="text1374" v:langID="1033" class="st16" y="788.54999" x="30.66"><v:paragraph v:horizAlign="2"/><v:tabList/>SW_B5</text>						</g>
+						<g transform="matrix(-1,0,0,1,58.3589,0)" v:groupContext="shape" v:mID="232" id="shape232-761">
+							<title id="title1377">Sheet.232</title>
+							<rect id="rect1379" class="st19" height="6.3072" width="6.3072" y="785.69299" x="0"/>
+						</g>
+					</g>
+					<g v:groupContext="group" v:mID="233" transform="translate(0,-35.597)" id="group233-763">
+						<title id="title1383">Sheet.233</title>
+						<g transform="rotate(180,26.834,790.425)" v:groupContext="shape" v:mID="234" id="shape234-764">
+							<title id="title1385">Sheet.234</title>
+							<path inkscape:connector-curvature="0" id="path1387" class="st34" d="M 0,792 H 49.99"/>
+						</g>
+						<g transform="translate(0,-3.1536)" v:groupContext="shape" v:mID="235" id="shape235-767">
+							<title id="title1390">Sheet.235</title>
+							<desc id="desc1392">PVIN_B5</desc>
+							<v:textBlock v:margins="rect(2,2,2,2)"/>
+							<v:textRect height="10.5059" width="53" cy="786.747" cx="26.5"/>
+							<rect id="rect1394" class="st15" height="10.5059" width="53" y="781.49402" x="0"/>
+							<text id="text1396" v:langID="1033" class="st16" y="788.54999" x="26.32"><v:paragraph v:horizAlign="2"/><v:tabList/>PVIN_B5</text>						</g>
+						<g transform="matrix(-1,0,0,1,58.3589,0)" v:groupContext="shape" v:mID="236" id="shape236-770">
+							<title id="title1399">Sheet.236</title>
+							<rect id="rect1401" class="st19" height="6.3072" width="6.3072" y="785.69299" x="0"/>
+						</g>
+					</g>
+				</g>
+			</g>
+		</g>
+		<g v:groupContext="group" v:mID="237" transform="translate(411.964,-223.522)" id="group237-772">
+			<title id="title1408">Sheet.237</title>
+			<g v:groupContext="group" v:mID="238" transform="translate(46.2455,-69.1875)" id="group238-773">
+				<title id="title1410">Sheet.238</title>
+				<g v:groupContext="shape" v:mID="239" id="shape239-774">
+					<title id="title1412">Sheet.239</title>
+					<desc id="desc1414">BUCK3 3.5 A Over-Current Monitor, Short Circuit Monitor, SW S...</desc>
+					<v:textBlock v:margins="rect(2,2,2,2)"/>
+					<v:textRect height="60.4038" width="80.65" cy="761.798" cx="40.3234"/>
+					<rect id="rect1416" class="st41" height="60.403801" width="80.646896" y="731.59601" x="0"/>
+					<text id="text1430" v:langID="1033" class="st21" y="742.90002" x="28.65"><v:paragraph v:horizAlign="1"/><v:tabList/>BUCK3<v:newlineChar/><v:newlineChar/><tspan id="tspan1418" class="st17" dy="2.4000001em" x="32.150002">3.5 A<v:newlineChar/></tspan><tspan id="tspan1420" class="st17" dy="1.2em" x="6.29">Over</tspan>-Current Monitor<tspan id="tspan1422" v:langID="1035" class="st17">,<v:newlineChar/></tspan><tspan id="tspan1424" class="st17" dy="1.2em" x="7.4499998">Short Circuit Monitor</tspan><tspan id="tspan1426" v:langID="1035" class="st17">,<v:newlineChar/></tspan><tspan id="tspan1428" v:langID="1035" class="st17" dy="1.2em" x="12.7">SW Short Monitor</tspan></text>				</g>
+				<g v:groupContext="group" v:mID="240" transform="translate(77.3224,-5.57365)" id="group240-783">
+					<title id="title1433">Sheet.240</title>
+					<g v:groupContext="group" v:mID="241" transform="translate(0,-35.597)" id="group241-784">
+						<title id="title1435">Sheet.241</title>
+						<g transform="rotate(180,26.834,790.425)" v:groupContext="shape" v:mID="242" id="shape242-785">
+							<title id="title1437">Sheet.242</title>
+							<path inkscape:connector-curvature="0" id="path1439" class="st34" d="M 0,792 H 49.99"/>
+						</g>
+						<g transform="translate(0,-3.1536)" v:groupContext="shape" v:mID="243" id="shape243-788">
+							<title id="title1442">Sheet.243</title>
+							<desc id="desc1444">PVIN_B3</desc>
+							<v:textBlock v:margins="rect(2,2,2,2)"/>
+							<v:textRect height="10.5059" width="53" cy="786.747" cx="26.5"/>
+							<rect id="rect1446" class="st15" height="10.5059" width="53" y="781.49402" x="0"/>
+							<text id="text1448" v:langID="1033" class="st16" y="788.54999" x="26.32"><v:paragraph v:horizAlign="2"/><v:tabList/>PVIN_B3</text>						</g>
+						<g transform="matrix(-1,0,0,1,58.3589,0)" v:groupContext="shape" v:mID="244" id="shape244-791">
+							<title id="title1451">Sheet.244</title>
+							<rect id="rect1453" class="st19" height="6.3072" width="6.3072" y="785.69299" x="0"/>
+						</g>
+					</g>
+					<g v:groupContext="group" v:mID="245" transform="translate(0,-17.7985)" id="group245-793">
+						<title id="title1457">Sheet.245</title>
+						<g transform="rotate(180,26.834,790.425)" v:groupContext="shape" v:mID="246" id="shape246-794">
+							<title id="title1459">Sheet.246</title>
+							<path inkscape:connector-curvature="0" id="path1461" class="st34" d="M 0,792 H 49.99"/>
+						</g>
+						<g transform="translate(0,-3.1536)" v:groupContext="shape" v:mID="247" id="shape247-797">
+							<title id="title1464">Sheet.247</title>
+							<desc id="desc1466">SW_B3</desc>
+							<v:textBlock v:margins="rect(2,2,2,2)"/>
+							<v:textRect height="10.5059" width="53" cy="786.747" cx="26.5"/>
+							<rect id="rect1468" class="st15" height="10.5059" width="53" y="781.49402" x="0"/>
+							<text id="text1470" v:langID="1033" class="st16" y="788.54999" x="30.66"><v:paragraph v:horizAlign="2"/><v:tabList/>SW_B3</text>						</g>
+						<g transform="matrix(-1,0,0,1,58.3589,0)" v:groupContext="shape" v:mID="248" id="shape248-800">
+							<title id="title1473">Sheet.248</title>
+							<rect id="rect1475" class="st19" height="6.3072" width="6.3072" y="785.69299" x="0"/>
+						</g>
+					</g>
+					<g v:groupContext="group" v:mID="249" id="group249-802">
+						<title id="title1479">Sheet.249</title>
+						<g transform="rotate(180,26.834,790.425)" v:groupContext="shape" v:mID="250" id="shape250-803">
+							<title id="title1481">Sheet.250</title>
+							<path inkscape:connector-curvature="0" id="path1483" class="st34" d="M 0,792 H 49.99"/>
+						</g>
+						<g transform="translate(0,-3.1536)" v:groupContext="shape" v:mID="251" id="shape251-806">
+							<title id="title1486">Sheet.251</title>
+							<desc id="desc1488">FB_B3</desc>
+							<v:textBlock v:margins="rect(2,2,2,2)"/>
+							<v:textRect height="10.5059" width="53" cy="786.747" cx="26.5"/>
+							<rect id="rect1490" class="st15" height="10.5059" width="53" y="781.49402" x="0"/>
+							<text id="text1492" v:langID="1033" class="st16" y="788.54999" x="32.66"><v:paragraph v:horizAlign="2"/><v:tabList/>FB_B3</text>						</g>
+						<g transform="matrix(-1,0,0,1,58.3589,0)" v:groupContext="shape" v:mID="252" id="shape252-809">
+							<title id="title1495">Sheet.252</title>
+							<rect id="rect1497" class="st19" height="6.3072" width="6.3072" y="785.69299" x="0"/>
+						</g>
+					</g>
+				</g>
+			</g>
+			<g v:groupContext="group" v:mID="253" transform="translate(0,-138.375)" id="group253-811">
+				<title id="title1503">Sheet.253</title>
+				<g transform="translate(46.2455)" v:groupContext="shape" v:mID="254" id="shape254-812">
+					<title id="title1505">Sheet.254</title>
+					<desc id="desc1507">BUCK2 3.5 A Over-Current Monitor, Short Circuit Monitor, SW S...</desc>
+					<v:textBlock v:margins="rect(2,2,2,2)"/>
+					<v:textRect height="60.4038" width="80.65" cy="761.798" cx="40.3234"/>
+					<rect id="rect1509" class="st41" height="60.403801" width="80.646896" y="731.59601" x="0"/>
+					<text id="text1523" v:langID="1033" class="st21" y="742.90002" x="28.65"><v:paragraph v:horizAlign="1"/><v:tabList/>BUCK2<v:newlineChar/><v:newlineChar/><tspan id="tspan1511" class="st17" dy="2.4000001em" x="32.150002">3.5 A<v:newlineChar/></tspan><tspan id="tspan1513" class="st17" dy="1.2em" x="6.29">Over</tspan>-Current Monitor<tspan id="tspan1515" v:langID="1035" class="st17">,<v:newlineChar/></tspan><tspan id="tspan1517" class="st17" dy="1.2em" x="7.4499998">Short Circuit Monitor</tspan><tspan id="tspan1519" v:langID="1035" class="st17">,<v:newlineChar/></tspan><tspan id="tspan1521" v:langID="1035" class="st17" dy="1.2em" x="12.7">SW Short Monitor</tspan></text>				</g>
+				<g v:groupContext="group" v:mID="255" transform="translate(123.608,-5.57365)" id="group255-821">
+					<title id="title1526">Sheet.255</title>
+					<g v:groupContext="group" v:mID="256" transform="translate(0,-35.597)" id="group256-822">
+						<title id="title1528">Sheet.256</title>
+						<g transform="rotate(180,26.834,790.425)" v:groupContext="shape" v:mID="257" id="shape257-823">
+							<title id="title1530">Sheet.257</title>
+							<path inkscape:connector-curvature="0" id="path1532" class="st34" d="M 0,792 H 49.99"/>
+						</g>
+						<g transform="translate(0,-3.1536)" v:groupContext="shape" v:mID="258" id="shape258-826">
+							<title id="title1535">Sheet.258</title>
+							<desc id="desc1537">PVIN_B2</desc>
+							<v:textBlock v:margins="rect(2,2,2,2)"/>
+							<v:textRect height="10.5059" width="53" cy="786.747" cx="26.5"/>
+							<rect id="rect1539" class="st15" height="10.5059" width="53" y="781.49402" x="0"/>
+							<text id="text1541" v:langID="1033" class="st16" y="788.54999" x="26.32"><v:paragraph v:horizAlign="2"/><v:tabList/>PVIN_B2</text>						</g>
+						<g transform="matrix(-1,0,0,1,58.3589,0)" v:groupContext="shape" v:mID="259" id="shape259-829">
+							<title id="title1544">Sheet.259</title>
+							<rect id="rect1546" class="st19" height="6.3072" width="6.3072" y="785.69299" x="0"/>
+						</g>
+					</g>
+					<g v:groupContext="group" v:mID="260" transform="translate(0,-17.7985)" id="group260-831">
+						<title id="title1550">Sheet.260</title>
+						<g transform="rotate(180,26.834,790.425)" v:groupContext="shape" v:mID="261" id="shape261-832">
+							<title id="title1552">Sheet.261</title>
+							<path inkscape:connector-curvature="0" id="path1554" class="st34" d="M 0,792 H 49.99"/>
+						</g>
+						<g transform="translate(0,-3.1536)" v:groupContext="shape" v:mID="262" id="shape262-835">
+							<title id="title1557">Sheet.262</title>
+							<desc id="desc1559">SW_B2</desc>
+							<v:textBlock v:margins="rect(2,2,2,2)"/>
+							<v:textRect height="10.5059" width="53" cy="786.747" cx="26.5"/>
+							<rect id="rect1561" class="st15" height="10.5059" width="53" y="781.49402" x="0"/>
+							<text id="text1563" v:langID="1033" class="st16" y="788.54999" x="30.66"><v:paragraph v:horizAlign="2"/><v:tabList/>SW_B2</text>						</g>
+						<g transform="matrix(-1,0,0,1,58.3589,0)" v:groupContext="shape" v:mID="263" id="shape263-838">
+							<title id="title1566">Sheet.263</title>
+							<rect id="rect1568" class="st19" height="6.3072" width="6.3072" y="785.69299" x="0"/>
+						</g>
+					</g>
+					<g v:groupContext="group" v:mID="264" id="group264-840">
+						<title id="title1572">Sheet.264</title>
+						<g transform="rotate(180,26.834,790.425)" v:groupContext="shape" v:mID="265" id="shape265-841">
+							<title id="title1574">Sheet.265</title>
+							<path inkscape:connector-curvature="0" id="path1576" class="st34" d="M 0,792 H 49.99"/>
+						</g>
+						<g transform="translate(0,-3.1536)" v:groupContext="shape" v:mID="266" id="shape266-844">
+							<title id="title1579">Sheet.266</title>
+							<desc id="desc1581">FB_B2</desc>
+							<v:textBlock v:margins="rect(2,2,2,2)"/>
+							<v:textRect height="10.5059" width="53" cy="786.747" cx="26.5"/>
+							<rect id="rect1583" class="st15" height="10.5059" width="53" y="781.49402" x="0"/>
+							<text id="text1585" v:langID="1033" class="st16" y="788.54999" x="32.66"><v:paragraph v:horizAlign="2"/><v:tabList/>FB_B2</text>						</g>
+						<g transform="matrix(-1,0,0,1,58.3589,0)" v:groupContext="shape" v:mID="267" id="shape267-847">
+							<title id="title1588">Sheet.267</title>
+							<rect id="rect1590" class="st19" height="6.3072" width="6.3072" y="785.69299" x="0"/>
+						</g>
+					</g>
+				</g>
+				<g v:groupContext="group" v:mID="268" transform="translate(0,-22.4186)" id="group268-849">
+					<title id="title1595">Sheet.268</title>
+					<g transform="translate(15.1424)" v:layerMember="0" v:groupContext="shape" v:mID="269" id="shape269-850">
+						<title id="title1597">Sheet.269</title>
+						<path inkscape:connector-curvature="0" id="path1599" class="st37" d="M 0,792 H 25.5"/>
+					</g>
+					<g transform="translate(2.38256,-15.5666)" v:layerMember="1" v:groupContext="shape" v:mID="270" id="shape270-855">
+						<title id="title1602">Sheet.270</title>
+						<path inkscape:connector-curvature="0" id="path1604" class="st12" d="M 0,792 H 39.26"/>
+					</g>
+				</g>
+			</g>
+			<g v:groupContext="group" v:mID="271" transform="translate(0.142366,-207.562)" id="group271-860">
+				<title id="title1609">Sheet.271</title>
+				<g v:groupContext="group" v:mID="272" transform="translate(46.1031)" id="group272-861">
+					<title id="title1611">Sheet.272</title>
+					<g v:groupContext="shape" v:mID="273" id="shape273-862">
+						<title id="title1613">Sheet.273</title>
+						<desc id="desc1615">BUCK1 3.5 A Over-Current Monitor, Short Circuit Monitor, SW S...</desc>
+						<v:textBlock v:margins="rect(2,2,2,2)"/>
+						<v:textRect height="60.4038" width="80.65" cy="761.798" cx="40.3234"/>
+						<rect id="rect1617" class="st41" height="60.403801" width="80.646896" y="731.59601" x="0"/>
+						<text id="text1631" v:langID="1033" class="st21" y="742.90002" x="28.65"><v:paragraph v:horizAlign="1"/><v:tabList/>BUCK1<v:newlineChar/><v:newlineChar/><tspan id="tspan1619" class="st17" dy="2.4000001em" x="32.150002">3.5 A<v:newlineChar/></tspan><tspan id="tspan1621" class="st17" dy="1.2em" x="6.29">Over</tspan>-Current Monitor<tspan id="tspan1623" v:langID="1035" class="st17">,<v:newlineChar/></tspan><tspan id="tspan1625" class="st17" dy="1.2em" x="7.4499998">Short Circuit Monitor</tspan><tspan id="tspan1627" v:langID="1035" class="st17">,<v:newlineChar/></tspan><tspan id="tspan1629" v:langID="1035" class="st17" dy="1.2em" x="12.7">SW Short Monitor</tspan></text>					</g>
+					<g v:groupContext="group" v:mID="274" transform="translate(77.3424,-5.57365)" id="group274-871">
+						<title id="title1634">Sheet.274</title>
+						<g v:groupContext="group" v:mID="275" transform="translate(0,-35.597)" id="group275-872">
+							<title id="title1636">Sheet.275</title>
+							<g transform="rotate(180,26.834,790.425)" v:groupContext="shape" v:mID="276" id="shape276-873">
+								<title id="title1638">Sheet.276</title>
+								<path inkscape:connector-curvature="0" id="path1640" class="st34" d="M 0,792 H 49.99"/>
+							</g>
+							<g transform="translate(0,-3.1536)" v:groupContext="shape" v:mID="277" id="shape277-876">
+								<title id="title1643">Sheet.277</title>
+								<desc id="desc1645">PVIN_B1</desc>
+								<v:textBlock v:margins="rect(2,2,2,2)"/>
+								<v:textRect height="10.5059" width="53" cy="786.747" cx="26.5"/>
+								<rect id="rect1647" class="st15" height="10.5059" width="53" y="781.49402" x="0"/>
+								<text id="text1649" v:langID="1033" class="st16" y="788.54999" x="26.32"><v:paragraph v:horizAlign="2"/><v:tabList/>PVIN_B1</text>							</g>
+							<g transform="matrix(-1,0,0,1,58.3589,0)" v:groupContext="shape" v:mID="278" id="shape278-879">
+								<title id="title1652">Sheet.278</title>
+								<rect id="rect1654" class="st19" height="6.3072" width="6.3072" y="785.69299" x="0"/>
+							</g>
+						</g>
+						<g v:groupContext="group" v:mID="279" transform="translate(0,-17.7985)" id="group279-881">
+							<title id="title1658">Sheet.279</title>
+							<g transform="rotate(180,26.834,790.425)" v:groupContext="shape" v:mID="280" id="shape280-882">
+								<title id="title1660">Sheet.280</title>
+								<path inkscape:connector-curvature="0" id="path1662" class="st34" d="M 0,792 H 49.99"/>
+							</g>
+							<g transform="translate(0,-3.1536)" v:groupContext="shape" v:mID="281" id="shape281-885">
+								<title id="title1665">Sheet.281</title>
+								<desc id="desc1667">SW_B1</desc>
+								<v:textBlock v:margins="rect(2,2,2,2)"/>
+								<v:textRect height="10.5059" width="53" cy="786.747" cx="26.5"/>
+								<rect id="rect1669" class="st15" height="10.5059" width="53" y="781.49402" x="0"/>
+								<text id="text1671" v:langID="1033" class="st16" y="788.54999" x="30.66"><v:paragraph v:horizAlign="2"/><v:tabList/>SW_B1</text>							</g>
+							<g transform="matrix(-1,0,0,1,58.3589,0)" v:groupContext="shape" v:mID="282" id="shape282-888">
+								<title id="title1674">Sheet.282</title>
+								<rect id="rect1676" class="st19" height="6.3072" width="6.3072" y="785.69299" x="0"/>
+							</g>
+						</g>
+						<g v:groupContext="group" v:mID="283" id="group283-890">
+							<title id="title1680">Sheet.283</title>
+							<g transform="rotate(180,26.834,790.425)" v:groupContext="shape" v:mID="284" id="shape284-891">
+								<title id="title1682">Sheet.284</title>
+								<path inkscape:connector-curvature="0" id="path1684" class="st34" d="M 0,792 H 49.99"/>
+							</g>
+							<g transform="translate(0,-3.1536)" v:groupContext="shape" v:mID="285" id="shape285-894">
+								<title id="title1687">Sheet.285</title>
+								<desc id="desc1689">FB_B1</desc>
+								<v:textBlock v:margins="rect(2,2,2,2)"/>
+								<v:textRect height="10.5059" width="53" cy="786.747" cx="26.5"/>
+								<rect id="rect1691" class="st15" height="10.5059" width="53" y="781.49402" x="0"/>
+								<text id="text1693" v:langID="1033" class="st16" y="788.54999" x="32.66"><v:paragraph v:horizAlign="2"/><v:tabList/>FB_B1</text>							</g>
+							<g transform="matrix(-1,0,0,1,58.3589,0)" v:groupContext="shape" v:mID="286" id="shape286-897">
+								<title id="title1696">Sheet.286</title>
+								<rect id="rect1698" class="st19" height="6.3072" width="6.3072" y="785.69299" x="0"/>
+							</g>
+						</g>
+					</g>
+				</g>
+				<g v:groupContext="group" v:mID="287" transform="translate(0,-22.4186)" id="group287-899">
+					<title id="title1704">Sheet.287</title>
+					<g transform="translate(14.8929)" v:layerMember="0" v:groupContext="shape" v:mID="288" id="shape288-900">
+						<title id="title1706">Sheet.288</title>
+						<path inkscape:connector-curvature="0" id="path1708" class="st37" d="M 0,792 H 25.61"/>
+					</g>
+					<g transform="translate(2.24019,-15.5666)" v:layerMember="1" v:groupContext="shape" v:mID="289" id="shape289-905">
+						<title id="title1711">Sheet.289</title>
+						<path inkscape:connector-curvature="0" id="path1713" class="st12" d="M 0,792 H 39.26"/>
+					</g>
+				</g>
+			</g>
+			<g v:groupContext="group" v:mID="290" transform="translate(0.0968827)" id="group290-910">
+				<title id="title1718">Sheet.290</title>
+				<g v:groupContext="group" v:mID="291" transform="translate(46.1486)" id="group291-911">
+					<title id="title1720">Sheet.291</title>
+					<g v:groupContext="shape" v:mID="292" id="shape292-912">
+						<title id="title1722">Sheet.292</title>
+						<desc id="desc1724">BUCK4 4 A (Single-Phase) or 3.5 A Over-Current Monitor, Short...</desc>
+						<v:textBlock v:margins="rect(2,2,2,2)"/>
+						<v:textRect height="60.4038" width="80.65" cy="761.798" cx="40.3234"/>
+						<rect id="rect1726" class="st41" height="60.403801" width="80.646896" y="731.59601" x="0"/>
+						<text id="text1742" v:langID="1033" class="st21" y="741.70001" x="28.65"><v:paragraph v:horizAlign="1"/><v:tabList/>BUCK4<v:newlineChar/><v:newlineChar/><tspan id="tspan1728" class="st17" dy="1.543em" x="10.95">4 A (Single</tspan>-Phase)<v:newlineChar/><tspan id="tspan1730" class="st17" dy="1.2em" x="27.09"> </tspan>or 3.5 A<v:newlineChar/><tspan id="tspan1732" class="st17" dy="1.2em" x="6.29">Over</tspan>-Current Monitor<tspan id="tspan1734" v:langID="1035" class="st17">,<v:newlineChar/></tspan><tspan id="tspan1736" class="st17" dy="1.2em" x="7.4499998">Short Circuit Monitor</tspan><tspan id="tspan1738" v:langID="1035" class="st17">,<v:newlineChar/></tspan><tspan id="tspan1740" v:langID="1035" class="st17" dy="1.2em" x="12.7">SW Short Monitor</tspan></text>					</g>
+					<g v:groupContext="group" v:mID="293" transform="translate(77.2719,-5.57365)" id="group293-922">
+						<title id="title1745">Sheet.293</title>
+						<g v:groupContext="group" v:mID="294" transform="translate(0,-35.597)" id="group294-923">
+							<title id="title1747">Sheet.294</title>
+							<g transform="rotate(180,26.834,790.425)" v:groupContext="shape" v:mID="295" id="shape295-924">
+								<title id="title1749">Sheet.295</title>
+								<path inkscape:connector-curvature="0" id="path1751" class="st34" d="M 0,792 H 49.99"/>
+							</g>
+							<g transform="translate(0,-3.1536)" v:groupContext="shape" v:mID="296" id="shape296-927">
+								<title id="title1754">Sheet.296</title>
+								<desc id="desc1756">PVIN_B4</desc>
+								<v:textBlock v:margins="rect(2,2,2,2)"/>
+								<v:textRect height="10.5059" width="53" cy="786.747" cx="26.5"/>
+								<rect id="rect1758" class="st15" height="10.5059" width="53" y="781.49402" x="0"/>
+								<text id="text1760" v:langID="1033" class="st16" y="788.54999" x="26.32"><v:paragraph v:horizAlign="2"/><v:tabList/>PVIN_B4</text>							</g>
+							<g transform="matrix(-1,0,0,1,58.3589,0)" v:groupContext="shape" v:mID="297" id="shape297-930">
+								<title id="title1763">Sheet.297</title>
+								<rect id="rect1765" class="st19" height="6.3072" width="6.3072" y="785.69299" x="0"/>
+							</g>
+						</g>
+						<g v:groupContext="group" v:mID="298" transform="translate(0,-17.7985)" id="group298-932">
+							<title id="title1769">Sheet.298</title>
+							<g transform="rotate(180,26.834,790.425)" v:groupContext="shape" v:mID="299" id="shape299-933">
+								<title id="title1771">Sheet.299</title>
+								<path inkscape:connector-curvature="0" id="path1773" class="st34" d="M 0,792 H 49.99"/>
+							</g>
+							<g transform="translate(0,-3.1536)" v:groupContext="shape" v:mID="300" id="shape300-936">
+								<title id="title1776">Sheet.300</title>
+								<desc id="desc1778">SW_B4</desc>
+								<v:textBlock v:margins="rect(2,2,2,2)"/>
+								<v:textRect height="10.5059" width="53" cy="786.747" cx="26.5"/>
+								<rect id="rect1780" class="st15" height="10.5059" width="53" y="781.49402" x="0"/>
+								<text id="text1782" v:langID="1033" class="st16" y="788.54999" x="30.66"><v:paragraph v:horizAlign="2"/><v:tabList/>SW_B4</text>							</g>
+							<g transform="matrix(-1,0,0,1,58.3589,0)" v:groupContext="shape" v:mID="301" id="shape301-939">
+								<title id="title1785">Sheet.301</title>
+								<rect id="rect1787" class="st19" height="6.3072" width="6.3072" y="785.69299" x="0"/>
+							</g>
+						</g>
+						<g v:groupContext="group" v:mID="302" id="group302-941">
+							<title id="title1791">Sheet.302</title>
+							<g transform="rotate(180,26.834,790.425)" v:groupContext="shape" v:mID="303" id="shape303-942">
+								<title id="title1793">Sheet.303</title>
+								<path inkscape:connector-curvature="0" id="path1795" class="st34" d="M 0,792 H 49.99"/>
+							</g>
+							<g transform="translate(0,-3.1536)" v:groupContext="shape" v:mID="304" id="shape304-945">
+								<title id="title1798">Sheet.304</title>
+								<desc id="desc1800">FB_B4</desc>
+								<v:textBlock v:margins="rect(2,2,2,2)"/>
+								<v:textRect height="10.5059" width="53" cy="786.747" cx="26.5"/>
+								<rect id="rect1802" class="st15" height="10.5059" width="53" y="781.49402" x="0"/>
+								<text id="text1804" v:langID="1033" class="st16" y="788.54999" x="32.66"><v:paragraph v:horizAlign="2"/><v:tabList/>FB_B4</text>							</g>
+							<g transform="matrix(-1,0,0,1,58.3589,0)" v:groupContext="shape" v:mID="305" id="shape305-948">
+								<title id="title1807">Sheet.305</title>
+								<rect id="rect1809" class="st19" height="6.3072" width="6.3072" y="785.69299" x="0"/>
+							</g>
+						</g>
+					</g>
+				</g>
+				<g v:groupContext="group" v:mID="306" transform="translate(0,-22.9316)" id="group306-950">
+					<title id="title1815">Sheet.306</title>
+					<g transform="translate(15.0267,-14.5406)" v:layerMember="0" v:groupContext="shape" v:mID="307" id="shape307-951">
+						<title id="title1817">Sheet.307</title>
+						<path inkscape:connector-curvature="0" id="path1819" class="st37" d="M 0,792 H 25.52"/>
+					</g>
+					<g transform="translate(2.28568)" v:layerMember="1" v:groupContext="shape" v:mID="308" id="shape308-956">
+						<title id="title1822">Sheet.308</title>
+						<path inkscape:connector-curvature="0" id="path1824" class="st12" d="M 0,792 H 38.91"/>
+					</g>
+				</g>
+			</g>
+		</g>
+		<g transform="translate(535.481,-96.4307)" v:groupContext="shape" v:mID="309" id="shape309-961">
+			<title id="title1830">Sheet.309</title>
+			<desc id="desc1832">EN_DRV</desc>
+			<v:textBlock v:margins="rect(2,2,2,2)"/>
+			<v:textRect height="10.5059" width="53" cy="786.747" cx="26.5"/>
+			<rect id="rect1834" class="st15" height="10.5059" width="53" y="781.49402" x="0"/>
+			<text id="text1836" v:langID="1033" class="st16" y="788.54999" x="26.66"><v:paragraph v:horizAlign="2"/><v:tabList/>EN_DRV</text>		</g>
+		<g transform="matrix(-1,0,0,1,593.84,-93.2771)" v:groupContext="shape" v:mID="310" id="shape310-964">
+			<title id="title1839">Sheet.310</title>
+			<rect id="rect1841" class="st19" height="6.3072" width="6.3072" y="785.69299" x="0"/>
+		</g>
+		<g transform="translate(535.481,-110.858)" v:groupContext="shape" v:mID="311" id="shape311-966">
+			<title id="title1844">Sheet.311</title>
+			<desc id="desc1846">nRST_OUT</desc>
+			<v:textBlock v:margins="rect(2,2,2,2)"/>
+			<v:textRect height="10.5059" width="53" cy="786.747" cx="26.5"/>
+			<rect id="rect1848" class="st15" height="10.5059" width="53" y="781.49402" x="0"/>
+			<text id="text1850" v:langID="1033" class="st16" y="788.54999" x="19.66"><v:paragraph v:horizAlign="2"/><v:tabList/>nRST_OUT</text>		</g>
+		<g transform="matrix(-1,0,0,1,593.84,-107.704)" v:groupContext="shape" v:mID="312" id="shape312-969">
+			<title id="title1853">Sheet.312</title>
+			<rect id="rect1855" class="st19" height="6.3072" width="6.3072" y="785.69299" x="0"/>
+		</g>
+		<g transform="rotate(90,321.6845,1019.2655)" v:layerMember="3" v:groupContext="shape" v:mID="313" id="shape313-971">
+			<title id="title1858">Sheet.313</title>
+			<path inkscape:connector-curvature="0" id="path1860" class="st28" d="M 0,792 H 4.84"/>
+		</g>
+		<g transform="rotate(180,274.4775,747.21)" v:layerMember="3" v:groupContext="shape" v:mID="314" id="shape314-974">
+			<title id="title1863">Sheet.314</title>
+			<path inkscape:connector-curvature="0" id="path1865" class="st28" d="M 0,792 H 13.15"/>
+		</g>
+		<g transform="translate(509.715,-84.5197)" v:groupContext="shape" v:mID="315" id="shape315-977">
+			<title id="title1868">All text this size (7-pt).487</title>
+			<desc id="desc1870">VCCA</desc>
+			<v:textBlock v:margins="rect(0,0,0,0)"/>
+			<v:textRect height="10.4062" width="24.47" cy="786.797" cx="12.2344"/>
+			<rect id="rect1872" class="st42" height="10.4062" width="24.4688" y="781.59399" x="0"/>
+			<text id="text1874" v:langID="1033" class="st21" y="788.90002" x="5.02"><v:paragraph v:horizAlign="2"/><v:tabList/>VCCA</text>		</g>
+		<g transform="translate(409.846,-96.4307)" v:layerMember="1" v:groupContext="shape" v:mID="316" id="shape316-980">
+			<title id="title1877">Sheet.316</title>
+			<path inkscape:connector-curvature="0" id="path1879" class="st43" d="M 0,792 H 172.96"/>
+		</g>
+		<g transform="matrix(1,0,0,-1,545.663,1484.58)" v:groupContext="shape" v:mID="317" id="shape317-986">
+			<title id="title1882">Sheet.317</title>
+			<path inkscape:connector-curvature="0" id="path1884" class="st19" d="M 0,785.93 V 792 l 7.71,-3.03 z"/>
+		</g>
+		<g transform="translate(409.846,-110.858)" v:layerMember="1" v:groupContext="shape" v:mID="318" id="shape318-988">
+			<title id="title1887">Sheet.318</title>
+			<path inkscape:connector-curvature="0" id="path1889" class="st43" d="M 0,792 H 172.96"/>
+		</g>
+		<g transform="matrix(1,0,0,-1,545.445,1470.09)" v:groupContext="shape" v:mID="319" id="shape319-993">
+			<title id="title1892">Sheet.319</title>
+			<path inkscape:connector-curvature="0" id="path1894" class="st19" d="M 0,785.93 V 792 l 7.71,-3.03 z"/>
+		</g>
+		<g transform="translate(535.431,-656.199)" v:groupContext="shape" v:mID="320" id="shape320-995">
+			<title id="title1897">Sheet.320</title>
+			<desc id="desc1899">nINT</desc>
+			<v:textBlock v:margins="rect(2,2,2,2)"/>
+			<v:textRect height="10.5059" width="53" cy="786.747" cx="26.5"/>
+			<rect id="rect1901" class="st15" height="10.5059" width="53" y="781.49402" x="0"/>
+			<text id="text1903" v:langID="1033" class="st16" y="788.54999" x="38"><v:paragraph v:horizAlign="2"/><v:tabList/>nINT</text>		</g>
+		<g transform="matrix(-1,0,0,1,593.79,-653.045)" v:groupContext="shape" v:mID="321" id="shape321-998">
+			<title id="title1906">Sheet.321</title>
+			<rect id="rect1908" class="st19" height="6.3072" width="6.3072" y="785.69299" x="0"/>
+		</g>
+		<g transform="matrix(1,0,0,-1,545.395,924.749)" v:groupContext="shape" v:mID="322" id="shape322-1000">
+			<title id="title1911">Sheet.322</title>
+			<path inkscape:connector-curvature="0" id="path1913" class="st19" d="M 0,785.93 V 792 l 7.71,-3.03 z"/>
+		</g>
+		<g transform="rotate(180,217.84,483.9605)" v:groupContext="shape" v:mID="323" id="shape323-1002">
+			<title id="title1916">Sheet.323</title>
+			<path inkscape:connector-curvature="0" id="path1918" class="st11" d="M 0,792 H 24"/>
+		</g>
+		<g transform="rotate(180,294.3895,481.3355)" v:groupContext="shape" v:mID="324" id="shape324-1005">
+			<title id="title1921">Sheet.324</title>
+			<path inkscape:connector-curvature="0" id="path1923" class="st34" d="M 0,792 H 56.91"/>
+		</g>
+		<g transform="translate(533.138,-618.704)" v:groupContext="shape" v:mID="325" id="shape325-1008">
+			<title id="title1926">Sheet.325</title>
+			<desc id="desc1928">OSC32KIN</desc>
+			<v:textBlock v:margins="rect(2,2,2,2)"/>
+			<v:textRect height="12" width="54.09" cy="786" cx="27.0424"/>
+			<rect id="rect1930" class="st15" height="12" width="54.0849" y="780" x="0"/>
+			<text id="text1932" v:langID="1033" class="st16" y="787.79999" x="22.41"><v:paragraph v:horizAlign="2"/><v:tabList/>OSC32KIN</text>		</g>
+		<g transform="matrix(-1,0,0,1,593.82,-618.079)" v:groupContext="shape" v:mID="326" id="shape326-1011">
+			<title id="title1935">Sheet.326</title>
+			<rect id="rect1937" class="st19" height="6.3072" width="6.3072" y="785.69299" x="0"/>
+		</g>
+		<g transform="rotate(180,294.389,486.679)" v:groupContext="shape" v:mID="327" id="shape327-1013">
+			<title id="title1940">Sheet.327</title>
+			<path inkscape:connector-curvature="0" id="path1942" class="st34" d="M 0,792 H 56.51"/>
+		</g>
+		<g transform="translate(533.138,-607.829)" v:groupContext="shape" v:mID="328" id="shape328-1016">
+			<title id="title1945">Sheet.328</title>
+			<desc id="desc1947">OSC32KOUT</desc>
+			<v:textBlock v:margins="rect(2,2,2,2)"/>
+			<v:textRect height="12" width="54.09" cy="786" cx="27.0424"/>
+			<rect id="rect1949" class="st15" height="12" width="54.0849" y="780" x="0"/>
+			<text id="text1951" v:langID="1033" class="st16" y="787.79999" x="15.74"><v:paragraph v:horizAlign="2"/><v:tabList/>OSC32KOUT</text>		</g>
+		<g transform="matrix(-1,0,0,1,593.82,-607.391)" v:groupContext="shape" v:mID="329" id="shape329-1019">
+			<title id="title1954">Sheet.329</title>
+			<rect id="rect1956" class="st19" height="6.3072" width="6.3072" y="785.69299" x="0"/>
+		</g>
+		<g transform="rotate(180,294.4795,476.207)" v:groupContext="shape" v:mID="330" id="shape330-1021">
+			<title id="title1959">Sheet.330</title>
+			<path inkscape:connector-curvature="0" id="path1961" class="st34" d="M 0,792 H 87.28"/>
+		</g>
+		<g transform="translate(532.694,-629.392)" v:groupContext="shape" v:mID="331" id="shape331-1024">
+			<title id="title1964">Sheet.331</title>
+			<desc id="desc1966">OSC32KCAP</desc>
+			<v:textBlock v:margins="rect(2,2,2,2)"/>
+			<v:textRect height="12" width="54.09" cy="786" cx="27.0424"/>
+			<rect id="rect1968" class="st15" height="12" width="54.0849" y="780" x="0"/>
+			<text id="text1970" v:langID="1033" class="st16" y="787.79999" x="16.07"><v:paragraph v:horizAlign="2"/><v:tabList/>OSC32KCAP</text>		</g>
+		<g transform="matrix(-1,0,0,1,594,-628.335)" v:groupContext="shape" v:mID="332" id="shape332-1027">
+			<title id="title1973">Sheet.332</title>
+			<rect id="rect1975" class="st19" height="6.3072" width="6.3072" y="785.69299" x="0"/>
+		</g>
+		<g transform="rotate(-90,-61.1995,229.1205)" v:groupContext="shape" v:mID="333" id="shape333-1029">
+			<title id="title1978">Sheet.333</title>
+			<path inkscape:connector-curvature="0" id="path1980" class="st34" d="M 0,792 H 7.56"/>
+		</g>
+		<g transform="rotate(90,526.805,662.555)" v:groupContext="shape" v:mID="334" id="shape334-1032">
+			<title id="title1983">Sheet.334</title>
+			<path inkscape:connector-curvature="0" id="path1985" class="st11" d="M 0,792 H 30.75"/>
+		</g>
+		<g transform="translate(392.325,-625.5)" v:groupContext="shape" v:mID="335" id="shape335-1035">
+			<title id="title1988">Sheet.335</title>
+			<path inkscape:connector-curvature="0" id="path1990" class="st11" d="M 0,792 H 5.04"/>
+		</g>
+		<g transform="translate(37.9216,-277.619)" v:groupContext="shape" v:mID="336" id="shape336-1038">
+			<title id="title1993">Sheet.336</title>
+			<path inkscape:connector-curvature="0" id="path1995" class="st34" d="M 0,792 H 54.45"/>
+		</g>
+		<g transform="rotate(180,45.6936,648.135)" v:groupContext="shape" v:mID="337" id="shape337-1041">
+			<title id="title1998">Sheet.337</title>
+			<desc id="desc2000">PVIN_LDO3</desc>
+			<v:textBlock v:margins="rect(2,2,2,2)"/>
+			<v:textRect transform="rotate(180)" height="12" width="54" cy="786" cx="27"/>
+			<rect id="rect2002" class="st15" height="12" width="54" y="780" x="0"/>
+			<text id="text2004" v:langID="1033" class="st16" transform="scale(-1)" y="-784.20001" x="-52"><v:paragraph/><v:tabList/>PVIN_LDO3</text>		</g>
+		<g transform="rotate(180,18.89405,651.64)" v:groupContext="shape" v:mID="338" id="shape338-1044">
+			<title id="title2007">Sheet.338</title>
+			<rect id="rect2009" class="st19" height="6.3072" width="6.3072" y="785.69299" x="0"/>
+		</g>
+		<g transform="matrix(-1,0,0,1,188.137,-269.964)" v:layerMember="0" v:groupContext="shape" v:mID="339" id="shape339-1046">
+			<title id="title2012">Sheet.339</title>
+			<path inkscape:connector-curvature="0" id="path2014" class="st37" d="M 0,792 H 16.68"/>
+		</g>
+		<g transform="translate(92.4763,-252.183)" v:groupContext="shape" v:mID="340" id="shape340-1051">
+			<title id="title2017">Sheet.340</title>
+			<desc id="desc2019">LDO3, Bypass Over-Current Monitor, Short Circuit Monitor</desc>
+			<v:textBlock v:margins="rect(2,2,2,2)"/>
+			<v:textRect height="35.561" width="73.16" cy="774.22" cx="36.5762"/>
+			<rect id="rect2021" class="st45" height="35.561001" width="73.152496" y="756.43903" x="0"/>
+			<text id="text2027" v:langID="1033" class="st21" y="763.71997" x="14.01"><v:paragraph v:horizAlign="1"/><v:tabList/>LDO3, Bypass<v:newlineChar/><v:newlineChar/><tspan id="tspan2023" class="st17" dy="2.4000001em" x="2.54">Over</tspan>-Current Monitor,<v:newlineChar/><tspan id="tspan2025" class="st17" dy="1.2em" x="4.6799998">Short Circuit Monitor</tspan></text>		</g>
+		<g transform="translate(37.9497,-260.099)" v:groupContext="shape" v:mID="341" id="shape341-1056">
+			<title id="title2030">Sheet.341</title>
+			<path inkscape:connector-curvature="0" id="path2032" class="st34" d="M 0,792 H 54.28"/>
+		</g>
+		<g transform="rotate(180,45.6936,656.895)" v:groupContext="shape" v:mID="342" id="shape342-1059">
+			<title id="title2035">Sheet.342</title>
+			<desc id="desc2037">VOUT_LDO3</desc>
+			<v:textBlock v:margins="rect(2,2,2,2)"/>
+			<v:textRect transform="rotate(180)" height="12" width="54" cy="786" cx="27"/>
+			<rect id="rect2039" class="st15" height="12" width="54" y="780" x="0"/>
+			<text id="text2041" v:langID="1033" class="st16" transform="scale(-1)" y="-784.20001" x="-52"><v:paragraph/><v:tabList/>VOUT_LDO3</text>		</g>
+		<g transform="rotate(180,18.89405,660.4)" v:groupContext="shape" v:mID="343" id="shape343-1062">
+			<title id="title2044">Sheet.343</title>
+			<rect id="rect2046" class="st19" height="6.3072" width="6.3072" y="785.69299" x="0"/>
+		</g>
+		<g transform="translate(37.9216,-234.265)" v:groupContext="shape" v:mID="344" id="shape344-1064">
+			<title id="title2049">Sheet.344</title>
+			<path inkscape:connector-curvature="0" id="path2051" class="st34" d="M 0,792 H 54.45"/>
+		</g>
+		<g transform="rotate(180,45.6936,669.81)" v:groupContext="shape" v:mID="345" id="shape345-1067">
+			<title id="title2054">Sheet.345</title>
+			<desc id="desc2056">PVIN_LDO4</desc>
+			<v:textBlock v:margins="rect(2,2,2,2)"/>
+			<v:textRect transform="rotate(180)" height="12" width="54" cy="786" cx="27"/>
+			<rect id="rect2058" class="st15" height="12" width="54" y="780" x="0"/>
+			<text id="text2060" v:langID="1033" class="st16" transform="scale(-1)" y="-784.20001" x="-52"><v:paragraph/><v:tabList/>PVIN_LDO4</text>		</g>
+		<g transform="rotate(180,18.89405,673.32)" v:groupContext="shape" v:mID="346" id="shape346-1070">
+			<title id="title2063">Sheet.346</title>
+			<rect id="rect2065" class="st19" height="6.3072" width="6.3072" y="785.69299" x="0"/>
+		</g>
+		<g transform="matrix(-1,0,0,1,188.512,-226.61)" v:layerMember="0" v:groupContext="shape" v:mID="347" id="shape347-1072">
+			<title id="title2068">Sheet.347</title>
+			<path inkscape:connector-curvature="0" id="path2070" class="st37" d="M 0,792 H 16.68"/>
+		</g>
+		<g transform="translate(92.4763,-208.829)" v:groupContext="shape" v:mID="348" id="shape348-1077">
+			<title id="title2073">Sheet.348</title>
+			<desc id="desc2075">LDO4 (Low Noise) Over-Current Monitor, Short Circuit Monitor</desc>
+			<v:textBlock v:margins="rect(2,2,2,2)"/>
+			<v:textRect height="35.561" width="73.16" cy="774.22" cx="36.5762"/>
+			<rect id="rect2077" class="st45" height="35.561001" width="73.152496" y="756.43903" x="0"/>
+			<text id="text2085" v:langID="1033" class="st21" y="763.71997" x="27.43"><v:paragraph v:horizAlign="1"/><v:tabList/>LDO4<v:newlineChar/><tspan id="tspan2079" class="st17" dy="1.2em" x="17.9">(Low Noise)<v:newlineChar/></tspan><tspan id="tspan2081" class="st17" dy="1.2em" x="2.54">Over</tspan>-Current Monitor,<v:newlineChar/><tspan id="tspan2083" class="st17" dy="1.2em" x="4.6799998">Short Circuit Monitor</tspan></text>		</g>
+		<g transform="translate(37.9497,-216.746)" v:groupContext="shape" v:mID="349" id="shape349-1083">
+			<title id="title2088">Sheet.349</title>
+			<path inkscape:connector-curvature="0" id="path2090" class="st34" d="M 0,792 H 54.28"/>
+		</g>
+		<g transform="rotate(180,45.6936,678.57)" v:groupContext="shape" v:mID="350" id="shape350-1086">
+			<title id="title2093">Sheet.350</title>
+			<desc id="desc2095">VOUT_LDO4</desc>
+			<v:textBlock v:margins="rect(2,2,2,2)"/>
+			<v:textRect transform="rotate(180)" height="12" width="54" cy="786" cx="27"/>
+			<rect id="rect2097" class="st15" height="12" width="54" y="780" x="0"/>
+			<text id="text2099" v:langID="1033" class="st16" transform="scale(-1)" y="-784.20001" x="-52"><v:paragraph/><v:tabList/>VOUT_LDO4</text>		</g>
+		<g transform="rotate(180,18.89405,682.08)" v:groupContext="shape" v:mID="351" id="shape351-1089">
+			<title id="title2102">Sheet.351</title>
+			<rect id="rect2104" class="st19" height="6.3072" width="6.3072" y="785.69299" x="0"/>
+		</g>
+		<g transform="translate(37.9216,-364.326)" v:groupContext="shape" v:mID="352" id="shape352-1091">
+			<title id="title2107">Sheet.352</title>
+			<path inkscape:connector-curvature="0" id="path2109" class="st34" d="M 0,792 H 54.45"/>
+		</g>
+		<g transform="rotate(180,45.6936,604.695)" v:groupContext="shape" v:mID="353" id="shape353-1094">
+			<title id="title2112">Sheet.353</title>
+			<desc id="desc2114">VOUT_LDO1</desc>
+			<v:textBlock v:margins="rect(2,2,2,2)"/>
+			<v:textRect transform="rotate(180)" height="12" width="54" cy="786" cx="27"/>
+			<rect id="rect2116" class="st15" height="12" width="54" y="780" x="0"/>
+			<text id="text2118" v:langID="1033" class="st16" transform="scale(-1)" y="-784.20001" x="-52"><v:paragraph/><v:tabList/>VOUT_LDO1</text>		</g>
+		<g transform="rotate(180,18.89405,608.29)" v:groupContext="shape" v:mID="354" id="shape354-1097">
+			<title id="title2121">Sheet.354</title>
+			<rect id="rect2123" class="st19" height="6.3072" width="6.3072" y="785.69299" x="0"/>
+		</g>
+		<g transform="matrix(-1,0,0,1,188.137,-356.671)" v:layerMember="0" v:groupContext="shape" v:mID="355" id="shape355-1099">
+			<title id="title2126">Sheet.355</title>
+			<path inkscape:connector-curvature="0" id="path2128" class="st37" d="M 0,792 H 16.68"/>
+		</g>
+		<g transform="translate(92.4763,-338.89)" v:groupContext="shape" v:mID="356" id="shape356-1104">
+			<title id="title2131">Sheet.356</title>
+			<desc id="desc2133">LDO1, Bypass Over-Current Monitor, Short Circuit Monitor</desc>
+			<v:textBlock v:margins="rect(2,2,2,2)"/>
+			<v:textRect height="35.561" width="73.16" cy="774.22" cx="36.5762"/>
+			<rect id="rect2135" class="st45" height="35.561001" width="73.152496" y="756.43903" x="0"/>
+			<text id="text2141" v:langID="1033" class="st21" y="763.71997" x="14.01"><v:paragraph v:horizAlign="1"/><v:tabList/>LDO1, Bypass<v:newlineChar/><v:newlineChar/><tspan id="tspan2137" class="st17" dy="2.4000001em" x="2.54">Over</tspan>-Current Monitor,<v:newlineChar/><tspan id="tspan2139" class="st17" dy="1.2em" x="4.6799998">Short Circuit Monitor</tspan></text>		</g>
+		<g transform="translate(37.9497,-346.807)" v:groupContext="shape" v:mID="357" id="shape357-1109">
+			<title id="title2144">Sheet.357</title>
+			<path inkscape:connector-curvature="0" id="path2146" class="st34" d="M 0,792 H 54.28"/>
+		</g>
+		<g transform="rotate(180,45.6936,613.32)" v:groupContext="shape" v:mID="358" id="shape358-1112">
+			<title id="title2149">Sheet.358</title>
+			<desc id="desc2151">PVIN_LDO12</desc>
+			<v:textBlock v:margins="rect(2,2,2,2)"/>
+			<v:textRect transform="rotate(180)" height="12" width="54" cy="786" cx="27"/>
+			<rect id="rect2153" class="st15" height="12" width="54" y="780" x="0"/>
+			<text id="text2155" v:langID="1033" class="st16" transform="scale(-1)" y="-784.20001" x="-52"><v:paragraph/><v:tabList/>PVIN_LDO12</text>		</g>
+		<g transform="rotate(180,18.89405,617.05)" v:groupContext="shape" v:mID="359" id="shape359-1115">
+			<title id="title2158">Sheet.359</title>
+			<rect id="rect2160" class="st19" height="6.3072" width="6.3072" y="785.69299" x="0"/>
+		</g>
+		<g transform="matrix(-1,0,0,1,188.137,-313.317)" v:layerMember="0" v:groupContext="shape" v:mID="360" id="shape360-1117">
+			<title id="title2163">Sheet.360</title>
+			<path inkscape:connector-curvature="0" id="path2165" class="st37" d="M 0,792 H 16.68"/>
+		</g>
+		<g transform="translate(92.4763,-295.537)" v:groupContext="shape" v:mID="361" id="shape361-1122">
+			<title id="title2168">Sheet.361</title>
+			<desc id="desc2170">LDO2, Bypass Over-Current Monitor, Short Circuit Monitor</desc>
+			<v:textBlock v:margins="rect(2,2,2,2)"/>
+			<v:textRect height="35.561" width="73.16" cy="774.22" cx="36.5762"/>
+			<rect id="rect2172" class="st45" height="35.561001" width="73.152496" y="756.43903" x="0"/>
+			<text id="text2178" v:langID="1033" class="st21" y="763.71997" x="14.01"><v:paragraph v:horizAlign="1"/><v:tabList/>LDO2, Bypass<v:newlineChar/><v:newlineChar/><tspan id="tspan2174" class="st17" dy="2.4000001em" x="2.54">Over</tspan>-Current Monitor,<v:newlineChar/><tspan id="tspan2176" class="st17" dy="1.2em" x="4.6799998">Short Circuit Monitor</tspan></text>		</g>
+		<g transform="translate(37.9497,-303.453)" v:groupContext="shape" v:mID="362" id="shape362-1127">
+			<title id="title2181">Sheet.362</title>
+			<path inkscape:connector-curvature="0" id="path2183" class="st34" d="M 0,792 H 54.28"/>
+		</g>
+		<g transform="rotate(180,45.6936,635.22)" v:groupContext="shape" v:mID="363" id="shape363-1130">
+			<title id="title2186">Sheet.363</title>
+			<desc id="desc2188">VOUT_LDO2</desc>
+			<v:textBlock v:margins="rect(2,2,2,2)"/>
+			<v:textRect transform="rotate(180)" height="12" width="54" cy="786" cx="27"/>
+			<rect id="rect2190" class="st15" height="12" width="54" y="780" x="0"/>
+			<text id="text2192" v:langID="1033" class="st16" transform="scale(-1)" y="-784.20001" x="-52"><v:paragraph/><v:tabList/>VOUT_LDO2</text>		</g>
+		<g transform="rotate(180,18.89405,638.725)" v:groupContext="shape" v:mID="364" id="shape364-1133">
+			<title id="title2195">Sheet.364</title>
+			<rect id="rect2197" class="st19" height="6.3072" width="6.3072" y="785.69299" x="0"/>
+		</g>
+		<g transform="translate(431.93,-67.9205)" v:groupContext="shape" v:mID="365" id="shape365-1135">
+			<title id="title2200">Copyright</title>
+			<desc id="desc2202">Copyright © 2019, Texas Instruments Incorporated</desc>
+			<v:textBlock v:margins="rect(0,0,0,0)"/>
+			<v:textRect height="9" width="162" cy="787.5" cx="81"/>
+			<rect id="rect2204" class="st42" height="9" width="162" y="783" x="0"/>
+			<text id="text2208" v:langID="1033" class="st21" y="789.59998" x="4.71"><v:paragraph v:horizAlign="2"/><v:tabList/>Copyright © 201<tspan id="tspan2206" v:langID="1035" class="st17">9</tspan>, Texas Instruments Incorporated</text>		</g>
+		<g transform="rotate(90,203.7435,648.9365)" v:groupContext="shape" v:mID="366" id="shape366-1139">
+			<title id="title2211">Sheet.366</title>
+			<path inkscape:connector-curvature="0" id="path2213" class="st46" d="M 1.09,792 H 1.45 21.7"/>
+		</g>
+		<g transform="translate(60.6805,-325.106)" v:groupContext="shape" v:mID="367" id="shape367-1145">
+			<title id="title2216">Sheet.367</title>
+			<path inkscape:connector-curvature="0" id="path2218" class="st34" d="M 0,792 H 31.8"/>
+		</g>
+		<g transform="translate(320.114,-488.108)" v:groupContext="shape" v:mID="368" id="shape368-1148">
+			<title id="title2221">Sheet.368</title>
+			<desc id="desc2223">Level or PWM Mode Error Signal Monitors (MCU, SoC)</desc>
+			<v:textBlock v:margins="rect(2,2,2,2)"/>
+			<v:textRect height="27.142" width="72.67" cy="778.429" cx="36.3322"/>
+			<rect id="rect2225" class="st1" height="27.142" width="72.664398" y="764.85797" x="0"/>
+			<text id="text2235" v:langID="1033" class="st21" y="772.13" x="4.6300001"><v:paragraph v:horizAlign="1"/><v:tabList/>Level or PWM Mode <tspan id="tspan2227" class="st17" dy="1.2em" x="3.46">Error Signal Monitor</tspan><tspan id="tspan2229" v:langID="1031" class="st17">s</tspan><tspan id="tspan2231" v:langID="1035" class="st17"> </tspan><tspan id="tspan2233" v:langID="1031" class="st17" dy="1.2em" x="17.280001">(MCU, SoC)</tspan></text>		</g>
+		<g transform="rotate(180,280.184,524.46)" v:groupContext="shape" v:mID="369" id="shape369-1155">
+			<title id="title2238">Sheet.369</title>
+			<path inkscape:connector-curvature="0" id="path2240" class="st8" d="M 0,792 H 9.09"/>
+		</g>
+		<g transform="rotate(180,226.557,469.78)" v:groupContext="shape" v:mID="370" id="shape370-1160">
+			<title id="title2243">Sheet.370</title>
+			<path inkscape:connector-curvature="0" id="path2245" class="st8" d="M 0,792 H 44.55"/>
+		</g>
+		<g transform="translate(450.071,-636.329)" v:groupContext="shape" v:mID="371" id="shape371-1165">
+			<title id="title2248">Sheet.371</title>
+			<desc id="desc2250">128-kHz RC Oscillator</desc>
+			<v:textBlock v:margins="rect(2,2,2,2)"/>
+			<v:textRect height="13.5" width="96.61" cy="785.25" cx="48.3047"/>
+			<rect id="rect2252" class="st1" height="13.5" width="96.609398" y="778.5" x="0"/>
+			<text id="text2256" v:langID="1033" class="st21" y="787.34998" x="13.69"><v:paragraph v:horizAlign="1"/><v:tabList/>128-kHz <tspan id="tspan2254" v:langID="1035" class="st17">RC Oscillator</tspan></text>		</g>
+		<g transform="rotate(180,48.7621,539.955)" v:layerMember="4" v:groupContext="shape" v:mID="372" id="shape372-1169">
+			<title id="title2259">Sheet.372</title>
+			<path inkscape:connector-curvature="0" id="path2261" class="st28" d="M 0,792 H 9.39"/>
+		</g>
+		<g transform="translate(96.6805,-488.906)" v:groupContext="shape" v:mID="373" id="shape373-1172">
+			<title id="title2264">Sheet.373</title>
+			<desc id="desc2266">VIN Monitor</desc>
+			<v:textBlock v:verticalAlign="0" v:margins="rect(2,2,2,2)"/>
+			<v:textRect height="31.5" width="85.5" cy="776.25" cx="42.75"/>
+			<rect id="rect2268" class="st1" height="31.5" width="85.5" y="760.5" x="0"/>
+			<text id="text2270" v:langID="1035" class="st21" y="768.79999" x="24.27"><v:paragraph v:horizAlign="1"/><v:tabList/>VIN Monitor</text>		</g>
+		<g transform="rotate(90,267.5765,783.1035)" v:layerMember="0" v:groupContext="shape" v:mID="374" id="shape374-1175">
+			<title id="title2273">Sheet.374</title>
+			<path inkscape:connector-curvature="0" id="path2275" class="st36" d="M 4.24,792 H 4.6 80.36"/>
+		</g>
+		<g transform="rotate(90,262.7015,778.2285)" v:layerMember="0" v:groupContext="shape" v:mID="375" id="shape375-1182">
+			<title id="title2278">Sheet.375</title>
+			<path inkscape:connector-curvature="0" id="path2280" class="st36" d="M 4.24,792 H 4.6 80.36"/>
+		</g>
+		<g transform="matrix(0,1,1,0,-540.445,537.327)" v:groupContext="shape" v:mID="376" id="shape376-1189">
+			<title id="title2283">Sheet.376</title>
+			<desc id="desc2285">SDATA (GPIO6)</desc>
+			<v:textBlock v:margins="rect(2,2,2,2)"/>
+			<v:textRect height="12" width="55.97" cy="786" cx="27.9844"/>
+			<rect id="rect2287" class="st15" height="12" width="55.9688" y="780" x="0"/>
+			<text id="text2289" v:langID="1035" class="st16" transform="scale(-1,1)" y="787.79999" x="-53.970001"><v:paragraph/><v:tabList/>SDATA (GPIO6)</text>		</g>
+		<g transform="matrix(0,1,1,0,-530.695,537.327)" v:groupContext="shape" v:mID="377" id="shape377-1192">
+			<title id="title2292">Sheet.377</title>
+			<desc id="desc2294">SCLK (GPIO5)</desc>
+			<v:textBlock v:margins="rect(2,2,2,2)"/>
+			<v:textRect height="12" width="55.97" cy="786" cx="27.9844"/>
+			<rect id="rect2296" class="st15" height="12" width="55.9688" y="780" x="0"/>
+			<text id="text2298" v:langID="1035" class="st16" transform="scale(-1,1)" y="787.79999" x="-53.970001"><v:paragraph/><v:tabList/>SCLK (GPIO5)</text>		</g>
+		<g transform="rotate(-90,110.629,521.534)" v:groupContext="shape" v:mID="378" id="shape378-1195">
+			<title id="title2301">Sheet.378</title>
+			<path inkscape:connector-curvature="0" id="path2303" class="st30" d="M 0,792 H 13.59"/>
+		</g>
+		<g transform="rotate(-90,108.2735,523.8895)" v:groupContext="shape" v:mID="379" id="shape379-1200">
+			<title id="title2306">Sheet.379</title>
+			<path inkscape:connector-curvature="0" id="path2308" class="st32" d="m 3.52,792 h 0.36 9.71"/>
+		</g>
+		<g transform="rotate(-90,112.984,519.179)" v:groupContext="shape" v:mID="380" id="shape380-1207">
+			<title id="title2311">Sheet.380</title>
+			<path inkscape:connector-curvature="0" id="path2313" class="st33" d="M 3.52,792 H 3.88 17.47"/>
+		</g>
+		<g transform="translate(371.411,-155.899)" v:groupContext="shape" v:mID="381" id="shape381-1212">
+			<title id="title2316">Sheet.381</title>
+			<path inkscape:connector-curvature="0" id="path2318" class="st19" d="M 19.32,787.5 H 0 L 2.41,792 H 16.9 Z"/>
+		</g>
+		<g transform="rotate(-90.027,147.09819,560.76857)" v:groupContext="shape" v:mID="382" id="shape382-1214">
+			<title id="title2321">Sheet.382</title>
+			<path inkscape:connector-curvature="0" id="path2323" class="st34" d="M 0,792 H 54.55"/>
+		</g>
+		<g transform="matrix(0,1,1,0,-413.627,636.212)" v:groupContext="shape" v:mID="383" id="shape383-1217">
+			<title id="title2326">Sheet.383</title>
+			<path inkscape:connector-curvature="0" id="path2328" class="st34" d="M 0,792 H 19.27"/>
+		</g>
+		<g transform="matrix(0,1,1,0,-409.076,636.212)" v:groupContext="shape" v:mID="384" id="shape384-1220">
+			<title id="title2331">Sheet.384</title>
+			<path inkscape:connector-curvature="0" id="path2333" class="st34" d="M 15.42,787.45 V 792 H 0"/>
+		</g>
+		<g transform="rotate(-90,120.8665,526.9075)" v:groupContext="shape" v:mID="385" id="shape385-1223">
+			<title id="title2336">Sheet.385</title>
+			<path inkscape:connector-curvature="0" id="path2338" class="st19" d="M 0,785.93 V 792 l 7.71,-3.03 z"/>
+		</g>
+		<g transform="matrix(-1,0,0,1,381.567,-80.1277)" v:groupContext="shape" v:mID="386" id="shape386-1225">
+			<title id="title2341">Sheet.386</title>
+			<rect id="rect2343" class="st19" height="6.3072" width="6.3072" y="785.69299" x="0"/>
+		</g>
+		<g transform="rotate(180,190.758,717.755)" v:layerMember="3" v:groupContext="shape" v:mID="387" id="shape387-1227">
+			<title id="title2346">Sheet.387</title>
+			<path inkscape:connector-curvature="0" id="path2348" class="st25" d="M 0,792 H 12.59"/>
+		</g>
+		<g transform="rotate(-90,118.2425,541.3125)" v:layerMember="3" v:groupContext="shape" v:mID="388" id="shape388-1230">
+			<title id="title2351">Sheet.388</title>
+			<path inkscape:connector-curvature="0" id="path2353" class="st25" d="M 0,792 H 16.04"/>
+		</g>
+		<g transform="rotate(-90,99.449,532.714)" v:groupContext="shape" v:mID="389" id="shape389-1233">
+			<title id="title2356">Sheet.389</title>
+			<path inkscape:connector-curvature="0" id="path2358" class="st30" d="M 0,792 H 13.59"/>
+		</g>
+		<g transform="rotate(-90,97.0935,535.0695)" v:groupContext="shape" v:mID="390" id="shape390-1238">
+			<title id="title2361">Sheet.390</title>
+			<path inkscape:connector-curvature="0" id="path2363" class="st32" d="m 3.52,792 h 0.36 9.71"/>
+		</g>
+		<g transform="rotate(-90,101.8045,530.3585)" v:groupContext="shape" v:mID="391" id="shape391-1245">
+			<title id="title2366">Sheet.391</title>
+			<path inkscape:connector-curvature="0" id="path2368" class="st33" d="M 3.52,792 H 3.88 17.47"/>
+		</g>
+		<g transform="translate(349.052,-155.899)" v:groupContext="shape" v:mID="392" id="shape392-1250">
+			<title id="title2371">Sheet.392</title>
+			<path inkscape:connector-curvature="0" id="path2373" class="st19" d="M 19.32,787.5 H 0 L 2.41,792 H 16.9 Z"/>
+		</g>
+		<g transform="rotate(-90,135.8985,571.8595)" v:groupContext="shape" v:mID="393" id="shape393-1252">
+			<title id="title2376">Sheet.393</title>
+			<path inkscape:connector-curvature="0" id="path2378" class="st34" d="M 0,792 H 71.66"/>
+		</g>
+		<g transform="matrix(-1,0,0,1,359.208,-80.1277)" v:groupContext="shape" v:mID="394" id="shape394-1255">
+			<title id="title2381">Sheet.394</title>
+			<rect id="rect2383" class="st19" height="6.3072" width="6.3072" y="785.69299" x="0"/>
+		</g>
+		<g transform="rotate(180,177.2775,717.755)" v:layerMember="3" v:groupContext="shape" v:mID="395" id="shape395-1257">
+			<title id="title2386">Sheet.395</title>
+			<path inkscape:connector-curvature="0" id="path2388" class="st25" d="M 0,792 H 7"/>
+		</g>
+		<g transform="rotate(-90,107.453,551.898)" v:layerMember="3" v:groupContext="shape" v:mID="396" id="shape396-1260">
+			<title id="title2391">Sheet.396</title>
+			<path inkscape:connector-curvature="0" id="path2393" class="st25" d="M 0,792 H 15.84"/>
+		</g>
+		<g transform="matrix(0,1,1,0,-410.593,640.066)" v:groupContext="shape" v:mID="397" id="shape397-1263">
+			<title id="title2396">Sheet.397</title>
+			<path inkscape:connector-curvature="0" id="path2398" class="st19" d="M 0,785.93 V 792 l 7.71,-3.03 z"/>
+		</g>
+		<g transform="translate(337.524,-281.089)" v:groupContext="shape" v:mID="398" id="shape398-1265">
+			<title id="title2401">Sheet.398</title>
+			<desc id="desc2403">I2C2</desc>
+			<v:textBlock v:margins="rect(2,2,2,2)"/>
+			<v:textRect height="17.7401" width="20.26" cy="783.13" cx="10.1279"/>
+			<rect id="rect2405" class="st24" height="17.740101" width="20.2558" y="774.26001" x="0"/>
+			<text id="text2407" v:langID="1035" class="st21" y="785.22998" x="2.73"><v:paragraph v:horizAlign="1"/><v:tabList/>I2C2</text>		</g>
+		<g transform="translate(362.274,-281.089)" v:groupContext="shape" v:mID="399" id="shape399-1268">
+			<title id="title2410">Sheet.399</title>
+			<desc id="desc2412">SPI</desc>
+			<v:textBlock v:margins="rect(2,2,2,2)"/>
+			<v:textRect height="17.7401" width="29.25" cy="783.13" cx="14.625"/>
+			<rect id="rect2414" class="st24" height="17.740101" width="29.25" y="774.26001" x="0"/>
+			<text id="text2416" v:langID="1035" class="st21" y="785.22998" x="8.9799995"><v:paragraph v:horizAlign="1"/><v:tabList/>SPI</text>		</g>
+		<g transform="rotate(90,301.6565,817.1835)" v:layerMember="0" v:groupContext="shape" v:mID="400" id="shape400-1271">
+			<title id="title2419">Sheet.400</title>
+			<path inkscape:connector-curvature="0" id="path2421" class="st36" d="M 4.24,792 H 4.6 80.36"/>
+		</g>
+		<g transform="rotate(90,296.7815,812.3085)" v:layerMember="0" v:groupContext="shape" v:mID="401" id="shape401-1278">
+			<title id="title2424">Sheet.401</title>
+			<path inkscape:connector-curvature="0" id="path2426" class="st47" d="M 4.24,792 H 4.6 84.96"/>
+		</g>
+		<g transform="matrix(0,1,1,0,-472.288,537.327)" v:groupContext="shape" v:mID="402" id="shape402-1283">
+			<title id="title2429">Sheet.402</title>
+			<desc id="desc2431">SCL_I2C1</desc>
+			<v:textBlock v:margins="rect(2,2,2,2)"/>
+			<v:textRect height="12" width="55.97" cy="786" cx="27.9844"/>
+			<rect id="rect2433" class="st15" height="12" width="55.9688" y="780" x="0"/>
+			<text id="text2435" v:langID="1033" class="st16" transform="scale(-1,1)" y="787.79999" x="-53.970001"><v:paragraph/><v:tabList/>SCL_I2C1</text>		</g>
+		<g transform="matrix(0,1,1,0,-462.538,537.327)" v:groupContext="shape" v:mID="403" id="shape403-1286">
+			<title id="title2438">Sheet.403</title>
+			<desc id="desc2440">SDA_I2C1</desc>
+			<v:textBlock v:margins="rect(2,2,2,2)"/>
+			<v:textRect height="12" width="55.97" cy="786" cx="27.9844"/>
+			<rect id="rect2442" class="st15" height="12" width="55.9688" y="780" x="0"/>
+			<text id="text2444" v:langID="1033" class="st16" transform="scale(-1,1)" y="787.79999" x="-53.970001"><v:paragraph/><v:tabList/>SDA_I2C1</text>		</g>
+		<g transform="rotate(90,312.8115,828.3385)" v:layerMember="0" v:groupContext="shape" v:mID="404" id="shape404-1289">
+			<title id="title2447">Sheet.404</title>
+			<path inkscape:connector-curvature="0" id="path2449" class="st36" d="M 4.24,792 H 4.6 80.36"/>
+		</g>
+		<g transform="rotate(90,307.9365,823.4635)" v:layerMember="0" v:groupContext="shape" v:mID="405" id="shape405-1296">
+			<title id="title2452">Sheet.405</title>
+			<path inkscape:connector-curvature="0" id="path2454" class="st47" d="M 4.24,792 H 4.6 84.96"/>
+		</g>
+		<g transform="matrix(0,1,1,0,-449.976,537.327)" v:groupContext="shape" v:mID="406" id="shape406-1301">
+			<title id="title2457">Sheet.406</title>
+			<desc id="desc2459">SCL_I2C2 (GPIO1)</desc>
+			<v:textBlock v:margins="rect(2,2,2,2)"/>
+			<v:textRect height="12" width="55.97" cy="786" cx="27.9844"/>
+			<rect id="rect2461" class="st15" height="12" width="55.9688" y="780" x="0"/>
+			<text id="text2467" v:langID="1033" class="st16" transform="scale(-1,1)" y="787.79999" x="-53.970001"><v:paragraph/><v:tabList/>SCL_I2C2<tspan id="tspan2463" v:langID="1035" class="st17"> </tspan><tspan id="tspan2465" v:langID="1035" class="st17">(GPIO1)</tspan></text>		</g>
+		<g transform="matrix(0,1,1,0,-440.226,531.421)" v:groupContext="shape" v:mID="407" id="shape407-1306">
+			<title id="title2470">Sheet.407</title>
+			<desc id="desc2472">SDA_I2C2 (GPIO2)</desc>
+			<v:textBlock v:margins="rect(2,2,2,2)"/>
+			<v:textRect height="12" width="61.88" cy="786" cx="30.9375"/>
+			<rect id="rect2474" class="st15" height="12" width="61.875" y="780" x="0"/>
+			<text id="text2480" v:langID="1033" class="st16" transform="scale(-1,1)" y="787.79999" x="-59.869999"><v:paragraph/><v:tabList/>SDA_I2C2<tspan id="tspan2476" v:langID="1035" class="st17"> </tspan><tspan id="tspan2478" v:langID="1035" class="st17">(GPIO2)</tspan></text>		</g>
+		<g transform="rotate(90,324.0615,839.5885)" v:layerMember="0" v:groupContext="shape" v:mID="408" id="shape408-1311">
+			<title id="title2483">Sheet.408</title>
+			<path inkscape:connector-curvature="0" id="path2485" class="st47" d="M 4.24,792 H 4.6 84.96"/>
+		</g>
+		<g transform="rotate(90,319.1865,834.7135)" v:layerMember="0" v:groupContext="shape" v:mID="409" id="shape409-1316">
+			<title id="title2488">Sheet.409</title>
+			<path inkscape:connector-curvature="0" id="path2490" class="st47" d="M 4.24,792 H 4.6 84.96"/>
+		</g>
+		<g transform="matrix(0,1,1,0,-427.476,537.327)" v:groupContext="shape" v:mID="410" id="shape410-1321">
+			<title id="title2493">Sheet.410</title>
+			<desc id="desc2495">CLK_SPI</desc>
+			<v:textBlock v:margins="rect(2,2,2,2)"/>
+			<v:textRect height="12" width="55.97" cy="786" cx="27.9844"/>
+			<rect id="rect2497" class="st15" height="12" width="55.9688" y="780" x="0"/>
+			<text id="text2499" v:langID="1033" class="st16" transform="scale(-1,1)" y="787.79999" x="-53.970001"><v:paragraph/><v:tabList/>CLK_SPI</text>		</g>
+		<g transform="matrix(0,1,1,0,-417.726,537.327)" v:groupContext="shape" v:mID="411" id="shape411-1324">
+			<title id="title2502">Sheet.411</title>
+			<desc id="desc2504">SDI_SPI</desc>
+			<v:textBlock v:margins="rect(2,2,2,2)"/>
+			<v:textRect height="12" width="55.97" cy="786" cx="27.9844"/>
+			<rect id="rect2506" class="st15" height="12" width="55.9688" y="780" x="0"/>
+			<text id="text2508" v:langID="1033" class="st16" transform="scale(-1,1)" y="787.79999" x="-53.970001"><v:paragraph/><v:tabList/>SDI_SPI</text>		</g>
+		<g transform="rotate(90,333.9965,849.5235)" v:layerMember="0" v:groupContext="shape" v:mID="412" id="shape412-1327">
+			<title id="title2511">Sheet.412</title>
+			<path inkscape:connector-curvature="0" id="path2513" class="st6" d="M 0,792 H 80.36"/>
+		</g>
+		<g transform="rotate(90,329.1215,844.6485)" v:layerMember="0" v:groupContext="shape" v:mID="413" id="shape413-1332">
+			<title id="title2516">Sheet.413</title>
+			<path inkscape:connector-curvature="0" id="path2518" class="st47" d="M 4.24,792 H 4.6 84.96"/>
+		</g>
+		<g transform="matrix(0,1,1,0,-407.601,537.327)" v:groupContext="shape" v:mID="414" id="shape414-1337">
+			<title id="title2521">Sheet.414</title>
+			<desc id="desc2523">CS_SPI (GPIO1)</desc>
+			<v:textBlock v:margins="rect(2,2,2,2)"/>
+			<v:textRect height="12" width="55.97" cy="786" cx="27.9844"/>
+			<rect id="rect2525" class="st15" height="12" width="55.9688" y="780" x="0"/>
+			<text id="text2527" v:langID="1033" class="st16" transform="scale(-1,1)" y="787.79999" x="-53.970001"><v:paragraph/><v:tabList/>CS_SPI (GPIO1)</text>		</g>
+		<g transform="matrix(0,1,1,0,-397.851,537.327)" v:groupContext="shape" v:mID="415" id="shape415-1340">
+			<title id="title2530">Sheet.415</title>
+			<desc id="desc2532">SDO_SPI (GPIO2)</desc>
+			<v:textBlock v:margins="rect(2,2,2,2)"/>
+			<v:textRect height="12" width="55.97" cy="786" cx="27.9844"/>
+			<rect id="rect2534" class="st15" height="12" width="55.9688" y="780" x="0"/>
+			<text id="text2536" v:langID="1033" class="st16" transform="scale(-1,1)" y="787.79999" x="-53.970001"><v:paragraph/><v:tabList/>SDO_SPI (GPIO2)</text>		</g>
+		<g transform="rotate(-90,107.4005,540.3735)" v:groupContext="shape" v:mID="416" id="shape416-1343">
+			<title id="title2539">Sheet.416</title>
+			<path inkscape:connector-curvature="0" id="path2541" class="st19" d="M 0,785.93 V 792 l 7.71,-3.03 z"/>
+		</g>
+		<g transform="matrix(0,1,1,0,-434.507,635.483)" v:groupContext="shape" v:mID="417" id="shape417-1345">
+			<title id="title2544">Sheet.417</title>
+			<desc id="desc2546">SCL_I2C1/CLK_SPI</desc>
+			<v:textBlock v:margins="rect(2,2,2,2)"/>
+			<v:textRect height="12" width="71.44" cy="786" cx="35.7187"/>
+			<rect id="rect2548" class="st15" height="12" width="71.4375" y="780" x="0"/>
+			<text id="text2550" v:langID="1033" class="st16" transform="scale(-1,1)" y="787.79999" x="-69.440002"><v:paragraph/><v:tabList/>SCL_I2C1/CLK_SPI</text>		</g>
+		<g transform="rotate(180,97.84,513.795)" v:layerMember="4" v:groupContext="shape" v:mID="418" id="shape418-1348">
+			<title id="title2553">Sheet.418</title>
+			<path inkscape:connector-curvature="0" id="path2555" class="st28" d="M 0,792 H 108"/>
+		</g>
+		<g transform="rotate(-90,-217.776,457.294)" v:layerMember="4" v:groupContext="shape" v:mID="419" id="shape419-1351">
+			<title id="title2558">Sheet.419</title>
+			<path inkscape:connector-curvature="0" id="path2560" class="st28" d="M 0,792 H 3.92"/>
+		</g>
+		<g transform="rotate(-90,-195.276,434.794)" v:layerMember="4" v:groupContext="shape" v:mID="420" id="shape420-1354">
+			<title id="title2563">Sheet.420</title>
+			<path inkscape:connector-curvature="0" id="path2565" class="st28" d="M 0,792 H 3.92"/>
+		</g>
+		<g transform="rotate(-90,-230.988,444.082)" v:layerMember="4" v:groupContext="shape" v:mID="421" id="shape421-1357">
+			<title id="title2568">Sheet.421</title>
+			<path inkscape:connector-curvature="0" id="path2570" class="st48" d="M 0,792 H 15"/>
+		</g>
+		<g transform="rotate(180,81.19,496.5605)" v:layerMember="4" v:groupContext="shape" v:mID="422" id="shape422-1360">
+			<title id="title2573">Sheet.422</title>
+			<path inkscape:connector-curvature="0" id="path2575" class="st48" d="M 0,792 H 45.45"/>
+		</g>
+		<g transform="rotate(-90,-210.738,419.332)" v:layerMember="4" v:groupContext="shape" v:mID="423" id="shape423-1363">
+			<title id="title2578">Sheet.423</title>
+			<path inkscape:connector-curvature="0" id="path2580" class="st48" d="M 0,792 H 7.02"/>
+		</g>
+		<g transform="translate(96.6805,-594.019)" v:groupContext="shape" v:mID="424" id="shape424-1366">
+			<title id="title2583">Sheet.424</title>
+			<desc id="desc2585">Backup Supply Management</desc>
+			<v:textBlock v:margins="rect(2,2,2,2)"/>
+			<v:textRect height="22.9428" width="81" cy="780.529" cx="40.5"/>
+			<rect id="rect2587" class="st1" height="22.942801" width="81" y="769.05701" x="0"/>
+			<text id="text2591" v:langID="1033" class="st21" y="778.42999" x="17.15"><v:paragraph v:horizAlign="1"/><v:tabList/>Backup Supply <tspan id="tspan2589" class="st17" dy="1.2em" x="20.07">Management</tspan></text>		</g>
+		<g transform="translate(96.6805,-560.906)" v:groupContext="shape" v:mID="425" id="shape425-1370">
+			<title id="title2594">Sheet.425</title>
+			<desc id="desc2596">LDO RTC</desc>
+			<v:textBlock v:margins="rect(2,2,2,2)"/>
+			<v:textRect height="23.076" width="38.25" cy="780.462" cx="19.125"/>
+			<rect id="rect2598" class="st1" height="23.076" width="38.25" y="768.92401" x="0"/>
+			<text id="text2602" v:langID="1033" class="st21" y="778.35999" x="11.93"><v:paragraph v:horizAlign="1"/><v:tabList/>LDO<v:newlineChar/><tspan id="tspan2600" class="st17" dy="1.2em" x="11.93">RTC</tspan></text>		</g>
+		<g transform="translate(143.93,-560.906)" v:groupContext="shape" v:mID="426" id="shape426-1374">
+			<title id="title2605">Sheet.426</title>
+			<desc id="desc2607">Bandgap VRTC</desc>
+			<v:textBlock v:margins="rect(2,2,2,2)"/>
+			<v:textRect height="23.076" width="36.69" cy="780.462" cx="18.3408"/>
+			<rect id="rect2609" class="st1" height="23.076" width="36.681702" y="768.92401" x="0"/>
+			<text id="text2615" v:langID="1033" class="st21" y="778.35999" x="4.3299999"><v:paragraph v:horizAlign="1"/><v:tabList/>B<tspan id="tspan2611" v:langID="1035" class="st17">andgap<v:newlineChar/></tspan><tspan id="tspan2613" class="st17" dy="1.2em" x="8.8100004">VRTC</tspan></text>		</g>
+		<g transform="translate(143.249,-529.406)" v:groupContext="shape" v:mID="427" id="shape427-1379">
+			<title id="title2618">Sheet.427</title>
+			<desc id="desc2620">Bandgap VINT</desc>
+			<v:textBlock v:margins="rect(2,2,2,2)"/>
+			<v:textRect height="23.076" width="36.69" cy="780.462" cx="18.3408"/>
+			<rect id="rect2622" class="st1" height="23.076" width="36.681702" y="768.92401" x="0"/>
+			<text id="text2630" v:langID="1033" class="st21" y="778.35999" x="4.3299999"><v:paragraph v:horizAlign="1"/><v:tabList/>B<tspan id="tspan2624" v:langID="1035" class="st17">andgap<v:newlineChar/></tspan><tspan id="tspan2626" class="st17" dy="1.2em" x="10.37">V</tspan><tspan id="tspan2628" v:langID="1035" class="st17">INT</tspan></text>		</g>
+		<g transform="translate(96.6805,-529.406)" v:groupContext="shape" v:mID="428" id="shape428-1385">
+			<title id="title2633">Sheet.428</title>
+			<desc id="desc2635">LDO INT</desc>
+			<v:textBlock v:margins="rect(2,2,2,2)"/>
+			<v:textRect height="23.076" width="38.25" cy="780.462" cx="19.125"/>
+			<rect id="rect2637" class="st1" height="23.076" width="38.25" y="768.92401" x="0"/>
+			<text id="text2641" v:langID="1033" class="st21" y="778.35999" x="11.93"><v:paragraph v:horizAlign="1"/><v:tabList/>LDO<v:newlineChar/><tspan id="tspan2639" v:langID="1035" class="st17" dy="1.2em" x="13.49">INT</tspan></text>		</g>
+		<g transform="matrix(-1,0,0,1,139.43,-492.695)" v:groupContext="shape" v:mID="429" id="shape429-1389">
+			<title id="title2644">Sheet.429</title>
+			<desc id="desc2646">Bandgap</desc>
+			<v:textBlock v:margins="rect(2,2,2,2)"/>
+			<v:textRect height="16.4611" width="36" cy="783.769" cx="18"/>
+			<rect id="rect2648" class="st24" height="16.4611" width="36" y="775.539" x="0"/>
+			<text id="text2650" v:langID="1035" class="st16" transform="scale(-1,1)" y="785.57001" x="-30.01"><v:paragraph v:horizAlign="1"/><v:tabList/>Bandgap</text>		</g>
+		<g transform="matrix(-1,0,0,1,174.587,-492.695)" v:groupContext="shape" v:mID="430" id="shape430-1392">
+			<title id="title2653">Sheet.430</title>
+			<desc id="desc2655">OVP UVLO</desc>
+			<v:textBlock v:margins="rect(2,2,2,2)"/>
+			<v:textRect height="16.4611" width="21.66" cy="783.769" cx="10.8281"/>
+			<rect id="rect2657" class="st24" height="16.4611" width="21.6562" y="775.539" x="0"/>
+			<text id="text2661" v:langID="1035" class="st16" transform="scale(-1,1)" y="781.96997" x="-17.16"><v:paragraph v:horizAlign="1"/><v:tabList/>OVP<v:newlineChar/><tspan id="tspan2659" class="st17" dy="1.2em" x="-19">UVLO</tspan></text>		</g>
+		<g transform="matrix(1,0,0,-1,139.43,1083.07)" v:groupContext="shape" v:mID="431" id="shape431-1396">
+			<title id="title2664">Sheet.431</title>
+			<path inkscape:connector-curvature="0" id="path2666" class="st30" d="M 0,792 H 9.25"/>
+		</g>
+		<g transform="translate(173.18,-580.079)" v:groupContext="shape" v:mID="432" id="shape432-1401">
+			<title id="title2669">Sheet.432</title>
+			<desc id="desc2671">WAKEn nSLEEPn</desc>
+			<v:textBlock v:tabSpace="42.5197" v:margins="rect(4,4,4,4)"/>
+			<v:textRect height="30.7368" width="44.67" cy="776.632" cx="22.3306"/>
+			<rect id="rect2673" class="st15" height="30.736799" width="44.661201" y="761.263" x="0"/>
+			<text id="text2677" v:langID="1033" class="st21" y="774.53003" x="16.15"><v:paragraph v:horizAlign="2"/><v:tabList/>WAKEn<v:newlineChar/><tspan id="tspan2675" class="st17" dy="1.2em" x="10.31">nSLEEPn</tspan></text>		</g>
+		<g transform="translate(182.18,-504.704)" v:layerMember="0" v:groupContext="shape" v:mID="433" id="shape433-1405">
+			<title id="title2680">Sheet.433</title>
+			<path inkscape:connector-curvature="0" id="path2682" class="st6" d="M 0,792 H 39.79"/>
+		</g>
+		<g transform="translate(27.4305,-446.577)" v:groupContext="shape" v:mID="434" id="shape434-1410">
+			<title id="title2685">Sheet.434</title>
+			<desc id="desc2687">PVIN_B5</desc>
+			<v:textBlock v:margins="rect(2,2,2,2)"/>
+			<v:textRect height="10.5059" width="53" cy="786.747" cx="26.5"/>
+			<rect id="rect2689" class="st15" height="10.5059" width="53" y="781.49402" x="0"/>
+			<text id="text2691" v:langID="1033" class="st16" y="788.54999" x="26.32"><v:paragraph v:horizAlign="2"/><v:tabList/>PVIN_B5</text>		</g>
+		<g transform="rotate(180,69.715,568.24)" v:layerMember="4" v:groupContext="shape" v:mID="435" id="shape435-1413">
+			<title id="title2694">Sheet.435</title>
+			<path inkscape:connector-curvature="0" id="path2696" class="st34" d="M 0,792 H 85.5"/>
+		</g>
+		<g transform="translate(96.6805,-411.329)" v:groupContext="shape" v:mID="436" id="shape436-1416">
+			<title id="title2699">Sheet.436</title>
+			<desc id="desc2701">VIN Monitor</desc>
+			<v:textBlock v:verticalAlign="0" v:margins="rect(2,2,2,2)"/>
+			<v:textRect height="31.5" width="85.5" cy="776.25" cx="42.75"/>
+			<rect id="rect2703" class="st1" height="31.5" width="85.5" y="760.5" x="0"/>
+			<text id="text2705" v:langID="1035" class="st21" y="768.79999" x="24.27"><v:paragraph v:horizAlign="1"/><v:tabList/>VIN Monitor</text>		</g>
+		<g transform="matrix(-1,0,0,1,139.43,-415.118)" v:groupContext="shape" v:mID="437" id="shape437-1419">
+			<title id="title2708">Sheet.437</title>
+			<desc id="desc2710">Bandgap</desc>
+			<v:textBlock v:margins="rect(2,2,2,2)"/>
+			<v:textRect height="16.4611" width="36" cy="783.769" cx="18"/>
+			<rect id="rect2712" class="st24" height="16.4611" width="36" y="775.539" x="0"/>
+			<text id="text2714" v:langID="1035" class="st16" transform="scale(-1,1)" y="785.57001" x="-30.01"><v:paragraph v:horizAlign="1"/><v:tabList/>Bandgap</text>		</g>
+		<g transform="matrix(-1,0,0,1,174.587,-415.118)" v:groupContext="shape" v:mID="438" id="shape438-1422">
+			<title id="title2717">Sheet.438</title>
+			<desc id="desc2719">OVP UVLO</desc>
+			<v:textBlock v:margins="rect(2,2,2,2)"/>
+			<v:textRect height="16.4611" width="21.66" cy="783.769" cx="10.8281"/>
+			<rect id="rect2721" class="st24" height="16.4611" width="21.6562" y="775.539" x="0"/>
+			<text id="text2725" v:langID="1035" class="st16" transform="scale(-1,1)" y="781.96997" x="-17.16"><v:paragraph v:horizAlign="1"/><v:tabList/>OVP<v:newlineChar/><tspan id="tspan2723" class="st17" dy="1.2em" x="-19">UVLO</tspan></text>		</g>
+		<g transform="matrix(1,0,0,-1,139.43,1160.65)" v:groupContext="shape" v:mID="439" id="shape439-1426">
+			<title id="title2728">Sheet.439</title>
+			<path inkscape:connector-curvature="0" id="path2730" class="st30" d="M 0,792 H 9.25"/>
+		</g>
+		<g transform="translate(182.18,-427.079)" v:layerMember="0" v:groupContext="shape" v:mID="440" id="shape440-1431">
+			<title id="title2733">Sheet.440</title>
+			<path inkscape:connector-curvature="0" id="path2735" class="st6" d="M 0,792 H 39.27"/>
+		</g>
+		<g transform="matrix(0,1,1,0,-648.07,291.074)" v:groupContext="shape" v:mID="441" id="shape441-1436">
+			<title id="title2738">Sheet.441</title>
+			<path inkscape:connector-curvature="0" id="path2740" class="st30" d="M 0,792 H 14.12"/>
+		</g>
+		<g transform="translate(182.18,-469.829)" v:layerMember="0" v:groupContext="shape" v:mID="442" id="shape442-1441">
+			<title id="title2743">Sheet.442</title>
+			<path inkscape:connector-curvature="0" id="path2745" class="st6" d="M 0,792 H 40.4"/>
+		</g>
+		<g transform="matrix(1,0,0,-1,79.1305,1114.17)" v:groupContext="shape" v:mID="443" id="shape443-1446">
+			<title id="title2748">Sheet.443</title>
+			<path inkscape:connector-curvature="0" id="path2750" class="st29" d="M 0,792 H 17.55"/>
+		</g>
+		<g transform="translate(535.43,-131.277)" v:groupContext="shape" v:mID="444" id="shape444-1449">
+			<title id="title2753">Sheet.444</title>
+			<desc id="desc2755">AMUXOUT</desc>
+			<v:textBlock v:margins="rect(2,2,2,2)"/>
+			<v:textRect height="12" width="54" cy="786" cx="27"/>
+			<rect id="rect2757" class="st15" height="12" width="54" y="780" x="0"/>
+			<text id="text2759" v:langID="1033" class="st16" y="787.79999" x="22"><v:paragraph v:horizAlign="2"/><v:tabList/>AMUXOUT</text>		</g>
+		<g transform="rotate(180,293.759,724.99)" v:groupContext="shape" v:mID="445" id="shape445-1452">
+			<title id="title2762">Sheet.445</title>
+			<path inkscape:connector-curvature="0" id="path2764" class="st34" d="M 0,792 H 50.29"/>
+		</g>
+		<g transform="translate(587.623,-130.808)" v:groupContext="shape" v:mID="446" id="shape446-1455">
+			<title id="title2767">Sheet.446</title>
+			<rect id="rect2769" class="st19" height="6.3072" width="6.3072" y="785.69299" x="0"/>
+		</g>
+		<g transform="rotate(90,368.8295,724.7505)" v:layerMember="0" v:groupContext="shape" v:mID="447" id="shape447-1457">
+			<title id="title2772">Sheet.447</title>
+			<path inkscape:connector-curvature="0" id="path2774" class="st6" d="M 0,792 H 240.65"/>
+		</g>
+		<g transform="translate(182.18,-393.329)" v:layerMember="0" v:groupContext="shape" v:mID="448" id="shape448-1462">
+			<title id="title2777">Sheet.448</title>
+			<path inkscape:connector-curvature="0" id="path2779" class="st6" d="M 0,792 H 35.9"/>
+		</g>
+		<g transform="rotate(180,158.7775,556.24)" v:layerMember="0" v:groupContext="shape" v:mID="449" id="shape449-1467">
+			<title id="title2782">Sheet.449</title>
+			<path inkscape:connector-curvature="0" id="path2784" class="st11" d="M 0,792 H 15.97"/>
+		</g>
+		<g transform="translate(320.114,-555.187)" v:groupContext="shape" v:mID="450" id="shape450-1470">
+			<title id="title2787">Sheet.450</title>
+			<desc id="desc2789">Clock Controller &amp; Monitor</desc>
+			<v:textBlock v:margins="rect(2,2,2,2)"/>
+			<v:textRect height="25.3125" width="72" cy="779.344" cx="36"/>
+			<rect id="rect2791" class="st1" height="25.3125" width="72" y="766.68799" x="0"/>
+			<text id="text2799" v:langID="1035" class="st21" y="777.23999" x="11.1"><v:paragraph v:horizAlign="1"/><v:tabList/>Clock<tspan id="tspan2793" v:langID="1033" class="st17"> </tspan><tspan id="tspan2795" v:langID="1033" class="st17">Controller<v:newlineChar/></tspan><tspan id="tspan2797" v:langID="1033" class="st17" dy="1.2em" x="21.02">&amp; </tspan>Monitor</text>		</g>
+		<g transform="matrix(1,0,0,-1,79.1305,1190.67)" v:groupContext="shape" v:mID="451" id="shape451-1476">
+			<title id="title2802">Sheet.451</title>
+			<path inkscape:connector-curvature="0" id="path2804" class="st29" d="M 0,792 H 17.55"/>
+		</g>
+		<g transform="translate(96.6805,-384.329)" v:groupContext="shape" v:mID="452" id="shape452-1479">
+			<title id="title2807">Sheet.452</title>
+			<desc id="desc2809">Thermal Monitor</desc>
+			<v:textBlock v:margins="rect(2,2,2,2)"/>
+			<v:textRect height="18" width="85.5" cy="783" cx="42.75"/>
+			<rect id="rect2811" class="st1" height="18" width="85.5" y="774" x="0"/>
+			<text id="text2813" v:langID="1033" class="st21" y="785.09998" x="17.27"><v:paragraph v:horizAlign="1"/><v:tabList/>Thermal Monitor</text>		</g>
+		<g transform="translate(96.6805,-638.364)" v:groupContext="shape" v:mID="453" id="shape453-1482">
+			<title id="title2816">Sheet.453</title>
+			<desc id="desc2818">VSYS Monitor</desc>
+			<v:textBlock v:margins="rect(2,2,2,2)"/>
+			<v:textRect height="22.9428" width="85.5" cy="780.529" cx="42.75"/>
+			<rect id="rect2820" class="st1" height="22.942801" width="85.5" y="769.05701" x="0"/>
+			<text id="text2824" v:langID="1033" class="st21" y="782.63" x="20.77"><v:paragraph v:horizAlign="1"/><v:tabList/>V<tspan id="tspan2822" v:langID="1035" class="st17">SYS</tspan> Monitor</text>		</g>
+		<g transform="translate(391.846,-598.079)" v:layerMember="1" v:groupContext="shape" v:mID="454" id="shape454-1486">
+			<title id="title2827">Sheet.454</title>
+			<path inkscape:connector-curvature="0" id="path2829" class="st36" d="M 4.24,792 H 4.6 29.92"/>
+		</g>
+		<g transform="translate(449.93,-568.829)" v:groupContext="shape" v:mID="455" id="shape455-1493">
+			<title id="title2832">Sheet.455</title>
+			<desc id="desc2834">20-MHz Monitor Oscillator</desc>
+			<v:textBlock v:margins="rect(2,2,2,2)"/>
+			<v:textRect height="13.5" width="96.75" cy="785.25" cx="48.375"/>
+			<rect id="rect2836" class="st1" height="13.5" width="96.75" y="778.5" x="0"/>
+			<text id="text2840" v:langID="1033" class="st21" y="787.34998" x="7.9200001"><v:paragraph v:horizAlign="1"/><v:tabList/>20-MHz Monitor Osc<tspan id="tspan2838" v:langID="1035" class="st17">illator</tspan></text>		</g>
+		<g transform="translate(449.93,-510.329)" v:groupContext="shape" v:mID="456" id="shape456-1497">
+			<title id="title2843">Sheet.456</title>
+			<desc id="desc2845">DPLL with SSM</desc>
+			<v:textBlock v:margins="rect(2,2,2,2)"/>
+			<v:textRect height="29.25" width="42.75" cy="777.375" cx="21.375"/>
+			<rect id="rect2847" class="st24" height="29.25" width="42.75" y="762.75" x="0"/>
+			<text id="text2851" v:langID="1035" class="st21" y="775.27002" x="5.4200001"><v:paragraph v:horizAlign="1"/><v:tabList/>DPLL with<v:newlineChar/><tspan id="tspan2849" class="st17" dy="1.2em" x="13.79">SSM</tspan></text>		</g>
+		<g transform="translate(449.93,-550.829)" v:groupContext="shape" v:mID="457" id="shape457-1501">
+			<title id="title2854">Sheet.457</title>
+			<desc id="desc2856">20-MHz RC Oscillator</desc>
+			<v:textBlock v:margins="rect(2,2,2,2)"/>
+			<v:textRect height="13.5" width="96.75" cy="785.25" cx="48.375"/>
+			<rect id="rect2858" class="st1" height="13.5" width="96.75" y="778.5" x="0"/>
+			<text id="text2864" v:langID="1033" class="st21" y="787.34998" x="14.54"><v:paragraph v:horizAlign="1"/><v:tabList/>20-MHz <tspan id="tspan2860" v:langID="1035" class="st17">RC</tspan> Osc<tspan id="tspan2862" v:langID="1035" class="st17">illator</tspan></text>		</g>
+		<g transform="translate(502.85,-510.329)" v:groupContext="shape" v:mID="458" id="shape458-1506">
+			<title id="title2867">Sheet.458</title>
+			<desc id="desc2869">Clock Dividers and Mux</desc>
+			<v:textBlock v:margins="rect(2,2,2,2)"/>
+			<v:textRect height="29.25" width="43.84" cy="777.375" cx="21.915"/>
+			<rect id="rect2871" class="st24" height="29.25" width="43.830002" y="762.75" x="0"/>
+			<text id="text2877" v:langID="1035" class="st21" y="771.07001" x="13.16"><v:paragraph v:horizAlign="1"/><v:tabList/>Clock <tspan id="tspan2873" class="st17" dy="1.2em" x="2.46">Dividers and </tspan><tspan id="tspan2875" class="st17" dy="1.2em" x="15.3">Mux</tspan></text>		</g>
+		<g transform="rotate(180,251.425,529.525)" v:groupContext="shape" v:mID="459" id="shape459-1511">
+			<title id="title2880">Sheet.459</title>
+			<path inkscape:connector-curvature="0" id="path2882" class="st8" d="M 0,792 H 5.57"/>
+		</g>
+		<g transform="rotate(180,224.965,504.21)" v:groupContext="shape" v:mID="460" id="shape460-1516">
+			<title id="title2885">Sheet.460</title>
+			<path inkscape:connector-curvature="0" id="path2887" class="st8" d="M 0,792 H 53.14"/>
+		</g>
+		<g transform="rotate(180,224.965,511.96)" v:groupContext="shape" v:mID="461" id="shape461-1521">
+			<title id="title2890">Sheet.461</title>
+			<path inkscape:connector-curvature="0" id="path2892" class="st8" d="M 0,792 H 52.45"/>
+		</g>
+		<g transform="rotate(90,553.0295,799.1505)" v:groupContext="shape" v:mID="462" id="shape462-1526">
+			<title id="title2895">Sheet.462</title>
+			<path inkscape:connector-curvature="0" id="path2897" class="st34" d="M 0,792 H 10.8"/>
+		</g>
+		<g transform="rotate(90,499.7245,730.9555)" v:groupContext="shape" v:mID="463" id="shape463-1529">
+			<title id="title2900">Sheet.463</title>
+			<path inkscape:connector-curvature="0" id="path2902" class="st34" d="M 0,792 H 14.44"/>
+		</g>
+		<g transform="rotate(180,279.9965,519.06)" v:groupContext="shape" v:mID="464" id="shape464-1532">
+			<title id="title2905">Sheet.464</title>
+			<path inkscape:connector-curvature="0" id="path2907" class="st34" d="M 0,792 H 121.31"/>
+		</g>
+		<g transform="rotate(-90,-178.401,417.919)" v:layerMember="4" v:groupContext="shape" v:mID="465" id="shape465-1535">
+			<title id="title2910">Sheet.465</title>
+			<path inkscape:connector-curvature="0" id="path2912" class="st28" d="M 0,792 H 3.92"/>
+		</g>
+		<g transform="rotate(-90,-154.512,441.808)" v:layerMember="0" v:groupContext="shape" v:mID="466" id="shape466-1538">
+			<title id="title2915">Sheet.466</title>
+			<path inkscape:connector-curvature="0" id="path2917" class="st6" d="M 0,792 H 20.15"/>
+		</g>
+		<g transform="translate(204.68,-539.579)" v:layerMember="0" v:groupContext="shape" v:mID="467" id="shape467-1543">
+			<title id="title2920">Sheet.467</title>
+			<path inkscape:connector-curvature="0" id="path2922" class="st6" d="M 0,792 H 16.21"/>
+		</g>
+		<g transform="translate(184.43,-529.454)" v:groupContext="shape" v:mID="468" id="shape468-1548">
+			<title id="title2925">Sheet.468</title>
+			<desc id="desc2927">FSD</desc>
+			<v:textBlock v:margins="rect(2,2,2,2)"/>
+			<v:textRect height="22.7812" width="20.25" cy="780.609" cx="10.125"/>
+			<rect id="rect2929" class="st1" height="22.7812" width="20.25" y="769.21899" x="0"/>
+			<text id="text2931" v:langID="1035" class="st21" y="782.71002" x="3.1300001"><v:paragraph v:horizAlign="1"/><v:tabList/>FSD</text>		</g>
+		<g transform="translate(226.567,-413.579)" v:groupContext="shape" v:mID="469" id="shape469-1551">
+			<title id="title2934">Sheet.469</title>
+			<desc id="desc2936">Fixed State Machine (FFSM) Pre-Configurable State Machine (PF...</desc>
+			<v:textBlock v:margins="rect(2,2,2,2)"/>
+			<v:textRect height="227.25" width="50.12" cy="678.375" cx="25.0569"/>
+			<rect id="rect2938" class="st1" height="227.25" width="50.113899" y="564.75" x="0"/>
+			<text id="text2958" v:langID="1033" class="st21" y="646.88" x="16.5"><v:paragraph v:horizAlign="1"/><v:tabList/>Fixed<v:newlineChar/><tspan id="tspan2940" v:langID="1035" class="st17" dy="1.2em" x="2.6800001">State Machine </tspan><tspan id="tspan2942" v:langID="1035" class="st17" dy="1.2em" x="13.2">(</tspan>F<tspan id="tspan2944" v:langID="1035" class="st17">FSM)<v:newlineChar/><v:newlineChar/></tspan><tspan id="tspan2946" class="st17" dy="2.4000001em" x="18.440001">Pre</tspan>-<tspan id="tspan2948" class="st17" dy="1.2em" x="5.21">Configurable<v:newlineChar/></tspan><tspan id="tspan2950" class="st17" dy="1.2em" x="15.91"> </tspan><tspan id="tspan2952" v:langID="1035" class="st17">State </tspan><tspan id="tspan2954" v:langID="1035" class="st17" dy="1.2em" x="11.83">Machine </tspan><tspan id="tspan2956" v:langID="1035" class="st17" dy="1.2em" x="13">(PFSM)</tspan></text>		</g>
+		<g transform="translate(277.055,-618.329)" v:layerMember="0" v:groupContext="shape" v:mID="470" id="shape470-1563">
+			<title id="title2961">Sheet.470</title>
+			<path inkscape:connector-curvature="0" id="path2963" class="st36" d="M 4.24,792 H 4.6 38.19"/>
+		</g>
+		<g transform="translate(303.68,-544.079)" v:layerMember="0" v:groupContext="shape" v:mID="471" id="shape471-1570">
+			<title id="title2966">Sheet.471</title>
+			<path inkscape:connector-curvature="0" id="path2968" class="st49" d="M 0,792 H 12.26"/>
+		</g>
+		<g transform="rotate(90,473.822,621.858)" v:groupContext="shape" v:mID="472" id="shape472-1576">
+			<title id="title2971">Sheet.472</title>
+			<path inkscape:connector-curvature="0" id="path2973" class="st51" d="M 4.24,792 H 4.6 99.88"/>
+		</g>
+		<g transform="translate(276.68,-566.579)" v:layerMember="0" v:groupContext="shape" v:mID="473" id="shape473-1582">
+			<title id="title2976">Sheet.473</title>
+			<path inkscape:connector-curvature="0" id="path2978" class="st36" d="M 4.24,792 H 4.6 38.57"/>
+		</g>
+		<g transform="translate(277.669,-526.079)" v:layerMember="0" v:groupContext="shape" v:mID="474" id="shape474-1589">
+			<title id="title2981">Sheet.474</title>
+			<path inkscape:connector-curvature="0" id="path2983" class="st36" d="M 4.24,792 H 4.6 38.27"/>
+		</g>
+		<g transform="translate(277.669,-494.579)" v:layerMember="0" v:groupContext="shape" v:mID="475" id="shape475-1596">
+			<title id="title2986">Sheet.475</title>
+			<path inkscape:connector-curvature="0" id="path2988" class="st36" d="M 4.24,792 H 4.6 37.58"/>
+		</g>
+		<g transform="translate(273.305,-508.5)" v:groupContext="shape" v:mID="476" id="shape476-1603">
+			<title id="title2991">Sheet.476</title>
+			<desc id="desc2993">nERR_MCU, nERR_SoC</desc>
+			<v:textBlock v:tabSpace="42.5197" v:margins="rect(4,4,4,4)"/>
+			<v:textRect height="7.23024" width="50.7" cy="788.385" cx="25.3473"/>
+			<rect id="rect2995" class="st15" height="7.2302399" width="50.6945" y="784.77002" x="0"/>
+			<text id="text2999" v:langID="1031" class="st21" y="786.28003" x="5.1199999"><v:paragraph v:horizAlign="1"/><v:tabList/>nERR_MCU, <tspan id="tspan2997" class="st17" dy="1.2em" x="7.2600002">nERR_SoC</tspan></text>		</g>
+		<g transform="translate(296.1,-504)" v:layerMember="0" v:groupContext="shape" v:mID="477" id="shape477-1607">
+			<title id="title3002">Sheet.477</title>
+			<path inkscape:connector-curvature="0" id="path3004" class="st6" d="M 0,792 H 18.8"/>
+		</g>
+		<g transform="translate(230.553,-280.829)" v:groupContext="shape" v:mID="478" id="shape478-1612">
+			<title id="title3007">Sheet.478</title>
+			<desc id="desc3009">Target</desc>
+			<v:textBlock v:margins="rect(2,2,2,2)"/>
+			<v:textRect height="18" width="28.13" cy="783" cx="14.0639"/>
+			<rect id="rect3011" class="st24" height="18" width="28.127899" y="774" x="0"/>
+			<text id="text3013" v:langID="1031" class="st21" y="785.09998" x="3.95"><v:paragraph v:horizAlign="1"/><v:tabList/>Target</text>		</g>
+		<g transform="translate(262.617,-280.829)" v:groupContext="shape" v:mID="479" id="shape479-1615">
+			<title id="title3016">Sheet.479</title>
+			<desc id="desc3018">Control</desc>
+			<v:textBlock v:margins="rect(2,2,2,2)"/>
+			<v:textRect height="18" width="29.89" cy="783" cx="14.9417"/>
+			<rect id="rect3020" class="st24" height="18" width="29.883499" y="774" x="0"/>
+			<text id="text3022" v:langID="1031" class="st52" y="785.40002" x="2.05"><v:paragraph v:horizAlign="1"/><v:tabList/>Control</text>		</g>
+		<g transform="translate(230.553,-303.329)" v:groupContext="shape" v:mID="480" id="shape480-1618">
+			<title id="title3025">Sheet.480</title>
+			<desc id="desc3027">BIST and CRC</desc>
+			<v:textBlock v:margins="rect(2,2,2,2)"/>
+			<v:textRect height="18" width="59.63" cy="783" cx="29.8139"/>
+			<rect id="rect3029" class="st24" height="18" width="59.627899" y="774" x="0"/>
+			<text id="text3031" v:langID="1035" class="st21" y="785.09998" x="6.6700001"><v:paragraph v:horizAlign="1"/><v:tabList/>BIST and CRC</text>		</g>
+		<g transform="translate(319.551,-432)" v:groupContext="shape" v:mID="481" id="shape481-1621">
+			<title id="title3034">Sheet.481</title>
+			<desc id="desc3036">Power Good Controller &amp; Monitor</desc>
+			<v:textBlock v:margins="rect(2,2,2,2)"/>
+			<v:textRect height="24.1875" width="73.13" cy="779.906" cx="36.5625"/>
+			<rect id="rect3038" class="st1" height="24.1875" width="73.125" y="767.81201" x="0"/>
+			<text id="text3044" v:langID="1035" class="st21" y="777.81" x="17.110001"><v:paragraph v:horizAlign="1"/><v:tabList/>Power Good<tspan id="tspan3040" v:langID="1033" class="st17"> </tspan><tspan id="tspan3042" v:langID="1033" class="st17" dy="1.2em" x="5.4400001">Controller &amp; </tspan>Monitor</text>		</g>
+		<g transform="translate(312.68,-303.329)" v:groupContext="shape" v:mID="482" id="shape482-1626">
+			<title id="title3047">Sheet.482</title>
+			<desc id="desc3049">CRC</desc>
+			<v:textBlock v:margins="rect(2,2,2,2)"/>
+			<v:textRect height="18" width="78.75" cy="783" cx="39.375"/>
+			<rect id="rect3051" class="st24" height="18" width="78.75" y="774" x="0"/>
+			<text id="text3053" v:langID="1035" class="st21" y="785.09998" x="31.790001"><v:paragraph v:horizAlign="1"/><v:tabList/>CRC</text>		</g>
+		<g transform="translate(309.024,-346.714)" v:groupContext="shape" v:mID="483" id="shape483-1629">
+			<title id="title3056">Sheet.483</title>
+			<desc id="desc3058">Registers</desc>
+			<v:textBlock v:verticalAlign="0" v:margins="rect(2,2,2,2)"/>
+			<v:textRect height="75.8656" width="85.79" cy="754.067" cx="42.8906"/>
+			<rect id="rect3060" class="st1" height="75.865601" width="85.781197" y="716.13397" x="0"/>
+			<text id="text3062" v:langID="1035" class="st21" y="724.42999" x="28.110001"><v:paragraph v:horizAlign="1"/><v:tabList/>Registers</text>		</g>
+		<g transform="translate(312.68,-349.945)" v:groupContext="shape" v:mID="484" id="shape484-1632">
+			<title id="title3065">Sheet.484</title>
+			<desc id="desc3067">Non-Volatile Memory (NVM)</desc>
+			<v:textBlock v:verticalAlign="0" v:margins="rect(2,2,2,2)"/>
+			<v:textRect height="20.108" width="78.75" cy="781.946" cx="39.375"/>
+			<rect id="rect3069" class="st1" height="20.108" width="78.75" y="771.89203" x="0"/>
+			<text id="text3079" v:langID="1033" class="st21" y="780.19" x="6.6999998"><v:paragraph v:horizAlign="1"/><v:tabList/>Non<tspan id="tspan3071" v:langID="1031" class="st17">-</tspan><tspan id="tspan3073" v:langID="1031" class="st17">V</tspan>olatile Memory<tspan id="tspan3075" v:langID="1035" class="st17"> </tspan><tspan id="tspan3077" class="st17" dy="1.2em" x="29.27">(NVM)</tspan></text>		</g>
+		<g transform="translate(312.68,-374.695)" v:groupContext="shape" v:mID="485" id="shape485-1639">
+			<title id="title3082">Sheet.485</title>
+			<desc id="desc3084">Register Map</desc>
+			<v:textBlock v:margins="rect(2,2,2,2)"/>
+			<v:textRect height="15.75" width="77.63" cy="784.125" cx="38.8125"/>
+			<rect id="rect3086" class="st24" height="15.75" width="77.625" y="776.25" x="0"/>
+			<text id="text3088" v:langID="1035" class="st21" y="786.22998" x="18"><v:paragraph v:horizAlign="1"/><v:tabList/>Register Map</text>		</g>
+		<g transform="translate(312.68,-394.945)" v:groupContext="shape" v:mID="486" id="shape486-1642">
+			<title id="title3091">Sheet.486</title>
+			<desc id="desc3093">CRC</desc>
+			<v:textBlock v:margins="rect(2,2,2,2)"/>
+			<v:textRect height="11.25" width="77.63" cy="786.375" cx="38.8125"/>
+			<rect id="rect3095" class="st24" height="11.25" width="77.625" y="780.75" x="0"/>
+			<text id="text3097" v:langID="1035" class="st21" y="788.47998" x="31.23"><v:paragraph v:horizAlign="1"/><v:tabList/>CRC</text>		</g>
+		<g transform="translate(319.804,-461.25)" v:groupContext="shape" v:mID="487" id="shape487-1645">
+			<title id="title3100">Sheet.487</title>
+			<desc id="desc3102">Resource Controller</desc>
+			<v:textBlock v:margins="rect(2,2,2,2)"/>
+			<v:textRect height="21.9375" width="72.88" cy="781.031" cx="36.436"/>
+			<rect id="rect3104" class="st1" height="21.9375" width="72.872002" y="770.06201" x="0"/>
+			<text id="text3106" v:langID="1033" class="st21" y="783.13" x="5.3099999"><v:paragraph v:horizAlign="1"/><v:tabList/>Resource Controller</text>		</g>
+		<g transform="translate(276.68,-447.329)" v:layerMember="0" v:groupContext="shape" v:mID="488" id="shape488-1648">
+			<title id="title3109">Sheet.488</title>
+			<path inkscape:connector-curvature="0" id="path3111" class="st36" d="M 4.24,792 H 4.6 38.57"/>
+		</g>
+		<g transform="translate(449.93,-607.923)" v:groupContext="shape" v:mID="489" id="shape489-1655">
+			<title id="title3114">Sheet.489</title>
+			<desc id="desc3116">32-kHz Crystal Oscillator</desc>
+			<v:textBlock v:margins="rect(1,1,1,1)"/>
+			<v:textRect height="16.1563" width="96.75" cy="783.922" cx="48.375"/>
+			<rect id="rect3118" class="st1" height="16.1563" width="96.75" y="775.84399" x="0"/>
+			<text id="text3120" v:langID="1033" class="st21" y="786.02002" x="9.8699999"><v:paragraph v:horizAlign="1"/><v:tabList/>32-kHz Crystal Oscillator</text>		</g>
+		<g transform="translate(277.669,-418.079)" v:layerMember="0" v:groupContext="shape" v:mID="490" id="shape490-1658">
+			<title id="title3123">Sheet.490</title>
+			<path inkscape:connector-curvature="0" id="path3125" class="st36" d="M 4.24,792 H 4.6 26.75"/>
+		</g>
+		<g transform="rotate(-90.5883,10.946876,451.9661)" v:layerMember="0" v:groupContext="shape" v:mID="491" id="shape491-1665">
+			<title id="title3128">Sheet.491</title>
+			<path inkscape:connector-curvature="0" id="path3130" class="st36" d="M 4.24,792 H 4.6 9.54"/>
+		</g>
+		<g transform="translate(281.18,-359.579)" v:layerMember="0" v:groupContext="shape" v:mID="492" id="shape492-1672">
+			<title id="title3133">Sheet.492</title>
+			<path inkscape:connector-curvature="0" id="path3135" class="st6" d="M 0,792 H 23.24"/>
+		</g>
+		<g transform="rotate(90,320.3795,752.8005)" v:layerMember="0" v:groupContext="shape" v:mID="493" id="shape493-1677">
+			<title id="title3138">Sheet.493</title>
+			<path inkscape:connector-curvature="0" id="path3140" class="st6" d="M 0,792 H 22.4"/>
+		</g>
+		<g transform="translate(278.044,-471.517)" v:layerMember="0" v:groupContext="shape" v:mID="494" id="shape494-1682">
+			<title id="title3143">Sheet.494</title>
+			<path inkscape:connector-curvature="0" id="path3145" class="st36" d="M 4.24,792 H 4.6 37.2"/>
+		</g>
+		<g transform="rotate(180,159.923,573.96)" v:layerMember="0" v:groupContext="shape" v:mID="495" id="shape495-1689">
+			<title id="title3148">Sheet.495</title>
+			<path inkscape:connector-curvature="0" id="path3150" class="st11" d="M 0,792 H 18.26"/>
+		</g>
+		<g transform="translate(303.68,-593.579)" v:layerMember="0" v:groupContext="shape" v:mID="496" id="shape496-1692">
+			<title id="title3153">Sheet.496</title>
+			<path inkscape:connector-curvature="0" id="path3155" class="st49" d="M 0,792 H 12.26"/>
+		</g>
+		<g transform="translate(303.68,-629.339)" v:layerMember="0" v:groupContext="shape" v:mID="497" id="shape497-1697">
+			<title id="title3158">Sheet.497</title>
+			<path inkscape:connector-curvature="0" id="path3160" class="st49" d="M 0,792 H 10.87"/>
+		</g>
+		<g transform="translate(230.555,-452.954)" v:groupContext="shape" v:mID="498" id="shape498-1702">
+			<title id="title3163">Sheet.498</title>
+			<desc id="desc3165">SRAM</desc>
+			<v:textBlock v:margins="rect(2,2,2,2)"/>
+			<v:textRect height="11.25" width="42.75" cy="786.375" cx="21.375"/>
+			<rect id="rect3167" class="st24" height="11.25" width="42.75" y="780.75" x="0"/>
+			<text id="text3169" v:langID="1035" class="st21" y="788.47998" x="11.26"><v:paragraph v:horizAlign="1"/><v:tabList/>SRAM</text>		</g>
+		<g transform="translate(248.555,-344.392)" v:groupContext="shape" v:mID="499" id="shape499-1705">
+			<title id="title3172">Sheet.499</title>
+			<desc id="desc3174">LBIST ABIST</desc>
+			<v:textBlock v:margins="rect(2,2,2,2)"/>
+			<v:textRect height="24.1875" width="27" cy="779.906" cx="13.5"/>
+			<rect id="rect3176" class="st1" height="24.1875" width="27" y="767.81201" x="0"/>
+			<text id="text3180" v:langID="1035" class="st21" y="777.81" x="3.77"><v:paragraph v:horizAlign="1"/><v:tabList/>LBIST<v:newlineChar/><tspan id="tspan3178" class="st17" dy="1.2em" x="3.3900001">ABIST</tspan></text>		</g>
+		<g transform="rotate(90,244.584,772.346)" v:layerMember="0" v:groupContext="shape" v:mID="500" id="shape500-1709">
+			<title id="title3183">Sheet.500</title>
+			<path inkscape:connector-curvature="0" id="path3185" class="st36" d="M 4.24,792 H 4.6 68.12"/>
+		</g>
+		<g transform="matrix(1,0,0,-1,37.843,956.88)" v:groupContext="shape" v:mID="501" id="shape501-1716">
+			<title id="title3188">Sheet.501</title>
+			<path inkscape:connector-curvature="0" id="path3190" class="st8" d="M 0,792 H 183.61"/>
+		</g>
+		<g transform="rotate(-90,-202.606,389.214)" v:layerMember="4" v:groupContext="shape" v:mID="502" id="shape502-1721">
+			<title id="title3193">Sheet.502</title>
+			<path inkscape:connector-curvature="0" id="path3195" class="st11" d="M 0,792 H 5.99"/>
+		</g>
+		<g transform="translate(222.68,-377.579)" v:groupContext="shape" v:mID="503" id="shape503-1724">
+			<title id="title3198">Sheet.503</title>
+			<desc id="desc3200">Thermal Controller</desc>
+			<v:textBlock v:margins="rect(2,2,2,2)"/>
+			<v:textRect height="22.5" width="36" cy="780.75" cx="18"/>
+			<rect id="rect3202" class="st1" height="22.5" width="36" y="769.5" x="0"/>
+			<text id="text3206" v:langID="1033" class="st21" y="778.65002" x="5.1599998"><v:paragraph v:horizAlign="1"/><v:tabList/>Thermal <tspan id="tspan3204" class="st17" dy="1.2em" x="2.8299999">Controller</tspan></text>		</g>
+		<g transform="rotate(90,326.0045,704.4255)" v:layerMember="0" v:groupContext="shape" v:mID="504" id="shape504-1728">
+			<title id="title3209">Sheet.504</title>
+			<path inkscape:connector-curvature="0" id="path3211" class="st36" d="M 4.24,792 H 4.6 9.86"/>
+		</g>
+		<g transform="rotate(90,338.942,716.238)" v:layerMember="0" v:groupContext="shape" v:mID="505" id="shape505-1735">
+			<title id="title3214">Sheet.505</title>
+			<path inkscape:connector-curvature="0" id="path3216" class="st36" d="M 4.24,792 H 4.6 41.52"/>
+		</g>
+		<g transform="matrix(1,0,0,-1,115.243,1435.92)" v:layerMember="3" v:groupContext="shape" v:mID="506" id="shape506-1742">
+			<title id="title3219">Sheet.506</title>
+			<path inkscape:connector-curvature="0" id="path3221" class="st29" d="M 0,792 H 4.84"/>
+		</g>
+		<g transform="matrix(0,-1,-1,0,912.08,655.733)" v:layerMember="3" v:groupContext="shape" v:mID="507" id="shape507-1745">
+			<title id="title3224">Sheet.507</title>
+			<path inkscape:connector-curvature="0" id="path3226" class="st29" d="M 0,792 H 11.81"/>
+		</g>
+		<g transform="matrix(1,0,0,-1,137.968,1436.48)" v:layerMember="3" v:groupContext="shape" v:mID="508" id="shape508-1748">
+			<title id="title3229">Sheet.508</title>
+			<path inkscape:connector-curvature="0" id="path3231" class="st29" d="M 0,792 H 4.84"/>
+		</g>
+		<g transform="matrix(0,-1,-1,0,934.805,656.296)" v:layerMember="3" v:groupContext="shape" v:mID="509" id="shape509-1751">
+			<title id="title3234">Sheet.509</title>
+			<path inkscape:connector-curvature="0" id="path3236" class="st29" d="M 0,792 H 11.81"/>
+		</g>
+		<g transform="matrix(0,-1,-1,0,940.43,663.608)" v:layerMember="3" v:groupContext="shape" v:mID="510" id="shape510-1754">
+			<title id="title3239">Sheet.510</title>
+			<path inkscape:connector-curvature="0" id="path3241" class="st18" d="M 0,792 H 19.18"/>
+		</g>
+		<g transform="matrix(1,0,0,-1,148.43,1436.48)" v:layerMember="3" v:groupContext="shape" v:mID="511" id="shape511-1757">
+			<title id="title3244">Sheet.511</title>
+			<path inkscape:connector-curvature="0" id="path3246" class="st18" d="M 0,792 H 4.84"/>
+		</g>
+		<g transform="matrix(0,-1,-1,0,962.593,663.104)" v:layerMember="3" v:groupContext="shape" v:mID="512" id="shape512-1760">
+			<title id="title3249">Sheet.512</title>
+			<path inkscape:connector-curvature="0" id="path3251" class="st18" d="M 0,792 H 19.18"/>
+		</g>
+		<g transform="matrix(1,0,0,-1,170.593,1435.98)" v:layerMember="3" v:groupContext="shape" v:mID="513" id="shape513-1763">
+			<title id="title3254">Sheet.513</title>
+			<path inkscape:connector-curvature="0" id="path3256" class="st18" d="M 0,792 H 4.84"/>
+		</g>
+		<g transform="rotate(180,109.934,717.815)" v:layerMember="3" v:groupContext="shape" v:mID="514" id="shape514-1766">
+			<title id="title3259">Sheet.514</title>
+			<path inkscape:connector-curvature="0" id="path3261" class="st29" d="M 0,792 H 5.27"/>
+		</g>
+		<g transform="rotate(-90,39.333,616.738)" v:layerMember="3" v:groupContext="shape" v:mID="515" id="shape515-1769">
+			<title id="title3264">Sheet.515</title>
+			<path inkscape:connector-curvature="0" id="path3266" class="st29" d="M 0,792 H 12.44"/>
+		</g>
+		<g transform="rotate(180,98.684,717.815)" v:layerMember="3" v:groupContext="shape" v:mID="516" id="shape516-1772">
+			<title id="title3269">Sheet.516</title>
+			<path inkscape:connector-curvature="0" id="path3271" class="st25" d="M 0,792 H 4.32"/>
+		</g>
+		<g transform="rotate(-90,28.5575,627.5135)" v:layerMember="3" v:groupContext="shape" v:mID="517" id="shape517-1775">
+			<title id="title3274">Sheet.517</title>
+			<path inkscape:connector-curvature="0" id="path3276" class="st29" d="M 0,792 H 12.44"/>
+		</g>
+		<g transform="matrix(-1,0,0,1,91.3872,-538.575)" v:groupContext="shape" v:mID="518" id="shape518-1778">
+			<title id="title3279">Sheet.518</title>
+			<desc id="desc3281">VOUT_LDOVINT</desc>
+			<v:textBlock v:margins="rect(2,2,2,2)"/>
+			<v:textRect height="12" width="54" cy="786" cx="27"/>
+			<rect id="rect3283" class="st15" height="12" width="54" y="780" x="0"/>
+			<text id="text3285" v:langID="1033" class="st16" transform="scale(-1,1)" y="787.79999" x="-52"><v:paragraph/><v:tabList/>VOUT_LDOVINT</text>		</g>
+		<g transform="rotate(90,293.475,637.955)" v:groupContext="shape" v:mID="519" id="shape519-1781">
+			<title id="title3288">Sheet.519</title>
+			<path inkscape:connector-curvature="0" id="path3290" class="st34" d="M 0,792 H 4.69"/>
+		</g>
+		<g transform="rotate(180,48.11525,579.36)" v:layerMember="4" v:groupContext="shape" v:mID="520" id="shape520-1784">
+			<title id="title3293">Sheet.520</title>
+			<path inkscape:connector-curvature="0" id="path3295" class="st28" d="M 0,792 H 8.55"/>
+		</g>
+		<g transform="rotate(-90,215.0505,455.8705)" v:groupContext="shape" v:mID="521" id="shape521-1787">
+			<title id="title3298">Sheet.521</title>
+			<path inkscape:connector-curvature="0" id="path3300" class="st19" d="M 27,783 H 0 l 3.37,9 h 20.25 z"/>
+		</g>
+		<g transform="matrix(-1,0,0,1,537.68,-126.349)" v:groupContext="shape" v:mID="522" id="shape522-1789">
+			<title id="title3303">Sheet.522</title>
+			<desc id="desc3305">Safety Bandgap</desc>
+			<v:textBlock v:margins="rect(2,2,2,2)"/>
+			<v:textRect height="16.4611" width="36" cy="783.769" cx="18"/>
+			<rect id="rect3307" class="st24" height="16.4611" width="36" y="775.539" x="0"/>
+			<text id="text3311" v:langID="1033" class="st16" transform="scale(-1,1)" y="781.96997" x="-26.5"><v:paragraph v:horizAlign="1"/><v:tabList/>Safety <tspan id="tspan3309" v:langID="1035" class="st17" dy="1.2em" x="-30.01">Bandgap</tspan></text>		</g>
+		<g transform="rotate(-90,44.342,558.658)" v:groupContext="shape" v:mID="523" id="shape523-1793">
+			<title id="title3314">Sheet.523</title>
+			<path inkscape:connector-curvature="0" id="path3316" class="st6" d="M 0,792 H 48.45"/>
+		</g>
+		<g transform="matrix(0,1,1,0,-508.5,526.781)" v:groupContext="shape" v:mID="525" id="shape525-1798">
+			<title id="title3319">Sheet.525</title>
+			<desc id="desc3321">TRIG_WDOG (GPIO2 or GPIO11)</desc>
+			<v:textBlock v:margins="rect(2,2,2,2)"/>
+			<v:textRect height="12" width="71.44" cy="786" cx="35.7187"/>
+			<rect id="rect3323" class="st15" height="12" width="71.4375" y="780" x="0"/>
+			<text id="text3329" v:langID="1033" class="st16" transform="scale(-1,1)" y="784.20001" x="-69.440002"><v:paragraph/><v:tabList/>TRIG_WDOG<v:lf/><tspan id="tspan3325" v:langID="1031" class="st17" dy="1.2em" x="-69.440002"> </tspan><tspan id="tspan3327" v:langID="1031" class="st17">(GPIO2 or GPIO11)</tspan></text>		</g>
+		<g transform="rotate(-90,12.3965,588.2125)" v:groupContext="shape" v:mID="526" id="shape526-1803">
+			<title id="title3332">Sheet.526</title>
+			<path inkscape:connector-curvature="0" id="path3334" class="st6" d="M 0,792 H 48.45"/>
+		</g>
+		<g transform="matrix(0,1,1,0,-574.5,526.5)" v:groupContext="shape" v:mID="527" id="shape527-1808">
+			<title id="title3337">Sheet.527</title>
+			<desc id="desc3339">nERR_MCU (GPIO7)</desc>
+			<v:textBlock v:margins="rect(2,2,2,2)"/>
+			<v:textRect height="12" width="71.44" cy="786" cx="35.7187"/>
+			<rect id="rect3341" class="st15" height="12" width="71.4375" y="780" x="0"/>
+			<text id="text3343" v:langID="1031" class="st16" transform="scale(-1,1)" y="787.79999" x="-69.440002"><v:paragraph/><v:tabList/>nERR_MCU (GPIO7)</text>		</g>
+		<g transform="rotate(-90,5.6465,594.9625)" v:groupContext="shape" v:mID="528" id="shape528-1811">
+			<title id="title3346">Sheet.528</title>
+			<path inkscape:connector-curvature="0" id="path3348" class="st6" d="M 0,792 H 48.45"/>
+		</g>
+		<g transform="matrix(0,1,1,0,-588,526.5)" v:groupContext="shape" v:mID="529" id="shape529-1816">
+			<title id="title3351">Sheet.529</title>
+			<desc id="desc3353">nERR_SoC (GPIO3)</desc>
+			<v:textBlock v:margins="rect(2,2,2,2)"/>
+			<v:textRect height="12" width="71.44" cy="786" cx="35.7187"/>
+			<rect id="rect3355" class="st15" height="12" width="71.4375" y="780" x="0"/>
+			<text id="text3357" v:langID="1031" class="st16" transform="scale(-1,1)" y="787.79999" x="-69.440002"><v:paragraph/><v:tabList/>nERR_SoC (GPIO3)</text>		</g>
+	</g>
+</svg>

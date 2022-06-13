@@ -1,0 +1,18 @@
+[[pictures]]
+== Pictures
+
+image::images/ch10/front.jpg[title="BeagleBone AI-64 front"]
+
+image::images/ch10/back.jpg[title="BeagleBone AI-64 back"]
+
+image::images/ch10/back-heatsink.jpg[title="BeagleBone AI-64 back with heatsink"]
+
+image::images/ch10/45-front.jpg[title="BeagleBone AI-64 front at 45° angle"]
+
+image::images/ch10/45-back.jpg[title="BeagleBone AI-64 back at 45° angle"]
+
+image::images/ch10/45-back-heatsink.jpg[title="BeagleBone AI-64 back with heatsink at 45° angle"]
+
+image::images/ch10/feature.jpg[title="BeagleBone AI-64 ports"]
+
+

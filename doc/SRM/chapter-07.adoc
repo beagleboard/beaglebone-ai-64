@@ -1,0 +1,340 @@
+[[connectors]]
+== Connectors
+
+This section describes each of the connectors on the board.
+
+[[section-7-1,Section 7.1 Expansion Connectors]]
+=== Expansion Connectors
+
+The expansion interface on the board is comprised of two 46 pin
+connectors. All signals on the expansion headers are _3.3V_ unless
+otherwise indicated.
+
+_NOTE: Do not connect 5V logic level signals to these pins or the board
+will be_ _damaged._ '''
+
+*NOTE: DO NOT APPLY VOLTAGE TO ANY I/O PIN WHEN POWER IS NOT SUPPLIED TO
+THE BOARD. IT WILL DAMAGE THE PROCESSOR AND VOID THE WARRANTY.*
+
+*NO PINS ARE TO BE DRIVEN UNTIL AFTER THE SYS_RESET LINE GOES HIGH.*
+
+<<figure-50>> shows the location of the expansion connectors.
+
+[[figure-50,Figure 50]]
+.Figure 50. Expansion Connector Location
+image:media/image68.jpg[media/image68.jpg,title="media/image68.jpg",width=286,height=394,align="center"]
+
+The location and spacing of the expansion headers are the same as on the BeagleBone Black.
+
+[[connector-p8-and-p9]]
+==== Connector P8 and P9
+
+<<table-12>> shows the pin bindings for **P8** and **P9** expansion headers. Signals
+can be connected to theese connectors based on setting the pin mux on the
+processor, but this is the default settings on power up. The SW is
+responsible for setting the default function of each pin. There are some
+signals that have not been listed here. Refer to the processor
+documentation for more information on these pins and detailed
+descriptions of all of the pins listed. In some cases there may not be
+enough signals to complete a group of signals that may be required to
+implement a total interface.
+
+The *BALL NUMBER* Identifier is the pin number in the processor documentation.
+
+The *PIN No.* column is the pin number on the expansion header.
+
+The *ADDRESS* column is the pin CONFIGURATION address??? for each pin.
+
+The *MUXMODE[14:0] SETTINGS* are the possible pin configurations.
+
+
+*NOTE: DO NOT APPLY VOLTAGE TO ANY I/O PIN WHEN POWER IS NOT SUPPLIED TO
+THE BOARD. IT WILL DAMAGE THE PROCESSOR AND VOID THE WARRANTY.*
+
+*NO PINS ARE TO BE DRIVEN UNTIL AFTER THE SYS_RESET LINE GOES HIGH.*
+
+
+|=======
+| *PIN No.* | *ADDRESS* | *REGISTER NAME* | *BALL NUMBER* | *MUXMODE[14:0] SETTINGS*|||||||||||||||
+| *PIN No.* | *ADDRESS* | *REGISTER NAME* | *BALL NUMBER* |*0* | *1* | *2* | *3* | *4* | *5* | *6* | *7* | *8* | *9* | *10* | *11* | *12* | *13* | *14* | *Bootstrap* 
+ |P8_03|0x00011C054 | PADCONFIG21 | AH21 | PRG1_PRU0_GPO19 | PRG1_PRU0_GPI19 | PRG1_IEP0_EDC_SYNC_OUT0 | PRG1_PWM0_TZ_OUT |  | RMII5_TXD0 | MCAN6_TX | GPIO0_20 |  |  | VOUT0_EXTPCLKIN | VPFE0_PCLK | MCASP4_AFSX |  |  | 
+ |P8_04 |0x00011C0C4 | PADCONFIG49 | AC29 | PRG0_PRU0_GPO5 | PRG0_PRU0_GPI5 |  | PRG0_PWM3_B2 |  | RMII3_TXD0 |  | GPIO0_48 | GPMC0_AD0 |  |  |  | MCASP0_AXR3 |  |  | BOOTMODE2
+ |P8_05 |0x00011C088 | PADCONFIG34 | AH25 | PRG1_PRU1_GPO12 | PRG1_PRU1_GPI12 | PRG1_RGMII2_TD1 | PRG1_PWM1_A0 | RGMII2_TD1 |  | MCAN7_TX | GPIO0_33 | RGMII8_TD1 |  | VOUT0_DATA12 |  | MCASP9_AFSX |  |  | 
+ |P8_06 |0x00011C08C | PADCONFIG35 | AG25 | PRG1_PRU1_GPO13 | PRG1_PRU1_GPI13 | PRG1_RGMII2_TD2 | PRG1_PWM1_B0 | RGMII2_TD2 |  | MCAN7_RX | GPIO0_34 | RGMII8_TD2 |  | VOUT0_DATA13 | VPFE0_DATA8 | MCASP9_AXR0 | MCASP4_ACLKR |  | 
+ |P8_07 |0x00011C03C | PADCONFIG15 | AD24 | PRG1_PRU0_GPO14 | PRG1_PRU0_GPI14 | PRG1_RGMII1_TD3 | PRG1_PWM0_A1 | RGMII1_TD3 |  | MCAN5_RX | GPIO0_15 |  | RGMII7_TD3 | VOUT0_DATA19 | VPFE0_DATA3 | MCASP7_AXR1 |  |  | 
+ |P8_08 |0x00011C038 | PADCONFIG14 | AG24 | PRG1_PRU0_GPO13 | PRG1_PRU0_GPI13 | PRG1_RGMII1_TD2 | PRG1_PWM0_B0 | RGMII1_TD2 |  | MCAN5_TX | GPIO0_14 |  | RGMII7_TD2 | VOUT0_DATA18 | VPFE0_DATA2 | MCASP7_AXR0 |  |  | 
+ |P8_09 |0x00011C044 | PADCONFIG17 | AE24 | PRG1_PRU0_GPO16 | PRG1_PRU0_GPI16 | PRG1_RGMII1_TXC | PRG1_PWM0_A2 | RGMII1_TXC |  | MCAN6_RX | GPIO0_17 |  | RGMII7_TXC | VOUT0_DATA21 | VPFE0_DATA5 | MCASP7_AXR3 | MCASP7_AFSR |  | 
+ |P8_10 |0x00011C040 | PADCONFIG16 | AC24 | PRG1_PRU0_GPO15 | PRG1_PRU0_GPI15 | PRG1_RGMII1_TX_CTL | PRG1_PWM0_B1 | RGMII1_TX_CTL |  | MCAN6_TX | GPIO0_16 |  | RGMII7_TX_CTL | VOUT0_DATA20 | VPFE0_DATA4 | MCASP7_AXR2 | MCASP7_ACLKR |  | 
+ |P8_11 |0x00011C0F4 | PADCONFIG61 | AB24 | PRG0_PRU0_GPO17 | PRG0_PRU0_GPI17 | PRG0_IEP0_EDC_SYNC_OUT1 | PRG0_PWM0_B2 | PRG0_ECAP0_SYNC_OUT |  |  | GPIO0_60 | GPMC0_AD5 | OBSCLK1 |  |  | MCASP0_AXR13 |  |  | BOOTMODE7
+ |P8_12 |0x00011C0F0 | PADCONFIG60 | AH28 | PRG0_PRU0_GPO16 | PRG0_PRU0_GPI16 | PRG0_RGMII1_TXC | PRG0_PWM0_A2 | RGMII3_TXC |  |  | GPIO0_59 |  |  | DSS_FSYNC1 |  | MCASP0_AXR12 |  |  | 
+ |P8_13 |0x00011C168 | PADCONFIG90 | V27 | RGMII5_TD1 | RMII7_TXD1 | I2C3_SCL |  | VOUT1_DATA4 | TRC_DATA2 | EHRPWM0_B | GPIO0_89 | GPMC0_A5 |  |  |  | MCASP11_ACLKX |  |  | 
+ |P8_14 |0x00011C130 | PADCONFIG76 | AF27 | PRG0_PRU1_GPO12 | PRG0_PRU1_GPI12 | PRG0_RGMII2_TD1 | PRG0_PWM1_A0 | RGMII4_TD1 |  |  | GPIO0_75 |  |  |  |  | MCASP1_AXR8 |  | UART8_CTSn | 
+ |P8_15 |0x00011C0F8 | PADCONFIG62 | AB29 | PRG0_PRU0_GPO18 | PRG0_PRU0_GPI18 | PRG0_IEP0_EDC_LATCH_IN0 | PRG0_PWM0_TZ_IN | PRG0_ECAP0_IN_APWM_OUT |  |  | GPIO0_61 | GPMC0_AD6 |  |  |  | MCASP0_AXR14 |  |  | 
+ |P8_16 |0x00011C0FC | PADCONFIG63 | AB28 | PRG0_PRU0_GPO19 | PRG0_PRU0_GPI19 | PRG0_IEP0_EDC_SYNC_OUT0 | PRG0_PWM0_TZ_OUT |  |  |  | GPIO0_62 | GPMC0_AD7 |  |  |  | MCASP0_AXR15 |  |  | 
+ |P8_17 |0x00011C00C | PADCONFIG3 | AF22 | PRG1_PRU0_GPO2 | PRG1_PRU0_GPI2 | PRG1_RGMII1_RD2 | PRG1_PWM2_A0 | RGMII1_RD2 | RMII1_CRS_DV |  | GPIO0_3 | GPMC0_WAIT1 | RGMII7_RD2 |  |  | MCASP6_AXR0 |  | UART1_RXD | 
+ |P8_18 |0x00011C010 | PADCONFIG4 | AJ23 | PRG1_PRU0_GPO3 | PRG1_PRU0_GPI3 | PRG1_RGMII1_RD3 | PRG1_PWM3_A2 | RGMII1_RD3 | RMII1_RX_ER |  | GPIO0_4 | GPMC0_DIR | RGMII7_RD3 |  |  | MCASP6_AXR1 |  | UART1_TXD | 
+ |P8_19 |0x00011C164 | PADCONFIG89 | V29 | RGMII5_TD2 | UART3_TXD |  | SYNC3_OUT | VOUT1_DATA3 | TRC_DATA1 | EHRPWM0_A | GPIO0_88 | GPMC0_A4 |  |  |  | MCASP10_AXR1 |  |  | 
+ |P8_20 |0x00011C134 | PADCONFIG77 | AF26 | PRG0_PRU1_GPO13 | PRG0_PRU1_GPI13 | PRG0_RGMII2_TD2 | PRG0_PWM1_B0 | RGMII4_TD2 |  |  | GPIO0_76 |  |  |  |  | MCASP1_AXR9 |  | UART8_RTSn | 
+ |P8_21 |0x00011C07C | PADCONFIG31 | AF21 | PRG1_PRU1_GPO9 | PRG1_PRU1_GPI9 | PRG1_UART0_RXD |  | SPI6_CS3 | RMII6_RXD1 | MCAN8_TX | GPIO0_30 | GPMC0_CSn0 | PRG1_IEP0_EDIO_DATA_IN_OUT30 | VOUT0_DATA9 |  | MCASP4_AXR3 |  |  | 
+ |P8_22 |0x00011C014 | PADCONFIG5 | AH23 | PRG1_PRU0_GPO4 | PRG1_PRU0_GPI4 | PRG1_RGMII1_RX_CTL | PRG1_PWM2_B0 | RGMII1_RX_CTL | RMII1_TXD0 |  | GPIO0_5 | GPMC0_CSn2 | RGMII7_RX_CTL |  |  | MCASP6_AXR2 | MCASP6_ACLKR | UART2_RXD | 
+ |P8_23 |0x00011C080 | PADCONFIG32 | AB23 | PRG1_PRU1_GPO10 | PRG1_PRU1_GPI10 | PRG1_UART0_TXD | PRG1_PWM2_TZ_IN |  | RMII6_CRS_DV | MCAN8_RX | GPIO0_31 | GPMC0_CLKOUT | PRG1_IEP0_EDIO_DATA_IN_OUT31 | VOUT0_DATA10 | GPMC0_FCLK_MUX | MCASP5_ACLKX |  |  | 
+ |P8_24 |0x00011C018 | PADCONFIG6 | AD20 | PRG1_PRU0_GPO5 | PRG1_PRU0_GPI5 |  | PRG1_PWM3_B2 |  | RMII1_TX_EN |  | GPIO0_6 | GPMC0_WEn |  |  |  | MCASP3_AXR0 |  |  | BOOTMODE0
+ |P8_25 |0x00011C090 | PADCONFIG36 | AH26 | PRG1_PRU1_GPO14 | PRG1_PRU1_GPI14 | PRG1_RGMII2_TD3 | PRG1_PWM1_A1 | RGMII2_TD3 |  | MCAN8_TX | GPIO0_35 | RGMII8_TD3 |  | VOUT0_DATA14 |  | MCASP9_AXR1 | MCASP4_AFSR |  | 
+ |P8_26 |0x00011C0D0 | PADCONFIG52 | AC27 | PRG0_PRU0_GPO8 | PRG0_PRU0_GPI8 |  | PRG0_PWM2_A1 |  |  | MCAN9_RX | GPIO0_51 | GPMC0_AD2 |  |  |  | MCASP0_AXR6 |  | UART6_RXD | 
+ |P8_27 |0x00011C120 | PADCONFIG72 | AA28 | PRG0_PRU1_GPO8 | PRG0_PRU1_GPI8 |  | PRG0_PWM2_TZ_OUT |  |  | MCAN11_RX | GPIO0_71 | GPMC0_AD10 |  |  |  | MCASP1_AFSX |  |  | 
+ |P8_28 |0x00011C124 | PADCONFIG73 | Y24 | PRG0_PRU1_GPO9 | PRG0_PRU1_GPI9 | PRG0_UART0_RXD |  | SPI3_CS3 |  | PRG0_IEP0_EDIO_DATA_IN_OUT30 | GPIO0_72 | GPMC0_AD11 |  | DSS_FSYNC3 |  | MCASP1_AXR5 |  | UART8_RXD | 
+ |P8_29 |0x00011C128 | PADCONFIG74 | AA25 | PRG0_PRU1_GPO10 | PRG0_PRU1_GPI10 | PRG0_UART0_TXD | PRG0_PWM2_TZ_IN |  |  | PRG0_IEP0_EDIO_DATA_IN_OUT31 | GPIO0_73 | GPMC0_AD12 | CLKOUT |  |  | MCASP1_AXR6 |  | UART8_TXD | 
+ |P8_30 |0x00011C12C | PADCONFIG75 | AG26 | PRG0_PRU1_GPO11 | PRG0_PRU1_GPI11 | PRG0_RGMII2_TD0 |  | RGMII4_TD0 | RMII4_TX_EN |  | GPIO0_74 | GPMC0_A26 |  |  |  | MCASP1_AXR7 |  |  | 
+ |P8_31A |0x00011C084 | PADCONFIG33 | AJ25 | PRG1_PRU1_GPO11 | PRG1_PRU1_GPI11 | PRG1_RGMII2_TD0 |  | RGMII2_TD0 | RMII2_TX_EN |  | GPIO0_32 | RGMII8_TD0 | EQEP1_I | VOUT0_DATA11 |  | MCASP9_ACLKX |  |  | 
+ |P8_31B |0x00011C100 | PADCONFIG64 | AE29 | PRG0_PRU1_GPO0 | PRG0_PRU1_GPI0 | PRG0_RGMII2_RD0 |  | RGMII4_RD0 | RMII4_RXD0 |  | GPIO0_63 | UART4_CTSn |  |  |  | MCASP1_AXR0 |  | UART5_RXD | 
+ |P8_32A |0x00011C06C | PADCONFIG27 | AG21 | PRG1_PRU1_GPO5 | PRG1_PRU1_GPI5 |  |  |  | RMII5_TX_EN | MCAN6_RX | GPIO0_26 | GPMC0_WPn | EQEP1_S | VOUT0_DATA5 |  | MCASP4_AXR0 |  | TIMER_IO4 | 
+ |P8_32B |0x00011C104 | PADCONFIG65 | AD28 | PRG0_PRU1_GPO1 | PRG0_PRU1_GPI1 | PRG0_RGMII2_RD1 |  | RGMII4_RD1 | RMII4_RXD1 |  | GPIO0_64 | UART4_RTSn |  |  |  | MCASP1_AXR1 |  | UART5_TXD | 
+ |P8_33A |0x00011C068 | PADCONFIG26 | AH24 | PRG1_PRU1_GPO4 | PRG1_PRU1_GPI4 | PRG1_RGMII2_RX_CTL | PRG1_PWM2_B2 | RGMII2_RX_CTL | RMII2_TXD0 |  | GPIO0_25 | RGMII8_RX_CTL | EQEP1_B | VOUT0_DATA4 | VPFE0_DATA13 | MCASP8_AXR2 | MCASP8_ACLKR | TIMER_IO3 | 
+ |P8_33B |0x00011C1C0 | PADCONFIG112 | AA2 | SPI0_CS0 | UART0_RTSn |  |  |  |  |  | GPIO0_111 |  |  |  |  |  |  |  | 
+ |P8_34 |0x00011C01C | PADCONFIG7 | AD22 | PRG1_PRU0_GPO6 | PRG1_PRU0_GPI6 | PRG1_RGMII1_RXC | PRG1_PWM3_A1 | RGMII1_RXC | RMII1_TXD1 | AUDIO_EXT_REFCLK0 | GPIO0_7 | GPMC0_CSn3 | RGMII7_RXC |  |  | MCASP6_AXR3 | MCASP6_AFSR | UART2_TXD | 
+ |P8_35A |0x00011C064 | PADCONFIG25 | AD23 | PRG1_PRU1_GPO3 | PRG1_PRU1_GPI3 | PRG1_RGMII2_RD3 |  | RGMII2_RD3 | RMII2_RX_ER |  | GPIO0_24 | RGMII8_RD3 | EQEP1_A | VOUT0_DATA3 | VPFE0_WEN | MCASP8_AXR1 | MCASP3_AFSR | TIMER_IO2 | 
+ |P8_35B |0x00011C1D4 | PADCONFIG117 | Y3 | SPI1_CS0 | UART0_CTSn |  | UART5_RXD |  |  | PRG0_IEP0_EDIO_OUTVALID | GPIO0_116 | PRG0_IEP0_EDC_LATCH_IN0 |  |  |  |  |  |  | 
+ |P8_36 |0x00011C020 | PADCONFIG8 | AE20 | PRG1_PRU0_GPO7 | PRG1_PRU0_GPI7 | PRG1_IEP0_EDC_LATCH_IN1 | PRG1_PWM3_B1 |  | AUDIO_EXT_REFCLK1 | MCAN4_TX | GPIO0_8 |  |  |  |  | MCASP3_AXR1 |  |  | 
+ |P8_37A |0x00011C1AC | PADCONFIG107 | Y27 | RGMII6_RD2 | UART4_RTSn |  | UART5_TXD |  | TRC_DATA19 | EHRPWM5_A | GPIO0_106 | GPMC0_A22 |  |  |  | MCASP11_AXR5 |  |  | 
+ |P8_37B |0x00011C02C | PADCONFIG11 | AD21 | PRG1_PRU0_GPO10 | PRG1_PRU0_GPI10 | PRG1_UART0_RTSn | PRG1_PWM2_B1 | SPI6_CS2 | RMII5_CRS_DV |  | GPIO0_11 | GPMC0_BE0n_CLE | PRG1_IEP0_EDIO_DATA_IN_OUT29 | OBSCLK2 |  | MCASP3_AFSX |  |  | 
+ |P8_38A |0x00011C1A8 | PADCONFIG106 | Y29 | RGMII6_RD3 | UART4_CTSn |  | UART5_RXD | CLKOUT | TRC_DATA18 | EHRPWM_TZn_IN4 | GPIO0_105 | GPMC0_A21 |  |  |  | MCASP11_AXR4 |  |  | 
+ |P8_38B |0x00011C024 | PADCONFIG9 | AJ20 | PRG1_PRU0_GPO8 | PRG1_PRU0_GPI8 |  | PRG1_PWM2_A1 |  | RMII5_RXD0 | MCAN4_RX | GPIO0_9 | GPMC0_OEn_REn |  | VOUT0_DATA22 |  | MCASP3_AXR2 |  |  | 
+ |P8_39 |0x00011C118 | PADCONFIG70 | AC26 | PRG0_PRU1_GPO6 | PRG0_PRU1_GPI6 | PRG0_RGMII2_RXC |  | RGMII4_RXC | RMII4_TXD0 |  | GPIO0_69 | GPMC0_A25 |  |  |  | MCASP1_AXR3 |  |  | 
+ |P8_40 |0x00011C11C | PADCONFIG71 | AA24 | PRG0_PRU1_GPO7 | PRG0_PRU1_GPI7 | PRG0_IEP1_EDC_LATCH_IN1 |  | SPI3_CS0 |  | MCAN11_TX | GPIO0_70 | GPMC0_AD9 |  |  |  | MCASP1_AXR4 |  | UART2_TXD | 
+ |P8_41 |0x00011C110 | PADCONFIG68 | AD29 | PRG0_PRU1_GPO4 | PRG0_PRU1_GPI4 | PRG0_RGMII2_RX_CTL | PRG0_PWM2_B2 | RGMII4_RX_CTL | RMII4_TXD1 |  | GPIO0_67 | GPMC0_A24 |  |  |  | MCASP1_AXR2 |  |  | 
+ |P8_42 |0x00011C114 | PADCONFIG69 | AB27 | PRG0_PRU1_GPO5 | PRG0_PRU1_GPI5 |  |  |  |  |  | GPIO0_68 | GPMC0_AD8 |  |  |  | MCASP1_ACLKX |  |  | BOOTMODE6
+ |P8_43 |0x00011C108 | PADCONFIG66 | AD27 | PRG0_PRU1_GPO2 | PRG0_PRU1_GPI2 | PRG0_RGMII2_RD2 | PRG0_PWM2_A2 | RGMII4_RD2 | RMII4_CRS_DV |  | GPIO0_65 | GPMC0_A23 |  |  |  | MCASP1_ACLKR | MCASP1_AXR10 |  | 
+ |P8_44 |0x00011C10C | PADCONFIG67 | AC25 | PRG0_PRU1_GPO3 | PRG0_PRU1_GPI3 | PRG0_RGMII2_RD3 |  | RGMII4_RD3 | RMII4_RX_ER |  | GPIO0_66 |  |  |  |  | MCASP1_AFSR | MCASP1_AXR11 |  | 
+ |P8_45 |0x00011C140 | PADCONFIG80 | AG29 | PRG0_PRU1_GPO16 | PRG0_PRU1_GPI16 | PRG0_RGMII2_TXC | PRG0_PWM1_A2 | RGMII4_TXC |  |  | GPIO0_79 |  |  |  |  | MCASP2_AXR2 |  |  | 
+ |P8_46 |0x00011C144 | PADCONFIG81 | Y25 | PRG0_PRU1_GPO17 | PRG0_PRU1_GPI17 | PRG0_IEP1_EDC_SYNC_OUT1 | PRG0_PWM1_B2 | SPI3_CLK |  |  | GPIO0_80 | GPMC0_AD13 |  |  |  | MCASP2_AXR3 |  |  | BOOTMODE3
+ |P9_11 |0x00011C004 | PADCONFIG1 | AC23 | PRG1_PRU0_GPO0 | PRG1_PRU0_GPI0 | PRG1_RGMII1_RD0 | PRG1_PWM3_A0 | RGMII1_RD0 | RMII1_RXD0 |  | GPIO0_1 | GPMC0_BE1n | RGMII7_RD0 |  |  | MCASP6_ACLKX |  | UART0_RXD | 
+ |P9_12 |0x00011C0B8 | PADCONFIG46 | AE27 | PRG0_PRU0_GPO2 | PRG0_PRU0_GPI2 | PRG0_RGMII1_RD2 | PRG0_PWM2_A0 | RGMII3_RD2 | RMII3_CRS_DV |  | GPIO0_45 | UART3_RXD |  |  |  | MCASP0_ACLKR |  |  | 
+ |P9_13 |0x00011C008 | PADCONFIG2 | AG22 | PRG1_PRU0_GPO1 | PRG1_PRU0_GPI1 | PRG1_RGMII1_RD1 | PRG1_PWM3_B0 | RGMII1_RD1 | RMII1_RXD1 |  | GPIO0_2 | GPMC0_WAIT0 | RGMII7_RD1 |  |  | MCASP6_AFSX |  | UART0_TXD | 
+ |P9_14 |0x00011C178 | PADCONFIG94 | U27 | RGMII5_RD3 | UART3_CTSn |  | UART6_RXD | VOUT1_DATA8 | TRC_DATA6 | EHRPWM2_A | GPIO0_93 | GPMC0_A9 |  |  |  | MCASP11_AXR0 |  |  | 
+ |P9_15 |0x00011C0C0 | PADCONFIG48 | AD25 | PRG0_PRU0_GPO4 | PRG0_PRU0_GPI4 | PRG0_RGMII1_RX_CTL | PRG0_PWM2_B0 | RGMII3_RX_CTL | RMII3_TXD1 |  | GPIO0_47 |  |  |  |  | MCASP0_AXR2 |  |  | 
+ |P9_16A |0x00011C17C | PADCONFIG95 | U24 | RGMII5_RD2 | UART3_RTSn |  | UART6_TXD | VOUT1_DATA9 | TRC_DATA7 | EHRPWM2_B | GPIO0_94 | GPMC0_A10 |  |  |  | MCASP11_AXR1 |  |  | 
+ |P9_16B |0x00011C1DC | PADCONFIG119 | Y1 | SPI1_CLK | UART5_CTSn | I2C4_SDA | UART2_RXD |  |  |  | GPIO0_118 | PRG0_IEP0_EDC_SYNC_OUT0 |  |  |  |  |  |  | 
+ |P9_17A |0x00011C074 | PADCONFIG29 | AC21 | PRG1_PRU1_GPO7 | PRG1_PRU1_GPI7 | PRG1_IEP1_EDC_LATCH_IN1 |  | SPI6_CS0 | RMII6_RX_ER | MCAN7_TX | GPIO0_28 |  |  | VOUT0_DATA7 | VPFE0_DATA15 | MCASP4_AXR1 |  | UART3_TXD | 
+ |P9_17B |0x00011C1D0 | PADCONFIG116 | AA3 | SPI0_D1 |  | I2C6_SCL |  |  |  |  | GPIO0_115 |  |  |  |  |  |  |  | 
+ |P9_18A |0x00011C0A4 | PADCONFIG41 | AH22 | PRG1_PRU1_GPO19 | PRG1_PRU1_GPI19 | PRG1_IEP1_EDC_SYNC_OUT0 | PRG1_PWM1_TZ_OUT | SPI6_D1 | RMII6_TXD1 | PRG1_ECAP0_IN_APWM_OUT | GPIO0_40 |  |  | VOUT0_PCLK |  | MCASP5_AXR1 |  |  | 
+ |P9_18B |0x00011C1E4 | PADCONFIG121 | Y2 | SPI1_D1 |  | I2C6_SDA |  |  |  |  | GPIO0_120 | PRG0_IEP1_EDC_SYNC_OUT0 |  |  |  |  |  |  | 
+ |P9_19A |0x00011C208 | PADCONFIG130 | W5 | MCAN0_RX |  |  |  | I2C2_SCL |  |  | GPIO1_1 |  |  |  |  |  |  |  | 
+ |P9_19B |0x00011C13C | PADCONFIG79 | AF29 | PRG0_PRU1_GPO15 | PRG0_PRU1_GPI15 | PRG0_RGMII2_TX_CTL | PRG0_PWM1_B1 | RGMII4_TX_CTL |  |  | GPIO0_78 |  |  |  |  | MCASP2_AXR1 |  | UART2_RTSn | 
+ |P9_20A |0x00011C20C | PADCONFIG131 | W6 | MCAN0_TX |  |  |  | I2C2_SDA |  |  | GPIO1_2 |  |  |  |  |  |  |  | 
+ |P9_21A |0x00011C0A0 | PADCONFIG40 | AJ22 | PRG1_PRU1_GPO18 | PRG1_PRU1_GPI18 | PRG1_IEP1_EDC_LATCH_IN0 | PRG1_PWM1_TZ_IN | SPI6_D0 | RMII6_TXD0 | PRG1_ECAP0_SYNC_IN | GPIO0_39 |  | VOUT0_VP2_VSYNC | VOUT0_VSYNC |  | MCASP5_AXR0 |  | VOUT0_VP0_VSYNC | 
+ |P9_22A |0x00011C09C | PADCONFIG39 | AC22 | PRG1_PRU1_GPO17 | PRG1_PRU1_GPI17 | PRG1_IEP1_EDC_SYNC_OUT1 | PRG1_PWM1_B2 | SPI6_CLK | RMII6_TX_EN | PRG1_ECAP0_SYNC_OUT | GPIO0_38 |  | VOUT0_VP2_DE | VOUT0_DE | VPFE0_DATA10 | MCASP5_AFSX |  | VOUT0_VP0_DE | BOOTMODE1
+ |P9_22B |0x00011C170 | PADCONFIG92 | U29 | RGMII5_TXC | RMII7_TX_EN | I2C6_SCL |  | VOUT1_DATA6 | TRC_DATA4 | EHRPWM1_B | GPIO0_91 | GPMC0_A7 |  |  |  | MCASP10_AXR2 |  |  | 
+ |P9_23 |0x00011C028 | PADCONFIG10 | AG20 | PRG1_PRU0_GPO9 | PRG1_PRU0_GPI9 | PRG1_UART0_CTSn | PRG1_PWM3_TZ_IN | SPI6_CS1 | RMII5_RXD1 |  | GPIO0_10 | GPMC0_ADVn_ALE | PRG1_IEP0_EDIO_DATA_IN_OUT28 | VOUT0_DATA23 |  | MCASP3_ACLKX |  |  | 
+ |P9_24A |0x00011C034 | PADCONFIG13 | AJ24 | PRG1_PRU0_GPO12 | PRG1_PRU0_GPI12 | PRG1_RGMII1_TD1 | PRG1_PWM0_A0 | RGMII1_TD1 |  | MCAN4_RX | GPIO0_13 |  | RGMII7_TD1 | VOUT0_DATA17 | VPFE0_DATA1 | MCASP7_AFSX |  |  | 
+ |P9_24B |0x00011C1E0 | PADCONFIG120 | Y5 | SPI1_D0 | UART5_RTSn | I2C4_SCL | UART2_TXD |  |  |  | GPIO0_119 | PRG0_IEP1_EDC_LATCH_IN0 |  |  |  |  |  |  | 
+ |P9_25A |0x00011C200 | PADCONFIG128 | AC4 | UART1_CTSn | MCAN3_RX |  |  | SPI2_D0 | EQEP0_S |  | GPIO0_127 |  |  |  |  |  |  |  | 
+ |P9_25B |0x00011C1A4 | PADCONFIG105 | W26 | RGMII6_RXC |  |  | AUDIO_EXT_REFCLK2 | VOUT1_DE | TRC_DATA17 | EHRPWM4_B | GPIO0_104 | GPMC0_A20 | VOUT1_VP0_DE |  |  | MCASP10_AXR7 |  |  | 
+ |P9_26A |0x00011C030 | PADCONFIG12 | AF24 | PRG1_PRU0_GPO11 | PRG1_PRU0_GPI11 | PRG1_RGMII1_TD0 | PRG1_PWM3_TZ_OUT | RGMII1_TD0 |  | MCAN4_TX | GPIO0_12 |  | RGMII7_TD0 | VOUT0_DATA16 | VPFE0_DATA0 | MCASP7_ACLKX |  |  | 
+ |P9_27A |0x00011C0BC | PADCONFIG47 | AD26 | PRG0_PRU0_GPO3 | PRG0_PRU0_GPI3 | PRG0_RGMII1_RD3 | PRG0_PWM3_A2 | RGMII3_RD3 | RMII3_RX_ER |  | GPIO0_46 | UART3_TXD |  |  |  | MCASP0_AFSR |  |  | 
+ |P9_27B |0x00011C1F4 | PADCONFIG125 | AB1 | UART0_RTSn | TIMER_IO7 | SPI0_CS3 | MCAN2_TX | SPI2_CLK | EQEP0_B |  | GPIO0_124 |  |  |  |  |  |  |  | 
+ |P9_28A |0x00011C230 | PADCONFIG140 | U2 | ECAP0_IN_APWM_OUT | SYNC0_OUT | CPTS0_RFT_CLK |  | SPI2_CS3 | I3C0_SDAPULLEN | SPI7_CS0 | GPIO1_11 |  |  |  |  |  |  |  | 
+ |P9_28B |0x00011C0B0 | PADCONFIG44 | AF28 | PRG0_PRU0_GPO0 | PRG0_PRU0_GPI0 | PRG0_RGMII1_RD0 | PRG0_PWM3_A0 | RGMII3_RD0 | RMII3_RXD1 |  | GPIO0_43 |  |  |  |  | MCASP0_AXR0 |  |  | 
+ |P9_29A |0x00011C0D8 | PADCONFIG54 | AB25 | PRG0_PRU0_GPO10 | PRG0_PRU0_GPI10 | PRG0_UART0_RTSn | PRG0_PWM2_B1 | SPI3_CS2 | PRG0_IEP0_EDIO_DATA_IN_OUT29 | MCAN10_RX | GPIO0_53 | GPMC0_AD4 |  |  |  | MCASP0_AFSX |  |  | 
+ |P9_29B |0x00011C23C | PADCONFIG143 | V5 | TIMER_IO1 | ECAP2_IN_APWM_OUT | OBSCLK0 |  |  |  | SPI7_D1 | GPIO1_14 |  |  |  |  |  |  |  | BOOTMODE5
+ |P9_30A |0x00011C0B4 | PADCONFIG45 | AE28 | PRG0_PRU0_GPO1 | PRG0_PRU0_GPI1 | PRG0_RGMII1_RD1 | PRG0_PWM3_B0 | RGMII3_RD1 | RMII3_RXD0 |  | GPIO0_44 |  |  |  |  | MCASP0_AXR1 |  |  | 
+ |P9_30B |0x00011C238 | PADCONFIG142 | V6 | TIMER_IO0 | ECAP1_IN_APWM_OUT | SYSCLKOUT0 |  |  |  | SPI7_D0 | GPIO1_13 |  |  |  |  |  |  |  | BOOTMODE4
+ |P9_31A |0x00011C0D4 | PADCONFIG53 | AB26 | PRG0_PRU0_GPO9 | PRG0_PRU0_GPI9 | PRG0_UART0_CTSn | PRG0_PWM3_TZ_IN | SPI3_CS1 | PRG0_IEP0_EDIO_DATA_IN_OUT28 | MCAN10_TX | GPIO0_52 | GPMC0_AD3 |  |  |  | MCASP0_ACLKX |  | UART6_TXD | 
+ |P9_31B |0x00011C234 | PADCONFIG141 | U3 | EXT_REFCLK1 | SYNC1_OUT |  |  |  |  | SPI7_CLK | GPIO1_12 |  |  |  |  |  |  |  | 
+ |P9_33A |0x00011C0CC | PADCONFIG51 | AC28 | PRG0_PRU0_GPO7 | PRG0_PRU0_GPI7 | PRG0_IEP0_EDC_LATCH_IN1 | PRG0_PWM3_B1 | PRG0_ECAP0_SYNC_IN |  | MCAN9_TX | GPIO0_50 | GPMC0_AD1 |  |  |  | MCASP0_AXR5 |  |  | 
+ |P9_33B |0x04301C140 | WKUP_PADCONFIG80 | K24 | MCU_ADC0_AIN4 |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+ |P9_35A |0x00011C0E0 | PADCONFIG56 | AH27 | PRG0_PRU0_GPO12 | PRG0_PRU0_GPI12 | PRG0_RGMII1_TD1 | PRG0_PWM0_A0 | RGMII3_TD1 |  |  | GPIO0_55 |  |  | DSS_FSYNC0 |  | MCASP0_AXR8 |  |  | 
+ |P9_35B |0x04301C148 | WKUP_PADCONFIG82 | K29 | MCU_ADC0_AIN6 |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+ |P9_36A |0x00011C0E4 | PADCONFIG57 | AH29 | PRG0_PRU0_GPO13 | PRG0_PRU0_GPI13 | PRG0_RGMII1_TD2 | PRG0_PWM0_B0 | RGMII3_TD2 |  |  | GPIO0_56 |  |  | DSS_FSYNC2 |  | MCASP0_AXR9 |  |  | 
+ |P9_36B |0x04301C144 | WKUP_PADCONFIG81 | K27 | MCU_ADC0_AIN5 |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+ |P9_37A |0x00011C0E8 | PADCONFIG58 | AG28 | PRG0_PRU0_GPO14 | PRG0_PRU0_GPI14 | PRG0_RGMII1_TD3 | PRG0_PWM0_A1 | RGMII3_TD3 |  |  | GPIO0_57 | UART4_RXD |  |  |  | MCASP0_AXR10 |  |  | 
+ |P9_37B |0x04301C138 | WKUP_PADCONFIG78 | K28 | MCU_ADC0_AIN2 |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+ |P9_38A |0x00011C0EC | PADCONFIG59 | AG27 | PRG0_PRU0_GPO15 | PRG0_PRU0_GPI15 | PRG0_RGMII1_TX_CTL | PRG0_PWM0_B1 | RGMII3_TX_CTL |  |  | GPIO0_58 | UART4_TXD |  | DSS_FSYNC3 |  | MCASP0_AXR11 |  |  | 
+ |P9_38B |0x04301C13C | WKUP_PADCONFIG79 | L28 | MCU_ADC0_AIN3 |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+ |P9_39A |0x04301C130 | WKUP_PADCONFIG76 | K25 | MCU_ADC0_AIN0 |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+ |P9_39B |0x00011C0DC | PADCONFIG55 | AJ28 | PRG0_PRU0_GPO11 | PRG0_PRU0_GPI11 | PRG0_RGMII1_TD0 | PRG0_PWM3_TZ_OUT | RGMII3_TD0 |  |  | GPIO0_54 |  | CLKOUT |  |  | MCASP0_AXR7 |  |  | 
+ |P9_40A |0x00011C148 | PADCONFIG82 | AA26 | PRG0_PRU1_GPO18 | PRG0_PRU1_GPI18 | PRG0_IEP1_EDC_LATCH_IN0 | PRG0_PWM1_TZ_IN | SPI3_D0 |  | MCAN12_TX | GPIO0_81 | GPMC0_AD14 |  |  |  | MCASP2_AFSX |  | UART2_RXD | 
+ |P9_40B |0x04301C134 | WKUP_PADCONFIG77 | K26 | MCU_ADC0_AIN1 |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+ |P9_41 |0x00011C204 | PADCONFIG129 | AD5 | UART1_RTSn | MCAN3_TX |  |  | SPI2_D1 | EQEP0_I |  | GPIO1_0 |  |  |  |  |  |  |  | 
+ |P9_42A |0x00011C1F0 | PADCONFIG124 | AC2 | UART0_CTSn | TIMER_IO6 | SPI0_CS2 | MCAN2_RX | SPI2_CS0 | EQEP0_A |  | GPIO0_123 |  |  |  |  |  |  |  | 
+ |P9_42B |0x00011C04C | PADCONFIG19 | AJ21 | PRG1_PRU0_GPO17 | PRG1_PRU0_GPI17 | PRG1_IEP0_EDC_SYNC_OUT1 | PRG1_PWM0_B2 |  | RMII5_TXD1 | MCAN5_TX | GPIO0_18 |  |  |  | VPFE0_DATA6 | MCASP3_AXR3 |  |  | |
+|=======
+
+
+
+
+
+
+
+
+[[power-jack]]
+=== Power Jack
+
+The DC power jack is located next to the RJ45 Ethernet connector as
+shown in <<figure-51>>. This uses the same power connector as is used on
+the BeagleBone Black. The connector has a 2.1mm diameter center post
+(5VDC) and a 5.5mm diameter outer dimension on the barrel (GND).
+
+[[figure-51,Figure 51]]
+.Figure 51. 5VDC Power Jack
+image:media/image69.jpg[media/image69.jpg,title="media/image69.jpg",width=579,height=411]
+
+The board requires a regulated 5VDC +/-.25V supply at 1A. A higher
+current rating may be needed if capes are plugged into the expansion
+headers. Using a higher current power supply will not damage the board.
+
+[[usb-client]]
+=== USB Client
+
+The USB Client connector is accessible on the bottom side of the board
+under the row of four LEDs as shown in <<figure-52>>. It uses a 5 pin
+miniUSB cable, the same as is used on the BeagleBone Black. The cable
+is provided with the board. The cable can also be used to power the
+board.
+
+[[figure-52,Figure 52]]
+.Figure 52. USB Client
+image:media/image71.jpg[media/image71.jpg,title="media/image71.jpg",width=633,height=454]
+
+This port is a USB Client only interface and is intended for connection
+to a PC.
+
+[[usb-host-1]]
+=== USB Host
+
+There is a single USB Host connector on the board and is shown in
+*Figure 53* below.
+
+image:media/image71.jpg[media/image71.jpg,title="media/image71.jpg",width=593,height=387]
+
+[[figure-53.-usb-host-connector]]
+Figure 53. USB Host Connector
+
+The port is USB 2.0 HS compatible and can supply up to 500mA of current.
+If more current or ports is needed, then a HUB can be used.
+
+[[serial-header]]
+=== Serial Header
+
+Each board has a debug serial interface that can be accessed by using a
+special serial cable that is plugged into the serial header as shown in
+*Figure 54* below.
+
+image:media/image71.jpg[media/image71.jpg,title="media/image71.jpg",width=527,height=351]
+
+[[figure-54.-serial-debug-header]]
+Figure 54. Serial Debug Header
+
+Two signals are provided, TX and RX on this connector. The levels on
+these signals are 3.3V. In order to access these signals, a FTDI USB to
+Serial cable is recommended as shown in *Figure 55* below.
+
+image:media/image73.jpg[media/image73.jpg,title="media/image73.jpg",width=428,height=162]
+
+The cable can be purchased from several different places and must be the
+3.3V version TTL-232R-3V3. Information on the cable itself can be found
+direct from FTDI at:
+
+http://www.ftdichip.com/Support/Documents/DataSheets/Cables/DS_TTL-232R_CABLES.pdf[_http://www.ftdichip.com/Support/Documents/DataSheets/Cables/DS_TTL232R_CABLES.pdf_]
+
+Pin 1 of the cable is the ai-64 wire. That must align with the pin 1 on
+the board which is designated by the white dot next to the connector on
+the board.
+
+Refer to the support WIKI
+http://elinux.org/BeagleBoneBlack[_http://elinux.org/BeagleBoneBlack_]
+for more sources of this cable and other options that will work.
+
+Table is the pinout of the connector as reflected in the schematic. It
+is the same as the
+
+FTDI cable which can be found at
+
+http://www.ftdichip.com/Support/Documents/DataSheets/Cables/DS_TTL-232R_CABLES.pdf[_http://www.ftdichip.com/Support/Documents/DataSheets/Cables/DS_TTL-232R_CABLES.pdf_]
+
+with the exception that only three pins are used on the board. The pin
+numbers are defined in *Table 14*. The signals are from the perspective
+of the board.
+
+[[table-14.-j1-serial-header-pins]]
+Table 14. J1 Serial Header Pins
+
+[cols=",",options="header",]
+|==================
+|PIN NUMBER |SIGNAL
+|*1* |Ground
+|*4* |Receive
+|*5* |Transmit
+|==================
+
+*Figure 56* shows the pin location on the board.
+
+image:media/image75.jpg[media/image75.jpg,title="media/image75.jpg",width=373,height=374]
+
+*Figure 56. Serial Header*
+
+[[hdmi]]
+=== HDMI
+
+Access to the HDMI interface is through the HDMI connector that is
+located on the bottom side of the board as shown in *Figure 57* below.
+
+image:media/image71.jpg[media/image71.jpg,title="media/image71.jpg",width=579,height=387]
+
+[[figure-57.-hdmi-connector]]
+Figure 57. HDMI Connector
+
+The connector is microHDMI connector. This was done due to the space
+limitations we had in finding a place to fit the connector. It requires
+a microHDMI to HDMI cable as shown in *Figure 58* below. The cable can
+be purchased from several different sources.
+
+image:media/image77.jpg[media/image77.jpg,title="media/image77.jpg",width=196,height=196]
+
+*Figure 58. HDMI Cable*
+
+[[microsd]]
+=== microSD
+
+A microSD connector is located on the back or bottom side of the board
+as shown in *Figure 59* below. The microSD card is not supplied with the
+board.
+
+image:media/image71.jpg[media/image71.jpg,title="media/image71.jpg",width=579,height=438]
+
+[[figure-59.-microsd-connector]]
+Figure 59. microSD Connector
+
+When plugging in the SD card, the writing on the card should be up.
+Align the card with the connector and push to insert. Then release.
+There should be a click and the card will start to eject slightly, but
+it then should latch into the connector. To eject the card, push the SD
+card in and then remove your finger. The SD card will be ejected from
+the connector.
+
+Do not pull the SD card out or you could damage the connector.
+
+[[ethernet-1]]
+=== Ethernet
+
+The board comes with a single 10/100 Ethernet interface located next to
+the power jack as shown in *Figure 60*.
+
+image:media/image71.jpg[media/image71.jpg,title="media/image71.jpg",width=579,height=387]
+
+*Figure 60. Ethernet Connector*
+
+The PHY supports AutoMDX which means either a straight or a swap cable
+can be used
+
+[[jtag-connector]]
+=== JTAG Connector
+
+A place for an optional 20 pin CTI JTAG header is provided on the board
+to facilitate the SW development and debugging of the board by using
+various JTAG emulators. This header is not supplied standard on the
+board. To use this, a connector will need to be soldered onto the board.
+
+If you need the JTAG connector you can solder it on yourself. No other
+components are needed. The connector is made by Samtec and the part
+number is FTR-110-03-G-D-06. You can purchase it from
+http://www.digikey.com/[_www.digikey.com_.]

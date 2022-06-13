@@ -1,0 +1,52 @@
+[[support-information]]
+== Support Information
+
+All support for this design is through BeagleBoard.org community at:
+
+link:https://forum.beagleboard.org/[BeagleBoard.org fourm].
+
+
+[[hardware-design]]
+=== Hardware Design
+
+You can find all BeagleBone AI-64 hardware files https://git.beagleboard.org/beagleboard/beaglebone-ai-64/-/tree/master/hw[here].
+
+
+[[software-updates]]
+=== Software Updates
+
+You can download and flash the supported image onto your BeagleBone AI-64 from 
+https://debian.beagle.cc/images/bbai64-emmc-flasher-debian-11.2-xfce-arm64-2022-01-14-8gb.img.xz[this] source.
+
+To see what SW revision is loaded into the eMMC check `/etc/dogtag`.
+It should look something like as shown below,
+
+```
+root@BeagleBone:~# cat /etc/dogtag
+BeagleBoard.org Debian Bullseye Xfce Image 2022-01-14
+```
+
+[[rma-support]]
+=== RMA Support
+
+If you feel your board is defective or has issues, request an Return Merchandise Application (RMA) by filling out the form at
+http://beagleboard.org/support/rma . You will need the serial number and revision of the board. The
+serial numbers and revisions keep moving. Different boards can have different locations depending
+on when they were made. The following figures show the three locations of the serial and revision
+number.
+
+[[trouble-shooting-video-output-issues]]
+=== Troubleshooting video output issues
+
+[WARNING]
+====
+When connecting to an HDMI monitor, make sure your miniDP
+adapter is *active*. A *passive* adapter will not work.
+See <<display-adaptors-figure>>.
+====
+
+[[getting-help]]
+==== Getting Help
+
+If you need some up to date troubleshooting techniques,
+you can post your queries on link:https://forum.beagleboard.org/[BeagleBoard.org fourm].

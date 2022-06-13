@@ -1,0 +1,34 @@
+[[change-history]]
+== Change History
+
+This section describes the change history of this document and board.
+Document changes are not always a result of a board change. A board
+change will always result in a document change.
+
+[[document-change-history]]
+=== Document Change History
+
+This table seeks to keep track of major revision cycles in the documentation. Moving forward, we'll seek to align these version numbers across all of the various documentation.
+
+.Change History
+[[change-history-table, Change History]]
+[cols="1,7,2,1",options="header",]
+|=======================================================================
+|*Rev* |*Changes*                  |*Date*         |*By*
+|0.0.1 |AI-64 initial prototype    |September 2021 |James Anderson
+|0.0.2 |AI-64 final prototype      |December 2021  |James Anderson
+|0.0.3 |AI-64 initial production release |June 9, 2022   |Deepak Khatri and Jason Kridner
+|=======================================================================
+
+[[board-changes]]
+=== Board Changes
+
+Be sure to check the board revision history in the schematic file in the
+https://git.beagleboard.org/beagleboard/beaglebone-ai-64[BeagleBone AI-64 git repository].
+Also check the https://git.beagleboard.org/beagleboard/beaglebone-ai-64/-/issues[issues list].
+
+[[rev-B]]
+==== Rev B
+
+We are starting with revision B based on this being an update to the BeagleBone Black AI. However, because this board ended up being so different, we've decided to name it BeagleBone AI-64, rather than simply a new revision. This refers to the Seeed release on 21 Dec 2021 of "BeagleBone AI-64_SCH_Rev B_211221". This is the initial production release.
+

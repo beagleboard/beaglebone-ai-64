@@ -1,0 +1,29 @@
+[colophon]
+== *Revision 0.0.3*
+
+*Last PDF conversion:* June 11^th^, 2022
+
+*Maintaining editor:* mailto:lorforlinux@beagleboard.org[Deepak Khatri]
+
+*Contributors:*
+
+* Deepak Khatri
+* James Anderson
+* Jason Kridner
+* Robert P J Day
+* Gerald Coley
+
+
+*Supply comments and errors via:* https://git.beagleboard.org/beagleboard/beaglebone-ai-64/-/issues
+
+*All information in this document is subject to change without notice.*
+
+*For an up to date version of this document refer to:* https://git.beagleboard.org/beagleboard/beaglebone-ai-64
+
+*For all the graphics from this document refer to:*
+
+1. https://www.canva.com/design/DAFBB_G9tF8/LhD-uL0-aJAEH2MPMdyLkg/edit?utm_content=DAFBB_G9tF8&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton[SRM images].
+2. https://www.canva.com/design/DAFCvXa2NAQ/raxKIYZjrd0DqYF9IFMbjw/edit?utm_content=DAFCvXa2NAQ&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton[SRM cover page].
+
+image::images/by-sa.png[CCBYSA,88,31,align="center"]
+This work is licensed under a https://creativecommons.org/licenses/by-sa/4.0/[Creative Commons Attribution-ShareAlike 4.0 International License].
