@@ -8,3 +8,5 @@ deploy/tee-pager_v2.bin
 deploy/tiboot3.bin
 deploy/tispl.bin
 deploy/u-boot.img
+deploy/ipc_echo_testb_mcu1_0_release_strip.xer5f
+tmp/
