@@ -2,7 +2,7 @@
  
 BeagleBoard.org BeagleBone AI-64 - https://beaglebone.ai/64
 
-[![OSHW mark](doc/OSHW_mark_US002120.svg)](https://certification.oshwa.org/us002120.html)
+[![OSHW mark](doc/OSHW_mark_US002120.svg)](https://certification.oshwa.org/us002120.html){: .shadow}
 
 ## Project documentation release
 * Latest system reference manual: [BeagleBone\_AI-64\_System\_Reference\_Manual](https://docs.beagleboard.org/latest/boards/beaglebone/ai-64/)
