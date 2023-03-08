@@ -5,7 +5,7 @@ BeagleBoard.org BeagleBone AI-64 - https://beaglebone.ai/64
 [![OSHW mark](doc/OSHW_mark_US002120.png)](https://certification.oshwa.org/us002120.html)
 
 ## Project documentation release
-* Latest system reference manual: [BeagleBone\_AI-64\_System\_Reference\_Manual-0.0.3.pdf](https://git.beagleboard.org/beagleboard/beaglebone-ai-64/uploads/a8f416f8f44033b2b8f91f0cbc7de8f0/BeagleBone_AI-64_System_Reference_Manual-0.0.3.pdf)
+* Latest system reference manual: [BeagleBone\_AI-64\_System\_Reference\_Manual](https://docs.beagleboard.org/latest/boards/beaglebone/ai-64/)
 * Latest schematic: [BeagleBone\_AI-64\_Rev\_B1\_SCH\_220602.pdf](https://git.beagleboard.org/beagleboard/beaglebone-ai-64/-/raw/main/hw/BeagleBone_AI-64_Rev_B1_SCH_220602.pdf?inline=false)
 
 ## Key features
